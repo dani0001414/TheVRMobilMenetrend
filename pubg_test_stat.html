@@ -1,0 +1,37 @@
+<html>
+<head>
+<style type="text/css">    @font-face {    font-family: 'Covenant';    src: url(data:application/x-font-woff;charset=utf-8;base64,) format('woff');    font-weight: normal;    font-style: normal;  }  </style>
+<style type="text/css">    @font-face {    font-family: 'betutipus';    src: url(https://dani0001414.github.io/TheVRMobilMenetrend/betutipus.woff2) format('woff2');    font-weight: normal;    font-style: normal;  }  </style>
+<link href="https://fonts.googleapis.com/css?family=Squada+One" rel="stylesheet">
+<script>
+  var xmlhttp;
+  if (window.XMLHttpRequest) {
+    xmlhttp = new XMLHttpRequest();
+  } else {
+    // code for older browsers
+    xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+  }
+  xmlhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+       document.getElementById("pubgstat").innerHTML =
+      this.responseText;
+    }
+  };
+  xmlhttp.open("GET", "https://script.googleusercontent.com/macros/echo?user_content_key=eA8JgxZbLqX7kJ7Sdn_36rtacqWoM3WnfRwLzt3fbgNqLHE_Ju8LTIhwzPQ8TqvszZJ2q2qmv3psTLURMH04v9CGHLh2TU20m5_BxDlH2jW0nuo2oDemN9CCS2h10ox_1xSncGQajx_ryfhECjZEnLOKLQiCuVSPUb9avr67y5oUwmg42kytQulq_ZBNzBrybWeWRrekdEFOcOA63UrmShEGEm1UjO00&lib=MTb15TY5thj27cHQyMlNuE_RapJOW4JR8", true);
+  xmlhttp.send();
+
+</script>
+</head>
+
+<body style="font-family:'Roboto', sans-serif; background: #faf9fa; height:100%">
+<center >
+<div style="width:320px; background-color: #4b367c; border:1px solid #2f1174; color: #d3cae8" class="elem"><a target="_blank" href="https://www.twitch.tv/wearethevr"><img src="https://i.imgur.com/o1kyCnf.png"></a><br><b>PUBG Stat Test</b><a target="_blank" href="https://www.twitch.tv/wearethevr"><img src="https://img.wennermedia.com/article-leads-horizontal/pubg-promo-4574a65f-4db8-4b8d-b1f8-d3bfaf1de16a.jpg" class="aspect__fill" width="320"></a>2018.03.15<br>8:30-22:00<p></p></div>
+
+<div style="font-family: 'Squada One', cursive, sans-serif; width:322px; color: #8d8d8d; background-color: #4b4b4b;"  id="pubgstat"></div>
+ 
+
+
+
+</center>
+</body>
+</html>
