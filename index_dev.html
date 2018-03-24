@@ -17,7 +17,7 @@
     document.getElementsByTagName("HTML")[0].innerHTML = this.responseText;
 
 	function getCookie(cname) {
-		var name = cname + "=
+		var name = cname + "=";
 		var decodedCookie = decodeURIComponent(document.cookie);
 		var ca = decodedCookie.split(';');
 		for(var i = 0; i < ca.length; i++) {
@@ -29,7 +29,7 @@
             return c.substring(name.length, c.length);
 			}
 		}
-		return "
+		return "";
 	}
 
     var user=getCookie("theme");
