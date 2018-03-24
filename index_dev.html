@@ -7,19 +7,39 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-capable" content="yes">
-  <script>
-
-  Page.ClientScript.RegisterStartupScript(this.GetType(), "load", "<script language=javascript>alert('Hif');</script>");
-  </script>
+  
   
   <head>
 	<script>
-
   var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
       
     document.getElementsByTagName("HTML")[0].innerHTML = this.responseText;
+
+function getCookie(cname) {
+    var name = cname + "=";
+    var decodedCookie = decodeURIComponent(document.cookie);
+    var ca = decodedCookie.split(';');
+    for(var i = 0; i < ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+        }
+    }
+    return "";
+}
+
+function checkCookie() {
+    var user=getCookie("theme");
+    if (user != "") {
+        alert("Választott téma " + user);
+    }
+}
+	
     }
   };
   xhttp.open("GET", "https://script.google.com/macros/s/AKfycbxKt4xk1Ktq04Tw_kwDv9W___aQRx9jX1SQd7c5McIQQ0k69fM/exec", true);
@@ -27,6 +47,7 @@
 
 
 </script>
+
 
   </head>
   <body>
