@@ -24,12 +24,7 @@
 			document.getElementsByTagName("HTML")[0].innerHTML=document.getElementsByTagName("HTML")[0].innerHTML.replace(/#c3c1c8/g , "black");
 			document.getElementsByTagName("HTML")[0].innerHTML=document.getElementsByTagName("HTML")[0].innerHTML.replace(/#2e2b35/g , "#e5e3e8");
 		}
-		if (user == "dark") { 
-			darkt_theme();
-		}
-		if (user == "light") { 
-			light_theme();
-        }
+
 		function getCookie(cname) {
 		var name = cname + "=";
 		var decodedCookie = decodeURIComponent(document.cookie);
@@ -47,7 +42,12 @@
 	}
 
     var user=getCookie("theme");
-	
+	if (user == "dark") { 
+			darkt_theme();
+	}
+	if (user == "light") { 
+			light_theme();
+    }
 	var xhttp = new XMLHttpRequest();
 	xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {  
