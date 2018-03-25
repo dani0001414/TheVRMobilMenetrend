@@ -1,0 +1,23 @@
+    var name = &quot;theme&quot; + &quot;=&quot;;
+	var szoveg;
+    var decodedCookie = decodeURIComponent(document.cookie);
+    var ca = decodedCookie.split(';');
+    for(var i = 0; i < ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+            szoveg = c.substring(name.length, c.length);
+        }
+    }
+    szoveg = &quot;&quot;;
+
+	
+
+    if (szoveg == &quot;dark&quot;) {
+        document.getElementsByTagName(&quot;HTML&quot;)[0].innerHTML=document.getElementsByTagName(&quot;HTML&quot;)[0].innerHTML.replace(/TheVR Happy Hour/g , &quot;Dövíár bódog óra&quot;);
+    } else {
+		document.getElementsByTagName(&quot;HTML&quot;)[0].innerHTML=&quot;nemjöttössze&quot;;
+	}
+}
