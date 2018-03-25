@@ -42,12 +42,6 @@
 	}
 
     var user=getCookie("theme");
-	if (user == "dark") { 
-			darkt_theme();
-	}
-	if (user == "light") { 
-			light_theme();
-    }
 	var xhttp = new XMLHttpRequest();
 	xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {  
@@ -66,6 +60,15 @@
 
   </head>
   <body style="background: #0e0c13; color:#c3c1c8; text-align: center;">
+  	<script>
+	
+	if (user == "dark") { 
+			darkt_theme();
+	}
+	if (user == "light") { 
+			light_theme();
+    }
+  </script>
   <center><h1 style="font-family:'Roboto', sans-serif;">Menetrend Töltődik</h1></center>
   </body>
 </html>
