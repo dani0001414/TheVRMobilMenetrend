@@ -41,7 +41,6 @@
   xhttp.open("GET", "https://script.google.com/macros/s/AKfycbyn-ObGJyWxvfQqMTW3RdjuLbm_gZrJ816wQhvLRkRMFIewGKU/exec", true);
   xhttp.send();
 
-
 	if (user == "dark") { 
 			darkt_theme();
 	}
