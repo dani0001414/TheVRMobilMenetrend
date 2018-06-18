@@ -38,7 +38,7 @@
     }
 	}
   };
-  xhttp.open("GET", "https://script.google.com/macros/s/AKfycbw48vb_neDXkJ0SjCLopaEPQbFizqU2YEsuH8by54bJItk4v4Q/exec", true);
+  xhttp.open("GET", "https://script.google.com/macros/s/AKfycbyn-ObGJyWxvfQqMTW3RdjuLbm_gZrJ816wQhvLRkRMFIewGKU/exec", true);
   xhttp.send();
 
 
@@ -49,8 +49,5 @@
 			light_theme();
     }
 	
-	window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-}
+
+
