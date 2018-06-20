@@ -2,17 +2,17 @@
 
 //Weboldalt felépítő Script 
 	 	function darkt_theme() {
-			document.getElementsByClassName("content")[0].innerHTML=document.getElementsByClassName("content")[0].innerHTML.replace(/#faf9fa/g , "#0e0c13");
-			document.getElementsByClassName("content")[0].innerHTML=document.getElementsByClassName("content")[0].innerHTML.replace(/white/g , "#17141f");
-			document.getElementsByClassName("content")[0].innerHTML=document.getElementsByClassName("content")[0].innerHTML.replace(/black/g , "#c3c1c8");
-			document.getElementsByClassName("content")[0].innerHTML=document.getElementsByClassName("content")[0].innerHTML.replace(/#e5e3e8/g , "#2e2b35");
+			document.getElementsByTagName("HTML")[0].innerHTML=document.getElementsByTagName("HTML")[0].innerHTML.replace(/#faf9fa/g , "#0e0c13");
+			document.getElementsByTagName("HTML")[0].innerHTML=document.getElementsByTagName("HTML")[0].innerHTML.replace(/white/g , "#17141f");
+			document.getElementsByTagName("HTML")[0].innerHTML=document.getElementsByTagName("HTML")[0].innerHTML.replace(/black/g , "#c3c1c8");
+			document.getElementsByTagName("HTML")[0].innerHTML=document.getElementsByTagName("HTML")[0].innerHTML.replace(/#e5e3e8/g , "#2e2b35");
 		}
 		
 		function light_theme() {
-			document.getElementsByClassName("content")[0].innerHTML=document.getElementsByClassName("content")[0].innerHTML.replace(/#0e0c13/g , "#faf9fa");
-			document.getElementsByClassName("content")[0].innerHTML=document.getElementsByClassName("content")[0].innerHTML.replace(/#17141f/g , "white");
-			document.getElementsByClassName("content")[0].innerHTML=document.getElementsByClassName("content")[0].innerHTML.replace(/#c3c1c8/g , "black");
-			document.getElementsByClassName("content")[0].innerHTML=document.getElementsByClassName("content")[0].innerHTML.replace(/#2e2b35/g , "#e5e3e8");
+			document.getElementsByTagName("HTML")[0].innerHTML=document.getElementsByTagName("HTML")[0].innerHTML.replace(/#0e0c13/g , "#faf9fa");
+			document.getElementsByTagName("HTML")[0].innerHTML=document.getElementsByTagName("HTML")[0].innerHTML.replace(/#17141f/g , "white");
+			document.getElementsByTagName("HTML")[0].innerHTML=document.getElementsByTagName("HTML")[0].innerHTML.replace(/#c3c1c8/g , "black");
+			document.getElementsByTagName("HTML")[0].innerHTML=document.getElementsByTagName("HTML")[0].innerHTML.replace(/#2e2b35/g , "#e5e3e8");
 		}
 
 		function getCookie(cname) {
