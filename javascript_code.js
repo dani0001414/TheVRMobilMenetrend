@@ -1,18 +1,19 @@
 
 
 //Weboldalt felépítő Script 
-	 	function darkt_theme() {
-			document.getElementByTagName("HTML")=document.getElementByTagName("HTML").replace(/#faf9fa/g , "#0e0c13");
-			document.getElementByTagName("HTML")=document.getElementByTagName("HTML").replace(/white/g , "#17141f");
-			document.getElementByTagName("HTML")=document.getElementByTagName("HTML").replace(/black/g , "#c3c1c8");
-			document.getElementByTagName("HTML")=document.getElementByTagName("HTML").replace(/#e5e3e8/g , "#2e2b35");
+var parentDOM = document.getElementById("web");	 
+	 function darkt_theme() {
+			parentDOM.getElementByTagName("HTML")=parentDOM.getElementByTagName("HTML").replace(/#faf9fa/g , "#0e0c13");
+			parentDOM.getElementByTagName("HTML")=parentDOM.getElementByTagName("HTML").replace(/white/g , "#17141f");
+			parentDOM.getElementByTagName("HTML")=parentDOM.getElementByTagName("HTML").replace(/black/g , "#c3c1c8");
+			parentDOM.getElementByTagName("HTML")=parentDOM.getElementByTagName("HTML").replace(/#e5e3e8/g , "#2e2b35");
 		}
 		
 		function light_theme() {
-			document.getElementByTagName("HTML")=document.getElementByTagName("HTML").replace(/#0e0c13/g , "#faf9fa");
-			document.getElementByTagName("HTML")=document.getElementByTagName("HTML").replace(/#17141f/g , "white");
-			document.getElementByTagName("HTML")=document.getElementByTagName("HTML").replace(/#c3c1c8/g , "black");
-			document.getElementByTagName("HTML")=document.getElementByTagName("HTML").replace(/#2e2b35/g , "#e5e3e8");
+			parentDOM.getElementByTagName("HTML")=parentDOM.getElementByTagName("HTML").replace(/#0e0c13/g , "#faf9fa");
+			parentDOM.getElementByTagName("HTML")=parentDOM.getElementByTagName("HTML").replace(/#17141f/g , "white");
+			parentDOM.getElementByTagName("HTML")=parentDOM.getElementByTagName("HTML").replace(/#c3c1c8/g , "black");
+			parentDOM.getElementByTagName("HTML")=parentDOM.getElementByTagName("HTML").replace(/#2e2b35/g , "#e5e3e8");
 		}
 
 		function getCookie(cname) {
@@ -35,7 +36,7 @@
 	var xhttp = new XMLHttpRequest();
 	xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {  
-    document.getElementsByClassName("content") = this.responseText;
+    parentDOM.getElementsByClassName("content") = this.responseText;
     if (user == "dark") { 
 		darkt_theme();
     }
