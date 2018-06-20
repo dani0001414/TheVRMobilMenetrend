@@ -38,6 +38,8 @@
     document.getElementsByClassName("content")[0].innerHTML = this.responseText;
 	if (user == "dark") { 
 			darkt_theme();
+			var body=document.getElementsByTagName('body')[0];
+			body.style.background='#0e0c13';
 	}
 	if (user == "light") { 
 			light_theme();
