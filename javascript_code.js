@@ -6,6 +6,9 @@
 			document.getElementsByTagName("HTML")[0].innerHTML=document.getElementsByTagName("HTML")[0].innerHTML.replace(/white/g , "#17141f");
 			document.getElementsByTagName("HTML")[0].innerHTML=document.getElementsByTagName("HTML")[0].innerHTML.replace(/black/g , "#c3c1c8");
 			document.getElementsByTagName("HTML")[0].innerHTML=document.getElementsByTagName("HTML")[0].innerHTML.replace(/#e5e3e8/g , "#2e2b35");
+			var body=document.getElementsByTagName('body')[0];
+			body.style.background='#0e0c13';
+			body.style.color='#c3c1c8';
 		}
 		
 		function light_theme() {
@@ -54,6 +57,7 @@
 			
 			var body=document.getElementsByTagName('body')[0];
 			body.style.background='#0e0c13';
+			body.style.color='#c3c1c8';
 	}
 
 	//Cookie információs sáv(https://cookieinfoscript.com/ oldalról)
