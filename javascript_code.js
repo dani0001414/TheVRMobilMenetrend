@@ -2,10 +2,12 @@
 
 //Weboldalt felépítő Script 
 	 	function darkt_theme() {
-			document.getElementsByTagName("HTML")[0].innerHTML=document.getElementsByTagName("HTML")[0].innerHTML.replace(/#faf9fa/g , "#0e0c13");
-			document.getElementsByTagName("HTML")[0].innerHTML=document.getElementsByTagName("HTML")[0].innerHTML.replace(/white/g , "#17141f");
-			document.getElementsByTagName("HTML")[0].innerHTML=document.getElementsByTagName("HTML")[0].innerHTML.replace(/black/g , "#c3c1c8");
-			document.getElementsByTagName("HTML")[0].innerHTML=document.getElementsByTagName("HTML")[0].innerHTML.replace(/#e5e3e8/g , "#2e2b35");
+			
+			var elem=document.getElementsByClassName("elem");
+			elem.style.background='#17141f';
+			elem.style.color='#c3c1c8';
+			elem.style.border='1px solid #2e2b35';
+			
 			var body=document.getElementsByTagName('body')[0];
 			body.style.background='#0e0c13';
 			body.style.color='#c3c1c8';
