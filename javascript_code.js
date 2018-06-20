@@ -3,7 +3,7 @@
 //Weboldalt felépítő Script 
 	 	function darkt_theme() {
 			
-			var elem=document.getElementsByClassName("elem").innerHTML;
+			var elem=document.getElementsByClassName("elem")[0].innerHTML;
 			elem.style.background='#17141f';
 			elem.style.color='#c3c1c8';
 			elem.style.border='1px solid #2e2b35';
