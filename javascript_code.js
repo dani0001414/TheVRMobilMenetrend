@@ -16,6 +16,9 @@
 			document.getElementsByTagName("HTML")[0].innerHTML=document.getElementsByTagName("HTML")[0].innerHTML.replace(/#17141f/g , "white");
 			document.getElementsByTagName("HTML")[0].innerHTML=document.getElementsByTagName("HTML")[0].innerHTML.replace(/#c3c1c8/g , "black");
 			document.getElementsByTagName("HTML")[0].innerHTML=document.getElementsByTagName("HTML")[0].innerHTML.replace(/#2e2b35/g , "#e5e3e8");
+			var body=document.getElementsByTagName('body')[0];
+			body.style.background='#faf9fa';
+			body.style.color='black';
 		}
 
 		function getCookie(cname) {
