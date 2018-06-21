@@ -78,7 +78,7 @@
 
     
 		while(g) {
-			n = cut.search("visszablock();\">∨</span></div></div><div id=\"");
+			n = cut.search("visszablock");
 			if(n == -1){ g=0; break; }
 			cut = cut.substring(n+47); 
 			cut = cut.replace(/" style="display([\s\S]*?)*/gi, '');
