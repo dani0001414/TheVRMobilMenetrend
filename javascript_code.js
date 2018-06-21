@@ -84,8 +84,8 @@
 			cut = cut.replace(/" style="display([\s\S]*?)*/gi, '');
 			j++;
 		} 
-			
-			document.getElementsByClassName("content")[0].innerHTML = cut;
+			document.getElementsByClassName("content")[0].innerHTML=document.getElementsByClassName("content")[0].innerHTML.replace(/visszablock();/g , "#0e0c13");
+			alert(cut);
 	
 		}
 
