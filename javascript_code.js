@@ -78,10 +78,10 @@
 
     
 		while(g) {
-			n = cut.search("block");
+			cut = cut.replace(/"([\s\S]*?)*visszablock();">∨</span></div></div><div id="/gi, '');
 			if(n == -1){ g=0; break; }
 			cut = cut.substring(-45); 
-			cut = cut.replace(/" style="display([\s\S]*?)*/gi, '');
+			cut = cut.replace(/" style="display: block;([\s\S]*?)*/gi, '');
 			j++;
 		} 
 			document.getElementsByClassName("content")[0].innerHTML=document.getElementsByClassName("content")[0].innerHTML.replace(/visszablock();/g , "#0e0c13");
