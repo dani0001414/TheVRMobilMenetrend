@@ -78,9 +78,9 @@
 
     
 		while(g) {
-			n = cut.search("visszablock");
+			n = cut.search("block");
 			if(n == -1){ g=0; break; }
-			cut = cut.substring(n+47); 
+			cut = cut.substring(-45); 
 			cut = cut.replace(/" style="display([\s\S]*?)*/gi, '');
 			j++;
 		} 
