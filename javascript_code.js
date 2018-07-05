@@ -315,14 +315,17 @@ function createcookie(name, value, days, banner) {
 	if(banner == "banner"){document.getElementById("myCookie").style.display='none';} else {document.getElementById("c_gomb").innerHTML ="<span style=\"cursor: pointer; color: grey; text-decoration: underline;\" onclick=\"deleteAllCookies()\">Bekapcsolva</span>";}
 	if(name == "thevrmm_theme") {
 		if(value == "dark") {
-			document.getElementById("c_gomb").innerHTML ="<span style=\"cursor: pointer; color: grey; text-decoration: underline;\" onclick=\"document.cookie=createcookie('thevrmm_theme','light',365)\">Sötét</span>";
+			document.getElementById("theme_gomb").innerHTML ="<span style=\"cursor: pointer; color: grey; text-decoration: underline;\" onclick=\"document.cookie=createcookie('thevrmm_theme','light',365)\">Sötét</span>";
 		}	
 		if(value == "light") {
 			document.getElementById("theme_gomb").innerHTML ="<span style=\"cursor: pointer; color: grey; text-decoration: underline;\" onclick=\"document.cookie=createcookie('thevrmm_theme','dark',365)\">Világos</span>";
-			document.getElementById("0").style.backgroundColor="white";
-			//document.getElementsByClassName("elem").style.border="1px solid #e5e3e8";
-			document.getElementsByTagName("body").style.Color="black";
-			document.getElementsByTagName("body").style.backgroundColor="#faf9fa";
+			
+			for (var i = 0; i < events_hossz; i++) {
+			document.getElementById(i).style.backgroundColor="white";
+			document.getElementById(i).style.border="1px solid #e5e3e8";
+			}
+			document.body.style.Color="black";
+			document.body.style.backgroundColor="#faf9fa";
 		/*váltás*/
 		}
 	}
