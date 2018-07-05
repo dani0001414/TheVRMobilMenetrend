@@ -177,9 +177,13 @@ function events_array2(data) {
 			document.getElementById(i).style.backgroundColor="white";
 			document.getElementById(i).style.border="1px solid #e5e3e8";
 			document.getElementById(i).style.color="black";
+			document.getElementById(i+"_description").style.backgroundColor="white";
+			document.getElementById(i+"_description").style.border="1px solid #e5e3e8";
+			document.getElementById(i+"_description").style.color="black";
 			}
 			document.body.style.Color="black";
 			document.body.style.backgroundColor="#faf9fa";
+			
 	}
 	
 	var jsonstring_d = "[";
@@ -321,6 +325,16 @@ function createcookie(name, value, days, banner) {
 	if(name == "thevrmm_theme") {
 		if(value == "dark") {
 			document.getElementById("theme_gomb").innerHTML ="<span style=\"cursor: pointer; color: grey; text-decoration: underline;\" onclick=\"document.cookie=createcookie('thevrmm_theme','light',365)\">Sötét</span>";
+		for (var i = 0; i < events_hossz; i++) {
+			document.getElementById(i).style.backgroundColor="#17141f";
+			document.getElementById(i).style.border="1px solid #2e2b35";
+	
+			document.getElementById(i+"_description").style.backgroundColor="#17141f";
+			document.getElementById(i+"_description").style.border="1px solid #2e2b35";
+
+			}
+			document.body.style.Color="#c3c1c8";
+			document.body.style.backgroundColor="#0e0c13";
 		}	
 		if(value == "light") {
 			document.getElementById("theme_gomb").innerHTML ="<span style=\"cursor: pointer; color: grey; text-decoration: underline;\" onclick=\"document.cookie=createcookie('thevrmm_theme','dark',365)\">Világos</span>";
@@ -328,16 +342,13 @@ function createcookie(name, value, days, banner) {
 			for (var i = 0; i < events_hossz; i++) {
 			document.getElementById(i).style.backgroundColor="white";
 			document.getElementById(i).style.border="1px solid #e5e3e8";
-			document.getElementById(i).style.color="black";
+
 			document.getElementById(i+"_description").style.backgroundColor="white";
 			document.getElementById(i+"_description").style.border="1px solid #e5e3e8";
-			document.getElementById(i+"_description").style.color="black";
 			}
 			document.body.style.Color="black";
 			document.body.style.backgroundColor="#faf9fa";
-			document.getElementById("popup_content").style.backgroundColor="white";
-			document.getElementById("popup_content").style.border="1px solid #e5e3e8";
-			document.getElementById("popup_content").style.color="black";
+			
 			
 		/*váltás*/
 		}
