@@ -328,10 +328,10 @@ function createcookie(name, value, days, banner) {
 		for (var i = 0; i < events_hossz; i++) {
 			document.getElementById(i).style.backgroundColor="#17141f";
 			document.getElementById(i).style.border="1px solid #2e2b35";
-	
+			document.getElementById(i).style.color="#c3c1c8";
 			document.getElementById(i+"_description").style.backgroundColor="#17141f";
 			document.getElementById(i+"_description").style.border="1px solid #2e2b35";
-
+			document.getElementById(i+"_description").style.color="#c3c1c8";
 			}
 			document.body.style.Color="#c3c1c8";
 			document.body.style.backgroundColor="#0e0c13";
@@ -342,9 +342,10 @@ function createcookie(name, value, days, banner) {
 			for (var i = 0; i < events_hossz; i++) {
 			document.getElementById(i).style.backgroundColor="white";
 			document.getElementById(i).style.border="1px solid #e5e3e8";
-
+			document.getElementById(i).style.color="black";
 			document.getElementById(i+"_description").style.backgroundColor="white";
 			document.getElementById(i+"_description").style.border="1px solid #e5e3e8";
+			document.getElementById(i+"_description").style.color="black";
 			}
 			document.body.style.Color="black";
 			document.body.style.backgroundColor="#faf9fa";
