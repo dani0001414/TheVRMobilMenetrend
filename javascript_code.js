@@ -139,12 +139,7 @@ if(cookie_settings == 1) {theme_status = getCookie("thevrmm_theme");}
 function events_array(data) {
 	/*Ha még nem erősítette meg a felhasználó, hogy elfogadja e a cookie-kat vagy sem akkor megjeleníti az alsó bannert már itt, hogy gyorsabban megjelenjen!*/
 	if((cookie_settings != 1)&(cookie_settings != -1)) { document.getElementById("myCookie").style.display='block';}
-	if(theme_status == "light") {
-			document.getElementsByClassName("elem").style.backgroundColor="white";
-			document.getElementsByClassName("elem").style.border="1px solid #e5e3e8";
-			document.getElementsByTagName("body").style.Color="black";
-			document.getElementsByTagName("body").style.backgroundColor="#faf9fa";
-	}
+
 	live_adat = data;
 	live_adat = JSON.parse(live_adat); 
 	cover_live=null;
@@ -176,6 +171,16 @@ function events_array2(data) {
 	events = JSON.parse(events);
 	events = events["0"].data.user.eventLeaves.edges;
 	events_hossz = events.length;
+	
+		if((theme_status == "light")&(cookie_settings == 1)) {
+			for (var i = 0; i < events_hossz; i++) {
+			document.getElementById(i).style.backgroundColor="white";
+			document.getElementById(i).style.border="1px solid #e5e3e8";
+			document.getElementById(i).style.color="black";
+			}
+			document.body.style.Color="black";
+			document.body.style.backgroundColor="#faf9fa";
+	}
 	
 	var jsonstring_d = "[";
   
@@ -323,6 +328,7 @@ function createcookie(name, value, days, banner) {
 			for (var i = 0; i < events_hossz; i++) {
 			document.getElementById(i).style.backgroundColor="white";
 			document.getElementById(i).style.border="1px solid #e5e3e8";
+			document.getElementById(i).style.color="black";
 			}
 			document.body.style.Color="black";
 			document.body.style.backgroundColor="#faf9fa";
