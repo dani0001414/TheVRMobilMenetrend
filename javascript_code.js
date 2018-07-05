@@ -329,9 +329,16 @@ function createcookie(name, value, days, banner) {
 			document.getElementById(i).style.backgroundColor="white";
 			document.getElementById(i).style.border="1px solid #e5e3e8";
 			document.getElementById(i).style.color="black";
+			document.getElementById(i+"_description").style.backgroundColor="white";
+			document.getElementById(i+"_description").style.border="1px solid #e5e3e8";
+			document.getElementById(i+"_description").style.color="black";
 			}
 			document.body.style.Color="black";
 			document.body.style.backgroundColor="#faf9fa";
+			document.getElementById("popup_content").style.backgroundColor="white";
+			document.getElementById("popup_content").style.border="1px solid #e5e3e8";
+			document.getElementById("popup_content").style.color="black";
+			
 		/*váltás*/
 		}
 	}
