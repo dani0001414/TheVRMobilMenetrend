@@ -319,7 +319,7 @@ function createcookie(name, value, days, banner) {
 		}	
 		if(value == "light") {
 			document.getElementById("theme_gomb").innerHTML ="<span style=\"cursor: pointer; color: grey; text-decoration: underline;\" onclick=\"document.cookie=createcookie('thevrmm_theme','dark',365)\">Világos</span>";
-			//document.getElementsByClassName("elem").style.backgroundColor="white";
+			document.getElementById("0").style.backgroundColor="white";
 			//document.getElementsByClassName("elem").style.border="1px solid #e5e3e8";
 			document.getElementsByTagName("body").style.Color="black";
 			document.getElementsByTagName("body").style.backgroundColor="#faf9fa";
