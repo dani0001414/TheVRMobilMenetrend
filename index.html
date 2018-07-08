@@ -1,66 +1,377 @@
 ﻿<html>
-<link rel="manifest" href="data:application/manifest+json;base64, eyJuYW1lIjoiVGhlVlIgTW9iaWxCYXLDoXQgTWVuZXRyZW5kIiwic2hvcnRfbmFtZSI6IlRoZVZSIE1NIiwiZGlzcGxheSI6InN0YW5kYWxvbmUiLCJvcmllbnRhdGlvbiI6Im5hdHVyYWwiLCJzdGFydF91cmwiOiIuLi8iLCJiYWNrZ3JvdW5kX2NvbG9yIjoiI2Y3ZjdmNyIsInRoZW1lX2NvbG9yIjoiIzY0NDFBNCIsImljb25zIjpbeyJzcmMiOiJodHRwczovL2kuaW1ndXIuY29tL2xFb1ZranQucG5nIiwic2l6ZXMiOiIxNDR4MTQ0IiwidHlwZSI6ImltYWdlL3BuZyJ9XX0=">  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-  <style type='text/css'>    @font-face {    font-family: 'Covenant';    src: url(data:application/x-font-woff;charset=utf-8;base64,) format('woff');    font-weight: normal;    font-style: normal;  } /* The Modal (background) */.modal {    display: none; /* Hidden by default */     position: fixed; /* Stay in place */    z-index: 1; /* Sit on top */    padding-top: 100px; /* Location of the box */    left: 0;    top: 0;    width: 100%; /* Full width */    height: 100%; /* Full height */    overflow: auto; /* Enable scroll if needed */    background-color: rgb(0,0,0); /* Fallback color */    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */}/* Modal Content */	.modal-content {    background-color:#17141f;    margin: auto;    padding: 20px;    border: 1px solid #888;    width: 80%;}/* The Close Button */.close {    color: #aaaaaa;    float: right;    font-size: 28px;    font-weight: bold;}.close:hover,.close:focus {    color: #000;    text-decoration: none;    cursor: pointer;} .cookie {     display: none;    /* Hidden by default */     position: fixed;    /* Stay in place */     z-index: 1;    /* Sit on top */         /* Location of the box */     left: 0;     bottom: 0;     width: 100%;    /* Full width */         /* Full height */     overflow: auto;    /* Enable scroll if needed */     background-color: rgb(0,0,0);    /* Fallback color */     background-color: rgba(0,0,0,0.4);    /* Black w/ opacity */}/* Modal Content */ .modal-cookie {     background-color:#2e2b35;     margin: auto;     padding: 20px;      } </style>
-  <link rel="shortcut icon" type="image/png" href="https://i.imgur.com/9KP46NF.png">
-  <title>Mobilbarát Menetrend</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta charset="utf-8">
-  <head>
-	<script type="text/javascript" src="https://dani0001414.github.io/TheVRMobilMenetrend/javascript_code.js"></script>
-  </head>
-  <body link="grey" vlink="grey" style="font-family:'Roboto', sans-serif; background: #0e0c13; height:100%; color: #c3c1c8">
-<center>
-	<div style="display: none;"id="no_stream">
-		<img src="https://i.imgur.com/5dZn6sc.png" alt="23" width="320"><br>
-	<h3 style="font-family:rockwell;">Jelenleg nincs egy stream sem a menetrendben! Elszívták az UTP-vel együtt!<img src="http://static-cdn.jtvnw.net/emoticons/v1/25/1.0" alt="23"><br>Hamarosan újabb szálítmány!</h3>
-	</div>
-<div style="width:320px; display: none; background-color:#ffa100; border:1px solid #ff8700; color: black" id="meglepi" class="elem"><div id="meglepi_cim">cím</div><div id="meglepi_cover"></div><div id="meglepi_time"></div><span id="meglepistamp" style="cursor:pointer;" onclick="hide_and_show('meglepi_description',0)">☰</span></div><div style="width:320px; display: none; background-color:#17141f; border:1px solid #2e2b35" id="meglepi_description"><b>Részletek:</b><br>Ez egy előre nem tervezett stream. Stream hossza ismeretlen és ne is kérdezd. Élvezd ki!</div><div id="meglepi_br" style="display: none;"><br></div>
-<div style="width:320px; display: none; background-color:#17141f; border:1px solid #2e2b35" id="0" class="elem"><div id="0_cim">cím</div><div id="0_cover"></div><div id="0_time"></div><span id="streamspan" style="cursor:pointer;" onclick="hide_and_show('0_description',0)">☰</span></div><div style="width:320px; display: none; background-color:#17141f; border:1px solid #2e2b35" id="0_description"></div><div id="0_br" style="display: none;"><br></div>
-<div style="width:320px; display: none; background-color:#17141f; border:1px solid #2e2b35" id="1" class="elem"><div id="1_cim">cím</div><div id="1_cover"></div><div id="1_time"></div><span style="cursor:pointer;" onclick="hide_and_show('1_description',1)">☰</span></div><div style="width:320px; display: none; background-color:#17141f; border:1px solid #2e2b35" id="1_description"></div><div id="1_br" style="display: none;"><br></div>
-<div style="width:320px; display: none; background-color:#17141f; border:1px solid #2e2b35" id="2" class="elem"><div id="2_cim">cím</div><div id="2_cover"></div><div id="2_time"></div><span style="cursor:pointer;" onclick="hide_and_show('2_description',2)">☰</span></div><div style="width:320px; display: none; background-color:#17141f; border:1px solid #2e2b35" id="2_description"></div><div id="2_br" style="display: none;"><br></div>
-<div style="width:320px; display: none; background-color:#17141f; border:1px solid #2e2b35" id="3" class="elem"><div id="3_cim">cím</div><div id="3_cover"></div><div id="3_time"></div><span style="cursor:pointer;" onclick="hide_and_show('3_description',3)">☰</span></div><div style="width:320px; display: none; background-color:#17141f; border:1px solid #2e2b35" id="3_description"></div><div id="3_br" style="display: none;"><br></div>
-<div style="width:320px; display: none; background-color:#17141f; border:1px solid #2e2b35" id="4" class="elem"><div id="4_cim">cím</div><div id="4_cover"></div><div id="4_time"></div><span style="cursor:pointer;" onclick="hide_and_show('4_description',4)">☰</span></div><div style="width:320px; display: none; background-color:#17141f; border:1px solid #2e2b35" id="4_description"></div><div id="4_br" style="display: none;"><br></div>
-<div style="width:320px; display: none; background-color:#17141f; border:1px solid #2e2b35" id="5" class="elem"><div id="5_cim">cím</div><div id="5_cover"></div><div id="5_time"></div><span style="cursor:pointer;" onclick="hide_and_show('5_description',5)">☰</span></div><div style="width:320px; display: none; background-color:#17141f; border:1px solid #2e2b35" id="5_description"></div><div id="5_br" style="display: none;"><br></div>
-<div style="width:320px; display: none; background-color:#17141f; border:1px solid #2e2b35" id="6" class="elem"><div id="6_cim">cím</div><div id="6_cover"></div><div id="6_time"></div><span style="cursor:pointer;" onclick="hide_and_show('6_description',6)">☰</span></div><div style="width:320px; display: none; background-color:#17141f; border:1px solid #2e2b35" id="6_description"></div><div id="6_br" style="display: none;"><br></div>
-<div style="width:320px; display: none; background-color:#17141f; border:1px solid #2e2b35" id="7" class="elem"><div id="7_cim">cím</div><div id="7_cover"></div><div id="7_time"></div><span style="cursor:pointer;" onclick="hide_and_show('7_description',7)">☰</span></div><div style="width:320px; display: none; background-color:#17141f; border:1px solid #2e2b35" id="7_description"></div><div id="7_br" style="display: none;"><br></div>
-<div style="width:320px; display: none; background-color:#17141f; border:1px solid #2e2b35" id="8" class="elem"><div id="8_cim">cím</div><div id="8_cover"></div><div id="8_time"></div><span style="cursor:pointer;" onclick="hide_and_show('8_description',8)">☰</span></div><div style="width:320px; display: none; background-color:#17141f; border:1px solid #2e2b35" id="8_description"></div><div id="8_br" style="display: none;"><br></div>
-<div style="width:320px; display: none; background-color:#17141f; border:1px solid #2e2b35" id="9" class="elem"><div id="9_cim">cím</div><div id="9_cover"></div><div id="9_time"></div><span style="cursor:pointer;" onclick="hide_and_show('9_description',9)">☰</span></div><div style="width:320px; display: none; background-color:#17141f; border:1px solid #2e2b35" id="9_description"></div><div id="9_br" style="display: none;"><br></div>
-<div style="width:320px; display: none; background-color:#17141f; border:1px solid #2e2b35" id="10" class="elem"><div id="10_cim">cím</div><div id="10_cover"></div><div id="10_time"></div><span style="cursor:pointer;" onclick="hide_and_show('10_description',10)">☰</span></div><div style="width:320px; display: none; background-color:#17141f; border:1px solid #2e2b35" id="10_description"></div><div id="10_br" style="display: none;"><br></div>
-<div style="width:320px; display: none; background-color:#17141f; border:1px solid #2e2b35" id="11" class="elem"><div id="11_cim">cím</div><div id="11_cover"></div><div id="11_time"></div><span style="cursor:pointer;" onclick="hide_and_show('11_description',11)">☰</span></div><div style="width:320px; display: none; background-color:#17141f; border:1px solid #2e2b35" id="11_description"></div><div id="11_br" style="display: none;"><br></div>
-<div style="width:320px; display: none; background-color:#17141f; border:1px solid #2e2b35" id="12" class="elem"><div id="12_cim">cím</div><div id="12_cover"></div><div id="12_time"></div><span style="cursor:pointer;" onclick="hide_and_show('12_description',12)">☰</span></div><div style="width:320px; display: none; background-color:#17141f; border:1px solid #2e2b35" id="12_description"></div><div id="12_br" style="display: none;"><br></div>
-<div style="width:320px; display: none; background-color:#17141f; border:1px solid #2e2b35" id="13" class="elem"><div id="13_cim">cím</div><div id="13_cover"></div><div id="13_time"></div><span style="cursor:pointer;" onclick="hide_and_show('13_description',13)">☰</span></div><div style="width:320px; display: none; background-color:#17141f; border:1px solid #2e2b35" id="13_description"></div><div id="13_br" style="display: none;"><br></div>
-<div style="width:320px; display: none; background-color:#17141f; border:1px solid #2e2b35" id="14" class="elem"><div id="14_cim">cím</div><div id="14_cover"></div><div id="14_time"></div><span style="cursor:pointer;" onclick="hide_and_show('14_description',14)">☰</span></div><div style="width:320px; display: none; background-color:#17141f; border:1px solid #2e2b35" id="14_description"></div><div id="14_br" style="display: none;"><br></div>
-<div style="width:320px; display: none; background-color:#17141f; border:1px solid #2e2b35" id="15" class="elem"><div id="15_cim">cím</div><div id="15_cover"></div><div id="15_time"></div><span style="cursor:pointer;" onclick="hide_and_show('15_description',15)">☰</span></div><div style="width:320px; display: none; background-color:#17141f; border:1px solid #2e2b35" id="15_description"></div><div id="15_br" style="display: none;"><br></div>
-<div style="width:320px; display: none; background-color:#17141f; border:1px solid #2e2b35" id="16" class="elem"><div id="16_cim">cím</div><div id="16_cover"></div><div id="16_time"></div><span style="cursor:pointer;" onclick="hide_and_show('16_description',16)">☰</span></div><div style="width:320px; display: none; background-color:#17141f; border:1px solid #2e2b35" id="16_description"></div><div id="16_br" style="display: none;"><br></div>
-<div style="width:320px; display: none; background-color:#17141f; border:1px solid #2e2b35" id="17" class="elem"><div id="17_cim">cím</div><div id="17_cover"></div><div id="17_time"></div><span style="cursor:pointer;" onclick="hide_and_show('17_description',17)">☰</span></div><div style="width:320px; display: none; background-color:#17141f; border:1px solid #2e2b35" id="17_description"></div><div id="17_br" style="display: none;"><br></div>
-<div style="width:320px; display: none; background-color:#17141f; border:1px solid #2e2b35" id="18" class="elem"><div id="18_cim">cím</div><div id="18_cover"></div><div id="18_time"></div><span style="cursor:pointer;" onclick="hide_and_show('18_description',18)">☰</span></div><div style="width:320px; display: none; background-color:#17141f; border:1px solid #2e2b35" id="18_description"></div><div id="18_br" style="display: none;"><br></div>
-<div style="width:320px; display: none; background-color:#17141f; border:1px solid #2e2b35" id="19" class="elem"><div id="19_cim">cím</div><div id="19_cover"></div><div id="19_time"></div><span style="cursor:pointer;" onclick="hide_and_show('19_description',19)">☰</span></div><div style="width:320px; display: none; background-color:#17141f; border:1px solid #2e2b35" id="19_description"></div><div id="19_br" style="display: none;"><br></div>
-<div style="width:320px; display: none; background-color:#17141f; border:1px solid #2e2b35" id="20" class="elem"><div id="20_cim">cím</div><div id="20_cover"></div><div id="20_time"></div><span style="cursor:pointer;" onclick="hide_and_show('20_description',20)">☰</span></div><div style="width:320px; display: none; background-color:#17141f; border:1px solid #2e2b35" id="20_description"></div><div id="20_br" style="display: none;"><br></div>
-<div style="color: grey"><font size="2">Creator:<a target="_blank" href="https://forum.thevr.hu/u/dani0001414/">dani0001414 Ninjon</a><br><br><a href="https://dani0001414.github.io/TheVRMobilMenetrend/changelog.html">[Change-Log]</a><br><br><a style="cursor: pointer; color: grey; text-decoration: underline;" onclick="modal_open('cookie_settings')" >[Beállítások]</a></font></div>
-   <!-- The Modal -->
-<div id="myCookie" class="cookie">
+<link rel="manifest" href="data:application/manifest+json;base64, eyJuYW1lIjoiVGhlVlIgTW9iaWxCYXLDoXQgTWVuZXRyZW5kIiwic2hvcnRfbmFtZSI6IlRoZVZSIE1NIiwiZGlzcGxheSI6InN0YW5kYWxvbmUiLCJvcmllbnRhdGlvbiI6Im5hdHVyYWwiLCJzdGFydF91cmwiOiIuLi8iLCJiYWNrZ3JvdW5kX2NvbG9yIjoiI2Y3ZjdmNyIsInRoZW1lX2NvbG9yIjoiIzY0NDFBNCIsImljb25zIjpbeyJzcmMiOiJodHRwczovL2kuaW1ndXIuY29tL2xFb1ZranQucG5nIiwic2l6ZXMiOiIxNDR4MTQ0IiwidHlwZSI6ImltYWdlL3BuZyJ9XX0=">
+<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+<style type='text/css'>
+  @font-face {
+    font-family: 'Covenant';
+    src: url(data:application/x-font-woff;charset=utf-8;base64,) format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
 
-  <!-- Modal content -->
-  <div align="left" class="modal-cookie"> 
-    A MobilBarát Menetrend egyes funkcióihoz saját(Témaválasztó, Új funkciók jelzése) illetve harmadik fél általi(Google Analytics) Cookie-kat használ a későbbi fejlesztések segítése érdekében!<br><span style="cursor: pointer; color: grey; text-decoration: underline;" onclick="createcookie('thevrmmcookiepolicysagreement',1,365,'banner')">Elfogadom</span> <span style="cursor: pointer; color: grey; text-decoration: underline;" onclick="deleteAllCookies('banner')">Nem fogadom el</span> <span style="cursor: pointer; color: grey; text-decoration: underline;" onclick="modal_open('cookie_information')">Bővebb információ</span>
-  </div>
+  /* The Modal (background) */
 
-</div>
-  <!-- The Modal -->
-<div id="myModal" class="modal">
+  .modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    padding-top: 100px;
+    /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+  }
 
-  <!-- Modal content -->
-  <div class="modal-content">
-    <span onclick="spanonclick()" class="close">&times;</span>
-    <div id="popup_content"></div>
-  </div>
+  /* Modal Content */
 
-</div>
+  .modal-content {
+    background-color: #17141f;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+  }
+
+  /* The Close Button */
+
+  .close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .cookie {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    /* Location of the box */
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    /* Full width */
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+  }
+
+  /* Modal Content */
+
+  .modal-cookie {
+    background-color: #2e2b35;
+    margin: auto;
+    padding: 20px;
+  }
+</style>
+<link rel="shortcut icon" type="image/png" href="https://i.imgur.com/9KP46NF.png">
+<title>Mobilbarát Menetrend</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta charset="utf-8">
+
+<head>
+  <script type="text/javascript" src="https://dani0001414.github.io/TheVRMobilMenetrend/javascript_code.js"></script>
+</head>
+
+<body link="grey" vlink="grey" style="font-family:'Roboto', sans-serif; background: #0e0c13; height:100%; color: #c3c1c8">
+  <center>
+    <div style="display: none;" id="no_stream">
+      <img src="https://i.imgur.com/5dZn6sc.png" alt="23" width="320">
+      <br>
+      <h3 style="font-family:rockwell;">Jelenleg nincs egy stream sem a menetrendben! Elszívták az UTP-vel együtt!
+        <img src="http://static-cdn.jtvnw.net/emoticons/v1/25/1.0"
+          alt="23">
+        <br>Hamarosan újabb szálítmány!</h3>
+    </div>
+    <div style="width:320px; display: none; background-color:#ffa100; border:1px solid #ff8700; color: black" id="meglepi" class="elem">
+      <div id="meglepi_cim">cím</div>
+      <div id="meglepi_cover"></div>
+      <div id="meglepi_time"></div>
+      <span id="meglepistamp" style="cursor:pointer;" onclick="hide_and_show('meglepi_description',0)">☰</span>
+    </div>
+    <div style="width:320px; display: none; background-color:#17141f; border:1px solid #2e2b35" id="meglepi_description">
+      <b>Részletek:</b>
+      <br>Ez egy előre nem tervezett stream. Stream hossza ismeretlen és ne is kérdezd. Élvezd ki!
+    </div>
+    <div id="meglepi_br"
+      style="display: none;">
+      <br>
+    </div>
+    <div style="width:320px; display: none; background-color:#17141f; border:1px solid #2e2b35" id="0" class="elem">
+      <div id="0_cim">cím</div>
+      <div id="0_cover"></div>
+      <div id="0_time"></div>
+      <span id="streamspan" style="cursor:pointer;" onclick="hide_and_show('0_description',0)">☰</span>
+    </div>
+    <div style="width:320px; display: none; background-color:#17141f; border:1px solid #2e2b35" id="0_description"></div>
+    <div id="0_br" style="display: none;">
+      <br>
+    </div>
+    <div style="width:320px; display: none; background-color:#17141f; border:1px solid #2e2b35" id="1" class="elem">
+      <div id="1_cim">cím</div>
+      <div id="1_cover"></div>
+      <div id="1_time"></div>
+      <span style="cursor:pointer;" onclick="hide_and_show('1_description',1)">☰</span>
+    </div>
+    <div style="width:320px; display: none; background-color:#17141f; border:1px solid #2e2b35" id="1_description"></div>
+    <div id="1_br" style="display: none;">
+      <br>
+    </div>
+    <div style="width:320px; display: none; background-color:#17141f; border:1px solid #2e2b35" id="2" class="elem">
+      <div id="2_cim">cím</div>
+      <div id="2_cover"></div>
+      <div id="2_time"></div>
+      <span style="cursor:pointer;" onclick="hide_and_show('2_description',2)">☰</span>
+    </div>
+    <div style="width:320px; display: none; background-color:#17141f; border:1px solid #2e2b35" id="2_description"></div>
+    <div id="2_br" style="display: none;">
+      <br>
+    </div>
+    <div style="width:320px; display: none; background-color:#17141f; border:1px solid #2e2b35" id="3" class="elem">
+      <div id="3_cim">cím</div>
+      <div id="3_cover"></div>
+      <div id="3_time"></div>
+      <span style="cursor:pointer;" onclick="hide_and_show('3_description',3)">☰</span>
+    </div>
+    <div style="width:320px; display: none; background-color:#17141f; border:1px solid #2e2b35" id="3_description"></div>
+    <div id="3_br" style="display: none;">
+      <br>
+    </div>
+    <div style="width:320px; display: none; background-color:#17141f; border:1px solid #2e2b35" id="4" class="elem">
+      <div id="4_cim">cím</div>
+      <div id="4_cover"></div>
+      <div id="4_time"></div>
+      <span style="cursor:pointer;" onclick="hide_and_show('4_description',4)">☰</span>
+    </div>
+    <div style="width:320px; display: none; background-color:#17141f; border:1px solid #2e2b35" id="4_description"></div>
+    <div id="4_br" style="display: none;">
+      <br>
+    </div>
+    <div style="width:320px; display: none; background-color:#17141f; border:1px solid #2e2b35" id="5" class="elem">
+      <div id="5_cim">cím</div>
+      <div id="5_cover"></div>
+      <div id="5_time"></div>
+      <span style="cursor:pointer;" onclick="hide_and_show('5_description',5)">☰</span>
+    </div>
+    <div style="width:320px; display: none; background-color:#17141f; border:1px solid #2e2b35" id="5_description"></div>
+    <div id="5_br" style="display: none;">
+      <br>
+    </div>
+    <div style="width:320px; display: none; background-color:#17141f; border:1px solid #2e2b35" id="6" class="elem">
+      <div id="6_cim">cím</div>
+      <div id="6_cover"></div>
+      <div id="6_time"></div>
+      <span style="cursor:pointer;" onclick="hide_and_show('6_description',6)">☰</span>
+    </div>
+    <div style="width:320px; display: none; background-color:#17141f; border:1px solid #2e2b35" id="6_description"></div>
+    <div id="6_br" style="display: none;">
+      <br>
+    </div>
+    <div style="width:320px; display: none; background-color:#17141f; border:1px solid #2e2b35" id="7" class="elem">
+      <div id="7_cim">cím</div>
+      <div id="7_cover"></div>
+      <div id="7_time"></div>
+      <span style="cursor:pointer;" onclick="hide_and_show('7_description',7)">☰</span>
+    </div>
+    <div style="width:320px; display: none; background-color:#17141f; border:1px solid #2e2b35" id="7_description"></div>
+    <div id="7_br" style="display: none;">
+      <br>
+    </div>
+    <div style="width:320px; display: none; background-color:#17141f; border:1px solid #2e2b35" id="8" class="elem">
+      <div id="8_cim">cím</div>
+      <div id="8_cover"></div>
+      <div id="8_time"></div>
+      <span style="cursor:pointer;" onclick="hide_and_show('8_description',8)">☰</span>
+    </div>
+    <div style="width:320px; display: none; background-color:#17141f; border:1px solid #2e2b35" id="8_description"></div>
+    <div id="8_br" style="display: none;">
+      <br>
+    </div>
+    <div style="width:320px; display: none; background-color:#17141f; border:1px solid #2e2b35" id="9" class="elem">
+      <div id="9_cim">cím</div>
+      <div id="9_cover"></div>
+      <div id="9_time"></div>
+      <span style="cursor:pointer;" onclick="hide_and_show('9_description',9)">☰</span>
+    </div>
+    <div style="width:320px; display: none; background-color:#17141f; border:1px solid #2e2b35" id="9_description"></div>
+    <div id="9_br" style="display: none;">
+      <br>
+    </div>
+    <div style="width:320px; display: none; background-color:#17141f; border:1px solid #2e2b35" id="10" class="elem">
+      <div id="10_cim">cím</div>
+      <div id="10_cover"></div>
+      <div id="10_time"></div>
+      <span style="cursor:pointer;" onclick="hide_and_show('10_description',10)">☰</span>
+    </div>
+    <div style="width:320px; display: none; background-color:#17141f; border:1px solid #2e2b35" id="10_description"></div>
+    <div id="10_br" style="display: none;">
+      <br>
+    </div>
+    <div style="width:320px; display: none; background-color:#17141f; border:1px solid #2e2b35" id="11" class="elem">
+      <div id="11_cim">cím</div>
+      <div id="11_cover"></div>
+      <div id="11_time"></div>
+      <span style="cursor:pointer;" onclick="hide_and_show('11_description',11)">☰</span>
+    </div>
+    <div style="width:320px; display: none; background-color:#17141f; border:1px solid #2e2b35" id="11_description"></div>
+    <div id="11_br" style="display: none;">
+      <br>
+    </div>
+    <div style="width:320px; display: none; background-color:#17141f; border:1px solid #2e2b35" id="12" class="elem">
+      <div id="12_cim">cím</div>
+      <div id="12_cover"></div>
+      <div id="12_time"></div>
+      <span style="cursor:pointer;" onclick="hide_and_show('12_description',12)">☰</span>
+    </div>
+    <div style="width:320px; display: none; background-color:#17141f; border:1px solid #2e2b35" id="12_description"></div>
+    <div id="12_br" style="display: none;">
+      <br>
+    </div>
+    <div style="width:320px; display: none; background-color:#17141f; border:1px solid #2e2b35" id="13" class="elem">
+      <div id="13_cim">cím</div>
+      <div id="13_cover"></div>
+      <div id="13_time"></div>
+      <span style="cursor:pointer;" onclick="hide_and_show('13_description',13)">☰</span>
+    </div>
+    <div style="width:320px; display: none; background-color:#17141f; border:1px solid #2e2b35" id="13_description"></div>
+    <div id="13_br" style="display: none;">
+      <br>
+    </div>
+    <div style="width:320px; display: none; background-color:#17141f; border:1px solid #2e2b35" id="14" class="elem">
+      <div id="14_cim">cím</div>
+      <div id="14_cover"></div>
+      <div id="14_time"></div>
+      <span style="cursor:pointer;" onclick="hide_and_show('14_description',14)">☰</span>
+    </div>
+    <div style="width:320px; display: none; background-color:#17141f; border:1px solid #2e2b35" id="14_description"></div>
+    <div id="14_br" style="display: none;">
+      <br>
+    </div>
+    <div style="width:320px; display: none; background-color:#17141f; border:1px solid #2e2b35" id="15" class="elem">
+      <div id="15_cim">cím</div>
+      <div id="15_cover"></div>
+      <div id="15_time"></div>
+      <span style="cursor:pointer;" onclick="hide_and_show('15_description',15)">☰</span>
+    </div>
+    <div style="width:320px; display: none; background-color:#17141f; border:1px solid #2e2b35" id="15_description"></div>
+    <div id="15_br" style="display: none;">
+      <br>
+    </div>
+    <div style="width:320px; display: none; background-color:#17141f; border:1px solid #2e2b35" id="16" class="elem">
+      <div id="16_cim">cím</div>
+      <div id="16_cover"></div>
+      <div id="16_time"></div>
+      <span style="cursor:pointer;" onclick="hide_and_show('16_description',16)">☰</span>
+    </div>
+    <div style="width:320px; display: none; background-color:#17141f; border:1px solid #2e2b35" id="16_description"></div>
+    <div id="16_br" style="display: none;">
+      <br>
+    </div>
+    <div style="width:320px; display: none; background-color:#17141f; border:1px solid #2e2b35" id="17" class="elem">
+      <div id="17_cim">cím</div>
+      <div id="17_cover"></div>
+      <div id="17_time"></div>
+      <span style="cursor:pointer;" onclick="hide_and_show('17_description',17)">☰</span>
+    </div>
+    <div style="width:320px; display: none; background-color:#17141f; border:1px solid #2e2b35" id="17_description"></div>
+    <div id="17_br" style="display: none;">
+      <br>
+    </div>
+    <div style="width:320px; display: none; background-color:#17141f; border:1px solid #2e2b35" id="18" class="elem">
+      <div id="18_cim">cím</div>
+      <div id="18_cover"></div>
+      <div id="18_time"></div>
+      <span style="cursor:pointer;" onclick="hide_and_show('18_description',18)">☰</span>
+    </div>
+    <div style="width:320px; display: none; background-color:#17141f; border:1px solid #2e2b35" id="18_description"></div>
+    <div id="18_br" style="display: none;">
+      <br>
+    </div>
+    <div style="width:320px; display: none; background-color:#17141f; border:1px solid #2e2b35" id="19" class="elem">
+      <div id="19_cim">cím</div>
+      <div id="19_cover"></div>
+      <div id="19_time"></div>
+      <span style="cursor:pointer;" onclick="hide_and_show('19_description',19)">☰</span>
+    </div>
+    <div style="width:320px; display: none; background-color:#17141f; border:1px solid #2e2b35" id="19_description"></div>
+    <div id="19_br" style="display: none;">
+      <br>
+    </div>
+    <div style="width:320px; display: none; background-color:#17141f; border:1px solid #2e2b35" id="20" class="elem">
+      <div id="20_cim">cím</div>
+      <div id="20_cover"></div>
+      <div id="20_time"></div>
+      <span style="cursor:pointer;" onclick="hide_and_show('20_description',20)">☰</span>
+    </div>
+    <div style="width:320px; display: none; background-color:#17141f; border:1px solid #2e2b35" id="20_description"></div>
+    <div id="20_br" style="display: none;">
+      <br>
+    </div>
+    <div style="color: grey">
+      <font size="2">Creator:
+        <a target="_blank" href="https://forum.thevr.hu/u/dani0001414/">dani0001414 Ninjon</a>
+        <br>
+        <br>
+        <a href="https://dani0001414.github.io/TheVRMobilMenetrend/changelog.html">[Change-Log]</a>
+        <br>
+        <br>
+        <a style="cursor: pointer; color: grey; text-decoration: underline;" onclick="modal_open('cookie_settings')">[Beállítások]</a>
+      </font>
+    </div>
+    <!-- The Modal -->
+    <div id="myCookie" class="cookie">
+
+      <!-- Modal content -->
+      <div align="left" class="modal-cookie">
+        A MobilBarát Menetrend egyes funkcióihoz saját(Témaválasztó, Új funkciók jelzése) illetve harmadik fél általi(Google Analytics)
+        Cookie-kat használ a későbbi fejlesztések segítése érdekében!
+        <br>
+        <span style="cursor: pointer; color: grey; text-decoration: underline;" onclick="createcookie('thevrmmcookiepolicysagreement',1,365,'banner')">Elfogadom</span>
+        <span style="cursor: pointer; color: grey; text-decoration: underline;" onclick="deleteAllCookies('banner')">Nem fogadom el</span>
+        <span style="cursor: pointer; color: grey; text-decoration: underline;" onclick="modal_open('cookie_information')">Bővebb információ</span>
+      </div>
+
+    </div>
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+
+      <!-- Modal content -->
+      <div class="modal-content">
+        <span onclick="spanonclick()" class="close">&times;</span>
+        <div id="popup_content"></div>
+      </div>
+
+    </div>
   </center>
 
 
-  </body>
-  
+</body>
+
 </html>
