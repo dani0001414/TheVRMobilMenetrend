@@ -1,0 +1,1 @@
+document.getElementById("no_stream").innerHTML = "<img src=\"5dZn6sc.png\" alt=\"23\" width=\"320\"><br><h3 style=\"font-family:rockwell;\">Jelenleg nincs egy stream sem a menetrendben! Elszívták az UTP-vel együtt! <img src=\"http://static-cdn.jtvnw.net/emoticons/v1/25/1.0\" alt=\"23\"><br>Hamarosan újabb szálítmány!</h3>";
