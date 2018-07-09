@@ -8,9 +8,7 @@
     font-weight: normal;
     font-style: normal;
   }
-
   /* The Modal (background) */
-
   .modal {
     display: none;
     /* Hidden by default */
@@ -33,9 +31,7 @@
     background-color: rgba(0, 0, 0, 0.4);
     /* Black w/ opacity */
   }
-
   /* Modal Content */
-
   .modal-content {
     background-color: #17141f;
     margin: auto;
@@ -43,23 +39,19 @@
     border: 1px solid #888;
     width: 80%;
   }
-
   /* The Close Button */
-
   .close {
     color: #aaaaaa;
     float: right;
     font-size: 28px;
     font-weight: bold;
   }
-
   .close:hover,
   .close:focus {
     color: #000;
     text-decoration: none;
     cursor: pointer;
   }
-
   .cookie {
     display: none;
     /* Hidden by default */
@@ -95,11 +87,9 @@
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta charset="utf-8">
-
 <head>
   <script type="text/javascript" src="https://dani0001414.github.io/TheVRMobilMenetrend/javascript_code.js"></script>
 </head>
-
 <body link="grey" vlink="grey" style="font-family:'Roboto', sans-serif; background: #0e0c13; height:100%; color: #c3c1c8">
   <center>
     <div style="display: block;" id="no_stream">
@@ -340,7 +330,6 @@
     </div>
     <!-- The Modal -->
     <div id="myCookie" class="cookie">
-
       <!-- Modal content -->
       <div align="left" class="modal-cookie">
         A MobilBarát Menetrend egyes funkcióihoz saját(Témaválasztó, Új funkciók jelzése) illetve harmadik fél általi(Google Analytics)
@@ -350,21 +339,29 @@
         <span style="cursor: pointer; color: grey; text-decoration: underline;" onclick="deleteAllCookies('banner')">Nem fogadom el</span>
         <span style="cursor: pointer; color: grey; text-decoration: underline;" onclick="modal_open('cookie_information')">Bővebb információ</span>
       </div>
-
     </div>
     <!-- The Modal -->
     <div id="myModal" class="modal">
-
       <!-- Modal content -->
       <div class="modal-content">
         <span onclick="spanonclick()" class="close">&times;</span>
         <div id="popup_content"></div>
       </div>
-
     </div>
   </center>
-
-
 </body>
+<script>
 
+if ('serviceWorker' in navigator) {
+  // Register a service worker hosted at the root of the
+  // site using the default scope.
+  navigator.serviceWorker.register('https://dani0001414.github.io/TheVRMobilMenetrend/thevrmm_sw.js').then(function(registration) {
+    console.log('Service worker registration succeeded:', registration);
+  }).catch(function(error) {
+    console.log('Service worker registration failed:', error);
+  });
+} else {
+  console.log('Service workers are not supported.');
+} 
+</script>
 </html>
