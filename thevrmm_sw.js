@@ -14,7 +14,6 @@ var version = 'v1::';
 var offlineFundamentals = [
   '',
   'https://i.imgur.com/5dZn6sc.png',
-  'https://dani0001414.github.io/TheVRMobilMenetrend/offline_site.js'
 ];
 
 /* The install event fires when the service worker is first installed.
