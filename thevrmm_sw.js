@@ -16,13 +16,13 @@
 // in turn trigger the install event again.
 //const CACHE_VERSION = '{{ site.time }}';
 function aktualisido() {
-	var d = new Date().getTime();
-	return d / 1000;
+  var d = new Date().getTime();
+  return d / 1000;
 }
 
 const version = "v1";
-const PRECACHE = 'precache-'+ version;
-const RUNTIME = 'runtime'+ version;
+const PRECACHE = 'precache-' + version;
+const RUNTIME = 'runtime' + version;
 
 // A list of local resources we always want to be cached.
 const PRECACHE_URLS = [
@@ -55,10 +55,10 @@ self.addEventListener('activate', event => {
 });
 
 function timestamp(b) {
-	var utcDate = b;
-	var localDate = new Date(utcDate);
-	var localDate = localDate.getTime() / 1000;
-	return localDate;
+  var utcDate = b;
+  var localDate = new Date(utcDate);
+  var localDate = localDate.getTime() / 1000;
+  return localDate;
 }
 var eltelt;
 // The fetch handler serves responses for same-origin resources from a cache.
@@ -69,12 +69,15 @@ self.addEventListener('fetch', event => {
   if (event.request.url.startsWith(self.location.origin)) {
     event.respondWith(
       caches.match(event.request).then(cachedResponse => {
-        eltelt = aktualisido() - timestamp(cachedResponse.headers.get('Date'));
-        if (cachedResponse && (eltelt < 700)) {
-            
+
+        if (cachedResponse) {
+          eltelt = aktualisido() - timestamp(cachedResponse.headers.get('Date'));
+          if (eltelt < 700) {
+            console.log(eltelt);
             return cachedResponse;
+          }
         }
-        
+
         return caches.open(RUNTIME).then(cache => {
           return fetch(event.request).then(response => {
             // Put a copy of the response in the runtime cache.
