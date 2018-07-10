@@ -20,7 +20,7 @@ function aktualisido() {
   return d / 1000;
 }
 
-const version = "v1";
+const version = "v2018.07.10";
 const PRECACHE = 'precache-' + version;
 const RUNTIME = 'runtime' + version;
 
@@ -74,7 +74,6 @@ self.addEventListener('fetch', event => {
           eltelt = aktualisido() - timestamp(cachedResponse.headers.get('Date'));
           console.log(eltelt);
           if (eltelt < 700) {
-            
             return cachedResponse;
           }
         }
