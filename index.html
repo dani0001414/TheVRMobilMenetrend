@@ -102,6 +102,12 @@
     http.open('GET', "https://dani0001414.github.io/TheVRMobilMenetrend/javascript_code.js", true);
     /*Kérésküldés*/
     http.send();
+    http.onreadystatechange = function () {
+		if (http.readyState == 4 && http.status == 200) {
+      alert("elvileg látnia kell!");
+      alert(http.responseText);
+		}
+	}
     http.onerror = function () {
       window.onload = function () {
         alert("ez nem látja!");
