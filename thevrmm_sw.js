@@ -72,10 +72,10 @@ self.addEventListener('fetch', event => {
   // Skip cross-origin requests, like those for Google Analytics.
   var same_origin = event.request.url.startsWith(self.location.origin);
   var google_fonts = event.request.url.startsWith('https://fonts');
- // var twitch_cover = event.request.url.startsWith('https://static-cdn.jtvnw.net/twitch-event');
+  var twitch_cover = event.request.url.startsWith('https://static-cdn.jtvnw.net/twitch-event');
   var imgur = event.request.url.startsWith('https://i.imgur.com/9KP46NF.png');
 
-  if (same_origin | google_fonts | imgur) {
+  if (same_origin | google_fonts | imgur | twitch_cover) {
     event.respondWith(
       caches.match(event.request).then(cachedResponse => {
 
