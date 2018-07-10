@@ -20,7 +20,7 @@ function aktualisido() {
   return d / 1000;
 }
 
-const version = "v2018.07.10";
+const version = "v2018.07.10_2";
 const PRECACHE = 'precache-' + version;
 const RUNTIME = 'runtime' + version;
 
