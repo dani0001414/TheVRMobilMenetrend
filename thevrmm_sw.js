@@ -23,15 +23,15 @@ function date() {
   return dat;
 }
 function timestamp(b) {
-	var utcDate = b;
-	var localDate = new Date(utcDate);
-	var localDate = localDate.getTime() / 1000;
-	return localDate;
+  var utcDate = b;
+  var localDate = new Date(utcDate);
+  var localDate = localDate.getTime() / 1000;
+  return localDate;
 }
 
 function current_timestamp() {
-	var d = new Date().getTime();
-	return d / 1000;
+  var d = new Date().getTime();
+  return d / 1000;
 }
 //const version = "v2018.07.10";
 const version = "v" + date();
@@ -85,18 +85,19 @@ self.addEventListener('fetch', event => {
 
         if (cachedResponse) {
           eltelt = current_timestamp() - timestamp(cachedResponse.headers.get('Date'));
-          
+
           if (twitch_cover & (eltelt > 200)) {
             caches.open(RUNTIME).then(function (cache) {
               cache.delete(cachedResponse.url).then(function (response) {
-                someUIUpdateFunction();
+
               });
             })
 
           }
-          /*if (eltelt < 700) {*/
+          console.log('elteltmásodpercek:', eltelt);
+
           return cachedResponse;
-          /*}*/
+
         }
 
 
