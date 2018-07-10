@@ -59,10 +59,11 @@ self.addEventListener('fetch', event => {
     event.respondWith(
       caches.match(event.request).then(cachedResponse => {
         if (cachedResponse) {
-          return cachedResponse;
           console.log('Cache lejárati idő:', event.request.headers.last-modified);
           console.log('nem működik a fenti vagy nem lépbeide?');
           console.log(cachedResponse);
+          return cachedResponse;
+          
         }
         
         return caches.open(RUNTIME).then(cache => {
