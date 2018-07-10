@@ -69,7 +69,7 @@ const currentCaches = [PRECACHE, RUNTIME];
       return Promise.all(cachesToDelete.map(cacheToDelete => {
         return caches.delete(cacheToDelete);
       }));
-    }).then(() => self.clients.claim())
+    })
 
 /*function timestamp(b) {
   var utcDate = b;
