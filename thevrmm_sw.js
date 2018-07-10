@@ -59,7 +59,7 @@ self.addEventListener('fetch', event => {
     event.respondWith(
       caches.match(event.request).then(cachedResponse => {
         if (cachedResponse) {
-          console.log('header:', event.request.headers.get('Last-Modified'));
+          console.log('header:', event.request.headers.get('Expires'));
           console.log(cachedResponse);
           console.log(cachedResponse.headers.get('Date'));
           return cachedResponse;
