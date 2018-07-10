@@ -14,8 +14,12 @@
 // Names of the two caches used in this version of the service worker.
 // Change to v2, etc. when you update any of the local resources, which will
 // in turn trigger the install event again.
-
 //const CACHE_VERSION = '{{ site.time }}';
+function aktualisido() {
+	var d = new Date().getTime();
+	return d / 1000;
+}
+
 const version = "v1";
 const PRECACHE = 'precache-'+ version;
 const RUNTIME = 'runtime'+ version;
@@ -66,10 +70,14 @@ self.addEventListener('fetch', event => {
     event.respondWith(
       caches.match(event.request).then(cachedResponse => {
         if (cachedResponse) {
-          console.log('header:', event.request.headers.get('Expires'));
-          console.log(cachedResponse);
-          console.log(timestamp(cachedResponse.headers.get('Date')));
-          return cachedResponse;
+         var eltelt = aktualisido() - timestamp(cachedResponse.headers.get('Date'));
+          
+          if(eltelt > 600 ) {
+            return event.request;
+          } else {
+            return cachedResponse;
+          }
+         
         }
         
         return caches.open(RUNTIME).then(cache => {
