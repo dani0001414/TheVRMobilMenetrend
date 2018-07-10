@@ -62,7 +62,7 @@ self.addEventListener('fetch', event => {
         if (cachedResponse) {
           console.log('header:', event.request.headers);
          
-          console.log('event.request:', event.request.url.location.origin);
+          console.log('event.request:', event.request.url);
           console.log('nem működik a fenti vagy nem lépbeide?');
           console.log(cachedResponse);
           return cachedResponse;
