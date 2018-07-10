@@ -59,7 +59,7 @@ self.addEventListener('fetch', event => {
     event.respondWith(
       caches.match(event.request).then(cachedResponse => {
         if (cachedResponse) {
-          console.log('Cache lejárati idő:', event.request.headers.keys);
+          console.log('Cache lejárati idő:', event.request.headers.location.origin);
           console.log('event.request:', event.request.url.startsWith(self.location.origin));
           console.log('nem működik a fenti vagy nem lépbeide?');
           console.log(cachedResponse);
