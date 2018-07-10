@@ -18,13 +18,13 @@
 //const CACHE_VERSION = '{{ site.time }}';
 const version = "v1";
 const PRECACHE = 'precache-'+ version;
-const RUNTIME = 'runtime';
+const RUNTIME = 'runtime'+ version;
 
 // A list of local resources we always want to be cached.
 const PRECACHE_URLS = [
-  'index.html',
-  './', // Alias for index.html
-  'https://i.imgur.com/5dZn6sc.png'
+  'mm.html',
+  'https://i.imgur.com/5dZn6sc.png',
+  '',
 ];
 
 // The install handler takes care of precaching the resources we always need.
@@ -55,7 +55,7 @@ self.addEventListener('activate', event => {
 // from the network before returning it to the page.
 self.addEventListener('fetch', event => {
   // Skip cross-origin requests, like those for Google Analytics.
-  if ((event.request.url.startsWith(self.location.origin)) && (!event.request.url.endsWith('javascript_code.js'))) {
+  if (event.request.url.startsWith(self.location.origin)) {
     event.respondWith(
       caches.match(event.request).then(cachedResponse => {
         if (cachedResponse) {
