@@ -58,6 +58,16 @@ self.addEventListener('activate', event => {
   );
 });
 
+const currentCaches = [PRECACHE, RUNTIME];
+  event.waitUntil(
+    caches.keys().then(cacheNames => {
+      return cacheNames.filter(cacheName => !currentCaches.includes(cacheName));
+    }).then(cachesToDelete => {
+      return Promise.all(cachesToDelete.map(cacheToDelete => {
+        return caches.delete(cacheToDelete);
+      }));
+    }).then(() => self.clients.claim())
+  );
 /*function timestamp(b) {
   var utcDate = b;
   var localDate = new Date(utcDate);
