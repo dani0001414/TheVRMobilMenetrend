@@ -69,16 +69,17 @@ self.addEventListener('fetch', event => {
   var same_origin = event.request.url.startsWith(self.location.origin);
   var google_fonts = event.request.url.startsWith('https://fonts');
   var twitch_cover = event.request.url.startsWith('https://static-cdn.jtvnw.net/twitch-event');
+  var imgur = event.request.url.startsWith('https://i.imgur.com/9KP46NF.png');
 
-  if (same_origin | google_fonts | twitch_cover ) {
+  if (same_origin | google_fonts | twitch_cover) {
     event.respondWith(
       caches.match(event.request).then(cachedResponse => {
-        
+
         if (cachedResponse) {
           /*eltelt = aktualisido() - timestamp(cachedResponse.headers.get('Date'));*/
 
           /*if (eltelt < 700) {*/
-            return cachedResponse;
+          return cachedResponse;
           /*}*/
         }
 
