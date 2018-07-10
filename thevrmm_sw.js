@@ -68,7 +68,8 @@ self.addEventListener('activate', event => {
   );
 });
 
-var eltelt;
+//ifdate changes
+
 // The fetch handler serves responses for same-origin resources from a cache.
 // If no response is found, it populates the runtime cache with the response
 // from the network before returning it to the page.
@@ -86,7 +87,7 @@ self.addEventListener('fetch', event => {
           
           if (twitch_cover) {
             
-            console.log('kep ido:', cachedResponse);
+            console.log('kep ido:', cachedResponse.headers.get('Last-Modified'));
             caches.open(RUNTIME).then(function (cache) {
               cache.delete(event.request.url).then(function(response) {
                //valami
