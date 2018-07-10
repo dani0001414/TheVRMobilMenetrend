@@ -16,8 +16,8 @@
 // in turn trigger the install event again.
 
 //const CACHE_VERSION = '{{ site.time }}';
-
-const PRECACHE = 'precache-v1';
+const version = "v1";
+const PRECACHE = 'precache-${version}';
 const RUNTIME = 'runtime';
 
 // A list of local resources we always want to be cached.
