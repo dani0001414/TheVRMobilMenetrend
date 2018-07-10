@@ -88,13 +88,14 @@ self.addEventListener('fetch', event => {
 
           if (twitch_cover & (eltelt > 200)) {
             caches.open(RUNTIME).then(function (cache) {
-              cache.delete(cachedResponse.url).then(function (response) {
+              cache.delete(cachedResponse).then(function (response) {
 
               });
             })
 
           }
           console.log('elteltmásodpercek:', eltelt);
+          console.log('elteltmásodpercek:', cachedResponse.url);
 
           return cachedResponse;
 
