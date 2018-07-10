@@ -54,16 +54,12 @@ self.addEventListener('activate', event => {
 // If no response is found, it populates the runtime cache with the response
 // from the network before returning it to the page.
 self.addEventListener('fetch', event => {
- var data_string = fetch(event.request)
-  .then(function(response) {
-    return response;
-  })
   // Skip cross-origin requests, like those for Google Analytics.
   if (event.request.url.startsWith(self.location.origin)) {
     event.respondWith(
       caches.match(event.request).then(cachedResponse => {
         if (cachedResponse) {
-          console.log('header:', data_string);
+          console.log('header:', event.request.headers.get('Date'));
           console.log('nem működik a fenti vagy nem lépbeide?');
           console.log(cachedResponse.headers.get('Date'));
           return cachedResponse;
