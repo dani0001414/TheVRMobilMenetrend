@@ -83,7 +83,7 @@ self.addEventListener('fetch', event => {
     event.respondWith(
       caches.match(event.request).then(cachedResponse => {
         if (cachedResponse) {
-          cache.match('mm.html').then(function (response) {
+          cache.match('mm.html').then(response => {
             visszadottertek = response.headers.get('Date');
           });
           eltelt = current_timestamp() - timestamp(visszadottertek);
