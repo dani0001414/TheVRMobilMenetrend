@@ -91,9 +91,9 @@ self.addEventListener('fetch', event => {
                //valami
               });
             })
-
+            console.log('elteltmásodpercek:', eltelt);
           }
-          console.log('elteltmásodpercek:', eltelt);
+          
 
 
           return cachedResponse;
