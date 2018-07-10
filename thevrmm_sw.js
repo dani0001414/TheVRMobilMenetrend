@@ -75,7 +75,7 @@ self.addEventListener('fetch', event => {
   var twitch_cover = event.request.url.startsWith('https://static-cdn.jtvnw.net/twitch-event');
   var imgur = event.request.url.startsWith('https://i.imgur.com/9KP46NF.png');
 
-  if (same_origin | google_fonts | twitch_cover) {
+  if (same_origin | google_fonts | twitch_cover | imgur) {
     event.respondWith(
       caches.match(event.request).then(cachedResponse => {
 
