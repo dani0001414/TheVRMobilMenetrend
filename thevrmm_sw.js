@@ -83,17 +83,15 @@ self.addEventListener('fetch', event => {
     event.respondWith(
       caches.match(event.request).then(cachedResponse => {
         if (cachedResponse) {
-          eltelt = current_timestamp() - timestamp(cachedResponse.headers.get('Date'));
-          var idoke = timestamp(cachedResponse.headers.get('Date'));
+          
           if (twitch_cover) {
-            console.log('elteltmásodpercek:', event.request.url);
-            console.log('kep ido:', idoke);
+            
+            console.log('kep ido:', cachedResponse);
             caches.open(RUNTIME).then(function (cache) {
-              cache.delete(cachedResponse).then(function(response) {
+              cache.delete(event.request.url).then(function(response) {
                //valami
               });
             })
-            console.log('elteltmásodpercek:', eltelt);
           }
           
 
