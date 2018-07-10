@@ -69,10 +69,10 @@ self.addEventListener('fetch', event => {
   if (event.request.url.startsWith(self.location.origin)) {
     event.respondWith(
       caches.match(event.request).then(cachedResponse => {
-
+        console.log(eltelt);
         if (cachedResponse) {
           eltelt = aktualisido() - timestamp(cachedResponse.headers.get('Date'));
-          console.log(eltelt);
+
           if (eltelt < 700) {
             return cachedResponse;
           }
@@ -86,7 +86,7 @@ self.addEventListener('fetch', event => {
             });
           });
         });
-      })
+      }).catch(function () { return caches.match('mm.html'));
     );
   }
 })
