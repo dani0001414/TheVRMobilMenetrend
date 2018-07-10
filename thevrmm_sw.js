@@ -84,7 +84,7 @@ self.addEventListener('fetch', event => {
       caches.match(event.request).then(cachedResponse => {
 
         if (cachedResponse) {
-          eltelt = aktualisido() - timestamp(cachedResponse.headers.get('Date'));
+          eltelt = current_timestamp() - timestamp(cachedResponse.headers.get('Date'));
           
           if (twitch_cover & (eltelt > 200)) {
             caches.open(RUNTIME).then(function (cache) {
