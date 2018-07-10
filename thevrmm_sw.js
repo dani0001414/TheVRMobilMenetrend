@@ -59,8 +59,8 @@ self.addEventListener('fetch', event => {
     event.respondWith(
       caches.match(event.request).then(cachedResponse => {
         if (cachedResponse) {
-          console.log('Cache lejárati idő:', event.request.headers.get('Last-Modified'));
-          console.log('event.request:', event.request);
+          console.log('Cache lejárati idő:', event.request.headers.get('ETag'));
+          console.log('event.request:', event.request.url);
           console.log('nem működik a fenti vagy nem lépbeide?');
           console.log(cachedResponse);
           return cachedResponse;
