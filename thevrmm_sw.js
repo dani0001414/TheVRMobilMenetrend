@@ -17,24 +17,14 @@
 //const CACHE_VERSION = '{{ site.time }}';
 function date() {
   var d = new Date();
-  var honap = ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12"];
+  var honap = ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12"]; 
   var honapnap = ["00", "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46", "47", "48", "49", "50", "51", "52", "53", "54", "55", "56", "57", "58", "59"];
-  var dat = d.getFullYear() + "." + honap[d.getMonth()] + "." + honapnap[d.getDate()];
+  var dat= d.getFullYear()+"."+honap[d.getMonth()]+"."+honapnap[d.getDate()];
   return dat;
 }
-function timestamp(b) {
-  var utcDate = b;
-  var localDate = new Date(utcDate);
-  var localDate = localDate.getTime() / 1000;
-  return localDate;
-}
 
-function current_timestamp() {
-  var d = new Date().getTime();
-  return d / 1000;
-}
 //const version = "v2018.07.10";
-const version = "v" + date();
+const version = "v"+date();
 const PRECACHE = 'precache-' + version;
 const RUNTIME = 'runtime' + version;
 
@@ -68,7 +58,13 @@ self.addEventListener('activate', event => {
   );
 });
 
-var eltelt, visszadottertek;
+/*function timestamp(b) {
+  var utcDate = b;
+  var localDate = new Date(utcDate);
+  var localDate = localDate.getTime() / 1000;
+  return localDate;
+}*/
+//var eltelt;
 // The fetch handler serves responses for same-origin resources from a cache.
 // If no response is found, it populates the runtime cache with the response
 // from the network before returning it to the page.
@@ -76,36 +72,20 @@ self.addEventListener('fetch', event => {
   // Skip cross-origin requests, like those for Google Analytics.
   var same_origin = event.request.url.startsWith(self.location.origin);
   var google_fonts = event.request.url.startsWith('https://fonts');
-  var twitch_cover = event.request.url.startsWith('https://static-cdn.jtvnw.net/twitch-event');
+ // var twitch_cover = event.request.url.startsWith('https://static-cdn.jtvnw.net/twitch-event');
   var imgur = event.request.url.startsWith('https://i.imgur.com/9KP46NF.png');
 
-  if (same_origin | google_fonts | twitch_cover | imgur) {
+  if (same_origin | google_fonts | imgur) {
     event.respondWith(
       caches.match(event.request).then(cachedResponse => {
+
         if (cachedResponse) {
-          cache.match('mm.html').then(response => {
-            visszadottertek = response.headers.get('Date');
-          });
-          eltelt = current_timestamp() - timestamp(visszadottertek);
-          if (twitch_cover) {
-            console.log('elteltmásodpercek:', event.request.url);
-            console.log('kep ido:', idoke);
-            caches.open(RUNTIME).then(function (cache) {
-              cache.delete(event.request.url).then(function (response) {
-                //valami
-              });
-            })
-            console.log('elteltmásodpercek:', eltelt);
-          }
+          /*eltelt = aktualisido() - timestamp(cachedResponse.headers.get('Date'));*/
 
-
-
+          /*if (eltelt < 700) {*/
           return cachedResponse;
-
+          /*}*/
         }
-
-
-
 
         return caches.open(RUNTIME).then(cache => {
           return fetch(event.request).then(response => {
