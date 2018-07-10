@@ -65,7 +65,7 @@ self.addEventListener('fetch', event => {
         if (cachedResponse) {
           console.log('header:', data_string);
           console.log('nem működik a fenti vagy nem lépbeide?');
-          console.log(cachedResponse);
+          console.log(cachedResponse.headers.get('Date'));
           return cachedResponse;
         }
         
