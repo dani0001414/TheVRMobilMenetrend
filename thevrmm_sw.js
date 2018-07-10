@@ -73,7 +73,8 @@ self.addEventListener('fetch', event => {
          var eltelt = aktualisido() - timestamp(cachedResponse.headers.get('Date'));
           
           if(eltelt > 600 ) {
-            return event.request;
+            cachedResponse = event.request;
+            return cachedResponse;
           } else {
             return cachedResponse;
           }
