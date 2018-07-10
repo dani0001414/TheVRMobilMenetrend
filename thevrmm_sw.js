@@ -82,14 +82,12 @@ self.addEventListener('fetch', event => {
   if (same_origin | google_fonts | twitch_cover | imgur) {
     event.respondWith(
       caches.match(event.request).then(cachedResponse => {
-
         if (cachedResponse) {
           eltelt = current_timestamp() - timestamp(cachedResponse.headers.get('Date'));
-
           if (twitch_cover & (eltelt > 200)) {
             caches.open(RUNTIME).then(function (cache) {
-              cache.delete(cachedResponse).then(function (response) {
-
+              cache.delete(cachedResponse).then(function (true) {
+                //your cache entry has been deleted
               });
             })
 
