@@ -364,6 +364,13 @@
 
   if ('serviceWorker' in navigator) {
     // Register a service worker hosted at the root of the
+    if (navigator.serviceWorker.controller) {
+    console.log('This page is currently controlled by:',
+      navigator.serviceWorker.controller);
+  } else {
+    console.log('This page is not currently controlled ' +
+      'by a service worker.');
+  }
     // site using the default scope.
     navigator.serviceWorker.register('https://dani0001414.github.io/TheVRMobilMenetrend/thevrmm_sw.js').then(function (registration) {
       console.log('Service worker registration succeeded:', registration);
