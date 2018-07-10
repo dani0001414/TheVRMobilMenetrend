@@ -84,8 +84,8 @@ self.addEventListener('fetch', event => {
       caches.match(event.request).then(cachedResponse => {
         if (cachedResponse) {
           eltelt = current_timestamp() - timestamp(cachedResponse.headers.get('Date'));
-          if (twitch_cover ) {
-            console.log('elteltmásodpercek:', cachedResponse);
+          if (twitch_cover) {
+            console.log('elteltmásodpercek:', event.request.url);
             caches.open(RUNTIME).then(function (cache) {
               cache.delete(cachedResponse).then(function(response) {
                //valami
