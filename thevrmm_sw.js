@@ -59,7 +59,7 @@ self.addEventListener('fetch', event => {
     event.respondWith(
       caches.match(event.request).then(cachedResponse => {
         if (cachedResponse) {
-          console.log('header:', event.request.headers.get('Date'));
+          console.log('header:', event.request.headers.get('Modofied'));
           console.log('nem működik a fenti vagy nem lépbeide?');
           console.log(cachedResponse.headers.get('Date'));
           return cachedResponse;
