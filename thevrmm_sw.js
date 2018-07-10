@@ -17,7 +17,7 @@
 
 //const CACHE_VERSION = '{{ site.time }}';
 const version = "v1";
-const PRECACHE = 'precache-${version}';
+const PRECACHE = 'precache-'+ version;
 const RUNTIME = 'runtime';
 
 // A list of local resources we always want to be cached.
