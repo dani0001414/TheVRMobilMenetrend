@@ -86,7 +86,7 @@ self.addEventListener('fetch', event => {
             });
           });
         });
-      }).catch(function () { return caches.match('mm.html'));
+      }).catch(function () { return caches.match('mm.html');})    
     );
   }
 })
