@@ -23,7 +23,7 @@ function date() {
   var ora = d.getHours();
   var perc = d.getMinutes();
   var ido = ora+":"+perc;
-  return dat+","+ido;
+  return dat;
 }
 
 //const version = "v2018.07.10";
@@ -61,8 +61,8 @@ self.addEventListener('activate', event => {
   );
 });
 
+/*
 const currentCaches = [PRECACHE, RUNTIME];
-
     caches.keys().then(cacheNames => {
       return cacheNames.filter(cacheName => !currentCaches.includes(cacheName));
     }).then(cachesToDelete => {
@@ -70,7 +70,7 @@ const currentCaches = [PRECACHE, RUNTIME];
         return caches.delete(cacheToDelete);
       }));
     })
-
+*/
 /*function timestamp(b) {
   var utcDate = b;
   var localDate = new Date(utcDate);
