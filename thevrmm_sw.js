@@ -60,7 +60,7 @@ function timestamp(b) {
 	var localDate = localDate.getTime() / 1000;
 	return localDate;
 }
-
+var eltelt;
 // The fetch handler serves responses for same-origin resources from a cache.
 // If no response is found, it populates the runtime cache with the response
 // from the network before returning it to the page.
@@ -69,16 +69,10 @@ self.addEventListener('fetch', event => {
   if (event.request.url.startsWith(self.location.origin)) {
     event.respondWith(
       caches.match(event.request).then(cachedResponse => {
-        if (cachedResponse) {
-         var eltelt = aktualisido() - timestamp(cachedResponse.headers.get('Date'));
-          
-          if(eltelt > 600 ) {
-            cachedResponse = event.request;
+        eltelt = aktualisido() - timestamp(cachedResponse.headers.get('Date'));
+        if (cachedResponse && (eltelt < 700)) {
+            
             return cachedResponse;
-          } else {
-            return cachedResponse;
-          }
-         
         }
         
         return caches.open(RUNTIME).then(cache => {
