@@ -15,12 +15,12 @@
 // Change to v2, etc. when you update any of the local resources, which will
 // in turn trigger the install event again.
 //const CACHE_VERSION = '{{ site.time }}';
-function aktualisido() {
+/*function aktualisido() {
   var d = new Date().getTime();
   return d / 1000;
-}
+}*/
 
-const version = "v2018.07.10_2";
+const version = "v2018.07.10";
 const PRECACHE = 'precache-' + version;
 const RUNTIME = 'runtime' + version;
 
@@ -54,28 +54,32 @@ self.addEventListener('activate', event => {
   );
 });
 
-function timestamp(b) {
+/*function timestamp(b) {
   var utcDate = b;
   var localDate = new Date(utcDate);
   var localDate = localDate.getTime() / 1000;
   return localDate;
-}
-var eltelt;
+}*/
+//var eltelt;
 // The fetch handler serves responses for same-origin resources from a cache.
 // If no response is found, it populates the runtime cache with the response
 // from the network before returning it to the page.
 self.addEventListener('fetch', event => {
   // Skip cross-origin requests, like those for Google Analytics.
-  if (event.request.url.startsWith(self.location.origin)) {
+  var same_origin = event.request.url.startsWith(self.location.origin);
+  var google_fonts = event.request.url.startsWith('https://fonts');
+  var twitch_cover = event.request.url.startsWith('https://static-cdn.jtvnw.net/twitch-event');
+
+  if (same_origin | google_fonts | twitch_cover ) {
     event.respondWith(
       caches.match(event.request).then(cachedResponse => {
-        console.log(eltelt);
+        
         if (cachedResponse) {
-          eltelt = aktualisido() - timestamp(cachedResponse.headers.get('Date'));
+          /*eltelt = aktualisido() - timestamp(cachedResponse.headers.get('Date'));*/
 
-          if (eltelt < 700) {
+          /*if (eltelt < 700) {*/
             return cachedResponse;
-          }
+          /*}*/
         }
 
         return caches.open(RUNTIME).then(cache => {
@@ -86,7 +90,7 @@ self.addEventListener('fetch', event => {
             });
           });
         });
-      }).catch(function () { return caches.match('mm.html');})    
+      }) /*.catch(function () { return caches.match('mm.html');})*/
     );
   }
 })
