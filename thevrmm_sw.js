@@ -61,6 +61,8 @@ self.addEventListener('fetch', event => {
         if (cachedResponse) {
           return cachedResponse;
           console.log('Cache lejárati idő:', event.request.headers.last-modified);
+          console.log('nem működik a fenti vagy nem lépbeide?');
+          console.log(cachedResponse);
         }
         
         return caches.open(RUNTIME).then(cache => {
