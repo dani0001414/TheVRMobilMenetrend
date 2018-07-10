@@ -68,8 +68,7 @@ self.addEventListener('activate', event => {
   );
 });
 
-//ifdate changes
-
+var eltelt, visszadottertek;
 // The fetch handler serves responses for same-origin resources from a cache.
 // If no response is found, it populates the runtime cache with the response
 // from the network before returning it to the page.
@@ -84,17 +83,21 @@ self.addEventListener('fetch', event => {
     event.respondWith(
       caches.match(event.request).then(cachedResponse => {
         if (cachedResponse) {
-          
+          cache.match('mm.html').then(function (response) {
+            visszadottertek = response.headers.get('Date');
+          });
+          eltelt = current_timestamp() - timestamp(visszadottertek);
           if (twitch_cover) {
-            
-            console.log('kep ido:', cachedResponse.headers.get('Last-Modified'));
+            console.log('elteltmásodpercek:', event.request.url);
+            console.log('kep ido:', idoke);
             caches.open(RUNTIME).then(function (cache) {
-              cache.delete(event.request.url).then(function(response) {
-               //valami
+              cache.delete(event.request.url).then(function (response) {
+                //valami
               });
             })
+            console.log('elteltmásodpercek:', eltelt);
           }
-          
+
 
 
           return cachedResponse;
