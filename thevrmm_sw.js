@@ -60,8 +60,9 @@ self.addEventListener('fetch', event => {
       caches.match(event.request).then(cachedResponse => {
         if (cachedResponse) {
           return cachedResponse;
+          console.log('Cache lejárati idő:', event.request.headers.last-modified);
         }
-
+        
         return caches.open(RUNTIME).then(cache => {
           return fetch(event.request).then(response => {
             // Put a copy of the response in the runtime cache.
