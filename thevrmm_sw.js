@@ -50,6 +50,13 @@ self.addEventListener('activate', event => {
   );
 });
 
+function timestamp(b) {
+	var utcDate = b;
+	var localDate = new Date(utcDate);
+	var localDate = localDate.getTime() / 1000;
+	return localDate;
+}
+
 // The fetch handler serves responses for same-origin resources from a cache.
 // If no response is found, it populates the runtime cache with the response
 // from the network before returning it to the page.
@@ -61,7 +68,7 @@ self.addEventListener('fetch', event => {
         if (cachedResponse) {
           console.log('header:', event.request.headers.get('Expires'));
           console.log(cachedResponse);
-          console.log(cachedResponse.headers.get('Date'));
+          console.log(timestamp(cachedResponse.headers.get('Date')));
           return cachedResponse;
         }
         
