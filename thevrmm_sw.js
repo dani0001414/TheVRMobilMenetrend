@@ -61,14 +61,13 @@ self.addEventListener('activate', event => {
 
 
 const currentCaches = [PRECACHE, RUNTIME];
-    caches.keys().then(cacheNames => {
-      console.log(cacheNames);
-      return cacheNames.filter(cacheName => !currentCaches.includes(cacheName));
-    }).then(cachesToDelete => {
-      return Promise.all(cachesToDelete.map(cacheToDelete => {
-        return caches.delete(cacheToDelete);
-      }));
-    })
+caches.keys().then(cacheNames => {
+  return cacheNames.filter(cacheName => !currentCaches.includes(cacheName));
+}).then(cachesToDelete => {
+  return Promise.all(cachesToDelete.map(cacheToDelete => {
+    return caches.delete(cacheToDelete);
+  }));
+})
     
 
 // The fetch handler serves responses for same-origin resources from a cache.
