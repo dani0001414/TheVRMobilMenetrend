@@ -1,5 +1,5 @@
 ﻿<html>
-<link rel="manifest" href="https://dani0001414.github.io/TheVRMobilMenetrend/manifest.webmanifest">
+<link rel="manifest" href="manifest.webmanifest">
 <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 <style type='text/css'>
   @font-face {
@@ -365,7 +365,7 @@
   if ('serviceWorker' in navigator) {
     // Register a service worker hosted at the root of the
     // site using the default scope.
-    navigator.serviceWorker.register('https://dani0001414.github.io/TheVRMobilMenetrend/thevrmm_sw.js').then(function (registration) {
+    navigator.serviceWorker.register('thevrmm_sw.js').then(function (registration) {
       console.log('Service worker registration succeeded:', registration);
     }).catch(function (error) {
       console.log('Service worker registration failed:', error);
