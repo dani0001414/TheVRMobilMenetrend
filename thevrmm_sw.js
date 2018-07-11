@@ -27,7 +27,8 @@ function date() {
 const version = "v"+date();
 const PRECACHE = 'precache-' + version;
 const RUNTIME = 'runtime' + version;
-
+console.log(PRECACHE);
+console.log(RUNTIME);
 // A list of local resources we always want to be cached.
 const PRECACHE_URLS = [
   'mm.html',
@@ -61,14 +62,14 @@ self.addEventListener('activate', event => {
 
 const currentCaches = [PRECACHE, RUNTIME];
     caches.keys().then(cacheNames => {
-      
+      console.log(cacheNames);
       return cacheNames.filter(cacheName => !currentCaches.includes(cacheName));
     }).then(cachesToDelete => {
       return Promise.all(cachesToDelete.map(cacheToDelete => {
         return caches.delete(cacheToDelete);
       }));
     })
-    console.log(caches.keys());
+    
 
 // The fetch handler serves responses for same-origin resources from a cache.
 // If no response is found, it populates the runtime cache with the response
