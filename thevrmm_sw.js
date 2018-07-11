@@ -33,7 +33,6 @@ console.log(RUNTIME);
 const PRECACHE_URLS = [
   'mm.html',
   'https://i.imgur.com/5dZn6sc.png',
-  '',
 ];
 
 // The install handler takes care of precaching the resources we always need.
@@ -79,8 +78,9 @@ self.addEventListener('fetch', event => {
   var google_fonts = event.request.url.startsWith('https://fonts');
   var twitch_cover = event.request.url.startsWith('https://static-cdn.jtvnw.net/twitch-event');
   var imgur = event.request.url.startsWith('https://i.imgur.com/9KP46NF.png');
+  var javascript = event.request.url.startsWith('https://dani0001414.github.io/TheVRMobilMenetrend/javascript_code.js');
 
-  if (same_origin | google_fonts | imgur | twitch_cover) {
+  if (same_origin | google_fonts | imgur | twitch_cover | javascript) {
     event.respondWith(
       caches.match(event.request).then(cachedResponse => {
         if (cachedResponse) {
