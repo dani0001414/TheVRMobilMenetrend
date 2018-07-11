@@ -78,7 +78,7 @@ self.addEventListener('fetch', event => {
   var google_fonts = event.request.url.startsWith('https://fonts');
   var twitch_cover = event.request.url.startsWith('https://static-cdn.jtvnw.net/twitch-event');
   var imgur = event.request.url.startsWith('https://i.imgur.com/9KP46NF.png');
-  var javascript = event.request.url.startsWith('https://dani0001414.github.io/TheVRMobilMenetrend/javascript_code.js');
+  var javascript = event.request.url.startsWith('https://www.googletagmanager.com/gtag/js?id=UA-121876941-1');
 
   if (same_origin | google_fonts | imgur | twitch_cover | javascript) {
     event.respondWith(
