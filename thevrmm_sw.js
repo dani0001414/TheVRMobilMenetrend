@@ -83,6 +83,7 @@ self.addEventListener('fetch', event => {
   var javascript = event.request.url.startsWith('https://dani0001414.github.io/TheVRMobilMenetrend/javascript_code.js');
   var cached_time = null;
   var cached_time_catch = false;
+  var time;
 
   if (same_origin | google_fonts | imgur | twitch_cover | javascript) {
     event.respondWith(
