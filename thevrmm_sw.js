@@ -92,18 +92,14 @@ self.addEventListener('fetch', event => {
       caches.match(event.request).then(cachedResponse => {
         if (cachedResponse) {
           time = cachedResponse.headers.get("Date");
-          var nan_id = !isNaN(time);
-          console.log('ido nem if ágban:', time);
           if (time != null) {
             cached_time = timestamp(time);
             time = aktualisido() - cached_time;
             console.log('ido:', time);
-            if (200 < time) {
+            if (432000 < time) {
               trimCache(PRECACHE, 1);
               trimCache(RUNTIME, 1);
-              console.log('Sgadf:', i);
             }
-
           }
           return cachedResponse;
         }
@@ -112,7 +108,6 @@ self.addEventListener('fetch', event => {
           return fetch(event.request).then(response => {
             // Put a copy of the response in the runtime cache.
             return cache.put(event.request, response.clone()).then(() => {
-
               return response;
             });
           });
