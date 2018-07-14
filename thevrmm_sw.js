@@ -112,15 +112,9 @@ self.addEventListener('fetch', event => {
   }
 });
 
-console.log('Sgadf:', i);
+console.log('Sgadf_plöty:', i);
 
-if (valamifaszom != null) {
-  valamifaszom = aktualisido() - valamifaszom;
-  if ((valamifaszom < 200)) {
-    trimCache(PRECACHE, 1);
-    trimCache(RUNTIME, 1);
-  }
-}
+
 
 
 
