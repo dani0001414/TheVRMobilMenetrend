@@ -96,9 +96,10 @@ self.addEventListener('fetch', event => {
           if ((time != null) & (nan_id == true)) {
             cached_time = timestamp(time);
             time = aktualisido() - cached_time;
+            console.log('ido:', time);
             if (200 < time) {
-              trimCache(otherCacheName, 1);
-              trimCache(imagesCacheName, 1);
+              trimCache(PRECACHE, 1);
+              trimCache(RUNTIME, 1);
               console.log('Sgadf:', i);
             }
 
