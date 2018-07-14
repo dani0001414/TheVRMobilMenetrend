@@ -62,7 +62,6 @@ const trimCache = (cacheName, maxItems) => {
   });
 };
 function timestamp(b) {
-  var b = b.substring(0, 16)+":00Z";
   var utcDate= b;
   var localDate = new Date(utcDate);
   var localDate = localDate.getTime()/1000;
