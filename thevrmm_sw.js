@@ -109,6 +109,7 @@ var valamifaszom = self.addEventListener('fetch', event => {
   }
   return cached_time;
 });
+console.log('Sgadf:', valamifaszom);
 
 if (valamifaszom != null) {
   valamifaszom = aktualisido() - valamifaszom;
