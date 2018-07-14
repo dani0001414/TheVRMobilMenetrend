@@ -75,6 +75,7 @@ var time;
 // The fetch handler serves responses for same-origin resources from a cache.
 // If no response is found, it populates the runtime cache with the response
 // from the network before returning it to the page.
+i=0;
 self.addEventListener('fetch', event => {
   // Skip cross-origin requests, like those for Google Analytics.
   var same_origin = event.request.url.startsWith(self.location.origin);
@@ -84,7 +85,7 @@ self.addEventListener('fetch', event => {
   var javascript = event.request.url.startsWith('https://dani0001414.github.io/TheVRMobilMenetrend/javascript_code.js');
   var cached_time = null;
   var cached_time_catch = false;
-
+  i++;
 
   if (same_origin | google_fonts | imgur | twitch_cover | javascript) {
     event.respondWith(
@@ -107,7 +108,7 @@ self.addEventListener('fetch', event => {
         });
       })
     );
-    console.log('Sgadf:', "valamifaszom");
+    console.log('Sgadf:', i);
   }
 });
 
