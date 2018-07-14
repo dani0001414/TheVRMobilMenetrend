@@ -1,5 +1,5 @@
 ﻿<html>
-<link rel="manifest" href="https://dani0001414.github.io/TheVRMobilMenetrend/manifest.webmanifest">
+<link rel="manifest" href="manifest.webmanifest">
 <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 <style type='text/css'>
   @font-face {
@@ -97,7 +97,7 @@
 <meta charset="utf-8">
 
 <head>
-  <script id="main_js" type="text/javascript" src="javascript_code.js"></script>
+  <script id="main_js" type="text/javascript" src="https://dani0001414.github.io/TheVRMobilMenetrend/javascript_code.js"></script>
 </head>
 
 <body link="grey" vlink="grey" style="font-family:'Roboto', sans-serif; background: #0e0c13; height:100%; color: #c3c1c8">
@@ -361,19 +361,32 @@
   </center>
 </body>
 <script>
+  function clean() {
+    var d = new Date();
+    var honapnap = ["00", "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46", "47", "48", "49", "50", "51", "52", "53", "54", "55", "56", "57", "58", "59"];
+    var dat = honapnap[d.getDate()];
+    dat = dat / 5;
+    var dat_fixed = dat.toFixed(0);
+    var clean = false;
+    if ((dat_fixed - dat) == 0) { clean = true; };
+    return clean;
+  }
 
   if ('serviceWorker' in navigator) {
-    // Register a service worker hosted at the root of the
+    navigator.serviceWorker.register('/serviceworker.js');
     if (navigator.serviceWorker.controller) {
-    console.log('This page is currently controlled by:',
-      navigator.serviceWorker.controller);
-  } else {
-    console.log('This page is not currently controlled ' +
-      'by a service worker.');
+      navigator.serviceWorker.controller.postMessage({ 'command': clean() });
+      console.log('Cleaning status:', clean());
+    }
   }
-    // site using the default scope.
+
+  if ('serviceWorker' in navigator) {
     navigator.serviceWorker.register('thevrmm_sw.js').then(function (registration) {
       console.log('Service worker registration succeeded:', registration);
+
+      if (navigator.serviceWorker.controller) {
+        navigator.serviceWorker.controller.postMessage({ 'command': 'trimCache' });
+      }
     }).catch(function (error) {
       console.log('Service worker registration failed:', error);
     });
