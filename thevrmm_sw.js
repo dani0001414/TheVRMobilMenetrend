@@ -63,8 +63,8 @@ const trimCache = (cacheName, maxItems) => {
 
 self.addEventListener('message', event => {
   if(event.data.command == true) {
-    trimCache(PRECACHE, 50);
-    trimCache(RUNTIME, 25);
+    trimCache(PRECACHE, 4);
+    trimCache(RUNTIME, 2);
     console.log("töröl");
   }
 });
