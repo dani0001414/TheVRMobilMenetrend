@@ -91,7 +91,8 @@ var valamifaszom = self.addEventListener('fetch', event => {
       caches.match(event.request).then(cachedResponse => {
         if (cachedResponse) {
           time = cachedResponse.headers.get("Date");
-          if (time != null) { cached_time = timestamp(time); }
+          var nan_id = !isNaN(time);
+          if ((time != null)&(nan_id == true)) { cached_time = timestamp(time); }
           return cachedResponse;
         }
         
