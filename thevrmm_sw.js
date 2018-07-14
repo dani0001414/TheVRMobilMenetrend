@@ -91,7 +91,7 @@ self.addEventListener('fetch', event => {
       caches.match(event.request).then(cachedResponse => {
         if (cachedResponse) {
           time = cachedResponse.headers.get("Date");
-          if (time != null) { cached_time = time; }
+          if (time != null) { cached_time = timestamp(time); }
           return cachedResponse;
         }
         
@@ -105,9 +105,8 @@ self.addEventListener('fetch', event => {
         });
       })
     );
-    console.log('hmm:', time);
-
   }
+  console.log('hmm:', time);
   if (time != null) {
     time = aktualisido() - time;
     if ((time < 200)) {
