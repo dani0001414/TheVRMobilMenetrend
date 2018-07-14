@@ -86,7 +86,7 @@ self.addEventListener('fetch', event => {
           time = cachedResponse.headers.get("Date");
           console.log('date:', timestamp(time));
           
-          console.log('date:', cachedResponse);
+          console.log('date:', cachedResponse.url);
           
           return cachedResponse;
           
