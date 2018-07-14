@@ -78,9 +78,11 @@ self.addEventListener('fetch', event => {
     event.respondWith(
       caches.match(event.request).then(cachedResponse => {
         if (cachedResponse) {
-          return cachedResponse;
           time = cachedResponse.headers.get("Date");
           console.log('date:', time);
+          
+          return cachedResponse;
+          
         }
 
         return caches.open(RUNTIME).then(cache => {
