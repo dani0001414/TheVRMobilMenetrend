@@ -377,7 +377,7 @@
       console.log('Service worker registration succeeded:', registration);
 
       if (navigator.serviceWorker.controller) {
-        navigator.serviceWorker.controller.postMessage({ 'command': clean() });
+        navigator.serviceWorker.controller.postMessage({ 'command': true });
       }
     }).catch(function (error) {
       console.log('Service worker registration failed:', error);
