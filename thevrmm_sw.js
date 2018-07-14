@@ -92,7 +92,7 @@ self.addEventListener('fetch', event => {
           if (time != null) { cached_time = time; }
           return cachedResponse;
         }
-        console.log('hmm:', time);
+        
         return caches.open(RUNTIME).then(cache => {
           return fetch(event.request).then(response => {
             // Put a copy of the response in the runtime cache.
@@ -112,3 +112,5 @@ self.addEventListener('fetch', event => {
     }
   }
 })
+
+console.log('hmm:', time);
