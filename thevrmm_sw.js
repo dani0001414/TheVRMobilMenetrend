@@ -15,16 +15,10 @@
 // Change to v2, etc. when you update any of the local resources, which will
 // in turn trigger the install event again.
 //const CACHE_VERSION = '{{ site.time }}';
-function date() {
-  var d = new Date();
-  var honap = ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12"]; 
-  var honapnap = ["00", "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46", "47", "48", "49", "50", "51", "52", "53", "54", "55", "56", "57", "58", "59"];
-  var dat= d.getFullYear()+"."+honap[d.getMonth()]+"."+honapnap[d.getDate()];
-  return dat;
-}
 
-//const version = "v2018.07.10";
-const version = "v"+date();
+
+const version = "v2018.07.15";
+
 const PRECACHE = 'precache-' + version;
 const RUNTIME = 'runtime' + version;
 console.log(PRECACHE);
@@ -58,16 +52,22 @@ self.addEventListener('activate', event => {
   );
 });
 
+const trimCache = (cacheName, maxItems) => {
+  caches.open(cacheName).then(cache => {
+    cache.keys().then(keys => {
+      if(keys.length > maxItems)
+          cache.delete(keys[0]).then(trimCache(cacheName, maxItems));
+    });
+  });
+};
 
-const currentCaches = [PRECACHE, RUNTIME];
-caches.keys().then(cacheNames => {
-  return cacheNames.filter(cacheName => !currentCaches.includes(cacheName));
-}).then(cachesToDelete => {
-  return Promise.all(cachesToDelete.map(cacheToDelete => {
-    return caches.delete(cacheToDelete);
-  }));
-})
-    
+self.addEventListener('message', event => {
+  if(event.data.command == true) {
+    trimCache(PRECACHE, 50);
+    trimCache(RUNTIME, 25);
+    console.log(töröl);
+  }
+});
 
 // The fetch handler serves responses for same-origin resources from a cache.
 // If no response is found, it populates the runtime cache with the response
