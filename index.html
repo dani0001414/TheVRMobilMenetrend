@@ -373,19 +373,11 @@
   }
 
   if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('/serviceworker.js');
-    if (navigator.serviceWorker.controller) {
-      navigator.serviceWorker.controller.postMessage({ 'command': clean() });
-      console.log('Cleaning status:', clean());
-    }
-  }
-
-  if ('serviceWorker' in navigator) {
     navigator.serviceWorker.register('thevrmm_sw.js').then(function (registration) {
       console.log('Service worker registration succeeded:', registration);
 
       if (navigator.serviceWorker.controller) {
-        navigator.serviceWorker.controller.postMessage({ 'command': 'trimCache' });
+        navigator.serviceWorker.controller.postMessage({ 'command': clean() });
       }
     }).catch(function (error) {
       console.log('Service worker registration failed:', error);
