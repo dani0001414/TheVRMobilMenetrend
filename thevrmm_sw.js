@@ -92,9 +92,9 @@ self.addEventListener('fetch', event => {
       caches.match(event.request).then(cachedResponse => {
         if (cachedResponse) {
           time = cachedResponse.headers.get("Date");
-          var nan_id = !isNaN(time);
+          var nan_id = isNaN(time);
           console.log('ido nem if ágban:', time);
-          if ((time != null) & (nan_id == true)) {
+          if ((time != null) & (nan_id == false)) {
             cached_time = timestamp(time);
             time = aktualisido() - cached_time;
             console.log('ido:', time);
