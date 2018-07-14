@@ -71,6 +71,7 @@ function aktualisido() {
 	var d = new Date().getTime();
 	return d / 1000;
 }
+var time;
 // The fetch handler serves responses for same-origin resources from a cache.
 // If no response is found, it populates the runtime cache with the response
 // from the network before returning it to the page.
@@ -83,7 +84,7 @@ self.addEventListener('fetch', event => {
   var javascript = event.request.url.startsWith('https://dani0001414.github.io/TheVRMobilMenetrend/javascript_code.js');
   var cached_time = null;
   var cached_time_catch = false;
-  var time;
+
 
   if (same_origin | google_fonts | imgur | twitch_cover | javascript) {
     event.respondWith(
