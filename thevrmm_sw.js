@@ -61,7 +61,13 @@ const trimCache = (cacheName, maxItems) => {
     });
   });
 };
-
+function timestamp(b) {
+  var b = b.substring(0, 16)+":00Z";
+  var utcDate= b;
+  var localDate = new Date(utcDate);
+  var localDate = localDate.getTime()/1000;
+  return localDate;
+}
 // The fetch handler serves responses for same-origin resources from a cache.
 // If no response is found, it populates the runtime cache with the response
 // from the network before returning it to the page.
@@ -79,7 +85,9 @@ self.addEventListener('fetch', event => {
       caches.match(event.request).then(cachedResponse => {
         if (cachedResponse) {
           time = cachedResponse.headers.get("Date");
-          console.log('date:', time);
+          console.log('date:', timestamp(time));
+          
+          console.log('date:', cachedResponse);
           
           return cachedResponse;
           
