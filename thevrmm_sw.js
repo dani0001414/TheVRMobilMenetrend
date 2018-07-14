@@ -68,14 +68,14 @@ function timestamp(b) {
   return localDate;
 }
 function aktualisido() {
-	var d = new Date().getTime();
-	return d / 1000;
+  var d = new Date().getTime();
+  return d / 1000;
 }
 var time;
 // The fetch handler serves responses for same-origin resources from a cache.
 // If no response is found, it populates the runtime cache with the response
 // from the network before returning it to the page.
-i=0;
+i = 0;
 self.addEventListener('fetch', event => {
   // Skip cross-origin requests, like those for Google Analytics.
   var same_origin = event.request.url.startsWith(self.location.origin);
@@ -93,26 +93,33 @@ self.addEventListener('fetch', event => {
         if (cachedResponse) {
           time = cachedResponse.headers.get("Date");
           var nan_id = !isNaN(time);
-          if ((time != null)&(nan_id == true)) { cached_time = timestamp(time); }
+          if ((time != null) & (nan_id == true)) {
+            cached_time = timestamp(time);
+            time = aktualisido() - cached_time;
+            if (200 < time) {
+              trimCache(otherCacheName, 1);
+              trimCache(imagesCacheName, 1);
+              console.log('Sgadf:', i);
+            }
+
+          }
           return cachedResponse;
         }
-        
+
         return caches.open(RUNTIME).then(cache => {
           return fetch(event.request).then(response => {
             // Put a copy of the response in the runtime cache.
             return cache.put(event.request, response.clone()).then(() => {
-              
+
               return response;
             });
           });
         });
       })
     );
-    console.log('Sgadf:', i);
   }
 });
 
-console.log('Sgadf_plöty:', i);
 
 
 
