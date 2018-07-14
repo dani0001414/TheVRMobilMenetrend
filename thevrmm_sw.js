@@ -55,17 +55,21 @@ self.addEventListener('activate', event => {
 const trimCache = (cacheName, maxItems) => {
   caches.open(cacheName).then(cache => {
     cache.keys().then(keys => {
-      if(keys.length > maxItems)
-          cache.delete(keys[0]).then(trimCache(cacheName, maxItems));
+      if (keys.length > maxItems)
+        cache.delete(keys[0]).then(trimCache(cacheName, maxItems));
 
     });
   });
 };
 function timestamp(b) {
-  var utcDate= b;
+  var utcDate = b;
   var localDate = new Date(utcDate);
-  var localDate = localDate.getTime()/1000;
+  var localDate = localDate.getTime() / 1000;
   return localDate;
+}
+function aktualisido() {
+	var d = new Date().getTime();
+	return d / 1000;
 }
 // The fetch handler serves responses for same-origin resources from a cache.
 // If no response is found, it populates the runtime cache with the response
@@ -77,19 +81,16 @@ self.addEventListener('fetch', event => {
   var twitch_cover = event.request.url.startsWith('https://static-cdn.jtvnw.net/twitch-event');
   var imgur = event.request.url.startsWith('https://i.imgur.com/9KP46NF.png');
   var javascript = event.request.url.startsWith('https://dani0001414.github.io/TheVRMobilMenetrend/javascript_code.js');
-  var time;
+  var cached_time = null;
+  var cached_time_catch = false;
 
   if (same_origin | google_fonts | imgur | twitch_cover | javascript) {
     event.respondWith(
       caches.match(event.request).then(cachedResponse => {
         if (cachedResponse) {
           time = cachedResponse.headers.get("Date");
-          console.log('date:', timestamp(time));
-          
-          console.log('date:', cachedResponse.url);
-          
+          if (time != null) { cached_time = time; }
           return cachedResponse;
-          
         }
 
         return caches.open(RUNTIME).then(cache => {
@@ -102,5 +103,12 @@ self.addEventListener('fetch', event => {
         });
       })
     );
+  }
+  if (time != null) {
+    time = aktualisido() - time;
+    if ((time < 200)) {
+      trimCache(PRECACHE, 1);
+      trimCache(RUNTIME, 1);
+    }
   }
 })
