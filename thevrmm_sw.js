@@ -114,4 +114,3 @@ self.addEventListener('fetch', event => {
   }
 })
 
-console.log('hmm:', time);
