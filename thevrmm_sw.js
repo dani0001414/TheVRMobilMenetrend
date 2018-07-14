@@ -65,7 +65,7 @@ self.addEventListener('message', event => {
   if(event.data.command == true) {
     trimCache(PRECACHE, 4);
     trimCache(RUNTIME, 2);
-    console.log("töröl");
+    console.log(currentCaches);
   }
 });
 
