@@ -112,10 +112,4 @@ self.addEventListener('fetch', event => {
 });
 
 
-if (valamifaszom != null) {
-  valamifaszom = aktualisido() - valamifaszom;
-  if ((valamifaszom < 200)) {
-    trimCache(PRECACHE, 1);
-    trimCache(RUNTIME, 1);
-  }
-}
+
