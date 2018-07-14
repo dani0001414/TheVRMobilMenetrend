@@ -57,17 +57,10 @@ const trimCache = (cacheName, maxItems) => {
     cache.keys().then(keys => {
       if(keys.length > maxItems)
           cache.delete(keys[0]).then(trimCache(cacheName, maxItems));
+
     });
   });
 };
-
-self.addEventListener('message', event => {
-  if(event.data.command == true) {
-    trimCache(PRECACHE, 4);
-    trimCache(RUNTIME, 2);
-    console.log(cacheName);
-  }
-});
 
 // The fetch handler serves responses for same-origin resources from a cache.
 // If no response is found, it populates the runtime cache with the response
@@ -79,12 +72,15 @@ self.addEventListener('fetch', event => {
   var twitch_cover = event.request.url.startsWith('https://static-cdn.jtvnw.net/twitch-event');
   var imgur = event.request.url.startsWith('https://i.imgur.com/9KP46NF.png');
   var javascript = event.request.url.startsWith('https://dani0001414.github.io/TheVRMobilMenetrend/javascript_code.js');
+  var time;
 
   if (same_origin | google_fonts | imgur | twitch_cover | javascript) {
     event.respondWith(
       caches.match(event.request).then(cachedResponse => {
         if (cachedResponse) {
           return cachedResponse;
+          time = cachedResponse.headers.get("Date");
+          console.log('date:', time);
         }
 
         return caches.open(RUNTIME).then(cache => {
