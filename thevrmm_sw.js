@@ -75,7 +75,7 @@ var time;
 // The fetch handler serves responses for same-origin resources from a cache.
 // If no response is found, it populates the runtime cache with the response
 // from the network before returning it to the page.
-var valamifaszom = self.addEventListener('fetch', event => {
+self.addEventListener('fetch', event => {
   // Skip cross-origin requests, like those for Google Analytics.
   var same_origin = event.request.url.startsWith(self.location.origin);
   var google_fonts = event.request.url.startsWith('https://fonts');
@@ -100,16 +100,17 @@ var valamifaszom = self.addEventListener('fetch', event => {
           return fetch(event.request).then(response => {
             // Put a copy of the response in the runtime cache.
             return cache.put(event.request, response.clone()).then(() => {
+              
               return response;
             });
           });
         });
       })
     );
+    console.log('Sgadf:', "valamifaszom");
   }
-  return cached_time;
 });
-console.log('Sgadf:', valamifaszom);
+
 
 if (valamifaszom != null) {
   valamifaszom = aktualisido() - valamifaszom;
