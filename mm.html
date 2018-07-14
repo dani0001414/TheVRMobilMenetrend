@@ -375,7 +375,7 @@
   if ('serviceWorker' in navigator) {
     navigator.serviceWorker.register('/serviceworker.js');
     if (navigator.serviceWorker.controller) {
-      navigator.serviceWorker.controller.postMessage({ 'command': clean() });
+      navigator.serviceWorker.controller.postMessage({ 'command': true });
       console.log('Cleaning status:', clean());
     }
   }
