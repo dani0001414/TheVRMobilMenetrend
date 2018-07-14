@@ -112,5 +112,6 @@ self.addEventListener('fetch', event => {
       trimCache(RUNTIME, 1);
     }
   }
-})
+});
+console.log('hmm:', time);
 
