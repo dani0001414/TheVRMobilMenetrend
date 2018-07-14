@@ -105,6 +105,8 @@ self.addEventListener('fetch', event => {
         });
       })
     );
+    console.log('hmm:', time);
+
   }
   if (time != null) {
     time = aktualisido() - time;
@@ -114,5 +116,4 @@ self.addEventListener('fetch', event => {
     }
   }
 });
-console.log('hmm:', time);
 
