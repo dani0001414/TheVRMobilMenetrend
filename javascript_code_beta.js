@@ -361,10 +361,40 @@ function EventsArray3(data) {
 function HtmlStart() {
 
 	currenttime = CurrentTime();
-	var streamEnd, streamStart;
+	var cachedStreamStart, cachedTitles,k,l,m,n;
+	var titles = [];
+	var id = [];
+	var cachedStreamStart = [];
+	var cachedStreamEnd = [];
+	var cachedTitles = [];
+	var streamStart = [];
+	var streamEnd = [];
+	var newEventsPosition = [];
+	var changedTimePosition = [];
+	var changedTitlePosition = [];
+	var changedAllPosition = [];
+
 
 	for (var i = 0; i < eventsLength; i++) {
-		
+		streamStart = Timestamp(events[i].node.startAt);
+		streamEnd =  Timestamp(events[i].node.endAt);
+	}
+
+	//cached variables
+	var cachedStreamStart = JSON.parse(getCookie("cached_stream_start"));                        //Az előző menetrendi elemek idejét nyitja meg egy tömbbe.
+	var cachedTitles = JSON.parse(getCookie("cached_titles"));                         //Az előző memnetrendi elemek címét nyitja meg egy tömbe.
+	var cachedIDs = JSON.parse(getCookie("cached_ids"));
+	//var cachedStreamEnd = JSON.parse(getCookie("thvr_ese_v_c"));
+
+	if ((cachedStreamStart.length == 0)) {
+		cachedStreamStart = streamStartArray;
+		cachedTitles = titles;
+		cachedIDs = id;
+		//cachedStreamEnd = streamEnd;
+	}
+
+	for (var i = 0; i < eventsLength; i++) {
+
 		if (eventsLength > 1) {
 			if ((currenttime > stramStartFirstElement) & (i == 0)) {
 				i = 1;
@@ -373,32 +403,39 @@ function HtmlStart() {
 			stramStartFirstElement = Timestamp(events[0].node.endAt) + 7200;
 			streamEndFirstElement = Timestamp(events[0].node.endAt) + 7200;
 		}
-//////
+
+		var titleId = i + "_cim";
+		var coverId = i + "_cover";
+		var timeId = i + "_time";
+		var brId = i + "_br";
+
+		titles[i] = events[i].node.title;
+		id[i] = events[i].node.id;
+
+
+
+		//////
 		var changedTitleCount = 0, changedTimeCount = 0, changeAllCount = 0;
 		existElementCount = 0;
 
-		for (j = 0; j < cachedStartMinutes.length; j++) {
+		for (j = 0; j < cachedStreamStart.length; j++) {
 			if ((cachedIDs[j] == id[i])) {
 				existElementCount++;                                                                   //Öszehasonllítja az esemény dátum, idő, és címe alapján, hogy szerepel e már a menetrendben.  
 			}
-			if ((cachedStartDates[j] != startDates[i]) & (titles[i] == cachedTitles[j]) & (cachedIDs[j] == id[i])) {
+			if ((cachedStreamStart[j] != streamStart[i]) & (titles[i] == cachedTitles[j]) & (cachedIDs[j] == id[i])) {
 				changedTimeCount++;                                                                      //Megnézi, hogy talál e olyan eseményt a menetrendben aminek a címe azonos de a dátumát megváltoztatták
 
 			}
-			if ((cachedStartMinutes[j] != startMinutes[i]) & (titles[i] == cachedTitles[j]) & (cachedIDs[j] == id[i])) {
-				changedTimeCount++;                                                                       //Megnézi, hogy talál e olyan eseményt a menetrendben aminek a címe azonos de az időpontját megváltoztatták
-
-			}
-			if ((cachedStartMinutes[j] == startMinutes[i]) & (cachedStartDates[j] == startDates[i]) & (titles[i] != cachedTitles[j]) & (cachedIDs[j] == id[i])) {
+			if ((cachedStreamStart[j] == streamStart[i]) & (titles[i] != cachedTitles[j]) & (cachedIDs[j] == id[i])) {
 				changedTitleCount++;                                                                         //Megnézi, hogy talál e olyan eseményt a menetrendben aminek az időpontja nem változott de a címe igen.
 			}
-			if ((cachedStartMinutes[j] != startMinutes[i]) & (cachedStartDates[j] != startDates[i]) & (titles[i] != cachedTitles[j]) & (cachedIDs[j] == id[i])) {
+			if ((cachedStreamStart[j] != streamStart[i]) & (titles[i] != cachedTitles[j]) & (cachedIDs[j] == id[i])) {
 				changeAllCount++;                                                                         //Megnézi, hogy talál e olyan eseményt a menetrendben aminek az időpontja nem változott de a címe igen.
 			}
-			if ((cachedStartMinutes[j] != startMinutes[i]) & (cachedStartDates[j] == startDates[i]) & (titles[i] != cachedTitles[j]) & (cachedIDs[j] == id[i])) {
+			if ((cachedStreamStart[j] != streamStart[i]) & (titles[i] != cachedTitles[j]) & (cachedIDs[j] == id[i])) {
 				changeAllCount++;                                                                         //Megnézi, hogy talál e olyan eseményt a menetrendben aminek az időpontja nem változott de a címe igen.
 			}
-			if ((cachedStartMinutes[j] == startMinutes[i]) & (cachedStartDates[j] != startDates[i]) & (titles[i] != cachedTitles[j]) & (cachedIDs[j] == id[i])) {
+			if ((cachedStreamStart[j] == streamStart[i]) & (titles[i] != cachedTitles[j]) & (cachedIDs[j] == id[i])) {
 				changeAllCount++;                                                                         //Megnézi, hogy talál e olyan eseményt a menetrendben aminek az időpontja nem változott de a címe igen.
 			}
 		}
@@ -406,15 +443,9 @@ function HtmlStart() {
 		if ((changedTimeCount > 0)) { changedTimePosition[l] = i; l++; }
 		if ((changedTitleCount > 0)) { changedTitlePosition[m] = i; m++; }
 		if ((changeAllCount > 0)) { changedAllPosition[n] = i; n++; }
-////
-		var titleId = i + "_cim";
-		var coverId = i + "_cover";
-		var timeId = i + "_time";
-		var brId = i + "_br";
-		streamEnd = Timestamp(events[i].node.endAt);
-		streamStart = Timestamp(events[i].node.startAt);
+		////
 
-		var elapsed = parseInt((currenttime - streamEnd) / 60, 10);
+		var elapsed = parseInt((currenttime - streamEnd[i]) / 60, 10);
 
 		var cover = events[i].node.imageURL;
 		cover = cover.replace("320", "320");
@@ -451,22 +482,22 @@ function HtmlStart() {
 		document.getElementById(coverId).innerHTML = "<img src=\"" + cover + "\" class=\"aspect__fill\" width=\"320\">";
 		document.getElementById(timeId).innerHTML = startTime[0] + "<br>" + startTime[1] + "-" + endTime[1];
 
-		/*var stream_hossz = streamEnd - streamStart;*/
+		/*var stream_hossz = streamEnd[i] - streamStart[i];*/
 		/*Változtatás: Ha az idő 2400másodpercnél kisebb akkor Premier-ről van szó és átszinezzük.*/
 
 
 
 		/*majd 7200 legyen */
-		var countdownStart = streamStart - currenttime;
+		var countdownStart = streamStart[i] - currenttime;
 		/*A menetrendi idő jelzésének módjának változtatása ha eltérő dátumú kedés és befejezés és ha a stream tovább tart mint a várt*/
-		if ((liveTimestamp < streamEnd + 3000) & (liveTimestamp > streamStart - 3000) & (elapsed > 0) & (startTime[0] == endTime[0])) {
+		if ((liveTimestamp < streamEnd[i] + 3000) & (liveTimestamp > streamStart[i] - 3000) & (elapsed > 0) & (startTime[0] == endTime[0])) {
 			document.getElementById(timeId).innerHTML = startTime[0] + "<br>" + startTime[1] + "-" + endTime[1] + "<font color=\"yellow\"> + " + elapsed + "p</font>";
 		} else if (startTime[0] == endTime[0]) {
-			if ((countdownStart < 7200) & (countdownStart > 0) & (liveStatus != "live")) { Countdown(streamStart); } else { document.getElementById(timeId).innerHTML = startTime[0] + "<br>" + startTime[1] + "-" + endTime[1]; }
-		} else if ((liveTimestamp < streamEnd + 3000) & (liveTimestamp > streamStart - 3000) & (elapsed > 0)) {
+			if ((countdownStart < 7200) & (countdownStart > 0) & (liveStatus != "live")) { Countdown(streamStart[i]); } else { document.getElementById(timeId).innerHTML = startTime[0] + "<br>" + startTime[1] + "-" + endTime[1]; }
+		} else if ((liveTimestamp < streamEnd[i] + 3000) & (liveTimestamp > streamStart[i] - 3000) & (elapsed > 0)) {
 			document.getElementById(timeId).innerHTML = "<div style=\"overflow: hidden; width: 320px;\">    <div style=\"float:left; width: 155px\"><center>" + startTime[0] + "<br>" + startTime[1] + "<font color=\"yellow\"> + " + elapsed + "p</font></center></div>    <div style=\"float:left; margin-left:10px; margin-top:10px\"><center>-</center></div>	<div style=\"overflow: hidden; width: 155px float:right;\"><center>" + endTime[0] + "<br>" + endTime[1] + "</center></div></div>";
 		} else {
-			if ((countdownStart < 7200) & (countdownStart > 0) & (liveStatus != "live")) { Countdown(streamStart); } else { document.getElementById(timeId).innerHTML = "<div style=\"overflow: hidden; width: 320px;\">    <div style=\"float:left; width: 155px\"><center>" + startTime[0] + "<br>" + startTime[1] + "</center></div>    <div style=\"float:left; margin-left:10px; margin-top:10px\"><center>-</center></div>	<div style=\"overflow: hidden; width: 155px float:right;\"><center>" + endTime[0] + "<br>" + endTime[1] + "</center></div></div>"; }
+			if ((countdownStart < 7200) & (countdownStart > 0) & (liveStatus != "live")) { Countdown(streamStart[i]); } else { document.getElementById(timeId).innerHTML = "<div style=\"overflow: hidden; width: 320px;\">    <div style=\"float:left; width: 155px\"><center>" + startTime[0] + "<br>" + startTime[1] + "</center></div>    <div style=\"float:left; margin-left:10px; margin-top:10px\"><center>-</center></div>	<div style=\"overflow: hidden; width: 155px float:right;\"><center>" + endTime[0] + "<br>" + endTime[1] + "</center></div></div>"; }
 		}
 	}
 
@@ -517,7 +548,18 @@ function HtmlStart() {
 	// Get the <span> element that closes the modal
 	span = document.getElementsByClassName("close")[0];
 
+	//////////////cache to cookie////
+	if ((changedTitlePosition.length > 0) | (changedTimePosition.length > 0) | (newEventsPosition.length > 0) | (changedAllPosition.length > 0)) {
+		cachedStreamStart = streamStart;
+		cachedTitles = titles;
+		cachedIDs = id;
+		cachedStreamEnd = streamEnd;
+	}
 
+	createcookie('cachedStreamStart', cachedStreamStart, 365);
+	createcookie('cachedTitles', cachedTitles, 365);
+	createcookie('cachedIDs', cachedIDs, 365);
+	createcookie('cachedStreamEnd', cachedStreamEnd, 365);
 
 }
 
@@ -598,7 +640,7 @@ function createcookie(name, value, days, banner) {
 	}
 	document.cookie = name + "=" + value + expires;
 
-	if (banner == "banner") { document.getElementById("myCookie").style.display = 'none'; } else if (name != "thevrmm_new_feature") { modal_open("cookie_settings"); }
+	if (banner == "banner") { document.getElementById("myCookie").style.display = 'none'; } else if ((name == "thevrmmcookiepolicysagreement")|(name == "thevrmm_theme")) { modal_open("cookie_settings"); }
 	/*Téma választó cookie létrehozásával egyben át is váltjuk az általa képviselt kinézetre*/
 	if (name == "thevrmm_theme") {
 		if (value == "dark") {
