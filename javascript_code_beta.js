@@ -556,7 +556,6 @@ function HtmlStart() {
 			document.getElementById(j).style.border = "1px solid #022e40";
 			document.getElementById(j).style.color = "white";
 			document.getElementById(titleId).innerHTML = "<div style=\"color: #fafbff\" ><img src=\"https://dani0001414.github.io/TheVRMobilMenetrend/new_stream.png\"><br><b>" + events[i].node.title + "</b></div></p>";
-
 		}
 
 		///////
