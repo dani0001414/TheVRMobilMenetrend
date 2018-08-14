@@ -560,8 +560,8 @@ function HtmlStart() {
 			document.getElementById(j).style.color = "white";
 			document.getElementById(titleId).innerHTML = "<div style=\"color: #fafbff\" ><img src=\"https://dani0001414.github.io/TheVRMobilMenetrend/time_stream.png\"><br><b>" + events[j].node.title + "</b></div></p>";
 		}
-		for (i = 0; i < changeAllCount.length; i++) {
-			j = changeAllCount[i];
+		for (i = 0; i < changedAllPosition.length; i++) {
+			j = changedAllPosition[i];
 			var titleId = j + "_cim";
 			document.getElementById(j).style.backgroundColor = "#3f7186";
 			document.getElementById(j).style.border = "1px solid #022e40";
