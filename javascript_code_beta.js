@@ -153,7 +153,7 @@ function dynamicallyLoadScript_content(content) {
 
 function HttpPost(url, callback) {
 	var http = new XMLHttpRequest();
-	/*fromTime = "2018-06-10T14:26:00Z";*/
+	fromTime = "2018-06-10T14:26:00Z";
 	var params = "[{\"variables\":{\"channelLogin\":\"wearethevr\",\"limit\":20,\"before\":null,\"after\":\"" + fromTime + "\",\"sortOrder\":\"ASC\",\"following\":true},\"extensions\":{},\"operationName\":\"EventsPage_EventScheduleQuery\",\"query\":\"query EventsPage_EventScheduleQuery($channelLogin: String!, $limit: Int, $cursor: Cursor, $before: Time, $after: Time, $following: Boolean!, $sortOrder: SortOrder) {  user(login: $channelLogin) {    id    eventLeaves(first: $limit, after: $cursor, criteria: {endsBefore: $before, endsAfter: $after, sortOrder: $sortOrder}) {      pageInfo {        hasNextPage        __typename      }      edges {        cursor        node {          id          self @include(if: $following) {            isFollowing            __typename          }          ... on EventLeaf {            title            startAt            endAt            game {              id              displayName              __typename            }            channel {              id              login              displayName              __typename            }            imageURL(width: 320, height: 180)            __typename          }          __typename        }        __typename      }      __typename    }    __typename  }}\"}]";
 	http.open('POST', url, true);
 	/*kérésküldés*/
