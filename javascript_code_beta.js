@@ -410,10 +410,6 @@ function HtmlStart() {
 		var timeId = i + "_time";
 		var brId = i + "_br";
 
-
-
-
-
 		//////
 		var changedTitleCount = 0, changedTimeCount = 0, changeAllCount = 0;
 		existElementCount = 0;
@@ -554,14 +550,14 @@ function HtmlStart() {
 		cachedTitles = titles;
 		cachedIDs = id;
 		cachedStreamEnd = streamEnd;
-	}
-	if (cachedTitles != titles) {
+
 		createcookie('cachedStreamStart', JSON.stringify(cachedStreamStart), 365);
 		createcookie('cachedTitles', JSON.stringify(cachedTitles), 365);
 		createcookie('cachedIDs', JSON.stringify(cachedIDs), 365);
 		createcookie('cachedStreamEnd', JSON.stringify(cachedStreamEnd), 365);
 	}
 
+	////////////////
 }
 
 function new_features(data) {
