@@ -341,7 +341,7 @@ function EventsArray2(data) {
 function EventsArray3(data) {
 	eventsDescriptions = data;
 	eventsDescriptions = JSON.parse(eventsDescriptions);
-
+	var titleId = i + "_cim";
 	for (var i = 0; i < eventsLength; i++) {
 		if (eventsDescriptions[i].data.event.premiere != null) {
 			if ((eventsDescriptions[i].data.event.premiere.__typename == "Premiere")) {
