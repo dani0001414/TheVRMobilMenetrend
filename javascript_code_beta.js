@@ -361,7 +361,7 @@ function EventsArray3(data) {
 function HtmlStart() {
 
 	currenttime = CurrentTime();
-	var cachedStreamStart, cachedTitles, k, l, m, n;
+	var cachedStreamStart, cachedTitles, k = 0, l = 0, m = 0, n = 0;
 	var titles = [];
 	var id = [];
 	var cachedStreamStart = [];
@@ -376,8 +376,8 @@ function HtmlStart() {
 
 
 	for (var i = 0; i < eventsLength; i++) {
-		streamStart = Timestamp(events[i].node.startAt);
-		streamEnd = Timestamp(events[i].node.endAt);
+		streamStart[i] = Timestamp(events[i].node.startAt);
+		streamEnd[i] = Timestamp(events[i].node.endAt);
 	}
 	var cachedStreamStart = JSON.parse(getCookie("cachedStreamStart"));                        //Az előző menetrendi elemek idejét nyitja meg egy tömbbe.
 	var cachedTitles = JSON.parse(getCookie("cachedTitles"));                         //Az előző memnetrendi elemek címét nyitja meg egy tömbe.
@@ -391,7 +391,6 @@ function HtmlStart() {
 		cachedIDs = id;
 		//cachedStreamEnd = streamEnd;
 		//cached variables
-
 	}
 
 	for (var i = 0; i < eventsLength; i++) {
