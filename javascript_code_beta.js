@@ -382,10 +382,10 @@ function HtmlStart() {
 	var cachedStreamStart = JSON.parse(getCookie("cachedStreamStart"));                        //Az előző menetrendi elemek idejét nyitja meg egy tömbbe.
 	var cachedTitles = JSON.parse(getCookie("cachedTitles"));                         //Az előző memnetrendi elemek címét nyitja meg egy tömbe.
 	var cachedIDs = JSON.parse(getCookie("cachedIDs"));
-	alert(cachedStreamStart.length);
+	
 	//var cachedStreamEnd = JSON.parse(getCookie("thvr_ese_v_c"));
 
-	if ((cachedStreamStart.length == 0) | (cachedTitles.length == 0) | (cachedIDs.length == 0)) {
+	if ((cachedStreamStart == 0) | (cachedTitles == 0) | (cachedIDs == 0)) {
 		cachedStreamStart = streamStart;
 		cachedTitles = titles;
 		cachedIDs = id;
@@ -561,7 +561,7 @@ function HtmlStart() {
 	createcookie('cachedTitles', JSON.stringify(cachedTitles), 365);
 	createcookie('cachedIDs', JSON.stringify(cachedIDs), 365);
 	createcookie('cachedStreamEnd', JSON.stringify(cachedStreamEnd), 365);
-	alert(JSON.stringify(cachedStreamStart));
+	
 
 }
 
