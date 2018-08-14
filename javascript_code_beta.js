@@ -341,8 +341,9 @@ function EventsArray2(data) {
 function EventsArray3(data) {
 	eventsDescriptions = data;
 	eventsDescriptions = JSON.parse(eventsDescriptions);
-	var titleId = i + "_cim";
+	var titleId;
 	for (var i = 0; i < eventsLength; i++) {
+		titleId = i + "_cim";
 		if (eventsDescriptions[i].data.event.premiere != null) {
 			if ((eventsDescriptions[i].data.event.premiere.__typename == "Premiere")) {
 				document.getElementById(i).style.backgroundColor = "#e52e26";
