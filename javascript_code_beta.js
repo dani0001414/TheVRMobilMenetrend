@@ -552,6 +552,7 @@ function HtmlStart() {
 		/////változás szinezés////////
 		for (i = 0; i < newEventsPosition.length; i++) {
 			j = newEventsPosition[i];
+			var titleId = j + "_cim";
 			document.getElementById(j).style.backgroundColor = "#3f7186";
 			document.getElementById(j).style.border = "1px solid #022e40";
 			document.getElementById(j).style.color = "white";
