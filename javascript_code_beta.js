@@ -392,6 +392,10 @@ function HtmlStart() {
 		cachedIDs = id;
 		//cachedStreamEnd = streamEnd;
 		//cached variables
+		createcookie('cachedStreamStart', JSON.stringify(cachedStreamStart), 365);
+		createcookie('cachedTitles', JSON.stringify(cachedTitles), 365);
+		createcookie('cachedIDs', JSON.stringify(cachedIDs), 365);
+		createcookie('cachedStreamEnd', JSON.stringify(cachedStreamEnd), 365);
 	}
 
 	for (var i = 0; i < eventsLength; i++) {
