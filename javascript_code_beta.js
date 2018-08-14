@@ -365,9 +365,7 @@ function HtmlStart() {
 	var cachedStreamStart, cachedTitles, k = 0, l = 0, m = 0, n = 0;
 	var titles = [];
 	var id = [];
-	var cachedStreamStart = [];
 	var cachedStreamEnd = [];
-	var cachedTitles = [];
 	var streamStart = [];
 	var streamEnd = [];
 	var newEventsPosition = [];
@@ -379,6 +377,8 @@ function HtmlStart() {
 	for (var i = 0; i < eventsLength; i++) {
 		streamStart[i] = Timestamp(events[i].node.startAt);
 		streamEnd[i] = Timestamp(events[i].node.endAt);
+		titles[i] = events[i].node.title;
+		id[i] = events[i].node.id;
 	}
 	var cachedStreamStart = JSON.parse(getCookie("cachedStreamStart"));                        //Az előző menetrendi elemek idejét nyitja meg egy tömbbe.
 	var cachedTitles = JSON.parse(getCookie("cachedTitles"));                         //Az előző memnetrendi elemek címét nyitja meg egy tömbe.
@@ -410,8 +410,7 @@ function HtmlStart() {
 		var timeId = i + "_time";
 		var brId = i + "_br";
 
-		titles[i] = events[i].node.title;
-		id[i] = events[i].node.id;
+		
 
 
 
