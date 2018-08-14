@@ -556,10 +556,10 @@ function HtmlStart() {
 		cachedStreamEnd = streamEnd;
 	}
 
-	createcookie('cachedStreamStart', cachedStreamStart, 365);
-	createcookie('cachedTitles', cachedTitles, 365);
-	createcookie('cachedIDs', cachedIDs, 365);
-	createcookie('cachedStreamEnd', cachedStreamEnd, 365);
+	createcookie('cachedStreamStart', JSON.stringify(cachedStreamStart), 365);
+	createcookie('cachedTitles', JSON.stringify(cachedTitles), 365);
+	createcookie('cachedIDs', JSON.stringify(cachedIDs), 365);
+	createcookie('cachedStreamEnd', JSON.stringify(cachedStreamEnd), 365);
 
 }
 
