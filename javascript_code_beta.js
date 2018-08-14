@@ -361,7 +361,7 @@ function EventsArray3(data) {
 function HtmlStart() {
 
 	currenttime = CurrentTime();
-	var cachedStreamStart, cachedTitles,k,l,m,n;
+	var cachedStreamStart, cachedTitles, k, l, m, n;
 	var titles = [];
 	var id = [];
 	var cachedStreamStart = [];
@@ -377,20 +377,21 @@ function HtmlStart() {
 
 	for (var i = 0; i < eventsLength; i++) {
 		streamStart = Timestamp(events[i].node.startAt);
-		streamEnd =  Timestamp(events[i].node.endAt);
+		streamEnd = Timestamp(events[i].node.endAt);
 	}
-
-	//cached variables
-	var cachedStreamStart = JSON.parse(getCookie("cached_stream_start"));                        //Az előző menetrendi elemek idejét nyitja meg egy tömbbe.
-	var cachedTitles = JSON.parse(getCookie("cached_titles"));                         //Az előző memnetrendi elemek címét nyitja meg egy tömbe.
-	var cachedIDs = JSON.parse(getCookie("cached_ids"));
+	var cachedStreamStart = JSON.parse(getCookie("cachedStreamStart"));                        //Az előző menetrendi elemek idejét nyitja meg egy tömbbe.
+	var cachedTitles = JSON.parse(getCookie("cachedTitles"));                         //Az előző memnetrendi elemek címét nyitja meg egy tömbe.
+	var cachedIDs = JSON.parse(getCookie("cachedIDs"));
+	alert(cachedStreamStart.length);
 	//var cachedStreamEnd = JSON.parse(getCookie("thvr_ese_v_c"));
 
-	if ((cachedStreamStart.length == 0)) {
-		cachedStreamStart = streamStartArray;
+	if ((cachedStreamStart.length == 0) | (cachedTitles.length == 0) | (cachedIDs.length == 0)) {
+		cachedStreamStart = streamStart;
 		cachedTitles = titles;
 		cachedIDs = id;
 		//cachedStreamEnd = streamEnd;
+		//cached variables
+
 	}
 
 	for (var i = 0; i < eventsLength; i++) {
@@ -560,6 +561,7 @@ function HtmlStart() {
 	createcookie('cachedTitles', JSON.stringify(cachedTitles), 365);
 	createcookie('cachedIDs', JSON.stringify(cachedIDs), 365);
 	createcookie('cachedStreamEnd', JSON.stringify(cachedStreamEnd), 365);
+	alert(JSON.stringify(cachedStreamStart));
 
 }
 
@@ -640,7 +642,7 @@ function createcookie(name, value, days, banner) {
 	}
 	document.cookie = name + "=" + value + expires;
 
-	if (banner == "banner") { document.getElementById("myCookie").style.display = 'none'; } else if ((name == "thevrmmcookiepolicysagreement")|(name == "thevrmm_theme")) { modal_open("cookie_settings"); }
+	if (banner == "banner") { document.getElementById("myCookie").style.display = 'none'; } else if ((name == "thevrmmcookiepolicysagreement") | (name == "thevrmm_theme")) { modal_open("cookie_settings"); }
 	/*Téma választó cookie létrehozásával egyben át is váltjuk az általa képviselt kinézetre*/
 	if (name == "thevrmm_theme") {
 		if (value == "dark") {
