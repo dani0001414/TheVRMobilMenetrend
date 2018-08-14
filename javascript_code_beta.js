@@ -373,31 +373,31 @@ function HtmlStart() {
 	var changedTitlePosition = [];
 	var changedAllPosition = [];
 
+	if (cookieSettings == 1) {
+		for (var i = 0; i < eventsLength; i++) {
+			streamStart[i] = Timestamp(events[i].node.startAt);
+			streamEnd[i] = Timestamp(events[i].node.endAt);
+			titles[i] = events[i].node.title;
+			id[i] = events[i].node.id;
+		}
+		var cachedStreamStart = JSON.parse(getCookie("cachedStreamStart"));                        //Az előző menetrendi elemek idejét nyitja meg egy tömbbe.
+		var cachedTitles = JSON.parse(getCookie("cachedTitles"));                         //Az előző memnetrendi elemek címét nyitja meg egy tömbe.
+		var cachedIDs = JSON.parse(getCookie("cachedIDs"));
 
-	for (var i = 0; i < eventsLength; i++) {
-		streamStart[i] = Timestamp(events[i].node.startAt);
-		streamEnd[i] = Timestamp(events[i].node.endAt);
-		titles[i] = events[i].node.title;
-		id[i] = events[i].node.id;
+		//var cachedStreamEnd = JSON.parse(getCookie("thvr_ese_v_c"));
+
+		if ((cachedStreamStart == 0) | (cachedTitles == 0) | (cachedIDs == 0)) {
+			cachedStreamStart = streamStart;
+			cachedTitles = titles;
+			cachedIDs = id;
+			//cachedStreamEnd = streamEnd;
+			//cached variables
+			createcookie('cachedStreamStart', JSON.stringify(cachedStreamStart), 365);
+			createcookie('cachedTitles', JSON.stringify(cachedTitles), 365);
+			createcookie('cachedIDs', JSON.stringify(cachedIDs), 365);
+			createcookie('cachedStreamEnd', JSON.stringify(cachedStreamEnd), 365);
+		}
 	}
-	var cachedStreamStart = JSON.parse(getCookie("cachedStreamStart"));                        //Az előző menetrendi elemek idejét nyitja meg egy tömbbe.
-	var cachedTitles = JSON.parse(getCookie("cachedTitles"));                         //Az előző memnetrendi elemek címét nyitja meg egy tömbe.
-	var cachedIDs = JSON.parse(getCookie("cachedIDs"));
-
-	//var cachedStreamEnd = JSON.parse(getCookie("thvr_ese_v_c"));
-
-	if ((cachedStreamStart == 0) | (cachedTitles == 0) | (cachedIDs == 0)) {
-		cachedStreamStart = streamStart;
-		cachedTitles = titles;
-		cachedIDs = id;
-		//cachedStreamEnd = streamEnd;
-		//cached variables
-		createcookie('cachedStreamStart', JSON.stringify(cachedStreamStart), 365);
-		createcookie('cachedTitles', JSON.stringify(cachedTitles), 365);
-		createcookie('cachedIDs', JSON.stringify(cachedIDs), 365);
-		createcookie('cachedStreamEnd', JSON.stringify(cachedStreamEnd), 365);
-	}
-
 	for (var i = 0; i < eventsLength; i++) {
 
 		if (eventsLength > 1) {
@@ -413,38 +413,39 @@ function HtmlStart() {
 		var coverId = i + "_cover";
 		var timeId = i + "_time";
 		var brId = i + "_br";
+		if (cookieSettings == 1) {
+			//////
+			var changedTitleCount = 0, changedTimeCount = 0, changeAllCount = 0;
+			existElementCount = 0;
 
-		//////
-		var changedTitleCount = 0, changedTimeCount = 0, changeAllCount = 0;
-		existElementCount = 0;
 
-		for (j = 0; j < cachedStreamStart.length; j++) {
-			if ((cachedIDs[j] == id[i])) {
-				existElementCount++;                                                                   //Öszehasonllítja az esemény dátum, idő, és címe alapján, hogy szerepel e már a menetrendben.  
-			}
-			if ((cachedStreamStart[j] != streamStart[i]) & (titles[i] == cachedTitles[j]) & (cachedIDs[j] == id[i])) {
-				changedTimeCount++;                                                                      //Megnézi, hogy talál e olyan eseményt a menetrendben aminek a címe azonos de a dátumát megváltoztatták
+			for (j = 0; j < cachedStreamStart.length; j++) {
+				if ((cachedIDs[j] == id[i])) {
+					existElementCount++;                                                                   //Öszehasonllítja az esemény dátum, idő, és címe alapján, hogy szerepel e már a menetrendben.  
+				}
+				if ((cachedStreamStart[j] != streamStart[i]) & (titles[i] == cachedTitles[j]) & (cachedIDs[j] == id[i])) {
+					changedTimeCount++;                                                                      //Megnézi, hogy talál e olyan eseményt a menetrendben aminek a címe azonos de a dátumát megváltoztatták
 
+				}
+				if ((cachedStreamStart[j] == streamStart[i]) & (titles[i] != cachedTitles[j]) & (cachedIDs[j] == id[i])) {
+					changedTitleCount++;                                                                         //Megnézi, hogy talál e olyan eseményt a menetrendben aminek az időpontja nem változott de a címe igen.
+				}
+				if ((cachedStreamStart[j] != streamStart[i]) & (titles[i] != cachedTitles[j]) & (cachedIDs[j] == id[i])) {
+					changeAllCount++;                                                                         //Megnézi, hogy talál e olyan eseményt a menetrendben aminek az időpontja nem változott de a címe igen.
+				}
+				if ((cachedStreamStart[j] != streamStart[i]) & (titles[i] != cachedTitles[j]) & (cachedIDs[j] == id[i])) {
+					changeAllCount++;                                                                         //Megnézi, hogy talál e olyan eseményt a menetrendben aminek az időpontja nem változott de a címe igen.
+				}
+				if ((cachedStreamStart[j] == streamStart[i]) & (titles[i] != cachedTitles[j]) & (cachedIDs[j] == id[i])) {
+					changeAllCount++;                                                                         //Megnézi, hogy talál e olyan eseményt a menetrendben aminek az időpontja nem változott de a címe igen.
+				}
 			}
-			if ((cachedStreamStart[j] == streamStart[i]) & (titles[i] != cachedTitles[j]) & (cachedIDs[j] == id[i])) {
-				changedTitleCount++;                                                                         //Megnézi, hogy talál e olyan eseményt a menetrendben aminek az időpontja nem változott de a címe igen.
-			}
-			if ((cachedStreamStart[j] != streamStart[i]) & (titles[i] != cachedTitles[j]) & (cachedIDs[j] == id[i])) {
-				changeAllCount++;                                                                         //Megnézi, hogy talál e olyan eseményt a menetrendben aminek az időpontja nem változott de a címe igen.
-			}
-			if ((cachedStreamStart[j] != streamStart[i]) & (titles[i] != cachedTitles[j]) & (cachedIDs[j] == id[i])) {
-				changeAllCount++;                                                                         //Megnézi, hogy talál e olyan eseményt a menetrendben aminek az időpontja nem változott de a címe igen.
-			}
-			if ((cachedStreamStart[j] == streamStart[i]) & (titles[i] != cachedTitles[j]) & (cachedIDs[j] == id[i])) {
-				changeAllCount++;                                                                         //Megnézi, hogy talál e olyan eseményt a menetrendben aminek az időpontja nem változott de a címe igen.
-			}
+			if ((existElementCount == 0)) { newEventsPosition[k] = i; k++; }
+			if ((changedTimeCount > 0)) { changedTimePosition[l] = i; l++; }
+			if ((changedTitleCount > 0)) { changedTitlePosition[m] = i; m++; }
+			if ((changeAllCount > 0)) { changedAllPosition[n] = i; n++; }
+			////
 		}
-		if ((existElementCount == 0)) { newEventsPosition[k] = i; k++; }
-		if ((changedTimeCount > 0)) { changedTimePosition[l] = i; l++; }
-		if ((changedTitleCount > 0)) { changedTitlePosition[m] = i; m++; }
-		if ((changeAllCount > 0)) { changedAllPosition[n] = i; n++; }
-		////
-
 		var elapsed = parseInt((currenttime - streamEnd[i]) / 60, 10);
 
 		var cover = events[i].node.imageURL;
@@ -547,27 +548,29 @@ function HtmlStart() {
 
 	// Get the <span> element that closes the modal
 	span = document.getElementsByClassName("close")[0];
-	/////változás szinezés////////
-	for (i = 0; i < newEventsPosition.length; i++) {
-		j = newEventsPosition[i];
-		document.getElementById(j).style.backgroundColor = "#3f7186";
-				document.getElementById(j).style.border = "1px solid #022e40";
-				document.getElementById(j).style.color = "white";
-	}
-	///////
-	//////////////cache to cookie////
-	if ((changedTitlePosition.length > 0) | (changedTimePosition.length > 0) | (newEventsPosition.length > 0) | (changedAllPosition.length > 0)) {
-		cachedStreamStart = streamStart;
-		cachedTitles = titles;
-		cachedIDs = id;
-		cachedStreamEnd = streamEnd;
+	if (cookieSettings == 1) {
+		/////változás szinezés////////
+		for (i = 0; i < newEventsPosition.length; i++) {
+			j = newEventsPosition[i];
+			document.getElementById(j).style.backgroundColor = "#3f7186";
+			document.getElementById(j).style.border = "1px solid #022e40";
+			document.getElementById(j).style.color = "white";
+		}
 
-		createcookie('cachedStreamStart', JSON.stringify(cachedStreamStart), 365);
-		createcookie('cachedTitles', JSON.stringify(cachedTitles), 365);
-		createcookie('cachedIDs', JSON.stringify(cachedIDs), 365);
-		createcookie('cachedStreamEnd', JSON.stringify(cachedStreamEnd), 365);
-	}
+		///////
+		//////////////cache to cookie////
+		if ((changedTitlePosition.length > 0) | (changedTimePosition.length > 0) | (newEventsPosition.length > 0) | (changedAllPosition.length > 0)) {
+			cachedStreamStart = streamStart;
+			cachedTitles = titles;
+			cachedIDs = id;
+			cachedStreamEnd = streamEnd;
 
+			createcookie('cachedStreamStart', JSON.stringify(cachedStreamStart), 365);
+			createcookie('cachedTitles', JSON.stringify(cachedTitles), 365);
+			createcookie('cachedIDs', JSON.stringify(cachedIDs), 365);
+			createcookie('cachedStreamEnd', JSON.stringify(cachedStreamEnd), 365);
+		}
+	}
 	////////////////
 }
 
