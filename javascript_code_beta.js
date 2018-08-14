@@ -547,7 +547,14 @@ function HtmlStart() {
 
 	// Get the <span> element that closes the modal
 	span = document.getElementsByClassName("close")[0];
-
+	/////változás szinezés////////
+	for (i = 0; i < newEventsPosition.length; i++) {
+		j = newEventsPosition[i];
+		document.getElementById(i).style.backgroundColor = "#3f7186";
+				document.getElementById(i).style.border = "1px solid #022e40";
+				document.getElementById(i).style.color = "white";
+	}
+	///////
 	//////////////cache to cookie////
 	if ((changedTitlePosition.length > 0) | (changedTimePosition.length > 0) | (newEventsPosition.length > 0) | (changedAllPosition.length > 0)) {
 		cachedStreamStart = streamStart;
