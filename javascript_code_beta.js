@@ -655,7 +655,7 @@ function modal_open(i) {
 	}
 	if (i == "new") {
 		document.getElementById("popup_content").innerHTML = "<br><br><span style=\"color: red\"><b>[Újdonságok/Bejelentések]</b></span><br><br>" + newFunction.content;
-		createcookie('thevrmm_new_feature', newFunction.Timestamp, 365)
+		createcookie('thevrmm_new_feature', newFunction.timestamp, 365)
 	}
 }
 
