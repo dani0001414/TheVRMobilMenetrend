@@ -543,7 +543,7 @@ function HtmlStart() {
 	// Get the <span> element that closes the modal
 	span = document.getElementsByClassName("close")[0];
 	if (cookieSettings == 1) {
-		/////változás szinezés////////
+		/*Változtatások színezése!*/
 		for (i = 0; i < newEventsPosition.length; i++) {
 			j = newEventsPosition[i];
 			var titleId = j + "_cim";
@@ -577,8 +577,8 @@ function HtmlStart() {
 			document.getElementById(titleId).innerHTML = "<div style=\"color: #fafbff\" ><img src=\"https://dani0001414.github.io/TheVRMobilMenetrend/title_stream.png\"><br><b>" + events[j].node.title + "</b></div></p>";
 		}
 
-		///////
-		//////////////cache to cookie////
+		
+		/*cache elmentése*/
 		if ((changedTitlePosition.length > 0) | (changedTimePosition.length > 0) | (newEventsPosition.length > 0) | (changedAllPosition.length > 0)) {
 			cachedStreamStart = streamStart;
 			cachedTitles = titles;
@@ -591,7 +591,7 @@ function HtmlStart() {
 			createcookie('cachedStreamEnd', JSON.stringify(cachedStreamEnd), 365);
 		}
 	}
-	////////////////
+	
 }
 
 function new_features(data) {
