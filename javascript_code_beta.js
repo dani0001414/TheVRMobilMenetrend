@@ -603,6 +603,7 @@ function new_features(data) {
 		modal_open("new");
 	}
 	alert(newFunctionWeek);
+	alert(newFunction.Timestamp);
 	alert(theVRmmNewFeature);
 	alert(cookieSettings);
 }
