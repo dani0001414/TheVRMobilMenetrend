@@ -598,14 +598,11 @@ function new_features(data) {
 	newFunction = data;
 	newFunction = JSON.parse(newFunction);
 
-	var newFunctionWeek = currenttime - newFunction.Timestamp;
-	if ((newFunctionWeek < 1209600) & (theVRmmNewFeature < newFunction.Timestamp) & (cookieSettings == 1)) {
+	var newFunctionWeek = currenttime - newFunction.timestamp;
+	if ((newFunctionWeek < 1209600) & (theVRmmNewFeature < newFunction.timestamp) & (cookieSettings == 1)) {
 		modal_open("new");
 	}
-	alert(newFunctionWeek);
-	alert(newFunction.Timestamp);
-	alert(theVRmmNewFeature);
-	alert(cookieSettings);
+
 }
 /*Részletek megjelenítése és elrejtése*/
 function hide_and_show(elementId, i) {
