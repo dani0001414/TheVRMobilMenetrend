@@ -602,6 +602,9 @@ function new_features(data) {
 	if ((newFunctionWeek < 1209600) & (theVRmmNewFeature < newFunction.Timestamp) & (cookieSettings == 1)) {
 		modal_open("new");
 	}
+	alert(newFunctionWeek);
+	alert(theVRmmNewFeature);
+	alert(cookieSettings);
 }
 /*Részletek megjelenítése és elrejtése*/
 function hide_and_show(elementId, i) {
