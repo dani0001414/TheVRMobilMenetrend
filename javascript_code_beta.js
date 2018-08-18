@@ -421,7 +421,7 @@ function HtmlStart() {
 			//////
 			var changedTitleCount = 0, changedTimeCount = 0, changeAllCount = 0;
 			existElementCount = 0;
-			alert(JSON.stringify(cachedTitles), 365));
+			alert(JSON.stringify(cachedTitles));
 			if((cachedStreamStart.length == 0)&(eventsLength > 0)){
 				newEventsPosition[k] = i; k++;
 			}
