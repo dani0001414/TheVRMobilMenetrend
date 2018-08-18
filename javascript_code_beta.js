@@ -393,6 +393,8 @@ function HtmlStart() {
 			//cachedStreamEnd = streamEnd;
 			//cached variables
 			alert("belefut ide?");
+			alert(JSON.stringify(cachedTitles));
+			
 			createcookie('cachedStreamStart', JSON.stringify(cachedStreamStart), 365);
 			createcookie('cachedTitles', JSON.stringify(cachedTitles), 365);
 			createcookie('cachedIDs', JSON.stringify(cachedIDs), 365);
