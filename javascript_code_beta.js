@@ -154,7 +154,7 @@ function dynamicallyLoadScript_content(content) {
 function HttpPost(url, callback) {
 	var http = new XMLHttpRequest();
 	/*fromTime = "2018-06-10T14:26:00Z";*/
-	var params = "[{\"variables\":{\"channelLogin\":\"danx27\",\"limit\":20,\"before\":null,\"after\":\"" + fromTime + "\",\"sortOrder\":\"ASC\",\"following\":true},\"extensions\":{},\"operationName\":\"EventsPage_EventScheduleQuery\",\"query\":\"query EventsPage_EventScheduleQuery($channelLogin: String!, $limit: Int, $cursor: Cursor, $before: Time, $after: Time, $following: Boolean!, $sortOrder: SortOrder) {  user(login: $channelLogin) {    id    eventLeaves(first: $limit, after: $cursor, criteria: {endsBefore: $before, endsAfter: $after, sortOrder: $sortOrder}) {      pageInfo {        hasNextPage        __typename      }      edges {        cursor        node {          id          self @include(if: $following) {            isFollowing            __typename          }          ... on EventLeaf {            title            startAt            endAt            game {              id              displayName              __typename            }            channel {              id              login              displayName              __typename            }            imageURL(width: 320, height: 180)            __typename          }          __typename        }        __typename      }      __typename    }    __typename  }}\"}]";
+	var params = "[{\"variables\":{\"channelLogin\":\"wearethevr\",\"limit\":20,\"before\":null,\"after\":\"" + fromTime + "\",\"sortOrder\":\"ASC\",\"following\":true},\"extensions\":{},\"operationName\":\"EventsPage_EventScheduleQuery\",\"query\":\"query EventsPage_EventScheduleQuery($channelLogin: String!, $limit: Int, $cursor: Cursor, $before: Time, $after: Time, $following: Boolean!, $sortOrder: SortOrder) {  user(login: $channelLogin) {    id    eventLeaves(first: $limit, after: $cursor, criteria: {endsBefore: $before, endsAfter: $after, sortOrder: $sortOrder}) {      pageInfo {        hasNextPage        __typename      }      edges {        cursor        node {          id          self @include(if: $following) {            isFollowing            __typename          }          ... on EventLeaf {            title            startAt            endAt            game {              id              displayName              __typename            }            channel {              id              login              displayName              __typename            }            imageURL(width: 320, height: 180)            __typename          }          __typename        }        __typename      }      __typename    }    __typename  }}\"}]";
 	http.open('POST', url, true);
 	/*kérésküldés*/
 	http.setRequestHeader('Client-ID', 'vpyy1j86wtuetq8b6vbxlmubi0jxoe');
@@ -413,6 +413,9 @@ function HtmlStart() {
 		var coverId = i + "_cover";
 		var timeId = i + "_time";
 		var brId = i + "_br";
+		var blankCover = "https://static-cdn.jtvnw.net/twitch-event-images-v2/default/town-320x180";
+
+
 		if (cookieSettings == 1) {
 			//////
 			var changedTitleCount = 0, changedTimeCount = 0, changeAllCount = 0;
@@ -443,8 +446,7 @@ function HtmlStart() {
 		var elapsed = parseInt((currenttime - streamEnd[i]) / 60, 10);
 
 		var cover = events[i].node.imageURL;
-		cover = cover.replace("320", "320");
-		cover = cover.replace("180", "180");
+
 
 		var startTime = TimeConvert(events[i].node.startAt).split("<br>");
 		var endTime = TimeConvert(events[i].node.endAt).split("<br>");
@@ -468,7 +470,9 @@ function HtmlStart() {
 		icalCalendarLink[i] = "https://maestro.io/pkg/lt3-api/4.0/api/calendar/event.ics?alarm=" + gCalendarEndTime + "&details=&end=" + gCalendarEndTime + "&location=&stamp=20180704T213131Z&convertedTime=" + gCalendarStartTime + "&title=" + icalCalendarTitle;
 		yahooCalendarLink[i] = "https://calendar.yahoo.com/?v=60&view=d&type=20&title=" + gCalendarTitle + "&st=" + gCalendarStartTime + "&et=" + gCalendarEndTime + "&uid=";
 
-
+		/*Szünet Cover létrehozás*/
+		var breakIndicator = titles[i].search("SZÜNET");
+		if ((cover == blankCover) & (breakIndicator > -1)) {cover="https://dani0001414.github.io/TheVRMobilMenetrend/brake.png"; }
 
 		/*Feltölteni kívánt Div-ek megjelenítése a rejtésből és adatokkal való feltöltésük*/
 		document.getElementById(i).style.display = 'block';
