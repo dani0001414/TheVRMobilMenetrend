@@ -420,8 +420,8 @@ function HtmlStart() {
 			//////
 			var changedTitleCount = 0, changedTimeCount = 0, changeAllCount = 0;
 			existElementCount = 0;
+			alert(cachedStreamStart.length);
 			if((cachedStreamStart.length == 0)&(eventsLength > 0)){
-				existElementCount++;
 				newEventsPosition[k] = i; k++;
 			}
 
