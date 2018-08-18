@@ -387,14 +387,15 @@ function HtmlStart() {
 		//var cachedStreamEnd = JSON.parse(getCookie("thvr_ese_v_c"));
 
 		if ((cachedStreamStart == 0) | (cachedTitles == 0) | (cachedIDs == 0)) {
+			alert(JSON.stringify(cachedTitles));
 			cachedStreamStart = streamStart;
 			cachedTitles = titles;
 			cachedIDs = id;
 			//cachedStreamEnd = streamEnd;
 			//cached variables
 			alert("belefut ide?");
-			alert(JSON.stringify(cachedTitles));
 			
+
 			createcookie('cachedStreamStart', JSON.stringify(cachedStreamStart), 365);
 			createcookie('cachedTitles', JSON.stringify(cachedTitles), 365);
 			createcookie('cachedIDs', JSON.stringify(cachedIDs), 365);
