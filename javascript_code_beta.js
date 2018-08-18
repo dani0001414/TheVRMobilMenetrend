@@ -392,6 +392,7 @@ function HtmlStart() {
 			cachedIDs = id;
 			//cachedStreamEnd = streamEnd;
 			//cached variables
+			alert("belefut ide?");
 			createcookie('cachedStreamStart', JSON.stringify(cachedStreamStart), 365);
 			createcookie('cachedTitles', JSON.stringify(cachedTitles), 365);
 			createcookie('cachedIDs', JSON.stringify(cachedIDs), 365);
@@ -420,7 +421,7 @@ function HtmlStart() {
 			//////
 			var changedTitleCount = 0, changedTimeCount = 0, changeAllCount = 0;
 			existElementCount = 0;
-			alert(cachedStreamStart.length);
+			alert(JSON.stringify(cachedTitles), 365));
 			if((cachedStreamStart.length == 0)&(eventsLength > 0)){
 				newEventsPosition[k] = i; k++;
 			}
