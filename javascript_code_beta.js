@@ -380,14 +380,15 @@ function HtmlStart() {
 			titles[i] = events[i].node.title;
 			id[i] = events[i].node.id;
 		}
+		
 		var cachedStreamStart = JSON.parse(getCookie("cachedStreamStart"));                        //Az előző menetrendi elemek idejét nyitja meg egy tömbbe.
 		var cachedTitles = JSON.parse(getCookie("cachedTitles"));                         //Az előző memnetrendi elemek címét nyitja meg egy tömbe.
 		var cachedIDs = JSON.parse(getCookie("cachedIDs"));
-
+		var emptyArrayIdicator = getCookie("cachedIDs");
 		//var cachedStreamEnd = JSON.parse(getCookie("thvr_ese_v_c"));
+		alert(emptyArrayIdicator);
 
-		if ((cachedStreamStart == 0) | (cachedTitles == 0) | (cachedIDs == 0)) {
-			alert(cachedTitles);
+		if (((cachedStreamStart == 0) | (cachedTitles == 0) | (cachedIDs == 0))&(emptyArrayIdicator<0)) {
 			cachedStreamStart = streamStart;
 			cachedTitles = titles;
 			cachedIDs = id;
