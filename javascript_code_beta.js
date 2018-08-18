@@ -380,7 +380,7 @@ function HtmlStart() {
 			titles[i] = events[i].node.title;
 			id[i] = events[i].node.id;
 		}
-		
+
 		var cachedStreamStart = JSON.parse(getCookie("cachedStreamStart"));                        //Az előző menetrendi elemek idejét nyitja meg egy tömbbe.
 		var cachedTitles = JSON.parse(getCookie("cachedTitles"));                         //Az előző memnetrendi elemek címét nyitja meg egy tömbe.
 		var cachedIDs = JSON.parse(getCookie("cachedIDs"));
@@ -388,7 +388,7 @@ function HtmlStart() {
 		//var cachedStreamEnd = JSON.parse(getCookie("thvr_ese_v_c"));
 		alert(emptyArrayIdicator);
 
-		if (((cachedStreamStart == 0) | (cachedTitles == 0) | (cachedIDs == 0))&(emptyArrayIdicator="[]")) {
+		if (((cachedStreamStart == 0) | (cachedTitles == 0) | (cachedIDs == 0)) & (emptyArrayIdicator != "[]")) {
 			cachedStreamStart = streamStart;
 			cachedTitles = titles;
 			cachedIDs = id;
@@ -423,8 +423,8 @@ function HtmlStart() {
 			//////
 			var changedTitleCount = 0, changedTimeCount = 0, changeAllCount = 0;
 			existElementCount = 0;
-			
-			if((cachedStreamStart.length == 0)&(eventsLength > 0)){
+
+			if ((cachedStreamStart.length == 0) & (eventsLength > 0)) {
 				newEventsPosition[k] = i; k++;
 			}
 
@@ -478,7 +478,7 @@ function HtmlStart() {
 
 		/*Szünet Cover létrehozás*/
 		var breakIndicator = titles[i].search("SZÜNET");
-		if ((cover == blankCover) & (breakIndicator > -1)) {cover="https://dani0001414.github.io/TheVRMobilMenetrend/brake.png"; }
+		if ((cover == blankCover) & (breakIndicator > -1)) { cover = "https://dani0001414.github.io/TheVRMobilMenetrend/brake.png"; }
 
 		/*Feltölteni kívánt Div-ek megjelenítése a rejtésből és adatokkal való feltöltésük*/
 		document.getElementById(i).style.display = 'block';
