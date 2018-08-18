@@ -387,14 +387,12 @@ function HtmlStart() {
 		//var cachedStreamEnd = JSON.parse(getCookie("thvr_ese_v_c"));
 
 		if ((cachedStreamStart == 0) | (cachedTitles == 0) | (cachedIDs == 0)) {
-			alert(JSON.stringify(cachedTitles));
+			alert(cachedTitles);
 			cachedStreamStart = streamStart;
 			cachedTitles = titles;
 			cachedIDs = id;
 			//cachedStreamEnd = streamEnd;
-			//cached variables
-			alert("belefut ide?");
-			
+			//cached variables	
 
 			createcookie('cachedStreamStart', JSON.stringify(cachedStreamStart), 365);
 			createcookie('cachedTitles', JSON.stringify(cachedTitles), 365);
@@ -424,7 +422,7 @@ function HtmlStart() {
 			//////
 			var changedTitleCount = 0, changedTimeCount = 0, changeAllCount = 0;
 			existElementCount = 0;
-			alert(JSON.stringify(cachedTitles));
+			
 			if((cachedStreamStart.length == 0)&(eventsLength > 0)){
 				newEventsPosition[k] = i; k++;
 			}
