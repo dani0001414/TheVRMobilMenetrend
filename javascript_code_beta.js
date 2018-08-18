@@ -386,7 +386,6 @@ function HtmlStart() {
 		var cachedIDs = JSON.parse(getCookie("cachedIDs"));
 		var emptyArrayIdicator = getCookie("cachedIDs");
 		//var cachedStreamEnd = JSON.parse(getCookie("thvr_ese_v_c"));
-		alert(emptyArrayIdicator);
 
 		if (((cachedStreamStart == 0) | (cachedTitles == 0) | (cachedIDs == 0)) & (emptyArrayIdicator != "[]")) {
 			cachedStreamStart = streamStart;
