@@ -1,11 +1,19 @@
 /**MobilBarát Menetrend Testreszabása. */
-var streamer = "fyrexxx";
+
+/*Streamer adatok megadása*/
+var streamer = "danx27";
 var twitchLink = "https://www.twitch.tv/" + streamer;
-var streamerID = "40261250";
-var noEventsPic = "https://dani0001414.github.io/pingvinmenetrend/pingvin.png";
-var offlinePic = "https://dani0001414.github.io/pingvinmenetrend/pingvin.png";
-var offlineText = "Eltünt az internet!<br>(Offline módban vagy!)";
-var noEventsText = "Nessaj jelenleg egy menetrendi eseményt sem adott meg!";
+var streamerID = "124554367";
+var noEventsPic = "https://dani0001414.github.io/TwitchEvents/noevents.png";
+var offlinePic = "https://juststickers.in/wp-content/uploads/2018/01/offline.png";
+var offlineText = "No mivan!<br>Csak nem elfújta az internetet a szél!";
+var noEventsText = "Esemény az minek?";
+
+/*Cookiek megadása*/
+var policyAgreementCookie = "danxmmrmmcookiepolicysagreement";
+var themeCookie = "danxmm_theme";
+var newFeatureCookie = "danxmm_new_feature";
+
 /*Szünet Cover 490 sor környékén kikommentelés ha nem a TheVR-ra specializálom */
 /***********************************************************************************************************************/
 /*A visszaszámláló, valamint a Cookie olvasás/létrehozás/törlés és modal funkció mind a w3schools oldalról származnak.*/
@@ -204,7 +212,7 @@ function HttpGet(url, callback) {
 			if (http.status == 200) {
 				callback(http.responseText);
 			} else {
-				document.getElementById("no_stream").innerHTML = "<img src=\"" + offlinePic + "\" alt=\"23\" width=\"320\"><br><h3 style=\"font-family:rockwell;\">"+offlineText+"</h3>";
+				document.getElementById("no_stream").innerHTML = "<img src=\"" + offlinePic + "\" alt=\"23\" width=\"320\"><br><h3 style=\"font-family:rockwell;\">" + offlineText + "</h3>";
 			}
 		}
 	}
@@ -243,10 +251,10 @@ if (location.protocol != 'file:') {
 
 
 /*Cookie lekérdezések*/
-cookieSettings = getCookie("thevrmmcookiepolicysagreement");
+cookieSettings = getCookie(policyAgreementCookie);
 if (cookieSettings == 1) {
-	themeStatus = getCookie("thevrmm_theme");
-	theVRmmNewFeature = getCookie("thevrmm_new_feature");
+	themeStatus = getCookie(themeCookie);
+	theVRmmNewFeature = getCookie(newFeatureCookie);
 }
 
 
@@ -270,7 +278,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
 	console.log("DOM fully loaded and parsed");
 });
 
-var getLink="https://api.twitch.tv/helix/streams?user_id="+streamerID;
+var getLink = "https://api.twitch.tv/helix/streams?user_id=" + streamerID;
 HttpGet(getLink, EventsArray);
 
 /*HttpGet live api lekérő meghívja a funkciót és átadja a callback változót*/
@@ -551,7 +559,7 @@ function HtmlStart() {
 		document.getElementById("meglepi_cover").innerHTML = "<img src=\"" + coverLive + "\" class=\"aspect__fill\" width=\"320\">";
 		document.getElementById("meglepi_time").innerHTML = liveDateStart + "<br>" + liveStart[1] + "-Ameddig tart</p>";
 	} else if (eventsLength == 0) {
-		document.getElementById("no_stream").innerHTML = "<img src=\"" + noEventsPic + "\" alt=\"23\" width=\"320\"><br><h3 style=\"font-family:rockwell;\">"+noEventsText+"</h3>";
+		document.getElementById("no_stream").innerHTML = "<img src=\"" + noEventsPic + "\" alt=\"23\" width=\"320\"><br><h3 style=\"font-family:rockwell;\">" + noEventsText + "</h3>";
 	}
 
 	// Get the modal ws3school script
@@ -646,8 +654,8 @@ function hide_and_show(elementId, i) {
 /*Popup ablak megnyitó*/
 function modal_open(i) {
 	/*Elfogadó cookie kinyerése majd ha az értéke 1 akkor a téma cookie kinyerése */
-	cookieSettings = getCookie("thevrmmcookiepolicysagreement");
-	if (cookieSettings == 1) { themeStatus = getCookie("thevrmm_theme"); }
+	cookieSettings = getCookie(policyAgreementCookie);
+	if (cookieSettings == 1) { themeStatus = getCookie(themeCookie); }
 	modal.style.display = "block";
 
 	if (typeof i === typeof 3) {
@@ -659,10 +667,10 @@ function modal_open(i) {
 	if (i == "cookie_settings") {
 		/*Cookie és téma beállítására szolgáló rész. */
 		var cookieStatusString, themeChangePart;
-		if (cookieSettings == 1) { cookieStatusString = "<span id=\"c_gomb\"><span style=\"cursor: pointer; color: grey; text-decoration: underline;\" onclick=\"deleteAllCookies()\">Bekapcsolva</span></span>"; } else { cookieStatusString = "<span id=\"c_gomb\"><span style=\"cursor: pointer; color: grey; text-decoration: underline;\" onclick=\"createcookie('thevrmmcookiepolicysagreement',1,365)\">Kikapcsolva</span></span>"; }
+		if (cookieSettings == 1) { cookieStatusString = "<span id=\"c_gomb\"><span style=\"cursor: pointer; color: grey; text-decoration: underline;\" onclick=\"deleteAllCookies()\">Bekapcsolva</span></span>"; } else { cookieStatusString = "<span id=\"c_gomb\"><span style=\"cursor: pointer; color: grey; text-decoration: underline;\" onclick=\"createcookie("+policyAgreementCookie+",1,365)\">Kikapcsolva</span></span>"; }
 		if (cookieSettings == 1) {
-			if ((themeStatus == "dark") | (themeStatus == 0)) { themeChangePart = "<span id=\"theme_gomb\"><span style=\"cursor: pointer; color: grey; text-decoration: underline;\" onclick=\"createcookie('thevrmm_theme','light',365)\">Sötét</span></span>"; }
-			if (themeStatus == "light") { themeChangePart = "<span id=\"theme_gomb\"><span style=\"cursor: pointer; color: grey; text-decoration: underline;\" onclick=\"createcookie('thevrmm_theme','dark',365)\">Világos</span></span>"; }
+			if ((themeStatus == "dark") | (themeStatus == 0)) { themeChangePart = "<span id=\"theme_gomb\"><span style=\"cursor: pointer; color: grey; text-decoration: underline;\" onclick=\"createcookie("+themeCookie+",'light',365)\">Sötét</span></span>"; }
+			if (themeStatus == "light") { themeChangePart = "<span id=\"theme_gomb\"><span style=\"cursor: pointer; color: grey; text-decoration: underline;\" onclick=\"createcookie("+themeCookie+",'dark',365)\">Világos</span></span>"; }
 		} else { themeChangePart = "Kikapcsolt Cookie-val nem lehetésges."; }
 		document.getElementById("popup_content").innerHTML = "<br><br><b>[Beállítások]</b><br><br>";
 		document.getElementById("popup_content").innerHTML += "<font size=\"2\">Téma: " + themeChangePart + "<br><br></font>";
@@ -670,12 +678,12 @@ function modal_open(i) {
 	}
 	if (i == "cookie_information") {
 		document.getElementById("popup_content").innerHTML = "<br><br><b>[Cookie Információ]</b><br><br>";
-		document.getElementById("popup_content").innerHTML += "<font size=\"2\"><div align=\"left\">A MobilBarát Menetrend által használt cookie-k:<br><br><span style=\"color: grey;\">thevrmmcookiepolicysagreement:</span><br>A döntésedet tárolja cookie-k használatával kapcsolatban. Ha nem fogadtad el, akkor a többi cookie nem lesz használatban.<br><br><span style=\"color: grey;\">thevrmm_theme:</span><br>Az általad választott téma bellítását tárolja<br><br><span style=\"color: grey;\">thevrmm_new_feature:</span><br>Azt tárolja mikor láttad az új funkciókról szóló értesítést, hogy feleslegesen ne jelenjen meg újra.<br><br><span style=\"color: grey;\">Google Analytics:</span><br>A Google Analitika szolgáltatása által használt Cookie-k amelyek anoním módon rögzítik, hogy miként használod az oldalt. Többek között, hogy milyen eszközről, böngészőböl, internet szolgáltatón keresztül stb. használod az oldalt. Ez segíti a későbbi fejlesztéseket.</div></font>";
+		document.getElementById("popup_content").innerHTML += "<font size=\"2\"><div align=\"left\">A MobilBarát Menetrend által használt cookie-k:<br><br><span style=\"color: grey;\">"+policyAgreementCookie+":</span><br>A döntésedet tárolja cookie-k használatával kapcsolatban. Ha nem fogadtad el, akkor a többi cookie nem lesz használatban.<br><br><span style=\"color: grey;\">"+themeCookie+":</span><br>Az általad választott téma bellítását tárolja<br><br><span style=\"color: grey;\">"+newFeatureCookie+":</span><br>Azt tárolja mikor láttad az új funkciókról szóló értesítést, hogy feleslegesen ne jelenjen meg újra.<br><br><span style=\"color: grey;\">Google Analytics:</span><br>A Google Analitika szolgáltatása által használt Cookie-k amelyek anoním módon rögzítik, hogy miként használod az oldalt. Többek között, hogy milyen eszközről, böngészőböl, internet szolgáltatón keresztül stb. használod az oldalt. Ez segíti a későbbi fejlesztéseket.</div></font>";
 		document.getElementById("popup_content").innerHTML += ""
 	}
 	if (i == "new") {
 		document.getElementById("popup_content").innerHTML = "<br><br><span style=\"color: red\"><b>[Újdonságok/Bejelentések]</b></span><br><br>" + newFunction.content;
-		createcookie('thevrmm_new_feature', newFunction.timestamp, 365)
+		createcookie(newFeatureCookie, newFunction.timestamp, 365)
 	}
 }
 
@@ -692,9 +700,9 @@ function createcookie(name, value, days, banner) {
 	}
 	document.cookie = name + "=" + value + expires;
 
-	if (banner == "banner") { document.getElementById("myCookie").style.display = 'none'; } else if ((name == "thevrmmcookiepolicysagreement") | (name == "thevrmm_theme")) { modal_open("cookie_settings"); }
+	if (banner == "banner") { document.getElementById("myCookie").style.display = 'none'; } else if ((name == policyAgreementCookie) | (name == themeCookie)) { modal_open("cookie_settings"); }
 	/*Téma választó cookie létrehozásával egyben át is váltjuk az általa képviselt kinézetre*/
-	if (name == "thevrmm_theme") {
+	if (name == themeCookie) {
 		if (value == "dark") {
 
 			for (var i = 0; i < eventsLength; i++) {
@@ -734,10 +742,10 @@ function deleteAllCookies(banner) {
 		document.cookie = name + "=;expires=Thu, 01 Jan 1970 00:00:00 GMT";
 		document.cookie = name + '=; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT;';
 	}
-	createcookie('thevrmmcookiepolicysagreement', -1, 20, 'banner');
+	createcookie(newFeatureCookie, -1, 20, 'banner');
 	if (banner == "banner") {
 		document.getElementById("myCookie").style.display = 'none';
-		createcookie('thevrmmcookiepolicysagreement', -1, 20, 'banner');
+		createcookie(newFeatureCookie, -1, 20, 'banner');
 	} else { modal_open("cookie_settings"); }
 
 
