@@ -742,10 +742,10 @@ function deleteAllCookies(banner) {
 		document.cookie = name + "=;expires=Thu, 01 Jan 1970 00:00:00 GMT";
 		document.cookie = name + '=; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT;';
 	}
-	createcookie(newFeatureCookie, -1, 20, 'banner');
+	createcookie(policyAgreementCookie, -1, 20, 'banner');
 	if (banner == "banner") {
 		document.getElementById("myCookie").style.display = 'none';
-		createcookie(newFeatureCookie, -1, 20, 'banner');
+		createcookie(policyAgreementCookie, -1, 20, 'banner');
 	} else { modal_open("cookie_settings"); }
 
 
