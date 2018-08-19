@@ -10,7 +10,7 @@ var offlineText = "No mivan!<br>Csak nem elfújta az internetet a szél!";
 var noEventsText = "Esemény az minek?";
 
 /*Cookiek megadása*/
-var policyAgreementCookie = "danxmmrmmcookiepolicysagreement";
+var policyAgreementCookie = "danxmmcookiepolicysagreement";
 var themeCookie = "danxmm_theme";
 var newFeatureCookie = "danxmm_new_feature";
 
