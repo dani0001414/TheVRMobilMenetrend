@@ -1,18 +1,18 @@
 /**MobilBarát Menetrend Testreszabása. */
 
 /*Streamer adatok megadása*/
-var streamer = "danx27";
+var streamer = "wearethevr";
 var twitchLink = "https://www.twitch.tv/" + streamer;
-var streamerID = "124554367";
-var noEventsPic = "https://dani0001414.github.io/TwitchEvents/noevents.png";
-var offlinePic = "https://juststickers.in/wp-content/uploads/2018/01/offline.png";
-var offlineText = "No mivan!<br>Csak nem elfújta az internetet a szél!";
-var noEventsText = "Esemény az minek?";
+var streamerID = "63493039";
+var noEventsPic = "https://i.imgur.com/5dZn6sc.png";
+var offlinePic = "https://i.imgur.com/5dZn6sc.png";
+var offlineText = "Kihúztad az UTP Kábelt!<br>Abban a pillanatban dugjad vissza és máris láthatod a menetrendet!(Offline módban vagy!)";
+var noEventsText = "Jelenleg nincs egy stream sem a menetrendben! Elszívták az UTP-vel együtt! <img src=\"http://static-cdn.jtvnw.net/emoticons/v1/25/1.0\" alt=\"23\"><br>Hamarosan újabb szálítmány!";
 
 /*Cookiek megadása*/
-var policyAgreementCookie = "danxmmcookiepolicysagreement";
-var themeCookie = "danxmm_theme";
-var newFeatureCookie = "danxmm_new_feature";
+var policyAgreementCookie = "thevrmmcookiepolicysagreement";
+var themeCookie = "thevrmm_theme";
+var newFeatureCookie = "thevrmm_new_feature";
 
 /*Szünet Cover 490 sor környékén kikommentelés ha nem a TheVR-ra specializálom */
 /***********************************************************************************************************************/
@@ -495,7 +495,8 @@ function HtmlStart() {
 		yahooCalendarLink[i] = "https://calendar.yahoo.com/?v=60&view=d&type=20&title=" + gCalendarTitle + "&st=" + gCalendarStartTime + "&et=" + gCalendarEndTime + "&uid=";
 
 		/*Szünet Cover létrehozás*/
-		var breakIndicator = titles[i].search("SZÜNET");
+		var brakeTitle = events[i].node.title;
+		var breakIndicator = brakeTitle.search("SZÜNET");
 		if ((cover == blankCover) & (breakIndicator > -1)) { cover = "https://dani0001414.github.io/TheVRMobilMenetrend/brake.png"; }
 
 		/*Feltölteni kívánt Div-ek megjelenítése a rejtésből és adatokkal való feltöltésük*/
@@ -667,10 +668,10 @@ function modal_open(i) {
 	if (i == "cookie_settings") {
 		/*Cookie és téma beállítására szolgáló rész. */
 		var cookieStatusString, themeChangePart;
-		if (cookieSettings == 1) { cookieStatusString = "<span id=\"c_gomb\"><span style=\"cursor: pointer; color: grey; text-decoration: underline;\" onclick=\"deleteAllCookies()\">Bekapcsolva</span></span>"; } else { cookieStatusString = "<span id=\"c_gomb\"><span style=\"cursor: pointer; color: grey; text-decoration: underline;\" onclick=\"createcookie("+policyAgreementCookie+",1,365)\">Kikapcsolva</span></span>"; }
+		if (cookieSettings == 1) { cookieStatusString = "<span id=\"c_gomb\"><span style=\"cursor: pointer; color: grey; text-decoration: underline;\" onclick=\"deleteAllCookies()\">Bekapcsolva</span></span>"; } else { cookieStatusString = "<span id=\"c_gomb\"><span style=\"cursor: pointer; color: grey; text-decoration: underline;\" onclick=\"createcookie(" + policyAgreementCookie + ",1,365)\">Kikapcsolva</span></span>"; }
 		if (cookieSettings == 1) {
-			if ((themeStatus == "dark") | (themeStatus == 0)) { themeChangePart = "<span id=\"theme_gomb\"><span style=\"cursor: pointer; color: grey; text-decoration: underline;\" onclick=\"createcookie("+themeCookie+",'light',365)\">Sötét</span></span>"; }
-			if (themeStatus == "light") { themeChangePart = "<span id=\"theme_gomb\"><span style=\"cursor: pointer; color: grey; text-decoration: underline;\" onclick=\"createcookie("+themeCookie+",'dark',365)\">Világos</span></span>"; }
+			if ((themeStatus == "dark") | (themeStatus == 0)) { themeChangePart = "<span id=\"theme_gomb\"><span style=\"cursor: pointer; color: grey; text-decoration: underline;\" onclick=\"createcookie(" + themeCookie + ",'light',365)\">Sötét</span></span>"; }
+			if (themeStatus == "light") { themeChangePart = "<span id=\"theme_gomb\"><span style=\"cursor: pointer; color: grey; text-decoration: underline;\" onclick=\"createcookie(" + themeCookie + ",'dark',365)\">Világos</span></span>"; }
 		} else { themeChangePart = "Kikapcsolt Cookie-val nem lehetésges."; }
 		document.getElementById("popup_content").innerHTML = "<br><br><b>[Beállítások]</b><br><br>";
 		document.getElementById("popup_content").innerHTML += "<font size=\"2\">Téma: " + themeChangePart + "<br><br></font>";
@@ -678,7 +679,7 @@ function modal_open(i) {
 	}
 	if (i == "cookie_information") {
 		document.getElementById("popup_content").innerHTML = "<br><br><b>[Cookie Információ]</b><br><br>";
-		document.getElementById("popup_content").innerHTML += "<font size=\"2\"><div align=\"left\">A MobilBarát Menetrend által használt cookie-k:<br><br><span style=\"color: grey;\">"+policyAgreementCookie+":</span><br>A döntésedet tárolja cookie-k használatával kapcsolatban. Ha nem fogadtad el, akkor a többi cookie nem lesz használatban.<br><br><span style=\"color: grey;\">"+themeCookie+":</span><br>Az általad választott téma bellítását tárolja<br><br><span style=\"color: grey;\">"+newFeatureCookie+":</span><br>Azt tárolja mikor láttad az új funkciókról szóló értesítést, hogy feleslegesen ne jelenjen meg újra.<br><br><span style=\"color: grey;\">Google Analytics:</span><br>A Google Analitika szolgáltatása által használt Cookie-k amelyek anoním módon rögzítik, hogy miként használod az oldalt. Többek között, hogy milyen eszközről, böngészőböl, internet szolgáltatón keresztül stb. használod az oldalt. Ez segíti a későbbi fejlesztéseket.</div></font>";
+		document.getElementById("popup_content").innerHTML += "<font size=\"2\"><div align=\"left\">A MobilBarát Menetrend által használt cookie-k:<br><br><span style=\"color: grey;\">" + policyAgreementCookie + ":</span><br>A döntésedet tárolja cookie-k használatával kapcsolatban. Ha nem fogadtad el, akkor a többi cookie nem lesz használatban.<br><br><span style=\"color: grey;\">" + themeCookie + ":</span><br>Az általad választott téma bellítását tárolja<br><br><span style=\"color: grey;\">" + newFeatureCookie + ":</span><br>Azt tárolja mikor láttad az új funkciókról szóló értesítést, hogy feleslegesen ne jelenjen meg újra.<br><br><span style=\"color: grey;\">Google Analytics:</span><br>A Google Analitika szolgáltatása által használt Cookie-k amelyek anoním módon rögzítik, hogy miként használod az oldalt. Többek között, hogy milyen eszközről, böngészőböl, internet szolgáltatón keresztül stb. használod az oldalt. Ez segíti a későbbi fejlesztéseket.</div></font>";
 		document.getElementById("popup_content").innerHTML += ""
 	}
 	if (i == "new") {
