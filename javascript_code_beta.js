@@ -1,3 +1,13 @@
+/**MobilBarát Menetrend Testreszabása. */
+var streamer = "wearethevr";
+var twitchLink = "https://www.twitch.tv/" + streamer;
+var streamerID = "https://i.imgur.com/5dZn6sc.png";
+var noEventsPic = "https://i.imgur.com/5dZn6sc.png";
+var offlinePic = "https://i.imgur.com/5dZn6sc.png";
+var offlineText = "Kihúztad az UTP Kábelt!<br>Abban a pillanatban dugjad vissza és máris láthatod a menetrendet!(Offline módban vagy!)";
+var noEventsText = "Jelenleg nincs egy stream sem a menetrendben! Elszívták az UTP-vel együtt! <img src=\"http://static-cdn.jtvnw.net/emoticons/v1/25/1.0\" alt=\"23\"><br>Hamarosan újabb szálítmány!";
+/*Szünet Cover 490 sor környékén kikommentelés ha nem a TheVR-ra specializálom */
+/***********************************************************************************************************************/
 /*A visszaszámláló, valamint a Cookie olvasás/létrehozás/törlés és modal funkció mind a w3schools oldalról származnak.*/
 CreateValidManifest();
 
@@ -154,7 +164,7 @@ function dynamicallyLoadScript_content(content) {
 function HttpPost(url, callback) {
 	var http = new XMLHttpRequest();
 	/*fromTime = "2018-06-10T14:26:00Z";*/
-	var params = "[{\"variables\":{\"channelLogin\":\"wearethevr\",\"limit\":20,\"before\":null,\"after\":\"" + fromTime + "\",\"sortOrder\":\"ASC\",\"following\":true},\"extensions\":{},\"operationName\":\"EventsPage_EventScheduleQuery\",\"query\":\"query EventsPage_EventScheduleQuery($channelLogin: String!, $limit: Int, $cursor: Cursor, $before: Time, $after: Time, $following: Boolean!, $sortOrder: SortOrder) {  user(login: $channelLogin) {    id    eventLeaves(first: $limit, after: $cursor, criteria: {endsBefore: $before, endsAfter: $after, sortOrder: $sortOrder}) {      pageInfo {        hasNextPage        __typename      }      edges {        cursor        node {          id          self @include(if: $following) {            isFollowing            __typename          }          ... on EventLeaf {            title            startAt            endAt            game {              id              displayName              __typename            }            channel {              id              login              displayName              __typename            }            imageURL(width: 320, height: 180)            __typename          }          __typename        }        __typename      }      __typename    }    __typename  }}\"}]";
+	var params = "[{\"variables\":{\"channelLogin\":\"" + streamer + "\",\"limit\":20,\"before\":null,\"after\":\"" + fromTime + "\",\"sortOrder\":\"ASC\",\"following\":true},\"extensions\":{},\"operationName\":\"EventsPage_EventScheduleQuery\",\"query\":\"query EventsPage_EventScheduleQuery($channelLogin: String!, $limit: Int, $cursor: Cursor, $before: Time, $after: Time, $following: Boolean!, $sortOrder: SortOrder) {  user(login: $channelLogin) {    id    eventLeaves(first: $limit, after: $cursor, criteria: {endsBefore: $before, endsAfter: $after, sortOrder: $sortOrder}) {      pageInfo {        hasNextPage        __typename      }      edges {        cursor        node {          id          self @include(if: $following) {            isFollowing            __typename          }          ... on EventLeaf {            title            startAt            endAt            game {              id              displayName              __typename            }            channel {              id              login              displayName              __typename            }            imageURL(width: 320, height: 180)            __typename          }          __typename        }        __typename      }      __typename    }    __typename  }}\"}]";
 	http.open('POST', url, true);
 	/*kérésküldés*/
 	http.setRequestHeader('Client-ID', 'vpyy1j86wtuetq8b6vbxlmubi0jxoe');
@@ -194,7 +204,7 @@ function HttpGet(url, callback) {
 			if (http.status == 200) {
 				callback(http.responseText);
 			} else {
-				document.getElementById("no_stream").innerHTML = "<img src=\"https://i.imgur.com/5dZn6sc.png\" alt=\"23\" width=\"320\"><br><h3 style=\"font-family:rockwell;\">Kihúztad az UTP Kábelt!<br>Abban a pillanatban dugjad vissza és máris láthatod a menetrendet!(Offline módban vagy!)</h3>";
+				document.getElementById("no_stream").innerHTML = "<img src=\"" + offlinePic + "\" alt=\"23\" width=\"320\"><br><h3 style=\"font-family:rockwell;\">"+offlineText+"</h3>";
 			}
 		}
 	}
@@ -510,24 +520,24 @@ function HtmlStart() {
 	if ((liveStatus == "live") & ((liveTimestamp < streamEndZeroElement) & (liveTimestamp > streamStartZeroElement - 3000)) & (currenttime < stramStartFirstElement)) {  /*Ha előfordulna, hogy jóval előbb indítják a streamet akkormég vagy-ként liveTimestamp helyett currenttime-al is vizsgálni. */
 		document.getElementById("0").style.backgroundColor = "#4b367c";
 		document.getElementById("0").style.color = "#c3c1c8";
-		document.getElementById("0_cim").innerHTML = "<a target=\"_blank\" href=\"https://www.twitch.tv/wearethevr\"><img src=\"https://i.imgur.com/o1kyCnf.png\"></a><br><b>" + titleLive + "</b>";
-		document.getElementById("0_cover").innerHTML = "<a target=\"_blank\" href=\"https://www.twitch.tv/wearethevr\"><img src=\"" + coverLive + "\" class=\"aspect__fill\" width=\"320\"></a>";
+		document.getElementById("0_cim").innerHTML = "<a target=\"_blank\" href=\"" + twitchLink + "\"><img src=\"https://i.imgur.com/o1kyCnf.png\"></a><br><b>" + titleLive + "</b>";
+		document.getElementById("0_cover").innerHTML = "<a target=\"_blank\" href=\"" + twitchLink + "\"><img src=\"" + coverLive + "\" class=\"aspect__fill\" width=\"320\"></a>";
 	} else if ((liveStatus == "live") & (currenttime < streamEndFirstElement) & (currenttime > stramStartFirstElement)) {
 		document.getElementById("1").style.backgroundColor = "#4b367c";
 		document.getElementById("1").style.color = "#c3c1c8";
-		document.getElementById("1_cim").innerHTML = "<a target=\"_blank\" href=\"https://www.twitch.tv/wearethevr\"><img src=\"https://i.imgur.com/o1kyCnf.png\"></a><br><b>" + titleLive + "</b>";
-		document.getElementById("1_cover").innerHTML = "<a target=\"_blank\" href=\"https://www.twitch.tv/wearethevr\"><img src=\"" + coverLive + "\" class=\"aspect__fill\" width=\"320\"></a>";
+		document.getElementById("1_cim").innerHTML = "<a target=\"_blank\" href=\"" + twitchLink + "\"><img src=\"https://i.imgur.com/o1kyCnf.png\"></a><br><b>" + titleLive + "</b>";
+		document.getElementById("1_cover").innerHTML = "<a target=\"_blank\" href=\"" + twitchLink + "\"><img src=\"" + coverLive + "\" class=\"aspect__fill\" width=\"320\"></a>";
 	} else if ((liveStatus == "live") & (currenttime < streamEndZeroElement) & (currenttime > streamStartZeroElement)) {
 		document.getElementById("0").style.backgroundColor = "#4b367c";
 		document.getElementById("0").style.color = "#c3c1c8";
-		document.getElementById("0_cim").innerHTML = "<a target=\"_blank\" href=\"https://www.twitch.tv/wearethevr\"><img src=\"https://i.imgur.com/o1kyCnf.png\"></a><br><b>" + titleLive + "</b>";
-		document.getElementById("0_cover").innerHTML = "<a target=\"_blank\" href=\"https://www.twitch.tv/wearethevr\"><img src=\"" + coverLive + "\" class=\"aspect__fill\" width=\"320\"></a>";
+		document.getElementById("0_cim").innerHTML = "<a target=\"_blank\" href=\"" + twitchLink + "\"><img src=\"https://i.imgur.com/o1kyCnf.png\"></a><br><b>" + titleLive + "</b>";
+		document.getElementById("0_cover").innerHTML = "<a target=\"_blank\" href=\"" + twitchLink + "\"><img src=\"" + coverLive + "\" class=\"aspect__fill\" width=\"320\"></a>";
 	} else if ((liveStatus != "live") & (currenttime < streamEndZeroElement) & (currenttime > streamStartZeroElement)) {  /*Ha előfordulna, hogy később indítják a streamet akkormég vagy-ként liveTimestamp helyett currenttime-al is vizsgálni. */
 		document.getElementById("0_cim").innerHTML = "<img src=\"https://i.imgur.com/ZNlNn8J.png\"><br><b>" + events[0].node.title + "</b>";
 	} else if (liveStatus == "live") {
 		document.getElementById("meglepi").style.display = 'block';
 		document.getElementById("meglepi_br").style.display = 'block';
-		document.getElementById("meglepi_cim").innerHTML = "<a target=\"_blank\" href=\"https://www.twitch.tv/wearethevr\"><img src=\"https://i.imgur.com/gu6M3eu.png\"></a><br><b>" + titleLive + "</b>";
+		document.getElementById("meglepi_cim").innerHTML = "<a target=\"_blank\" href=\"" + twitchLink + "\"><img src=\"https://i.imgur.com/gu6M3eu.png\"></a><br><b>" + titleLive + "</b>";
 		document.getElementById("meglepi_cover").innerHTML = "<img src=\"" + coverLive + "\" class=\"aspect__fill\" width=\"320\">";
 		document.getElementById("meglepi_time").innerHTML = liveDateStart + "<br>" + liveStart[1] + "-Ameddig tart</p>";
 
@@ -536,11 +546,11 @@ function HtmlStart() {
 	if ((eventsLength == 0) & (liveStatus == "live")) {
 		document.getElementById("meglepi").style.display = 'block';
 		document.getElementById("meglepi_br").style.display = 'block';
-		document.getElementById("meglepi_cim").innerHTML = "<a target=\"_blank\" href=\"https://www.twitch.tv/wearethevr\"><img src=\"https://i.imgur.com/gu6M3eu.png\"></a><br><b>" + titleLive + "</b>";
+		document.getElementById("meglepi_cim").innerHTML = "<a target=\"_blank\" href=\"" + twitchLink + "\"><img src=\"https://i.imgur.com/gu6M3eu.png\"></a><br><b>" + titleLive + "</b>";
 		document.getElementById("meglepi_cover").innerHTML = "<img src=\"" + coverLive + "\" class=\"aspect__fill\" width=\"320\">";
 		document.getElementById("meglepi_time").innerHTML = liveDateStart + "<br>" + liveStart[1] + "-Ameddig tart</p>";
 	} else if (eventsLength == 0) {
-		document.getElementById("no_stream").innerHTML = "<img src=\"https://i.imgur.com/5dZn6sc.png\" alt=\"23\" width=\"320\"><br><h3 style=\"font-family:rockwell;\">Jelenleg nincs egy stream sem a menetrendben! Elszívták az UTP-vel együtt! <img src=\"http://static-cdn.jtvnw.net/emoticons/v1/25/1.0\" alt=\"23\"><br>Hamarosan újabb szálítmány!</h3>";
+		document.getElementById("no_stream").innerHTML = "<img src=\"" + noEventsPic + "\" alt=\"23\" width=\"320\"><br><h3 style=\"font-family:rockwell;\">"+noEventsText+"</h3>";
 	}
 
 	// Get the modal ws3school script
