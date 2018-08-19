@@ -668,10 +668,10 @@ function modal_open(i) {
 	if (i == "cookie_settings") {
 		/*Cookie és téma beállítására szolgáló rész. */
 		var cookieStatusString, themeChangePart;
-		if (cookieSettings == 1) { cookieStatusString = "<span id=\"c_gomb\"><span style=\"cursor: pointer; color: grey; text-decoration: underline;\" onclick=\"deleteAllCookies()\">Bekapcsolva</span></span>"; } else { cookieStatusString = "<span id=\"c_gomb\"><span style=\"cursor: pointer; color: grey; text-decoration: underline;\" onclick=\"createcookie(\"" + policyAgreementCookie + "\",1,365)\">Kikapcsolva</span></span>"; }
+		if (cookieSettings == 1) { cookieStatusString = "<span id=\"c_gomb\"><span style=\"cursor: pointer; color: grey; text-decoration: underline;\" onclick=\"deleteAllCookies()\">Bekapcsolva</span></span>"; } else { cookieStatusString = "<span id=\"c_gomb\"><span style=\"cursor: pointer; color: grey; text-decoration: underline;\" onclick=\"createcookie('" + policyAgreementCookie + "',1,365)\">Kikapcsolva</span></span>"; }
 		if (cookieSettings == 1) {
-			if ((themeStatus == "dark") | (themeStatus == 0)) { themeChangePart = "<span id=\"theme_gomb\"><span style=\"cursor: pointer; color: grey; text-decoration: underline;\" onclick=\"createcookie(\"" + themeCookie + "\",'light',365)\">Sötét</span></span>"; }
-			if (themeStatus == "light") { themeChangePart = "<span id=\"theme_gomb\"><span style=\"cursor: pointer; color: grey; text-decoration: underline;\" onclick=\"createcookie(\"" + themeCookie + "\",'dark',365)\">Világos</span></span>"; }
+			if ((themeStatus == "dark") | (themeStatus == 0)) { themeChangePart = "<span id=\"theme_gomb\"><span style=\"cursor: pointer; color: grey; text-decoration: underline;\" onclick=\"createcookie('" + themeCookie + "','light',365)\">Sötét</span></span>"; }
+			if (themeStatus == "light") { themeChangePart = "<span id=\"theme_gomb\"><span style=\"cursor: pointer; color: grey; text-decoration: underline;\" onclick=\"createcookie('" + themeCookie + "','dark',365)\">Világos</span></span>"; }
 		} else { themeChangePart = "Kikapcsolt Cookie-val nem lehetésges."; }
 		document.getElementById("popup_content").innerHTML = "<br><br><b>[Beállítások]</b><br><br>";
 		document.getElementById("popup_content").innerHTML += "<font size=\"2\">Téma: " + themeChangePart + "<br><br></font>";
