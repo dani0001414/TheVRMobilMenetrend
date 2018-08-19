@@ -1,11 +1,11 @@
 /**MobilBarát Menetrend Testreszabása. */
-var streamer = "wearethevr";
+var streamer = "fyrexxx";
 var twitchLink = "https://www.twitch.tv/" + streamer;
-var streamerID = "https://i.imgur.com/5dZn6sc.png";
-var noEventsPic = "https://i.imgur.com/5dZn6sc.png";
-var offlinePic = "https://i.imgur.com/5dZn6sc.png";
-var offlineText = "Kihúztad az UTP Kábelt!<br>Abban a pillanatban dugjad vissza és máris láthatod a menetrendet!(Offline módban vagy!)";
-var noEventsText = "Jelenleg nincs egy stream sem a menetrendben! Elszívták az UTP-vel együtt! <img src=\"http://static-cdn.jtvnw.net/emoticons/v1/25/1.0\" alt=\"23\"><br>Hamarosan újabb szálítmány!";
+var streamerID = "40261250";
+var noEventsPic = "https://dani0001414.github.io/pingvinmenetrend/pingvin.png";
+var offlinePic = "https://dani0001414.github.io/pingvinmenetrend/pingvin.png";
+var offlineText = "Eltünt az internet!<br>(Offline módban vagy!)";
+var noEventsText = "Nessaj jelenleg egy menetrendi eseményt sem adott meg!";
 /*Szünet Cover 490 sor környékén kikommentelés ha nem a TheVR-ra specializálom */
 /***********************************************************************************************************************/
 /*A visszaszámláló, valamint a Cookie olvasás/létrehozás/törlés és modal funkció mind a w3schools oldalról származnak.*/
@@ -270,7 +270,8 @@ document.addEventListener("DOMContentLoaded", function (event) {
 	console.log("DOM fully loaded and parsed");
 });
 
-HttpGet("https://api.twitch.tv/helix/streams?user_id=63493039", EventsArray);
+var getLink="https://api.twitch.tv/helix/streams?user_id="+streamerID;
+HttpGet(getLink, EventsArray);
 
 /*HttpGet live api lekérő meghívja a funkciót és átadja a callback változót*/
 function EventsArray(data) {
