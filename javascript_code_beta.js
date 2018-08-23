@@ -644,7 +644,7 @@ function new_features(data) {
 	if (streamer == "wearethevr") {
 		var newInfoHour = currenttime - newFunction.infotimestamp;
 		if ((newInfoHour < 1209600) & (theVRmmNewInfo < newFunction.infotimestamp) & (cookieSettings == 1)) {
-			modal_open("new");
+			modal_open("thevrinfo");
 		}
 	}
 }
