@@ -643,7 +643,7 @@ function new_features(data) {
 	}
 	if (streamer == "wearethevr") {
 		var newInfoHour = currenttime - newFunction.infotimestamp;
-		if ((newInfoHour < 1209600) & (theVRmmNewInfo < newFunction.infotimestamp) & (cookieSettings == 1)) {
+		if ((newInfoHour < 10800) & (theVRmmNewInfo < newFunction.infotimestamp) & (cookieSettings == 1)) {
 			modal_open("thevrinfo");
 		}
 	}
@@ -694,7 +694,7 @@ function modal_open(i) {
 	}
 	if (i == "cookie_information") {
 		document.getElementById("popup_content").innerHTML = "<br><br><b>[Cookie Információ]</b><br><br>";
-		document.getElementById("popup_content").innerHTML += "<font size=\"2\"><div align=\"left\">A MobilBarát Menetrend által használt cookie-k:<br><br><span style=\"color: grey;\">" + policyAgreementCookie + ":</span><br>A döntésedet tárolja cookie-k használatával kapcsolatban. Ha nem fogadtad el, akkor a többi cookie nem lesz használatban.<br><br><span style=\"color: grey;\">" + themeCookie + ":</span><br>Az általad választott téma bellítását tárolja<br><br><span style=\"color: grey;\">" + newFeatureCookie + ":</span><br>Azt tárolja mikor láttad az új funkciókról szóló értesítést, hogy feleslegesen ne jelenjen meg újra.<br><br><span style=\"color: grey;\">Google Analytics:</span><br>A Google Analitika szolgáltatása által használt Cookie-k amelyek anoním módon rögzítik, hogy miként használod az oldalt. Többek között, hogy milyen eszközről, böngészőböl, internet szolgáltatón keresztül stb. használod az oldalt. Ez segíti a későbbi fejlesztéseket.<br><br><span style=\"color: grey;\">cachedIDs, cachedTitles, cachedStreamStart, cachedStreamEnd:</span><br>A menetrend id, cím, kezdési idejét, befejezési idejét tárolják, hogy a legközelebbi megnyitáskor a mobil menetrend ki tudja jelezni, hogy mik a változások.</div></font>";
+		document.getElementById("popup_content").innerHTML += "<font size=\"2\"><div align=\"left\">A MobilBarát Menetrend által használt cookie-k:<br><br><span style=\"color: grey;\">" + policyAgreementCookie + ":</span><br>A döntésedet tárolja cookie-k használatával kapcsolatban. Ha nem fogadtad el, akkor a többi cookie nem lesz használatban.<br><br><span style=\"color: grey;\">" + themeCookie + ":</span><br>Az általad választott téma bellítását tárolja<br><br><span style=\"color: grey;\">" + newFeatureCookie + ":</span><br>Azt tárolja mikor láttad az új funkciókról szóló értesítést, hogy feleslegesen ne jelenjen meg újra.<br><br><span style=\"color: grey;\">" + theVRmmNewInfoCookie + ":</span><br>Azt tárolja mikor láttad az új TheVR Stream Infót, hogy feleslegesen ne jelenjen meg újra.<br><br><span style=\"color: grey;\">Google Analytics:</span><br>A Google Analitika szolgáltatása által használt Cookie-k amelyek anoním módon rögzítik, hogy miként használod az oldalt. Többek között, hogy milyen eszközről, böngészőböl, internet szolgáltatón keresztül stb. használod az oldalt. Ez segíti a későbbi fejlesztéseket.<br><br><span style=\"color: grey;\">cachedIDs, cachedTitles, cachedStreamStart, cachedStreamEnd:</span><br>A menetrend id, cím, kezdési idejét, befejezési idejét tárolják, hogy a legközelebbi megnyitáskor a mobil menetrend ki tudja jelezni, hogy mik a változások.</div></font>";
 		document.getElementById("popup_content").innerHTML += ""
 	}
 	if (i == "new") {
@@ -702,7 +702,7 @@ function modal_open(i) {
 		createcookie(newFeatureCookie, newFunction.timestamp, 365)
 	}
 	if (i == "thevrinfo") {
-		document.getElementById("popup_content").innerHTML = "<br><br><span style=\"color: red\"><b>[TheVR StreamInfó]</b></span><br><br>" + newFunction.infocontent;
+		document.getElementById("popup_content").innerHTML = "<br><br><span style=\"color: red\"><b>[TheVR Stream Infó]</b></span><br><br>" + newFunction.infocontent;
 		createcookie(theVRmmNewInfoCookie, newFunction.infotimestamp, 365)
 	}
 }
