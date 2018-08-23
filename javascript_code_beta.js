@@ -437,7 +437,7 @@ function HtmlStart() {
 		var brId = i + "_br";
 		var blankCover = "https://static-cdn.jtvnw.net/twitch-event-images-v2/default/town-320x180";
 		
-		
+		alert(streamStart[i]);
 
 		if (cookieSettings == 1) {
 			//////
