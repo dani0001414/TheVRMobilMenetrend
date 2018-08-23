@@ -3,7 +3,7 @@
 /*Streamer adatok megadása*/
 var streamer = "danx27";
 var twitchLink = "https://www.twitch.tv/" + streamer;
-var streamerID = "63493039";
+var streamerID = "124554367";
 var noEventsPic = "https://i.imgur.com/5dZn6sc.png";
 var offlinePic = "https://i.imgur.com/5dZn6sc.png";
 var offlineText = "Kihúztad az UTP Kábelt!<br>Abban a pillanatban dugjad vissza és máris láthatod a menetrendet!(Offline módban vagy!)";
