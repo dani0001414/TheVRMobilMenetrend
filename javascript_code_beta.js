@@ -1,7 +1,7 @@
 /**MobilBarát Menetrend Testreszabása. */
 
 /*Streamer adatok megadása*/
-var streamer = "wearethevr";
+var streamer = "danx27";
 var twitchLink = "https://www.twitch.tv/" + streamer;
 var streamerID = "63493039";
 var noEventsPic = "https://i.imgur.com/5dZn6sc.png";
@@ -419,6 +419,7 @@ function HtmlStart() {
 			createcookie('cachedStreamEnd', JSON.stringify(cachedStreamEnd), 365);
 		}
 	}
+	
 	for (var i = 0; i < eventsLength; i++) {
 
 		if (eventsLength > 1) {
@@ -435,7 +436,11 @@ function HtmlStart() {
 		var timeId = i + "_time";
 		var brId = i + "_br";
 		var blankCover = "https://static-cdn.jtvnw.net/twitch-event-images-v2/default/town-320x180";
-
+		
+		if (cookieSettings != 1) {
+			streamStart[i] = Timestamp(events[i].node.startAt);
+			streamEnd[i] = Timestamp(events[i].node.endAt);
+		}
 
 		if (cookieSettings == 1) {
 			//////
