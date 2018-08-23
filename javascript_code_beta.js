@@ -1,18 +1,20 @@
 /**MobilBarát Menetrend Testreszabása. */
 
 /*Streamer adatok megadása*/
-var streamer = "danx27";
+var streamer = "wearethevr";
 var twitchLink = "https://www.twitch.tv/" + streamer;
-var streamerID = "124554367";
+var streamerID = "63493039";
 var noEventsPic = "https://i.imgur.com/5dZn6sc.png";
 var offlinePic = "https://i.imgur.com/5dZn6sc.png";
 var offlineText = "Kihúztad az UTP Kábelt!<br>Abban a pillanatban dugjad vissza és máris láthatod a menetrendet!(Offline módban vagy!)";
 var noEventsText = "Jelenleg nincs egy stream sem a menetrendben! Elszívták az UTP-vel együtt! <img src=\"http://static-cdn.jtvnw.net/emoticons/v1/25/1.0\" alt=\"23\"><br>Hamarosan újabb szálítmány!";
 
+
 /*Cookiek megadása*/
 var policyAgreementCookie = "thevrmmcookiepolicysagreement";
 var themeCookie = "thevrmm_theme";
 var newFeatureCookie = "thevrmm_new_feature";
+var theVRmmNewInfoCookie = "thevrmm_new_info";
 
 /*Szünet Cover 490 sor környékén kikommentelés ha nem a TheVR-ra specializálom */
 /***********************************************************************************************************************/
@@ -233,7 +235,7 @@ function HttpGetFeature(url, callback) {
 
 /*Változtatás : streamEndZeroElement, streamStartZeroElement változók deklarálása itt. */
 var fromTime = CurrentTimeTwitchServerFormat(0);
-var events, liveData, streamEndZeroElement, currenttime, theVRmmNewFeature, stramStartFirstElement, streamEndFirstElement, streamStartZeroElement, eventsDescriptions, eventsLength, liveTimestamp, liveStatus, titleLive, coverLive, gameLiveStatus, titleLive, modal, span, btn, cookieSettings, themeStatus, liveDateStart, liveStart, newFunction;
+var events, liveData, streamEndZeroElement, currenttime, theVRmmNewFeature, theVRmmNewInfo, stramStartFirstElement, streamEndFirstElement, streamStartZeroElement, eventsDescriptions, eventsLength, liveTimestamp, liveStatus, titleLive, coverLive, gameLiveStatus, titleLive, modal, span, btn, cookieSettings, themeStatus, liveDateStart, liveStart, newFunction;
 var gCalendarLink = [];
 var icalCalendarLink = [];
 var outlook_calendar_link = [];
@@ -255,6 +257,7 @@ cookieSettings = getCookie(policyAgreementCookie);
 if (cookieSettings == 1) {
 	themeStatus = getCookie(themeCookie);
 	theVRmmNewFeature = getCookie(newFeatureCookie);
+	theVRmmNewInfo = getCookie(theVRmmNewInfoCookie);
 }
 
 
@@ -419,7 +422,7 @@ function HtmlStart() {
 			createcookie('cachedStreamEnd', JSON.stringify(cachedStreamEnd), 365);
 		}
 	}
-	
+
 	for (var i = 0; i < eventsLength; i++) {
 
 		if (eventsLength > 1) {
@@ -436,7 +439,7 @@ function HtmlStart() {
 		var timeId = i + "_time";
 		var brId = i + "_br";
 		var blankCover = "https://static-cdn.jtvnw.net/twitch-event-images-v2/default/town-320x180";
-		
+
 		if (cookieSettings != 1) {
 			streamStart[i] = Timestamp(events[i].node.startAt);
 			streamEnd[i] = Timestamp(events[i].node.endAt);
@@ -500,9 +503,11 @@ function HtmlStart() {
 		yahooCalendarLink[i] = "https://calendar.yahoo.com/?v=60&view=d&type=20&title=" + gCalendarTitle + "&st=" + gCalendarStartTime + "&et=" + gCalendarEndTime + "&uid=";
 
 		/*Szünet Cover létrehozás*/
-		var brakeTitle = events[i].node.title;
-		var breakIndicator = brakeTitle.search("SZÜNET");
-		if ((cover == blankCover) & (breakIndicator > -1)) { cover = "https://dani0001414.github.io/TheVRMobilMenetrend/brake.png"; }
+		if (streamer == "wearethevr") {
+			var brakeTitle = events[i].node.title;
+			var breakIndicator = brakeTitle.search("SZÜNET");
+			if ((cover == blankCover) & (breakIndicator > -1)) { cover = "https://dani0001414.github.io/TheVRMobilMenetrend/brake.png"; }
+		}
 
 		/*Feltölteni kívánt Div-ek megjelenítése a rejtésből és adatokkal való feltöltésük*/
 		document.getElementById(i).style.display = 'block';
@@ -636,7 +641,12 @@ function new_features(data) {
 	if ((newFunctionWeek < 1209600) & (theVRmmNewFeature < newFunction.timestamp) & (cookieSettings == 1)) {
 		modal_open("new");
 	}
-
+	if (streamer == "wearethevr") {
+		var newInfoHour = currenttime - newFunction.infotimestamp;
+		if ((newInfoHour < 1209600) & (theVRmmNewInfo < newFunction.infotimestamp) & (cookieSettings == 1)) {
+			modal_open("new");
+		}
+	}
 }
 /*Részletek megjelenítése és elrejtése*/
 function hide_and_show(elementId, i) {
@@ -688,8 +698,12 @@ function modal_open(i) {
 		document.getElementById("popup_content").innerHTML += ""
 	}
 	if (i == "new") {
-		document.getElementById("popup_content").innerHTML = "<br><br><span style=\"color: red\"><b>[Újdonságok/Bejelentések]</b></span><br><br>" + newFunction.content;
+		document.getElementById("popup_content").innerHTML = "<br><br><span style=\"color: red\"><b>[Újdonságok]</b></span><br><br>" + newFunction.content;
 		createcookie(newFeatureCookie, newFunction.timestamp, 365)
+	}
+	if (i == "thevrinfo") {
+		document.getElementById("popup_content").innerHTML = "<br><br><span style=\"color: red\"><b>[TheVR StreamInfó]</b></span><br><br>" + newFunction.infocontent;
+		createcookie(theVRmmNewInfoCookie, newFunction.infotimestamp, 365)
 	}
 }
 
