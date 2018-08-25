@@ -250,6 +250,9 @@ var events, liveData, streamEndZeroElement, currenttime, theVRmmNewFeature, theV
 
 var calendarFunc = "https://script.google.com/macros/s/AKfycbwCuXEIW0pJo4aL8f09tvzPoaJ76t99aPT26kSw1Iji2K39WxNy/exec?func=calendar";
 var funcAppearFunc = "https://script.google.com/macros/s/AKfycbwCuXEIW0pJo4aL8f09tvzPoaJ76t99aPT26kSw1Iji2K39WxNy/exec?func=funcAppear";
+var googleFunc = "https://script.google.com/macros/s/AKfycbwCuXEIW0pJo4aL8f09tvzPoaJ76t99aPT26kSw1Iji2K39WxNy/exec?func=google-calendar";
+var icalFunc = "https://script.google.com/macros/s/AKfycbwCuXEIW0pJo4aL8f09tvzPoaJ76t99aPT26kSw1Iji2K39WxNy/exec?func=ical-calendar";
+var yahooFunc = "https://script.google.com/macros/s/AKfycbwCuXEIW0pJo4aL8f09tvzPoaJ76t99aPT26kSw1Iji2K39WxNy/exec?func=yahoo-calendar";
 
 var gCalendarLink = [];
 var icalCalendarLink = [];
@@ -691,7 +694,7 @@ function modal_open(i) {
 
 	if (typeof i === typeof 3) {
 		/*Aktuális menetrendi stream-nek megfelelő naptár linkek*/
-		document.getElementById("popup_content").innerHTML = "<b>Hozzáadás a naptáradhoz:</b><br><br><div id=\"light_popup\" ><a href=\"" + gCalendarLink[i] + "\"><img src=\"https://vignette.wikia.nocookie.net/logopedia/images/9/9d/Google_logo_white_2015.svg\" class=\"aspect__fill\" width=\"87\"></a>&nbsp;&nbsp;&nbsp;<a onclick=\"httpGetNorm('" + calendarFunc + "')\" href=\"" + icalCalendarLink[i] + "\"><img src=\"https://dani0001414.github.io/TheVRMobilMenetrend/ical_icon.svg\" class=\"aspect__fill\" width=\"58\"></a>&nbsp;&nbsp;&nbsp;<a href=\"" + yahooCalendarLink[i] + "\"><img src=\"https://dani0001414.github.io/TheVRMobilMenetrend/Yahooicon.svg\" class=\"aspect__fill\" width=\"58\"></a></div>";
+		document.getElementById("popup_content").innerHTML = "<b>Hozzáadás a naptáradhoz:</b><br><br><div id=\"light_popup\" ><a onclick=\"HttpGetNorm('" + googleFunc + "')\" href=\"" + gCalendarLink[i] + "\"><img src=\"https://vignette.wikia.nocookie.net/logopedia/images/9/9d/Google_logo_white_2015.svg\" class=\"aspect__fill\" width=\"87\"></a>&nbsp;&nbsp;&nbsp;<a onclick=\"HttpGetNorm('" + icalFunc + "')\" href=\"" + icalCalendarLink[i] + "\"><img src=\"https://dani0001414.github.io/TheVRMobilMenetrend/ical_icon.svg\" class=\"aspect__fill\" width=\"58\"></a>&nbsp;&nbsp;&nbsp;<a onclick=\"HttpGetNorm('" + yahooFunc + "')\"href=\"" + yahooCalendarLink[i] + "\"><img src=\"https://dani0001414.github.io/TheVRMobilMenetrend/Yahooicon.svg\" class=\"aspect__fill\" width=\"58\"></a></div>";
 		if (themeStatus == "light") { document.getElementById("light_popup").style.filter = "invert(100%)"; }
 		if (themeStatus == "dark") { document.getElementById("light_popup").style.filter = "invert(0%)"; }  /*Világos Témánál az svg ikonok invertálása. */
 		HttpGetNorm(calendarFunc);
