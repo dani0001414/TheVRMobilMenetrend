@@ -252,7 +252,7 @@ var calendarFunc = "https://script.google.com/macros/s/AKfycbwCuXEIW0pJo4aL8f09t
 var googleFunc = "https://script.google.com/macros/s/AKfycbwCuXEIW0pJo4aL8f09tvzPoaJ76t99aPT26kSw1Iji2K39WxNy/exec?func=add-google-calendar";
 var icalFunc = "https://script.google.com/macros/s/AKfycbwCuXEIW0pJo4aL8f09tvzPoaJ76t99aPT26kSw1Iji2K39WxNy/exec?func=add-ical-calendar";
 var yahooFunc = "https://script.google.com/macros/s/AKfycbwCuXEIW0pJo4aL8f09tvzPoaJ76t99aPT26kSw1Iji2K39WxNy/exec?func=add-yahoo-calendar";
-var settingsFunc = "https://script.google.com/macros/s/AKfycbwCuXEIW0pJo4aL8f09tvzPoaJ76t99aPT26kSw1Iji2K39WxNy/exec?func=settings-open";
+var detailFunc = "https://script.google.com/macros/s/AKfycbwCuXEIW0pJo4aL8f09tvzPoaJ76t99aPT26kSw1Iji2K39WxNy/exec?func=open-details";
 var whiteThemeFunc = "https://script.google.com/macros/s/AKfycbwCuXEIW0pJo4aL8f09tvzPoaJ76t99aPT26kSw1Iji2K39WxNy/exec?func=light-theme-set";
 var blackThemeFunc = "https://script.google.com/macros/s/AKfycbwCuXEIW0pJo4aL8f09tvzPoaJ76t99aPT26kSw1Iji2K39WxNy/exec?func=dark-theme-set";
 
@@ -684,7 +684,7 @@ function hide_and_show(elementId, i) {
 	} else {
 		x.style.display = "none";
 	}
-
+	HttpGetNorm(detailFunc);
 }
 
 /*Popup ablak megnyitó*/
@@ -712,7 +712,6 @@ function modal_open(i) {
 		document.getElementById("popup_content").innerHTML = "<br><br><b>[Beállítások]</b><br><br>";
 		document.getElementById("popup_content").innerHTML += "<font size=\"2\">Téma: " + themeChangePart + "<br><br></font>";
 		document.getElementById("popup_content").innerHTML += "<font size=\"2\">Cookie-k állapota: " + cookieStatusString + "</font>";
-	HttpGetNorm(settingsFunc);
 	}
 	if (i == "cookie_information") {
 		document.getElementById("popup_content").innerHTML = "<br><br><b>[Cookie Információ]</b><br><br>";
