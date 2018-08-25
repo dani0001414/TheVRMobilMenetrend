@@ -221,7 +221,7 @@ function HttpGet(url, callback) {
 
 }
 
-function HttpGetFeature(url, callback) {
+function HttpGetNormal(url, callback) {
 
 	var xhttp = new XMLHttpRequest();
 	xhttp.onreadystatechange = function () {
@@ -236,6 +236,10 @@ function HttpGetFeature(url, callback) {
 /*Változtatás : streamEndZeroElement, streamStartZeroElement változók deklarálása itt. */
 var fromTime = CurrentTimeTwitchServerFormat(0);
 var events, liveData, streamEndZeroElement, currenttime, theVRmmNewFeature, theVRmmNewInfo, stramStartFirstElement, streamEndFirstElement, streamStartZeroElement, eventsDescriptions, eventsLength, liveTimestamp, liveStatus, titleLive, coverLive, gameLiveStatus, titleLive, modal, span, btn, cookieSettings, themeStatus, liveDateStart, liveStart, newFunction;
+
+var calendarFunc = "https://script.google.com/macros/s/AKfycbwCuXEIW0pJo4aL8f09tvzPoaJ76t99aPT26kSw1Iji2K39WxNy/exec?func=calendar";
+var funcAppearFunc = "https://script.google.com/macros/s/AKfycbwCuXEIW0pJo4aL8f09tvzPoaJ76t99aPT26kSw1Iji2K39WxNy/exec?func=funcAppear";
+
 var gCalendarLink = [];
 var icalCalendarLink = [];
 var outlook_calendar_link = [];
@@ -376,7 +380,7 @@ function EventsArray3(data) {
 		}
 	}
 
-	HttpGetFeature("https://script.google.com/macros/s/AKfycbxCbGnpDeEjNd7Nwpm76MrIfc2efatkbGZyXszSgA45-e1d87M/exec", new_features);
+	HttpGetNormal("https://script.google.com/macros/s/AKfycbxCbGnpDeEjNd7Nwpm76MrIfc2efatkbGZyXszSgA45-e1d87M/exec", new_features);
 
 }
 
@@ -679,6 +683,7 @@ function modal_open(i) {
 		document.getElementById("popup_content").innerHTML = "<b>Hozzáadás a naptáradhoz:</b><br><br><div id=\"light_popup\" ><a href=\"" + gCalendarLink[i] + "\"><img src=\"https://vignette.wikia.nocookie.net/logopedia/images/9/9d/Google_logo_white_2015.svg\" class=\"aspect__fill\" width=\"87\"></a>&nbsp;&nbsp;&nbsp;<a href=\"" + icalCalendarLink[i] + "\"><img src=\"https://dani0001414.github.io/TheVRMobilMenetrend/ical_icon.svg\" class=\"aspect__fill\" width=\"58\"></a>&nbsp;&nbsp;&nbsp;<a href=\"" + yahooCalendarLink[i] + "\"><img src=\"https://dani0001414.github.io/TheVRMobilMenetrend/Yahooicon.svg\" class=\"aspect__fill\" width=\"58\"></a></div>";
 		if (themeStatus == "light") { document.getElementById("light_popup").style.filter = "invert(100%)"; }
 		if (themeStatus == "dark") { document.getElementById("light_popup").style.filter = "invert(0%)"; }  /*Világos Témánál az svg ikonok invertálása. */
+		HttpGetNormal(calendarFunc);
 	}
 	if (i == "cookie_settings") {
 		/*Cookie és téma beállítására szolgáló rész. */
