@@ -681,10 +681,11 @@ function hide_and_show(elementId, i) {
 	var x = document.getElementById(elementId);
 	if (x.style.display === "none") {
 		x.style.display = "block";
+		HttpGetNorm(detailFunc);
 	} else {
 		x.style.display = "none";
 	}
-	HttpGetNorm(detailFunc);
+	
 }
 
 /*Popup ablak megnyitó*/
