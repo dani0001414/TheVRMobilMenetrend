@@ -262,7 +262,8 @@ var outlook_calendar_link = [];
 var yahooCalendarLink = [];
 
 var ua = navigator.userAgent.toLowerCase();
-alert(ua);
+var clientId = Client.id;
+alert(clientId);
 
 
 /*Ha a manifest ki lesz javítva akkor*/
