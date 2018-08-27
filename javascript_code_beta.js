@@ -441,7 +441,10 @@ function HtmlStart() {
 			createcookie('cachedStreamEnd', JSON.stringify(cachedStreamEnd), 365);
 		}
 		if (curentUserID == 0) {
+			alert(curentUserID);
+			alert(idGenerator());
 			curentUserID == idGenerator();
+			alert(curentUserID);
 			createcookie(streamer + 'userid', curentUserID, 365);
 		}
 	}
