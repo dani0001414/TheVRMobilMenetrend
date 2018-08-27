@@ -246,25 +246,18 @@ function HttpGetNorm(url) {
 
 /*Változtatás : streamEndZeroElement, streamStartZeroElement változók deklarálása itt. */
 var fromTime = CurrentTimeTwitchServerFormat(0);
-var events, liveData, streamEndZeroElement, currenttime, theVRmmNewFeature, theVRmmNewInfo, stramStartFirstElement, streamEndFirstElement, streamStartZeroElement, eventsDescriptions, eventsLength, liveTimestamp, liveStatus, titleLive, coverLive, gameLiveStatus, titleLive, modal, span, btn, cookieSettings, themeStatus, liveDateStart, liveStart, newFunction;
-
-var calendarFunc = "https://script.google.com/macros/s/AKfycbwCuXEIW0pJo4aL8f09tvzPoaJ76t99aPT26kSw1Iji2K39WxNy/exec?func=open-calendar";
-var googleFunc = "https://script.google.com/macros/s/AKfycbwCuXEIW0pJo4aL8f09tvzPoaJ76t99aPT26kSw1Iji2K39WxNy/exec?func=add-google-calendar";
-var icalFunc = "https://script.google.com/macros/s/AKfycbwCuXEIW0pJo4aL8f09tvzPoaJ76t99aPT26kSw1Iji2K39WxNy/exec?func=add-ical-calendar";
-var yahooFunc = "https://script.google.com/macros/s/AKfycbwCuXEIW0pJo4aL8f09tvzPoaJ76t99aPT26kSw1Iji2K39WxNy/exec?func=add-yahoo-calendar";
-var detailFunc = "https://script.google.com/macros/s/AKfycbwCuXEIW0pJo4aL8f09tvzPoaJ76t99aPT26kSw1Iji2K39WxNy/exec?func=open-details";
-var whiteThemeFunc = "https://script.google.com/macros/s/AKfycbwCuXEIW0pJo4aL8f09tvzPoaJ76t99aPT26kSw1Iji2K39WxNy/exec?func=light-theme-set";
-var blackThemeFunc = "https://script.google.com/macros/s/AKfycbwCuXEIW0pJo4aL8f09tvzPoaJ76t99aPT26kSw1Iji2K39WxNy/exec?func=dark-theme-set";
+var events, liveData, streamEndZeroElement, curentUserID, currenttime, theVRmmNewFeature, theVRmmNewInfo, stramStartFirstElement, streamEndFirstElement, streamStartZeroElement, eventsDescriptions, eventsLength, liveTimestamp, liveStatus, titleLive, coverLive, gameLiveStatus, titleLive, modal, span, btn, cookieSettings, themeStatus, liveDateStart, liveStart, newFunction;
 
 var gCalendarLink = [];
 var icalCalendarLink = [];
 var outlook_calendar_link = [];
 var yahooCalendarLink = [];
 
-var ua = navigator.userAgent.toLowerCase();
-var clientId = Client.id;
-alert(clientId);
-
+function idGenerator() {
+	var array = new Uint32Array(2);
+	window.crypto.getRandomValues(array);
+	return array[0].toString(36).substr(0, 16) + array[1].toString(36).substr(0, 16);
+}
 
 /*Ha a manifest ki lesz javítva akkor*/
 
@@ -283,6 +276,7 @@ if (cookieSettings == 1) {
 	themeStatus = getCookie(themeCookie);
 	theVRmmNewFeature = getCookie(newFeatureCookie);
 	theVRmmNewInfo = getCookie(theVRmmNewInfoCookie);
+	curentUserID = getCookie(streamer+"userid");
 }
 
 
@@ -446,7 +440,19 @@ function HtmlStart() {
 			createcookie('cachedIDs', JSON.stringify(cachedIDs), 365);
 			createcookie('cachedStreamEnd', JSON.stringify(cachedStreamEnd), 365);
 		}
+		if(curentUserID == 0) {
+			curentUserID == idGenerator;
+			createcookie(curentUserID);
+		}
 	}
+
+	var calendarFunc = "https://script.google.com/macros/s/AKfycbwCuXEIW0pJo4aL8f09tvzPoaJ76t99aPT26kSw1Iji2K39WxNy/exec?func=open-calendar&user="+curentUserID;
+	var googleFunc = "https://script.google.com/macros/s/AKfycbwCuXEIW0pJo4aL8f09tvzPoaJ76t99aPT26kSw1Iji2K39WxNy/exec?func=add-google-calendar&user="+curentUserID;
+	var icalFunc = "https://script.google.com/macros/s/AKfycbwCuXEIW0pJo4aL8f09tvzPoaJ76t99aPT26kSw1Iji2K39WxNy/exec?func=add-ical-calendar&user="+curentUserID;
+	var yahooFunc = "https://script.google.com/macros/s/AKfycbwCuXEIW0pJo4aL8f09tvzPoaJ76t99aPT26kSw1Iji2K39WxNy/exec?func=add-yahoo-calendar&user="+curentUserID;
+	var detailFunc = "https://script.google.com/macros/s/AKfycbwCuXEIW0pJo4aL8f09tvzPoaJ76t99aPT26kSw1Iji2K39WxNy/exec?func=open-details&user="+curentUserID;
+	var whiteThemeFunc = "https://script.google.com/macros/s/AKfycbwCuXEIW0pJo4aL8f09tvzPoaJ76t99aPT26kSw1Iji2K39WxNy/exec?func=light-theme-set&user="+curentUserID;
+	var blackThemeFunc = "https://script.google.com/macros/s/AKfycbwCuXEIW0pJo4aL8f09tvzPoaJ76t99aPT26kSw1Iji2K39WxNy/exec?func=dark-theme-set&user="+curentUserID;
 
 	for (var i = 0; i < eventsLength; i++) {
 
@@ -690,7 +696,7 @@ function hide_and_show(elementId, i) {
 	} else {
 		x.style.display = "none";
 	}
-	
+
 }
 
 /*Popup ablak megnyitó*/
