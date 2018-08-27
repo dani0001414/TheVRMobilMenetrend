@@ -246,7 +246,7 @@ function HttpGetNorm(url) {
 
 /*Változtatás : streamEndZeroElement, streamStartZeroElement változók deklarálása itt. */
 var fromTime = CurrentTimeTwitchServerFormat(0);
-var events, liveData, streamEndZeroElement, curentUserID, currenttime, theVRmmNewFeature, theVRmmNewInfo, stramStartFirstElement, streamEndFirstElement, streamStartZeroElement, eventsDescriptions, eventsLength, liveTimestamp, liveStatus, titleLive, coverLive, gameLiveStatus, titleLive, modal, span, btn, cookieSettings, themeStatus, liveDateStart, liveStart, newFunction;
+var events, liveData, streamEndZeroElement, calendarFunc, googleFunc, icalFunc, yahooFunc, detailFunc, whiteThemeFunc, blackThemeFunc, curentUserID, currenttime, theVRmmNewFeature, theVRmmNewInfo, stramStartFirstElement, streamEndFirstElement, streamStartZeroElement, eventsDescriptions, eventsLength, liveTimestamp, liveStatus, titleLive, coverLive, gameLiveStatus, titleLive, modal, span, btn, cookieSettings, themeStatus, liveDateStart, liveStart, newFunction;
 
 var gCalendarLink = [];
 var icalCalendarLink = [];
@@ -276,7 +276,7 @@ if (cookieSettings == 1) {
 	themeStatus = getCookie(themeCookie);
 	theVRmmNewFeature = getCookie(newFeatureCookie);
 	theVRmmNewInfo = getCookie(theVRmmNewInfoCookie);
-	curentUserID = getCookie(streamer+"userid");
+	curentUserID = getCookie(streamer + "userid");
 }
 
 
@@ -440,19 +440,19 @@ function HtmlStart() {
 			createcookie('cachedIDs', JSON.stringify(cachedIDs), 365);
 			createcookie('cachedStreamEnd', JSON.stringify(cachedStreamEnd), 365);
 		}
-		if(curentUserID == 0) {
+		if (curentUserID == 0) {
 			curentUserID == idGenerator;
-			createcookie(curentUserID);
+			createcookie(streamer + 'userid', curentUserID, 365);
 		}
 	}
 
-	var calendarFunc = "https://script.google.com/macros/s/AKfycbwCuXEIW0pJo4aL8f09tvzPoaJ76t99aPT26kSw1Iji2K39WxNy/exec?func=open-calendar&user="+curentUserID;
-	var googleFunc = "https://script.google.com/macros/s/AKfycbwCuXEIW0pJo4aL8f09tvzPoaJ76t99aPT26kSw1Iji2K39WxNy/exec?func=add-google-calendar&user="+curentUserID;
-	var icalFunc = "https://script.google.com/macros/s/AKfycbwCuXEIW0pJo4aL8f09tvzPoaJ76t99aPT26kSw1Iji2K39WxNy/exec?func=add-ical-calendar&user="+curentUserID;
-	var yahooFunc = "https://script.google.com/macros/s/AKfycbwCuXEIW0pJo4aL8f09tvzPoaJ76t99aPT26kSw1Iji2K39WxNy/exec?func=add-yahoo-calendar&user="+curentUserID;
-	var detailFunc = "https://script.google.com/macros/s/AKfycbwCuXEIW0pJo4aL8f09tvzPoaJ76t99aPT26kSw1Iji2K39WxNy/exec?func=open-details&user="+curentUserID;
-	var whiteThemeFunc = "https://script.google.com/macros/s/AKfycbwCuXEIW0pJo4aL8f09tvzPoaJ76t99aPT26kSw1Iji2K39WxNy/exec?func=light-theme-set&user="+curentUserID;
-	var blackThemeFunc = "https://script.google.com/macros/s/AKfycbwCuXEIW0pJo4aL8f09tvzPoaJ76t99aPT26kSw1Iji2K39WxNy/exec?func=dark-theme-set&user="+curentUserID;
+	calendarFunc = "https://script.google.com/macros/s/AKfycbwCuXEIW0pJo4aL8f09tvzPoaJ76t99aPT26kSw1Iji2K39WxNy/exec?func=open-calendar&user=" + curentUserID;
+	googleFunc = "https://script.google.com/macros/s/AKfycbwCuXEIW0pJo4aL8f09tvzPoaJ76t99aPT26kSw1Iji2K39WxNy/exec?func=add-google-calendar&user=" + curentUserID;
+	icalFunc = "https://script.google.com/macros/s/AKfycbwCuXEIW0pJo4aL8f09tvzPoaJ76t99aPT26kSw1Iji2K39WxNy/exec?func=add-ical-calendar&user=" + curentUserID;
+	yahooFunc = "https://script.google.com/macros/s/AKfycbwCuXEIW0pJo4aL8f09tvzPoaJ76t99aPT26kSw1Iji2K39WxNy/exec?func=add-yahoo-calendar&user=" + curentUserID;
+	detailFunc = "https://script.google.com/macros/s/AKfycbwCuXEIW0pJo4aL8f09tvzPoaJ76t99aPT26kSw1Iji2K39WxNy/exec?func=open-details&user=" + curentUserID;
+	whiteThemeFunc = "https://script.google.com/macros/s/AKfycbwCuXEIW0pJo4aL8f09tvzPoaJ76t99aPT26kSw1Iji2K39WxNy/exec?func=light-theme-set&user=" + curentUserID;
+	blackThemeFunc = "https://script.google.com/macros/s/AKfycbwCuXEIW0pJo4aL8f09tvzPoaJ76t99aPT26kSw1Iji2K39WxNy/exec?func=dark-theme-set&user=" + curentUserID;
 
 	for (var i = 0; i < eventsLength; i++) {
 
