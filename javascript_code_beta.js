@@ -261,6 +261,10 @@ var icalCalendarLink = [];
 var outlook_calendar_link = [];
 var yahooCalendarLink = [];
 
+var ua = navigator.userAgent.toLowerCase();
+alert(ua);
+
+
 /*Ha a manifest ki lesz javítva akkor*/
 
 if (location.protocol != 'file:') {
