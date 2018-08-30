@@ -28,7 +28,8 @@ ws.onopen = function () {
 	 ws.send("CAP REQ :twitch.tv/tags twitch.tv/commands"); // send a message
 	 ws.send("PASS SCHMOOPIIE"); // send a message
 	 ws.send("NICK justinfan42461"); // send a message
-	 ws.send("USER justinfan42461 8 * :justinfan42461"); // send a message
+	 ws.send("USER justinfan42461 8 * :justinfan42461"); // send a message 
+	 ws.send("JOIN #wearethevr");
      console.log('message sent');
  };
 
