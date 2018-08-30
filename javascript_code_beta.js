@@ -22,10 +22,6 @@ var theVRmmNewInfoCookie = "thevrmm_new_info";
 CreateValidManifest();
 
 var ws = new WebSocket('wss://irc-ws.chat.twitch.tv/', 'echo-protocol');
-ws.send("CAP REQ :twitch.tv/tags twitch.tv/commands"); // send a message
-ws.send("PASS SCHMOOPIIE"); // send a message
-ws.send("NICK justinfan42461"); // send a message
-ws.send("USER justinfan42461 8 * :justinfan42461"); // send a message
 
 ws.onopen = function () {
      console.log('socket connection opened properly');
@@ -40,10 +36,7 @@ ws.onopen = function () {
      console.log("Message received = " + evt.data);
  };
 
- ws.onclose = function () {
-     // websocket is closed.
-     console.log("Connection closed...");
- };
+
 
 function CurrentTime() {
 	var currentMillisecTimestamp = new Date().getTime();
