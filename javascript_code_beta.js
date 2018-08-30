@@ -55,7 +55,10 @@ ws.onopen = function () {
 	for(var i=0;i<message.length;i++){
 	message[i] = message[i].split("=");
 	message[i][0] = message[i][0].replace("-","");
-	
+	if(message[i][0].search("PRIVMSG") > 0)
+	{
+		message[i][0] = message[i][0].substring(message[i][0].search("PRIVMSG")+21);
+	}
 	jsonStart +="\""+message[i][0]+"\":\""+message[i][1].substring(message[i][1].length-1,0)+"\"";
 	if(i != message.length-1){
 		jsonStart +=",";
