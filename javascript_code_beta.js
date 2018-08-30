@@ -21,58 +21,70 @@ var theVRmmNewInfoCookie = "thevrmm_new_info";
 /*A visszaszámláló, valamint a Cookie olvasás/létrehozás/törlés és modal funkció mind a w3schools oldalról származnak.*/
 CreateValidManifest();
 
-var ws = new WebSocket('wss://irc-ws.chat.twitch.tv/');
-var wsCount=0;
-ws.onopen = function () {
-     console.log('socket connection opened properly');
-	 ws.send("CAP REQ :twitch.tv/tags twitch.tv/commands"); // send a message
-	 ws.send("PASS SCHMOOPIIE"); // send a message
-	 ws.send("NICK justinfan42461"); // send a message
-	 ws.send("USER justinfan42461 8 * :justinfan42461"); // send a message 
-	 ws.send("JOIN #wearethevr");
-     console.log('message sent');
- };
-
- ws.onmessage = function (evt) {
-	var arrayChat = convertTwitchChat(evt.data); 
-	
-	if(wsCount == 0){document.getElementById("0_description").innerHTML="";}
-	wsCount++;
-	 
-	if(wsCount == 10){
-		
-		wsCount=0;
-
-	}
-	 document.getElementById("0_description").innerHTML += arrayChat.displayname+": "+arrayChat.usertype+"<br>";
-	 console.log("Message received = " + wsCount);
- };
-
- function convertTwitchChat(message) {
-	var arrayJson=[];
+function convertTwitchChat(message) {
+	var twitchMessage;
+	var twitchUser;
+	var emotes;
+	var streamerChat="dre3dd";
 	message = message.split(";");
-	var jsonStart = "{";
-	for(var i=0;i<message.length;i++){
-	message[i] = message[i].split("=");
-	message[i][0] = message[i][0].replace("-","");
-	if(message[i][0].search("PRIVMSG") > 0)
-	{
-		message[i][0] = message[i][0].substring(message[i][0].search("PRIVMSG")+21);
+
+	for (var i = 0; i < message.length; i++) {
+		message[i] = message[i].split("=");
+		message[i][0] = message[i][0].replace("-", "");
+		if (message[i][1] == "") { message[i][1] = "none"; }
+		if (message[i][0] == "usertype") {
+			twitchMessage = message[i][1].substring(message[i][1].search("PRIVMSG") + "PRIVMSG".length+ streamerChat.length+4 );
+			console.log(twitchMessage);
+		}
+		if (message[i][0] == "displayname") { twitchUser = message[i][1]; }
+		if (message[i][0] == "emotes") {
+			emotes = message[i][1];
+			if (message[i][1] != "none") {
+				emotes = emotes.split("/");
+				for (var j = 0; j < emotes.length; j++) {
+					emotes[j] = emotes[j].split(",");
+					var temp = emotes[j][0].split(":");
+					emotes[j].unshift(temp[0]);
+					emotes[j][1] = temp[1];
+				}
+
+			}
+		}
 	}
-	jsonStart +="\""+message[i][0]+"\":\""+message[i][1].substring(message[i][1].length-1,0)+"\"";
-	if(i != message.length-1){
-		jsonStart +=",";
-	}else {
-		jsonStart +="";
+
+	var chatArray = {
+		"twitchUser": twitchUser,
+		"twitchMessage": twitchMessage,
+		"emotes": emotes,
+	};
+
+	var link, emotePosition;
+	var emoteName = [];
+	var emoteLink = [];
+	if (emotes != "none") {
+		var emotesLength = Object.keys(chatArray.emotes).length;
+		for (var i = 0; i < emotesLength; i++) {
+			var insideEmotesLength = Object.keys(chatArray.emotes[i]).length;
+			for (var j = 0; j < insideEmotesLength; j++) {
+				if (j == 0) {
+					
+				}
+				if (j != 0) {
+					emotePosition = chatArray.emotes[i][j].split("-");
+					emoteName.push(twitchMessage.substring(parseInt(emotePosition[0]), parseInt(emotePosition[1]) + 1));
+					emoteLink.push(chatArray.emotes[i][0]);
+				}
+			}
+		}
+		for(var i=0;i<emoteName.length;i++){
+			link = " <img  src=\"https://static-cdn.jtvnw.net/emoticons/v1/"+emoteLink[i]+"/1.0\"></img> ";
+			twitchMessage = twitchMessage.replace(emoteName[i], link);
+			chatArray.twitchMessage = twitchMessage;
+		}
 	}
-	}
-	 jsonStart += "}";
-	console.log(jsonStart);
-	var arrayJson=JSON.parse(jsonStart);
-	var userWS = arrayJson.usertype;
-	arrayJson.usertype = userWS.substring(userWS.search("PRIVMSG")+21);
-   return arrayJson;
- }
+
+	return chatArray;
+}
 
 function CurrentTime() {
 	var currentMillisecTimestamp = new Date().getTime();
@@ -455,7 +467,36 @@ function EventsArray3(data) {
 
 /*Feltölti az üres DIV-eket a menetrendi információkkal*/
 function HtmlStart() {
+	if (1) {
+		var ws = new WebSocket('wss://irc-ws.chat.twitch.tv/');
+		var wsCount = 0;
+		ws.onopen = function () {
+			console.log('socket connection opened properly');
+			ws.send("CAP REQ :twitch.tv/tags twitch.tv/commands"); // send a message
+			ws.send("PASS SCHMOOPIIE"); // send a message
+			ws.send("NICK justinfan42461"); // send a message
+			ws.send("USER justinfan42461 8 * :justinfan42461"); // send a message 
+			ws.send("JOIN #dre3dd");
+			console.log('message sent');
+		};
 
+		ws.onmessage = function (evt) {
+			var chatArray = convertTwitchChat(evt.data);
+
+			if (wsCount == 0) { document.getElementById("0_description").innerHTML = "Chat pillanatok:"; }
+			wsCount++;
+
+			if (wsCount == 1) {
+
+				wsCount = 0;
+
+			}
+
+			//chatArray.twitchMessage
+			document.getElementById("0_description").innerHTML += "<p style=\"margin-left: 5px; margin-right: 5px\" align=\"left\"><font size=\"2\">" + "<b>" + chatArray.twitchUser + "</b>: " + chatArray.twitchMessage + "</font></p>";
+			console.log("Message received = " + wsCount);
+		};
+	}
 	currenttime = CurrentTime();
 	var cachedStreamStart, cachedTitles, k = 0, l = 0, m = 0, n = 0;
 	var titles = [];
@@ -738,7 +779,7 @@ function hide_and_show(elementId, i) {
 	/*Ha nem meglepi stream leírása akkor részletekkel töltjük fel részletek div-et.(Változtatás : else if ágba került egy rész ami a lekért leírást beilleszti ha nem üres. Ha üres akkor kiírja, hogy nem tartozik hozzá leírás.) */
 	if (elementId != "meglepi_description") {
 		if ((i == 0) & (liveStatus == "live") & ((liveTimestamp < streamEndZeroElement + 3000) & (liveTimestamp > streamStartZeroElement - 3000))) {
-			document.getElementById(elementId).innerHTML = "<b>Chat Incoming 3.. 2.. 1..:</b><br>";
+			document.getElementById(elementId).innerHTML = "<b>Chat Töltődik...</b><br>";
 		} else if (eventsDescriptions[i].data.event.description) {
 			document.getElementById(elementId).innerHTML = "<b>Részletek:</b><br>" + eventsDescriptions[i].data.event.description + "<br><br><a style=\"cursor: pointer; color: grey; text-decoration: underline;\" onclick=\"modal_open(" + i + ")\" >Hozzáadás a naptárhoz!</a>";
 		} else { document.getElementById(elementId).innerHTML = "<b>Részletek:</b><br>Az eseményhez nem tartozik részletes leírás!<br><br><a style=\"cursor: pointer; color: grey; text-decoration: underline;\" onclick=\"modal_open(" + i + ")\" >Hozzáadás a naptárhoz!</a> "; }
