@@ -44,7 +44,7 @@ ws.onopen = function () {
 		wsCount=0;
 
 	}
-	 document.getElementById("0_description").innerHTML += arrayChat[2]+": "+arrayChat[11]+"<br>";
+	 document.getElementById("0_description").innerHTML += arrayChat.displayname+": "+arrayChat.usertype+"<br>";
 	 console.log("Message received = " + wsCount);
  };
 
@@ -63,7 +63,7 @@ ws.onopen = function () {
 	var arrayJson=JSON.parse(jsonStart);
 	var userWS = arrayJson.usertype;
 	arrayJson.usertype = userWS.substring(userWS.search("PRIVMSG")+21);
-   return message;
+   return arrayJson;
  }
 
 function CurrentTime() {
