@@ -39,7 +39,7 @@ ws.onopen = function () {
 	if(wsCount == 0){document.getElementById("0_description").innerHTML="";}
 	wsCount++;
 	 
-	if(wsCount == 6){
+	if(wsCount == 10){
 		
 		wsCount=0;
 
@@ -54,7 +54,7 @@ ws.onopen = function () {
 	message[i] = message[i].substring(message[i].search("=")+1);
 	}
 	//message[11] = message[11].search("PRIVMSG #wearethevr");
-	message[11] = message[11].substring(message[11].search("PRIVMSG #wearethevr")+23);
+	message[11] = message[11].substring(message[11].search("PRIVMSG #wearethevr")+22);
 	
    return message;
  }
@@ -723,7 +723,7 @@ function hide_and_show(elementId, i) {
 	/*Ha nem meglepi stream leírása akkor részletekkel töltjük fel részletek div-et.(Változtatás : else if ágba került egy rész ami a lekért leírást beilleszti ha nem üres. Ha üres akkor kiírja, hogy nem tartozik hozzá leírás.) */
 	if (elementId != "meglepi_description") {
 		if ((i == 0) & (liveStatus == "live") & ((liveTimestamp < streamEndZeroElement + 3000) & (liveTimestamp > streamStartZeroElement - 3000))) {
-			document.getElementById(elementId).innerHTML = "<b>Részletek:</b><br>" + eventsDescriptions[i].data.event.description + "";
+			document.getElementById(elementId).innerHTML = "<b>Chat Incoming 3.. 2.. 1..:</b><br>";
 		} else if (eventsDescriptions[i].data.event.description) {
 			document.getElementById(elementId).innerHTML = "<b>Részletek:</b><br>" + eventsDescriptions[i].data.event.description + "<br><br><a style=\"cursor: pointer; color: grey; text-decoration: underline;\" onclick=\"modal_open(" + i + ")\" >Hozzáadás a naptárhoz!</a>";
 		} else { document.getElementById(elementId).innerHTML = "<b>Részletek:</b><br>Az eseményhez nem tartozik részletes leírás!<br><br><a style=\"cursor: pointer; color: grey; text-decoration: underline;\" onclick=\"modal_open(" + i + ")\" >Hozzáadás a naptárhoz!</a> "; }
