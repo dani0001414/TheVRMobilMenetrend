@@ -50,12 +50,19 @@ ws.onopen = function () {
 
  function convertTwitchChat(message) {
 	message = message.split(";");
+	var jsonStart = "{";
 	for(var i=0;i<message.length;i++){
-	message[i] = message[i].substring(message[i].search("=")+1);
-	}
-	//message[11] = message[11].search("PRIVMSG #wearethevr");
-	message[11] = message[11].substring(message[11].search("PRIVMSG #wearethevr")+20);
+	message[i] = message[i].split("=");
+	message[i][0] = message[i][0].replace("-","");
 	
+	jsonStart +="\""+message[i][0]+"\":\""+message[i][1]+"\"";
+	if(i != message.length+1){jsonStart +=",";}
+	}
+	 jsonStart += "}";
+	
+	var arrayJson=JSON.parse(jsonStart);
+	var userWS = arrayJson.usertype;
+	arrayJson.usertype = userWS.substring(userWS.search("PRIVMSG")+21);
    return message;
  }
 
