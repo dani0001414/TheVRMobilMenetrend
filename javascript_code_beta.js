@@ -54,7 +54,7 @@ ws.onopen = function () {
 	message[i] = message[i].substring(message[i].search("=")+1);
 	}
 	//message[11] = message[11].search("PRIVMSG #wearethevr");
-	message[11] = message[11].substring(message[11].search("PRIVMSG #wearethevr")+22);
+	message[11] = message[11].substring(message[11].search("PRIVMSG #wearethevr")+20);
 	
    return message;
  }
