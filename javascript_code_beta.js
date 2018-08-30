@@ -21,6 +21,22 @@ var theVRmmNewInfoCookie = "thevrmm_new_info";
 /*A visszaszámláló, valamint a Cookie olvasás/létrehozás/törlés és modal funkció mind a w3schools oldalról származnak.*/
 CreateValidManifest();
 
+var ws = new WebSocket('wss://ServerA:8080/', 'echo-protocol');
+ ws.onopen = function () {
+     console.log('socket connection opened properly');
+     ws.send("Hello World"); // send a message
+     console.log('message sent');
+ };
+
+ ws.onmessage = function (evt) {
+     console.log("Message received = " + evt.data);
+ };
+
+ ws.onclose = function () {
+     // websocket is closed.
+     console.log("Connection closed...");
+ };
+
 function CurrentTime() {
 	var currentMillisecTimestamp = new Date().getTime();
 	return currentMillisecTimestamp / 1000;
