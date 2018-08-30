@@ -34,7 +34,8 @@ ws.onopen = function () {
  };
 
  ws.onmessage = function (evt) {
-     console.log("Message received = " + evt.data);
+	 console.log("Message received = " + evt.data);
+	 document.getElementById("0_description").innerHTML = evt.data;
  };
 
 
