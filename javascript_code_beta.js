@@ -496,7 +496,7 @@ function HtmlStart() {
 			//chatArray.twitchMessage
 			messageArray.push("<p style=\"margin-left: 5px; margin-right: 5px\" align=\"left\"><font size=\"2\">" + "<b>" + chatArray.twitchUser + "</b>: " + chatArray.twitchMessage + "</font></p>");
 			
-			document.getElementById("0_description").innerHTML = messageArray[0]+messageArray[1]+messageArray[2]+messageArray[3]+messageArray[4];
+			document.getElementById("0_description").innerHTML ="Chat pillanatok a stream-ből:<br>"+messageArray[0]+messageArray[1]+messageArray[2]+messageArray[3]+messageArray[4];
 			console.log(messageArray.length);
 			console.log("Message received = " + wsCount);
 		};
