@@ -21,10 +21,10 @@ var theVRmmNewInfoCookie = "thevrmm_new_info";
 /*A visszaszámláló, valamint a Cookie olvasás/létrehozás/törlés és modal funkció mind a w3schools oldalról származnak.*/
 CreateValidManifest();
 
-var ws = new WebSocket('wss://ServerA:8080/', 'echo-protocol');
+var ws = new WebSocket('wss://wss://irc-ws.chat.twitch.tv/', 'echo-protocol');
  ws.onopen = function () {
      console.log('socket connection opened properly');
-     ws.send("Hello World"); // send a message
+    // ws.send("Hello World"); // send a message
      console.log('message sent');
  };
 
