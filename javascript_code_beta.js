@@ -22,7 +22,7 @@ var theVRmmNewInfoCookie = "thevrmm_new_info";
 CreateValidManifest();
 
 var ws = new WebSocket('wss://irc-ws.chat.twitch.tv/');
-
+var wsCount=0;
 ws.onopen = function () {
      console.log('socket connection opened properly');
 	 ws.send("CAP REQ :twitch.tv/tags twitch.tv/commands"); // send a message
@@ -36,8 +36,11 @@ ws.onopen = function () {
  ws.onmessage = function (evt) {
 	var arrayChat = convertTwitchChat(evt.data); 
 	console.log("Message received = " + evt.data);
-	 
-	 document.getElementById("0_description").innerHTML = arrayChat[2]+": "+arrayChat[11];
+	 wsCount++;
+	if(wsCount==6){
+		wsCount=0;
+	}
+	 document.getElementById("0_description").innerHTML += arrayChat[2]+": "+arrayChat[11]+"<br>";
  };
 
  function convertTwitchChat(message) {
