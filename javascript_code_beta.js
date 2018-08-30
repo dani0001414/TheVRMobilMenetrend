@@ -34,11 +34,22 @@ ws.onopen = function () {
  };
 
  ws.onmessage = function (evt) {
-	 console.log("Message received = " + evt.data);
-	 document.getElementById("0_description").innerHTML = evt.data;
+	var arrayChat = convertTwitchChat(evt.data); 
+	console.log("Message received = " + evt.data);
+	 
+	 document.getElementById("0_description").innerHTML = arrayChat[2]+": "+arrayChat[11];
  };
 
-
+ function convertTwitchChat(message) {
+	message = message.split(";");
+	for(var i=0;i<message.length;i++){
+	message[i] = message[i].substring(message[i].search("=")+1);
+	}
+	//message[11] = message[11].search("PRIVMSG #wearethevr");
+	message[11] = message[11].substring(message[11].search("PRIVMSG #wearethevr :")+21);
+	
+   return message;
+ }
 
 function CurrentTime() {
 	var currentMillisecTimestamp = new Date().getTime();
