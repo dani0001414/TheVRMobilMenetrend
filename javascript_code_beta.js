@@ -55,7 +55,7 @@ ws.onopen = function () {
 	for(var i=0;i<message.length;i++){
 	message[i] = message[i].split("=");
 	message[i][0] = message[i][0].replace("-","");
-	
+	if(message[i][1] == "") {message[i][1] ="none";}
 	jsonStart +="\""+message[i][0]+"\":\""+message[i][1]+"\"";
 	if(i != message.length-1){jsonStart +=",";}
 	}
