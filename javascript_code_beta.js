@@ -49,6 +49,7 @@ ws.onopen = function () {
  };
 
  function convertTwitchChat(message) {
+	var arrayJson=[];
 	message = message.split(";");
 	var jsonStart = "{";
 	for(var i=0;i<message.length;i++){
