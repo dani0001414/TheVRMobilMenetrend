@@ -56,7 +56,7 @@ ws.onopen = function () {
 	message[i] = message[i].split("=");
 	message[i][0] = message[i][0].replace("-","");
 	
-	jsonStart +="\""+message[i][0]+"\":\""+message[i][1].substring(0,1)+"\"";
+	jsonStart +="\""+message[i][0]+"\":\""+message[i][1].substring(message[i][1].length-1,0)+"\"";
 	if(i != message.length-1){
 		jsonStart +=",";
 	}else {
