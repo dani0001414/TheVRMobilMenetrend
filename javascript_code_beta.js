@@ -37,8 +37,11 @@ ws.onopen = function () {
 	var arrayChat = convertTwitchChat(evt.data); 
 	console.log("Message received = " + evt.data);
 	 wsCount++;
+	 if(wsCount ==0){document.getElementById("0_description").innerHTML="";}
 	if(wsCount==6){
+		
 		wsCount=0;
+
 	}
 	 document.getElementById("0_description").innerHTML += arrayChat[2]+": "+arrayChat[11]+"<br>";
  };
