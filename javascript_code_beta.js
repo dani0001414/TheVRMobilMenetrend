@@ -57,7 +57,7 @@ ws.onopen = function () {
 	message[i][0] = message[i][0].replace("-","");
 	
 	jsonStart +="\""+message[i][0]+"\":\""+message[i][1]+"\"";
-	if(i != message.length+1){jsonStart +=",";}
+	if(i != message.length){jsonStart +=",";}
 	}
 	 jsonStart += "}";
 	console.log(jsonStart);
