@@ -60,7 +60,7 @@ ws.onopen = function () {
 	if(i != message.length+1){jsonStart +=",";}
 	}
 	 jsonStart += "}";
-	
+	console.log(jsonStart);
 	var arrayJson=JSON.parse(jsonStart);
 	var userWS = arrayJson.usertype;
 	arrayJson.usertype = userWS.substring(userWS.search("PRIVMSG")+21);
