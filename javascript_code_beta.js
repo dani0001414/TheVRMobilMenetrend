@@ -25,7 +25,7 @@ function convertTwitchChat(message) {
 	var twitchMessage;
 	var twitchUser;
 	var emotes;
-	var streamerChat="dre3dd";
+	var streamerChat = "wearethevr";
 	message = message.split(";");
 
 	for (var i = 0; i < message.length; i++) {
@@ -33,7 +33,7 @@ function convertTwitchChat(message) {
 		message[i][0] = message[i][0].replace("-", "");
 		if (message[i][1] == "") { message[i][1] = "none"; }
 		if (message[i][0] == "usertype") {
-			twitchMessage = message[i][1].substring(message[i][1].search("PRIVMSG") + "PRIVMSG".length+ streamerChat.length+4 );
+			twitchMessage = message[i][1].substring(message[i][1].search("PRIVMSG") + "PRIVMSG".length + streamerChat.length + 4);
 			console.log(twitchMessage);
 		}
 		if (message[i][0] == "displayname") { twitchUser = message[i][1]; }
@@ -67,7 +67,7 @@ function convertTwitchChat(message) {
 			var insideEmotesLength = Object.keys(chatArray.emotes[i]).length;
 			for (var j = 0; j < insideEmotesLength; j++) {
 				if (j == 0) {
-					
+
 				}
 				if (j != 0) {
 					emotePosition = chatArray.emotes[i][j].split("-");
@@ -76,8 +76,8 @@ function convertTwitchChat(message) {
 				}
 			}
 		}
-		for(var i=0;i<emoteName.length;i++){
-			link = " <img  src=\"https://static-cdn.jtvnw.net/emoticons/v1/"+emoteLink[i]+"/1.0\"></img> ";
+		for (var i = 0; i < emoteName.length; i++) {
+			link = " <img  src=\"https://static-cdn.jtvnw.net/emoticons/v1/" + emoteLink[i] + "/1.0\"></img> ";
 			twitchMessage = twitchMessage.replace(emoteName[i], link);
 			chatArray.twitchMessage = twitchMessage;
 		}
@@ -468,6 +468,7 @@ function EventsArray3(data) {
 /*Feltölti az üres DIV-eket a menetrendi információkkal*/
 function HtmlStart() {
 	if (1) {
+		var messageArray = ["","","","",""];
 		var ws = new WebSocket('wss://irc-ws.chat.twitch.tv/');
 		var wsCount = 0;
 		ws.onopen = function () {
@@ -476,24 +477,27 @@ function HtmlStart() {
 			ws.send("PASS SCHMOOPIIE"); // send a message
 			ws.send("NICK justinfan42461"); // send a message
 			ws.send("USER justinfan42461 8 * :justinfan42461"); // send a message 
-			ws.send("JOIN #dre3dd");
+			ws.send("JOIN #wearethevr");
 			console.log('message sent');
 		};
-
+		
 		ws.onmessage = function (evt) {
 			var chatArray = convertTwitchChat(evt.data);
+			
 
-			if (wsCount == 0) { document.getElementById("0_description").innerHTML = "Chat pillanatok:"; }
 			wsCount++;
 
-			if (wsCount == 1) {
-
+			if (wsCount == 4) {
+				
 				wsCount = 0;
-
+				
 			}
-
+			messageArray.shift();
 			//chatArray.twitchMessage
-			document.getElementById("0_description").innerHTML += "<p style=\"margin-left: 5px; margin-right: 5px\" align=\"left\"><font size=\"2\">" + "<b>" + chatArray.twitchUser + "</b>: " + chatArray.twitchMessage + "</font></p>";
+			messageArray.push("<p style=\"margin-left: 5px; margin-right: 5px\" align=\"left\"><font size=\"2\">" + "<b>" + chatArray.twitchUser + "</b>: " + chatArray.twitchMessage + "</font></p>");
+			
+			document.getElementById("0_description").innerHTML = messageArray[0]+messageArray[1]+messageArray[2]+messageArray[3]+messageArray[4];
+			console.log(messageArray.length);
 			console.log("Message received = " + wsCount);
 		};
 	}
