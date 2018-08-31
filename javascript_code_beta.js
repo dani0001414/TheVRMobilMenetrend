@@ -25,7 +25,9 @@ function convertTwitchChat(message) {
 	var twitchMessage;
 	var twitchUser;
 	var emotes;
-	var streamerChat = "shroud";
+	var streamerChat = "danx27";
+	
+	/**Split függvényel ésegyébb eljárásokkal az egybefüggő szöveg lekérdezést tömbösítjük. */
 	message = message.split(";");
 
 	for (var i = 0; i < message.length; i++) {
@@ -36,10 +38,11 @@ function convertTwitchChat(message) {
 			twitchMessage = message[i][1].substring(message[i][1].search("PRIVMSG") + "PRIVMSG".length + streamerChat.length + 4);
 			console.log(twitchMessage);
 		}
+		/**A split függvényel szétszedett adatokat tovább rendszerezzük és alakítjuk a célnak. */
 		if (message[i][0] == "displayname") { twitchUser = message[i][1]; }
 		if (message[i][0] == "emotes") {
 			emotes = message[i][1];
-			if (message[i][1] != "none") {
+			if (emotes != "none") {
 				emotes = emotes.split("/");
 				for (var j = 0; j < emotes.length; j++) {
 					emotes[j] = emotes[j].split(",");
@@ -51,7 +54,7 @@ function convertTwitchChat(message) {
 			}
 		}
 	}
-
+	/**ChatArray Json struktúrába rakjuk(emotes rész valószínűleg felesleges majd átalakítom másként de így is működik) */
 	var chatArray = {
 		"twitchUser": twitchUser,
 		"twitchMessage": twitchMessage,
@@ -61,14 +64,13 @@ function convertTwitchChat(message) {
 	var link, emotePosition;
 	var emoteName = [];
 	var emoteLink = [];
+
+	/**Az Emotikonokon tovább gyúrúnk. Az emotikonok helyzetét leíró részt a célnak megfelelően formázzuk és substringel a nevét és linkhez használatós kódját eltároljuk.*/
 	if (emotes != "none") {
 		var emotesLength = Object.keys(chatArray.emotes).length;
 		for (var i = 0; i < emotesLength; i++) {
 			var insideEmotesLength = Object.keys(chatArray.emotes[i]).length;
 			for (var j = 0; j < insideEmotesLength; j++) {
-				if (j == 0) {
-
-				}
 				if (j != 0) {
 					emotePosition = chatArray.emotes[i][j].split("-");
 					emoteName.push(twitchMessage.substring(parseInt(emotePosition[0]), parseInt(emotePosition[1]) + 1));
@@ -76,6 +78,7 @@ function convertTwitchChat(message) {
 				}
 			}
 		}
+		/**Az eltárolt emote nevek és kódok alapján az emotikon neveket lecseréljük az emitokonra mutató képre. */
 		for (var i = 0; i < emoteName.length; i++) {
 			link = " <img  src=\"https://static-cdn.jtvnw.net/emoticons/v1/" + emoteLink[i] + "/1.0\"></img> ";
 			twitchMessage = twitchMessage.replace(emoteName[i], link);
@@ -467,6 +470,7 @@ function EventsArray3(data) {
 
 /*Feltölti az üres DIV-eket a menetrendi információkkal*/
 function HtmlStart() {
+	/**WebSocket rész a TheVR Chat-hez. Itt most jelenleg tesztként Shroud betéve */
 	if (1) {
 		var messageArray = ["","","","",""];
 		var ws = new WebSocket('wss://irc-ws.chat.twitch.tv/');
@@ -477,23 +481,16 @@ function HtmlStart() {
 			ws.send("PASS SCHMOOPIIE"); // send a message
 			ws.send("NICK justinfan42461"); // send a message
 			ws.send("USER justinfan42461 8 * :justinfan42461"); // send a message 
-			ws.send("JOIN #shroud");
+			ws.send("JOIN #danx27");
 			console.log('message sent');
 		};
 		
 		ws.onmessage = function (evt) {
+			/**WebSocket adatok olvasása*/
 			var chatArray = convertTwitchChat(evt.data);
 			
-
-			wsCount++;
-
-			if (wsCount == 4) {
-				
-				wsCount = 0;
-				
-			}
+			/**HTML-formában a tömbben shiftelgetjük, hogy szépen felfelé irányúan megjelenjen. */
 			messageArray.shift();
-			//chatArray.twitchMessage
 			messageArray.push("<p style=\"margin-left: 5px; margin-right: 5px\" align=\"left\"><font size=\"2\">" + "<b>" + chatArray.twitchUser + "</b>: " + chatArray.twitchMessage + "</font></p>");
 			
 			document.getElementById("0_description").innerHTML ="Chat pillanatok a stream-ből:"+messageArray[0]+messageArray[1]+messageArray[2]+messageArray[3]+messageArray[4];
@@ -501,6 +498,7 @@ function HtmlStart() {
 			console.log("Message received = " + wsCount);
 		};
 	}
+
 	currenttime = CurrentTime();
 	var cachedStreamStart, cachedTitles, k = 0, l = 0, m = 0, n = 0;
 	var titles = [];
