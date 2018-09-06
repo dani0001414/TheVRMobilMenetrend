@@ -25,8 +25,8 @@ function convertTwitchChat(message) {
 	var twitchMessage;
 	var twitchUser;
 	var emotes;
-	var streamerChat = "danx27";
-	
+	var streamerChat = "wearethevr";
+
 	/**Split függvényel ésegyébb eljárásokkal az egybefüggő szöveg lekérdezést tömbösítjük. */
 	message = message.split(";");
 
@@ -36,7 +36,6 @@ function convertTwitchChat(message) {
 		if (message[i][1] == "") { message[i][1] = "none"; }
 		if (message[i][0] == "usertype") {
 			twitchMessage = message[i][1].substring(message[i][1].search("PRIVMSG") + "PRIVMSG".length + streamerChat.length + 4);
-			console.log(twitchMessage);
 		}
 		/**A split függvényel szétszedett adatokat tovább rendszerezzük és alakítjuk a célnak. */
 		if (message[i][0] == "displayname") { twitchUser = message[i][1]; }
@@ -471,31 +470,26 @@ function EventsArray3(data) {
 /*Feltölti az üres DIV-eket a menetrendi információkkal*/
 function HtmlStart() {
 	/**WebSocket rész a TheVR Chat-hez. Itt most jelenleg tesztként Shroud betéve */
-	if (1) {
-		var messageArray = ["","","","",""];
+	if (liveStatus == "live") {
+		var formatedChatArray = ["", "", "", "", ""];
 		var ws = new WebSocket('wss://irc-ws.chat.twitch.tv/');
-		var wsCount = 0;
+
 		ws.onopen = function () {
-			console.log('socket connection opened properly');
 			ws.send("CAP REQ :twitch.tv/tags twitch.tv/commands"); // send a message
 			ws.send("PASS SCHMOOPIIE"); // send a message
 			ws.send("NICK justinfan42461"); // send a message
 			ws.send("USER justinfan42461 8 * :justinfan42461"); // send a message 
-			ws.send("JOIN #danx27");
-			console.log('message sent');
+			ws.send("JOIN #wearethevr");
 		};
-		
+
 		ws.onmessage = function (evt) {
 			/**WebSocket adatok olvasása*/
 			var chatArray = convertTwitchChat(evt.data);
-			
+
 			/**HTML-formában a tömbben shiftelgetjük, hogy szépen felfelé irányúan megjelenjen. */
-			messageArray.shift();
-			messageArray.push("<p style=\"margin-left: 5px; margin-right: 5px\" align=\"left\"><font size=\"2\">" + "<b>" + chatArray.twitchUser + "</b>: " + chatArray.twitchMessage + "</font></p>");
-			
-			document.getElementById("0_description").innerHTML ="Chat pillanatok a stream-ből:"+messageArray[0]+messageArray[1]+messageArray[2]+messageArray[3]+messageArray[4];
-			console.log(messageArray.length);
-			console.log("Message received = " + wsCount);
+			formatedChatArray.shift();
+			formatedChatArray.push("<p style=\"margin-left: 5px; margin-right: 5px\" align=\"left\"><font size=\"2\">" + "<b>" + chatArray.twitchUser + "</b>: " + chatArray.twitchMessage + "</font></p>");
+			document.getElementById("0_description").innerHTML = "Chat pillanatok a stream-ből:" + formatedChatArray[0] + formatedChatArray[1] + formatedChatArray[2] + formatedChatArray[3] + formatedChatArray[4];
 		};
 	}
 
