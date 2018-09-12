@@ -1,5 +1,5 @@
 /**MobilBarát Menetrend Testreszabása. */
-//NEM JÓ//////
+
 /*Streamer adatok megadása*/
 var streamer = "wearethevr";
 var twitchLink = "https://www.twitch.tv/" + streamer;
@@ -372,7 +372,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
 });
 
 var getLink = "https://api.twitch.tv/helix/streams?user_id=" + streamerID;
-HttpPost("https://gql.twitch.tv/gql", EventsArray2);
+HttpGet(getLink, EventsArray);
 
 /*HttpGet live api lekérő meghívja a funkciót és átadja a callback változót*/
 function EventsArray(data) {
@@ -385,7 +385,7 @@ function EventsArray(data) {
 	liveData = JSON.parse(liveData);
 	coverLive = null;
 	titleLive = null;
-	liveStatus = "nostream";
+	liveStatus = null;
 	gameLiveStatus = null;
 	if (liveData.data.length > 0) {
 		coverLive = liveData.data['0'].thumbnail_url;
@@ -402,7 +402,8 @@ function EventsArray(data) {
 	}
 
 	if (liveStatus == "live") { fromTime = liveData.data['0'].started_at; }
-	if (liveStatus == "live") { HttpPost("https://gql.twitch.tv/gql", EventsArray2); }
+
+	HttpPost("https://gql.twitch.tv/gql", EventsArray2);
 }
 
 /*HttpPost menetrend api lekérő meghívja a funkciót és átadja a callback változót*/
@@ -444,10 +445,8 @@ function EventsArray2(data) {
 	}
 	descriptionJsonStringPlayload += "]";
 
-	if (liveStatus != "live") { HttpGet(getLink, EventsArray); }
 	HttpPost2("https://gql.twitch.tv/gql", descriptionJsonStringPlayload, EventsArray3);
 	HtmlStart();
-
 }
 
 /*HttpPost2 menetrend részletek api lekérő meghívja a funkciót és átadja a callback változót*/
@@ -473,6 +472,31 @@ function EventsArray3(data) {
 
 /*Feltölti az üres DIV-eket a menetrendi információkkal*/
 function HtmlStart() {
+	/**WebSocket rész a TheVR Chat-hez. Itt most jelenleg tesztként Shroud betéve */
+	if (liveStatus == "live") {
+		var streamerChat = "JOIN #" + streamer;
+		var formatedChatArray = ["", "", "", "", ""];
+		var ws = new WebSocket('wss://irc-ws.chat.twitch.tv/');
+
+		ws.onopen = function () {
+			ws.send("CAP REQ :twitch.tv/tags twitch.tv/commands"); // send a message
+			ws.send("PASS SCHMOOPIIE"); // send a message
+			ws.send("NICK justinfan42461"); // send a message
+			ws.send("USER justinfan42461 8 * :justinfan42461"); // send a message 
+			ws.send(streamerChat);
+		};
+
+		ws.onmessage = function (evt) {
+			/**WebSocket adatok olvasása*/
+			var chatArray = convertTwitchChat(evt.data);
+
+			/**HTML-formában a tömbben shiftelgetjük, hogy szépen felfelé irányúan megjelenjen. */
+			formatedChatArray.shift();
+			formatedChatArray.push("<p style=\"margin-left: 5px; margin-right: 5px\" align=\"left\"><font size=\"2\">" + "<b>" + chatArray.twitchUser + "</b>: " + chatArray.twitchMessage + "</font></p>");
+			document.getElementById("0_description").innerHTML = "Chat pillanatok a stream-ből:" + formatedChatArray[0] + formatedChatArray[1] + formatedChatArray[2] + formatedChatArray[3] + formatedChatArray[4];
+		};
+	}
+
 	currenttime = CurrentTime();
 	var cachedStreamStart, cachedTitles, k = 0, l = 0, m = 0, n = 0;
 	var titles = [];
@@ -525,16 +549,17 @@ function HtmlStart() {
 	whiteThemeFunc = "https://script.google.com/macros/s/AKfycbwCuXEIW0pJo4aL8f09tvzPoaJ76t99aPT26kSw1Iji2K39WxNy/exec?func=light-theme-set&user=" + curentUserID;
 	blackThemeFunc = "https://script.google.com/macros/s/AKfycbwCuXEIW0pJo4aL8f09tvzPoaJ76t99aPT26kSw1Iji2K39WxNy/exec?func=dark-theme-set&user=" + curentUserID;
 
-	if (eventsLength > 1) {
-		if ((currenttime > stramStartFirstElement) & (i == 0)) {
-			i = 1;
-		}
-	} else {
-		stramStartFirstElement = Timestamp(events[0].node.endAt) + 7200;
-		streamEndFirstElement = Timestamp(events[0].node.endAt) + 7200;
-	}
-
 	for (var i = 0; i < eventsLength; i++) {
+
+		if (eventsLength > 1) {
+			if ((currenttime > stramStartFirstElement) & (i == 0)) {
+				i = 1;
+			}
+		} else {
+			stramStartFirstElement = Timestamp(events[0].node.endAt) + 7200;
+			streamEndFirstElement = Timestamp(events[0].node.endAt) + 7200;
+		}
+
 		var titleId = i + "_cim";
 		var coverId = i + "_cover";
 		var timeId = i + "_time";
@@ -548,7 +573,8 @@ function HtmlStart() {
 
 		if (cookieSettings == 1) {
 			//////
-			var changedTitleCount = 0, changedTimeCount = 0, changeAllCount = 0, existElementCount = 0;
+			var changedTitleCount = 0, changedTimeCount = 0, changeAllCount = 0;
+			existElementCount = 0;
 
 			if ((cachedStreamStart.length == 0) & (eventsLength > 0)) {
 				newEventsPosition[k] = i; k++;
@@ -624,85 +650,55 @@ function HtmlStart() {
 
 
 		/*majd 7200 legyen */
-
+		var countdownStart = streamStart[i] - currenttime;
 		/*A menetrendi idő jelzésének módjának változtatása ha eltérő dátumú kedés és befejezés és ha a stream tovább tart mint a várt*/
 		if ((liveTimestamp < streamEnd[i] + 3000) & (liveTimestamp > streamStart[i] - 3000) & (elapsed > 0) & (startTime[0] == endTime[0])) {
 			document.getElementById(timeId).innerHTML = startTime[0] + "<br>" + startTime[1] + "-" + endTime[1] + "<font color=\"yellow\"> + " + elapsed + "p</font>";
 		} else if (startTime[0] == endTime[0]) {
-			document.getElementById(timeId).innerHTML = startTime[0] + "<br>" + startTime[1] + "-" + endTime[1];
+			if ((countdownStart < 7200) & (countdownStart > 0) & (liveStatus != "live")) { Countdown(streamStart[i]); } else { document.getElementById(timeId).innerHTML = startTime[0] + "<br>" + startTime[1] + "-" + endTime[1]; }
 		} else if ((liveTimestamp < streamEnd[i] + 3000) & (liveTimestamp > streamStart[i] - 3000) & (elapsed > 0)) {
-			document.getElementById(timeId).innerHTML = "<div style=\"overflow: hidden; width: 320px;\">    <div style=\"float:left; width: 155px\"><center>" + startTime[0] + "<br>" + startTime[1] + "</center></div>    <div style=\"float:left; margin-left:10px; margin-top:10px\"><center>-</center></div>	<div style=\"overflow: hidden; width: 155px float:right;\"><center>" + endTime[0] + "<font color=\"yellow\"> + " + elapsed + "p</font><br>" + endTime[1] + "</center></div></div>";
+			document.getElementById(timeId).innerHTML = "<div style=\"overflow: hidden; width: 320px;\">    <div style=\"float:left; width: 155px\"><center>" + startTime[0] + "<br>" + startTime[1] + "<font color=\"yellow\"> + " + elapsed + "p</font></center></div>    <div style=\"float:left; margin-left:10px; margin-top:10px\"><center>-</center></div>	<div style=\"overflow: hidden; width: 155px float:right;\"><center>" + endTime[0] + "<br>" + endTime[1] + "</center></div></div>";
 		} else {
-			document.getElementById(timeId).innerHTML = "<div style=\"overflow: hidden; width: 320px;\">    <div style=\"float:left; width: 155px\"><center>" + startTime[0] + "<br>" + startTime[1] + "</center></div>    <div style=\"float:left; margin-left:10px; margin-top:10px\"><center>-</center></div>	<div style=\"overflow: hidden; width: 155px float:right;\"><center>" + endTime[0] + "<br>" + endTime[1] + "</center></div></div>";
-		}
-	}
-	if ((liveStatus == "live") | (liveStatus == "nostream")) {
-		/*Ha az első menetrendi elem lefedi a stream indítást akkor az első elem streamelődik. Ha nem akkor meglepi stream.(Változtatás : kivettem a fenti if ágból. streamEndZeroElement és streamStartZeroElement változók használata. ) */
-		if ((liveStatus == "live") & ((liveTimestamp < streamEndZeroElement) & (liveTimestamp > streamStartZeroElement - 3000)) & (currenttime < stramStartFirstElement)) {  /*Ha előfordulna, hogy jóval előbb indítják a streamet akkormég vagy-ként liveTimestamp helyett currenttime-al is vizsgálni. */
-			document.getElementById("0").style.backgroundColor = "#4b367c";
-			document.getElementById("0").style.color = "#c3c1c8";
-			document.getElementById("0_cim").innerHTML = "<a target=\"_blank\" href=\"" + twitchLink + "\"><img src=\"https://i.imgur.com/o1kyCnf.png\"></a><br><b>" + titleLive + "</b>";
-			document.getElementById("0_cover").innerHTML = "<a target=\"_blank\" href=\"" + twitchLink + "\"><img src=\"" + coverLive + "\" class=\"aspect__fill\" width=\"320\"></a>";
-		} else if ((liveStatus == "live") & (currenttime < streamEndFirstElement) & (currenttime > stramStartFirstElement)) {
-			document.getElementById("1").style.backgroundColor = "#4b367c";
-			document.getElementById("1").style.color = "#c3c1c8";
-			document.getElementById("1_cim").innerHTML = "<a target=\"_blank\" href=\"" + twitchLink + "\"><img src=\"https://i.imgur.com/o1kyCnf.png\"></a><br><b>" + titleLive + "</b>";
-			document.getElementById("1_cover").innerHTML = "<a target=\"_blank\" href=\"" + twitchLink + "\"><img src=\"" + coverLive + "\" class=\"aspect__fill\" width=\"320\"></a>";
-		} else if ((liveStatus == "live") & (currenttime < streamEndZeroElement) & (currenttime > streamStartZeroElement)) {
-			document.getElementById("0").style.backgroundColor = "#4b367c";
-			document.getElementById("0").style.color = "#c3c1c8";
-			document.getElementById("0_cim").innerHTML = "<a target=\"_blank\" href=\"" + twitchLink + "\"><img src=\"https://i.imgur.com/o1kyCnf.png\"></a><br><b>" + titleLive + "</b>";
-			document.getElementById("0_cover").innerHTML = "<a target=\"_blank\" href=\"" + twitchLink + "\"><img src=\"" + coverLive + "\" class=\"aspect__fill\" width=\"320\"></a>";
-		} else if ((liveStatus != "live") & (currenttime < streamEndZeroElement) & (currenttime > streamStartZeroElement)) {  /*Ha előfordulna, hogy később indítják a streamet akkormég vagy-ként liveTimestamp helyett currenttime-al is vizsgálni. */
-			document.getElementById("0_cim").innerHTML = "<img src=\"https://i.imgur.com/ZNlNn8J.png\"><br><b>" + events[0].node.title + "</b>";
-		} else if (liveStatus == "live") {
-			document.getElementById("meglepi").style.display = 'block';
-			document.getElementById("meglepi_br").style.display = 'block';
-			document.getElementById("meglepi_cim").innerHTML = "<a target=\"_blank\" href=\"" + twitchLink + "\"><img src=\"https://i.imgur.com/gu6M3eu.png\"></a><br><b>" + titleLive + "</b>";
-			document.getElementById("meglepi_cover").innerHTML = "<img src=\"" + coverLive + "\" class=\"aspect__fill\" width=\"320\">";
-			document.getElementById("meglepi_time").innerHTML = liveDateStart + "<br>" + liveStart[1] + "-Ameddig tart</p>";
-
-		}
-		/*Változtatás : Ha az events tömb hosszúsága nulla és élő közvetítés van akkor meglepi stream. Ellenkező esetbeh ha nincs stream és csak a tömb hossza nulla akkor no_stream div feltöltése a rejtés megjelenítés helyett. Html-ben mindig betöltődött a 125kb nagyságú kép rejtésből megjelenítéses módszernél. ) */
-		if ((eventsLength == 0) & (liveStatus == "live")) {
-			document.getElementById("meglepi").style.display = 'block';
-			document.getElementById("meglepi_br").style.display = 'block';
-			document.getElementById("meglepi_cim").innerHTML = "<a target=\"_blank\" href=\"" + twitchLink + "\"><img src=\"https://i.imgur.com/gu6M3eu.png\"></a><br><b>" + titleLive + "</b>";
-			document.getElementById("meglepi_cover").innerHTML = "<img src=\"" + coverLive + "\" class=\"aspect__fill\" width=\"320\">";
-			document.getElementById("meglepi_time").innerHTML = liveDateStart + "<br>" + liveStart[1] + "-Ameddig tart</p>";
-		} else if (eventsLength == 0) {
-			document.getElementById("no_stream").innerHTML = "<img src=\"" + noEventsPic + "\" alt=\"23\" width=\"320\"><br><h3 style=\"font-family:rockwell;\">" + noEventsText + "</h3>";
-		}
-
-		/**WebSocket rész a TheVR Chat-hez. Itt most jelenleg tesztként Shroud betéve */
-		if (liveStatus == "live") {
-			var streamerChat = "JOIN #" + streamer;
-			var formatedChatArray = ["", "", "", "", ""];
-			var ws = new WebSocket('wss://irc-ws.chat.twitch.tv/');
-
-			ws.onopen = function () {
-				ws.send("CAP REQ :twitch.tv/tags twitch.tv/commands"); // send a message
-				ws.send("PASS SCHMOOPIIE"); // send a message
-				ws.send("NICK justinfan42461"); // send a message
-				ws.send("USER justinfan42461 8 * :justinfan42461"); // send a message 
-				ws.send(streamerChat);
-			};
-
-			ws.onmessage = function (evt) {
-				/**WebSocket adatok olvasása*/
-				var chatArray = convertTwitchChat(evt.data);
-
-				/**HTML-formában a tömbben shiftelgetjük, hogy szépen felfelé irányúan megjelenjen. */
-				formatedChatArray.shift();
-				formatedChatArray.push("<p style=\"margin-left: 5px; margin-right: 5px\" align=\"left\"><font size=\"2\">" + "<b>" + chatArray.twitchUser + "</b>: " + chatArray.twitchMessage + "</font></p>");
-				document.getElementById("0_description").innerHTML = "Chat pillanatok a stream-ből:" + formatedChatArray[0] + formatedChatArray[1] + formatedChatArray[2] + formatedChatArray[3] + formatedChatArray[4];
-			};
+			if ((countdownStart < 7200) & (countdownStart > 0) & (liveStatus != "live")) { Countdown(streamStart[i]); } else { document.getElementById(timeId).innerHTML = "<div style=\"overflow: hidden; width: 320px;\">    <div style=\"float:left; width: 155px\"><center>" + startTime[0] + "<br>" + startTime[1] + "</center></div>    <div style=\"float:left; margin-left:10px; margin-top:10px\"><center>-</center></div>	<div style=\"overflow: hidden; width: 155px float:right;\"><center>" + endTime[0] + "<br>" + endTime[1] + "</center></div></div>"; }
 		}
 	}
 
-	/**CountDown rész */
-	var countdownStart = streamStartZeroElement - currenttime;
-	if ((countdownStart < 7200) & (countdownStart > 0) & (liveStatus != "live")) { Countdown(streamStartZeroElement); }
+
+	/*Ha az első menetrendi elem lefedi a stream indítást akkor az első elem streamelődik. Ha nem akkor meglepi stream.(Változtatás : kivettem a fenti if ágból. streamEndZeroElement és streamStartZeroElement változók használata. ) */
+	if ((liveStatus == "live") & ((liveTimestamp < streamEndZeroElement) & (liveTimestamp > streamStartZeroElement - 3000)) & (currenttime < stramStartFirstElement)) {  /*Ha előfordulna, hogy jóval előbb indítják a streamet akkormég vagy-ként liveTimestamp helyett currenttime-al is vizsgálni. */
+		document.getElementById("0").style.backgroundColor = "#4b367c";
+		document.getElementById("0").style.color = "#c3c1c8";
+		document.getElementById("0_cim").innerHTML = "<a target=\"_blank\" href=\"" + twitchLink + "\"><img src=\"https://i.imgur.com/o1kyCnf.png\"></a><br><b>" + titleLive + "</b>";
+		document.getElementById("0_cover").innerHTML = "<a target=\"_blank\" href=\"" + twitchLink + "\"><img src=\"" + coverLive + "\" class=\"aspect__fill\" width=\"320\"></a>";
+	} else if ((liveStatus == "live") & (currenttime < streamEndFirstElement) & (currenttime > stramStartFirstElement)) {
+		document.getElementById("1").style.backgroundColor = "#4b367c";
+		document.getElementById("1").style.color = "#c3c1c8";
+		document.getElementById("1_cim").innerHTML = "<a target=\"_blank\" href=\"" + twitchLink + "\"><img src=\"https://i.imgur.com/o1kyCnf.png\"></a><br><b>" + titleLive + "</b>";
+		document.getElementById("1_cover").innerHTML = "<a target=\"_blank\" href=\"" + twitchLink + "\"><img src=\"" + coverLive + "\" class=\"aspect__fill\" width=\"320\"></a>";
+	} else if ((liveStatus == "live") & (currenttime < streamEndZeroElement) & (currenttime > streamStartZeroElement)) {
+		document.getElementById("0").style.backgroundColor = "#4b367c";
+		document.getElementById("0").style.color = "#c3c1c8";
+		document.getElementById("0_cim").innerHTML = "<a target=\"_blank\" href=\"" + twitchLink + "\"><img src=\"https://i.imgur.com/o1kyCnf.png\"></a><br><b>" + titleLive + "</b>";
+		document.getElementById("0_cover").innerHTML = "<a target=\"_blank\" href=\"" + twitchLink + "\"><img src=\"" + coverLive + "\" class=\"aspect__fill\" width=\"320\"></a>";
+	} else if ((liveStatus != "live") & (currenttime < streamEndZeroElement) & (currenttime > streamStartZeroElement)) {  /*Ha előfordulna, hogy később indítják a streamet akkormég vagy-ként liveTimestamp helyett currenttime-al is vizsgálni. */
+		document.getElementById("0_cim").innerHTML = "<img src=\"https://i.imgur.com/ZNlNn8J.png\"><br><b>" + events[0].node.title + "</b>";
+	} else if (liveStatus == "live") {
+		document.getElementById("meglepi").style.display = 'block';
+		document.getElementById("meglepi_br").style.display = 'block';
+		document.getElementById("meglepi_cim").innerHTML = "<a target=\"_blank\" href=\"" + twitchLink + "\"><img src=\"https://i.imgur.com/gu6M3eu.png\"></a><br><b>" + titleLive + "</b>";
+		document.getElementById("meglepi_cover").innerHTML = "<img src=\"" + coverLive + "\" class=\"aspect__fill\" width=\"320\">";
+		document.getElementById("meglepi_time").innerHTML = liveDateStart + "<br>" + liveStart[1] + "-Ameddig tart</p>";
+	}
+	/*Változtatás : Ha az events tömb hosszúsága nulla és élő közvetítés van akkor meglepi stream. Ellenkező esetbeh ha nincs stream és csak a tömb hossza nulla akkor no_stream div feltöltése a rejtés megjelenítés helyett. Html-ben mindig betöltődött a 125kb nagyságú kép rejtésből megjelenítéses módszernél. ) */
+	if ((eventsLength == 0) & (liveStatus == "live")) {
+		document.getElementById("meglepi").style.display = 'block';
+		document.getElementById("meglepi_br").style.display = 'block';
+		document.getElementById("meglepi_cim").innerHTML = "<a target=\"_blank\" href=\"" + twitchLink + "\"><img src=\"https://i.imgur.com/gu6M3eu.png\"></a><br><b>" + titleLive + "</b>";
+		document.getElementById("meglepi_cover").innerHTML = "<img src=\"" + coverLive + "\" class=\"aspect__fill\" width=\"320\">";
+		document.getElementById("meglepi_time").innerHTML = liveDateStart + "<br>" + liveStart[1] + "-Ameddig tart</p>";
+	} else if (eventsLength == 0) {
+		document.getElementById("no_stream").innerHTML = "<img src=\"" + noEventsPic + "\" alt=\"23\" width=\"320\"><br><h3 style=\"font-family:rockwell;\">" + noEventsText + "</h3>";
+	}
 
 	// Get the modal ws3school script
 	modal = document.getElementById('myModal');
