@@ -352,18 +352,11 @@ if (cookieSettings == 1) {
 }
 
 if ((themeStatus == "light") & (cookieSettings == 1)) {
-	Light();
-	var meta = document.createElement("meta");
-	meta.name = "theme-color";
-	meta.content = "#faf9fa";
-	document.getElementsByTagName('head')[0].appendChild(meta);
-} else {
-	var meta = document.createElement("meta");
-	meta.name = "theme-color";
-	meta.content = "#0e0c13";
-	document.getElementsByTagName('head')[0].appendChild(meta);
+	document.body.style.Color = "black";
+	document.body.style.backgroundColor = "#faf9fa";
+	document.getElementsByClassName("modal-content")[0].style.color = "black";
+	document.getElementsByClassName("modal-content")[0].style.backgroundColor = "white";
 }
-
 
 document.onload = function () {
 	CreateValidManifest();
@@ -462,6 +455,19 @@ function EventsArray2(data) {
 			streamEndFirstElement = Timestamp(events[1].node.endAt);
 		}
 
+	}
+
+	if ((themeStatus == "light") & (cookieSettings == 1)) {
+		Light();
+		var meta = document.createElement("meta");
+		meta.name = "theme-color";
+		meta.content = "#faf9fa";
+		document.getElementsByTagName('head')[0].appendChild(meta);
+	} else {
+		var meta = document.createElement("meta");
+		meta.name = "theme-color";
+		meta.content = "#0e0c13";
+		document.getElementsByTagName('head')[0].appendChild(meta);
 	}
 
 	var descriptionJsonStringPlayload = "[";
