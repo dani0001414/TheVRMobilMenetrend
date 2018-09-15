@@ -373,6 +373,11 @@ document.addEventListener("DOMContentLoaded", function (event) {
 		document.getElementsByClassName("modal-content")[0].style.color = "black";
 		document.getElementsByClassName("modal-content")[0].style.backgroundColor = "white";
 	}
+
+	if ((cookieSettings != 1) & (cookieSettings != -1)) {
+		document.getElementById("myCookie").style.display = 'block';
+	}
+
 	document.body.innerHTML = document.body.innerHTML.replace("forum.thevr.hu/u/dani0001414/", "forum.thevr.hu/u/danx27/");
 	document.body.innerHTML = document.body.innerHTML.replace("dani0001414 Ninjon", "DanX27 Ninjon");
 	//	document.body.innerHTML = document.body.innerHTML.replace(/dani0001414/g, "DanX27");
@@ -388,9 +393,7 @@ HttpGetFeature("https://script.google.com/macros/s/AKfycbxCbGnpDeEjNd7Nwpm76MrIf
 /*HttpGet live api lekérő meghívja a funkciót és átadja a callback változót*/
 function EventsArray(data) {
 	/*Ha még nem erősítette meg a felhasználó, hogy elfogadja e a cookie-kat vagy sem akkor megjeleníti az alsó bannert már itt, hogy gyorsabban megjelenjen!*/
-	if ((cookieSettings != 1) & (cookieSettings != -1)) {
-		document.getElementById("myCookie").style.display = 'block';
-	}
+
 
 	liveData = data;
 	liveData = JSON.parse(liveData);
@@ -736,7 +739,7 @@ function HtmlStart() {
 		document.getElementById("meglepi_cim").innerHTML = "<a target=\"_blank\" href=\"" + twitchLink + "\"><img src=\"https://i.imgur.com/gu6M3eu.png\"></a><br><b>" + titleLive + "</b>";
 		document.getElementById("meglepi_cover").innerHTML = "<img src=\"" + coverLive + "\" class=\"aspect__fill\" width=\"320\">";
 		document.getElementById("meglepi_time").innerHTML = liveDateStart + "<br>" + liveStart[1] + "-Ameddig tart</p>";
-	} else if ((eventsLength == 0)&readyCheck) {
+	} else if ((eventsLength == 0) & readyCheck) {
 		document.getElementById("no_stream").innerHTML = "<img src=\"" + noEventsPic + "\" alt=\"23\" width=\"320\"><br><h3 style=\"font-family:rockwell;\">" + noEventsText + "</h3>";
 	}
 
