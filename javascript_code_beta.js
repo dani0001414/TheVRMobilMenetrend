@@ -351,12 +351,7 @@ if (cookieSettings == 1) {
 	curentUserID = getCookie(streamer + "userid");
 }
 
-if ((themeStatus == "light") & (cookieSettings == 1)) {
-	document.body.style.Color = "black";
-	document.body.style.backgroundColor = "#faf9fa";
-	document.getElementsByClassName("modal-content")[0].style.color = "black";
-	document.getElementsByClassName("modal-content")[0].style.backgroundColor = "white";
-}
+
 
 document.onload = function () {
 	CreateValidManifest();
@@ -372,6 +367,12 @@ if (cookieSettings == 1) {
 }
 
 document.addEventListener("DOMContentLoaded", function (event) {
+	if ((themeStatus == "light") & (cookieSettings == 1)) {
+		document.body.style.Color = "black";
+		document.body.style.backgroundColor = "#faf9fa";
+		document.getElementsByClassName("modal-content")[0].style.color = "black";
+		document.getElementsByClassName("modal-content")[0].style.backgroundColor = "white";
+	}
 	document.body.innerHTML = document.body.innerHTML.replace("forum.thevr.hu/u/dani0001414/", "forum.thevr.hu/u/danx27/");
 	document.body.innerHTML = document.body.innerHTML.replace("dani0001414 Ninjon", "DanX27 Ninjon");
 	//	document.body.innerHTML = document.body.innerHTML.replace(/dani0001414/g, "DanX27");
