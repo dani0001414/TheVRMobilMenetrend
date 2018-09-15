@@ -1,7 +1,7 @@
 /**MobilBarát Menetrend Testreszabása. */
 
 /*Streamer adatok megadása*/
-var streamer = "wearethevr";
+var streamer = "danx27";
 var twitchLink = "https://www.twitch.tv/" + streamer;
 var streamerID = "63493039";
 var noEventsPic = "https://i.imgur.com/5dZn6sc.png";
@@ -142,7 +142,6 @@ function OnlyDate(b) {
 function getCookie(cname) {
 	var name = cname + "=";
 	var decodedCookie = document.cookie;
-	//var decodedCookie = decodeURIComponent(document.cookie);
 	var ca = decodedCookie.split(';');
 	for (var i = 0; i < ca.length; i++) {
 		var c = ca[i];
@@ -245,7 +244,8 @@ function dynamicallyLoadScript_content(content) {
 function HttpPost(url, callback) {
 	var http = new XMLHttpRequest();
 	/*fromTime = "2018-06-10T14:26:00Z";*/
-	var params = "[{\"variables\":{\"channelLogin\":\"" + streamer + "\",\"limit\":20,\"before\":null,\"after\":\"" + fromTime + "\",\"sortOrder\":\"ASC\",\"following\":true},\"extensions\":{},\"operationName\":\"EventsPage_EventScheduleQuery\",\"query\":\"query EventsPage_EventScheduleQuery($channelLogin: String!, $limit: Int, $cursor: Cursor, $before: Time, $after: Time, $following: Boolean!, $sortOrder: SortOrder) {  user(login: $channelLogin) {    id    eventLeaves(first: $limit, after: $cursor, criteria: {endsBefore: $before, endsAfter: $after, sortOrder: $sortOrder}) {      pageInfo {        hasNextPage        __typename      }      edges {        cursor        node {          id          self @include(if: $following) {            isFollowing            __typename          }          ... on EventLeaf {            title            startAt            endAt            game {              id              displayName              __typename            }            channel {              id              login              displayName              __typename            }            imageURL(width: 320, height: 180)            __typename          }          __typename        }        __typename      }      __typename    }    __typename  }}\"}]";
+	var params = "[{\"variables\":{\"channelLogin\":\"" + streamer + "\",\"limit\":20,\"before\":null,\"after\":\"" + fromTime + "\",\"sortOrder\":\"ASC\",\"following\":true},\"extensions\":{},\"operationName\":\"EventsPage_EventScheduleQuery\",\"query\":\"query EventsPage_EventScheduleQuery($channelLogin: String!, $limit: Int, $cursor: Cursor, $before: Time, $after: Time, $following: Boolean!, $sortOrder: SortOrder) {  user(login: $channelLogin) {    id    eventLeaves(first: $limit, after: $cursor, criteria: {endsBefore: $before, endsAfter: $after, sortOrder: $sortOrder}) {      pageInfo {        hasNextPage        __typename      }      edges {        cursor        node {          id          self @include(if: $following) {            isFollowing            __typename          }          ... on EventLeaf {            title            startAt            endAt            game {              id              displayName              __typename            }            channel {              id              login              displayName              __typename            }            imageURL(width: 320, height: 180)            __typename          }          __typename        }        __typename      }      __typename    }    __typename  }}\"},{\"operationName\":\"ChannelPage_ChannelInfoBar_User_RENAME1\",\"variables\":{\"login\":\"" + streamer + "\"},\"extensions\":{\"persistedQuery\":{\"version\":1,\"sha256Hash\":\"af26d8d34bc0a201c463bd83b00b07d48c6dd7595993aad579cb5a8347386f83\"}}},{\"operationName\":\"VideoMarkersChatCommand\",\"variables\":{\"channelLogin\":\"" + streamer + "\"},\"extensions\":{\"persistedQuery\":{\"version\":1,\"sha256Hash\":\"c65f8b33e3bcccf2b16057e8f445311d213ecf8729f842ccdc71908231fa9a78\"}}}]";
+	if(needSecondPostRequest){ params = "[{\"variables\":{\"channelLogin\":\"" + streamer + "\",\"limit\":20,\"before\":null,\"after\":\"" + fromTime + "\",\"sortOrder\":\"ASC\",\"following\":true},\"extensions\":{},\"operationName\":\"EventsPage_EventScheduleQuery\",\"query\":\"query EventsPage_EventScheduleQuery($channelLogin: String!, $limit: Int, $cursor: Cursor, $before: Time, $after: Time, $following: Boolean!, $sortOrder: SortOrder) {  user(login: $channelLogin) {    id    eventLeaves(first: $limit, after: $cursor, criteria: {endsBefore: $before, endsAfter: $after, sortOrder: $sortOrder}) {      pageInfo {        hasNextPage        __typename      }      edges {        cursor        node {          id          self @include(if: $following) {            isFollowing            __typename          }          ... on EventLeaf {            title            startAt            endAt            game {              id              displayName              __typename            }            channel {              id              login              displayName              __typename            }            imageURL(width: 320, height: 180)            __typename          }          __typename        }        __typename      }      __typename    }    __typename  }}\"}]"; }
 	http.open('POST', url, true);
 	/*kérésküldés*/
 	http.setRequestHeader('Client-ID', 'vpyy1j86wtuetq8b6vbxlmubi0jxoe');
@@ -318,7 +318,7 @@ function HttpGetNorm(url) {
 
 /*Változtatás : streamEndZeroElement, streamStartZeroElement változók deklarálása itt. */
 var fromTime = CurrentTimeTwitchServerFormat(0);
-var events, liveData, streamEndZeroElement, calendarFunc, googleFunc, icalFunc, yahooFunc, detailFunc, whiteThemeFunc, blackThemeFunc, curentUserID, currenttime, theVRmmNewFeature, theVRmmNewInfo, stramStartFirstElement, streamEndFirstElement, streamStartZeroElement, eventsDescriptions, eventsLength, liveTimestamp, liveStatus, titleLive, coverLive, gameLiveStatus, titleLive, modal, span, btn, cookieSettings, themeStatus, liveDateStart, liveStart, newFunction;
+var events, liveData, streamEndZeroElement, needSecondPostRequest, calendarFunc, googleFunc, icalFunc, yahooFunc, detailFunc, whiteThemeFunc, blackThemeFunc, curentUserID, currenttime, theVRmmNewFeature, theVRmmNewInfo, stramStartFirstElement, streamEndFirstElement, streamStartZeroElement, eventsDescriptions, eventsLength, liveTimestamp, liveStatus, titleLive, coverLive, gameLiveStatus, titleLive, modal, span, btn, cookieSettings, themeStatus, liveDateStart, liveStart, newFunction;
 
 var gCalendarLink = [];
 var icalCalendarLink = [];
@@ -373,7 +373,9 @@ document.addEventListener("DOMContentLoaded", function (event) {
 });
 
 var getLink = "https://api.twitch.tv/helix/streams?user_id=" + streamerID;
-HttpGet(getLink, EventsArray);
+//HttpGet(getLink, EventsArray);
+needSecondPostRequest = false;
+HttpPost("https://gql.twitch.tv/gql", EventsArray2);
 
 /*HttpGet live api lekérő meghívja a funkciót és átadja a callback változót*/
 function EventsArray(data) {
@@ -408,11 +410,33 @@ function EventsArray(data) {
 }
 
 /*HttpPost menetrend api lekérő meghívja a funkciót és átadja a callback változót*/
-function EventsArray2(data) {
+function EventsArray2(data) {	
 	events = data;
 	events = JSON.parse(events);
+	if(needSecondPostRequest == false){
+		liveData = events["1"].data.user.stream;
+		liveStartTime = events["2"].data.user.stream;
+		titleLive = liveData.title;
+	}
+	needSecondPostRequest = false;
 	events = events["0"].data.user.eventLeaves.edges;
 	eventsLength = events.length;
+	
+	if (titleLive != null) { liveStatus = "live"; } else { liveStatus = null }
+
+	if ((liveStatus == "live") & (fromTime != liveStartTime.createdAt)) {
+		coverLive = "https://static-cdn.jtvnw.net/previews-ttv/live_user_" + streamer + "-640x360.jpg";
+		gameLiveStatus = liveData.game.id;  /*493057==PUBG*/
+
+		liveStart = TimeConvert(liveStartTime.createdAt).split("<br>");
+		liveDateStart = OnlyDate(liveStartTime.createdAt);
+		liveTimestamp = Timestamp(liveStartTime.createdAt);
+
+		fromTime = liveStartTime.createdAt;
+		needSecondPostRequest = true;
+		HttpPost("https://gql.twitch.tv/gql", EventsArray2);
+		
+	}
 
 	/*Változtatás : Ha az events tömb nem nulla akkor az első elem kezdési és végetérési időpontját beletesszük a streamEndZeroElement és a streamStartZeroElement változókba. */
 	if (eventsLength != 0) {
@@ -445,9 +469,10 @@ function EventsArray2(data) {
 		if (i < eventsLength - 1) { descriptionJsonStringPlayload += ","; }
 	}
 	descriptionJsonStringPlayload += "]";
-
-	HttpPost2("https://gql.twitch.tv/gql", descriptionJsonStringPlayload, EventsArray3);
-	HtmlStart();
+	if (needSecondPostRequest == false) { 
+		HttpPost2("https://gql.twitch.tv/gql", descriptionJsonStringPlayload, EventsArray3);
+		HtmlStart();
+	}
 }
 
 /*HttpPost2 menetrend részletek api lekérő meghívja a funkciót és átadja a callback változót*/
