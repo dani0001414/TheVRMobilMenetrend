@@ -347,7 +347,7 @@ cookieSettings = getCookie(policyAgreementCookie);
 if (cookieSettings == 1) {
 	themeStatus = getCookie(themeCookie);
 	theVRmmNewFeature = getCookie(newFeatureCookie);
-	theVRmmNewInfo = getCookie(theVRmmNewInfoCookie);
+	if(streamer == "wearethevr") {theVRmmNewInfo = getCookie(theVRmmNewInfoCookie);}
 	curentUserID = getCookie(streamer + "userid");
 }
 
