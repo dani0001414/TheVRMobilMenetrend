@@ -1,7 +1,7 @@
 /**MobilBarát Menetrend Testreszabása. */
 
 /*Streamer adatok megadása*/
-var streamer = "danx27";
+var streamer = "wearethevr";
 var twitchLink = "https://www.twitch.tv/" + streamer;
 var streamerID = "63493039";
 var noEventsPic = "https://i.imgur.com/5dZn6sc.png";
@@ -350,7 +350,6 @@ if (cookieSettings == 1) {
 	theVRmmNewInfo = getCookie(theVRmmNewInfoCookie);
 	curentUserID = getCookie(streamer + "userid");
 }
-
 
 
 document.onload = function () {
