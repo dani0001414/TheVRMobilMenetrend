@@ -827,6 +827,7 @@ function HtmlStart() {
 }
 
 function OfflineSite() {
+	document.getElementById("no_stream").innerHTML = "Offline menetrend:";
 	var streamStart = JSON.parse(getCookie("cachedStreamStart"));                        //Az előző menetrendi elemek idejét nyitja meg egy tömbbe.
 	var titles = JSON.parse(getCookie("cachedTitles"));                         //Az előző memnetrendi elemek címét nyitja meg egy tömbe.
 	var streamEnd = JSON.parse(getCookie("cachedStreamEnd"));
