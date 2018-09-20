@@ -331,6 +331,12 @@ var gCalendarLink = [];
 var icalCalendarLink = [];
 var outlook_calendar_link = [];
 var yahooCalendarLink = [];
+// Get the modal ws3school script
+modal = document.getElementById('myModal');
+// Get the button that opens the modal
+btn = document.getElementById("myBtn");
+// Get the <span> element that closes the modal
+span = document.getElementsByClassName("close")[0];
 
 function idGenerator() {
 	var array = new Uint32Array(2);
@@ -393,6 +399,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
 	fontPUBG.rel = "stylesheet";
 	fontPUBG.href = "https://fonts.googleapis.com/css?family=Squada+One";
 	head.appendChild(fontPUBG);
+
 
 });
 
@@ -767,14 +774,7 @@ function HtmlStart() {
 		document.getElementById("no_stream").innerHTML = "<img src=\"" + noEventsPic + "\" alt=\"23\" width=\"320\"><br><h3 style=\"font-family:rockwell;\">" + noEventsText + "</h3>";
 	}
 
-	// Get the modal ws3school script
-	modal = document.getElementById('myModal');
 
-	// Get the button that opens the modal
-	btn = document.getElementById("myBtn");
-
-	// Get the <span> element that closes the modal
-	span = document.getElementsByClassName("close")[0];
 	if (cookieSettings == 1) {
 		/*Változtatások színezése!*/
 		for (i = 0; i < newEventsPosition.length; i++) {
@@ -926,7 +926,7 @@ function modal_open(i) {
 		if (themeStatus == "dark") { document.getElementById("light_popup").style.filter = "invert(0%)"; }  /*Világos Témánál az svg ikonok invertálása. */
 		HttpGetNorm(calendarFunc);
 	}
-	if (i == "cookie_settings") { 
+	if (i == "cookie_settings") {
 		/*Cookie és téma beállítására szolgáló rész. */
 		var cookieStatusString, themeChangePart;
 		if (cookieSettings == 1) { cookieStatusString = "<span id=\"c_gomb\"><span style=\"cursor: pointer; color: grey; text-decoration: underline;\" onclick=\"deleteAllCookies()\">Bekapcsolva</span></span>"; } else { cookieStatusString = "<span id=\"c_gomb\"><span style=\"cursor: pointer; color: grey; text-decoration: underline;\" onclick=\"createcookie('" + policyAgreementCookie + "',1,365)\">Kikapcsolva</span></span>"; }
