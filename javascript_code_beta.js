@@ -882,7 +882,7 @@ function new_features(data) {
 }
 /*Részletek megjelenítése és elrejtése*/
 function hide_and_show(elementId, i) {
-	if (offlineStatus = "online") {
+	if (offlineStatus == "online") {
 		/*Ha nem meglepi stream leírása akkor részletekkel töltjük fel részletek div-et.(Változtatás : else if ágba került egy rész ami a lekért leírást beilleszti ha nem üres. Ha üres akkor kiírja, hogy nem tartozik hozzá leírás.) */
 		if (elementId != "meglepi_description") {
 			if ((gameLiveStatus == 493057) & (i == 0) & (liveStatus == "live") & ((liveTimestamp < streamEndZeroElement + 3000) & (liveTimestamp > streamStartZeroElement - 3000))) {
