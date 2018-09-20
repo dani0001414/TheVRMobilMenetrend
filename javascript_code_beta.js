@@ -21,7 +21,7 @@ var theVRmmNewInfoCookie = "thevrmm_new_info";
 /***********************************************************************************************************************/
 /*A visszaszámláló, valamint a Cookie olvasás/létrehozás/törlés és modal funkció mind a w3schools oldalról származnak.*/
 CreateValidManifest();
-var offlineStatus = "online";
+var internetStatus = "online";
 function convertTwitchChat(message) {
 	var twitchMessage;
 	var twitchUser;
@@ -215,10 +215,15 @@ function Light(length) {
 	document.body.style.backgroundColor = "#faf9fa";
 	document.getElementsByClassName("modal-content")[0].style.color = "black";
 	document.getElementsByClassName("modal-content")[0].style.backgroundColor = "white";
+	var meta = document.createElement("meta");
+	meta.name = "theme-color";
+	meta.content = "#faf9fa";
+	document.getElementsByTagName('head')[0].appendChild(meta);
+	
 }
 
-function Dark(length){
-				
+function Dark(length) {
+
 	for (var i = 0; i < length; i++) {
 		if ((i == 0) & (liveStatus == "live") & ((liveTimestamp < streamEndZeroElement + 3000) & (liveTimestamp > streamStartZeroElement - 3000))) {
 			document.getElementById(i + "_description").style.backgroundColor = "#17141f";
@@ -238,6 +243,10 @@ function Dark(length){
 	/*Változtatás : A lenti két dolog, hogy ezek is visszaváltozanak témaváltoztatásnál az oldal újratöltése nélkül, illetve vent a border-t: */
 	document.getElementsByClassName("modal-content")[0].style.color = "#c3c1c8";
 	document.getElementsByClassName("modal-content")[0].style.backgroundColor = "#17141f";
+	var meta = document.createElement("meta");
+	meta.name = "theme-color";
+	meta.content = "#0e0c13";
+	document.getElementsByTagName('head')[0].appendChild(meta);
 }
 
 function dynamicallyLoadScript(url) {
@@ -277,7 +286,7 @@ function HttpPost(url, callback) {
 				callback(http.responseText);
 			} else {
 				document.getElementById("no_stream").innerHTML = "<img src=\"" + offlinePic + "\" alt=\"23\" width=\"320\"><br><h3 style=\"font-family:rockwell; color:grey\">" + offlineText + "</h3>";
-				offlineStatus = "offline";
+				internetStatus = "offline";
 			}
 		}
 	}
@@ -394,10 +403,10 @@ if (cookieSettings == 1) {
 
 document.addEventListener("DOMContentLoaded", function (event) {
 	if ((themeStatus == "light") & (cookieSettings == 1)) {
-		document.body.style.Color = "black";
-		document.body.style.backgroundColor = "#faf9fa";
-		document.getElementsByClassName("modal-content")[0].style.color = "black";
-		document.getElementsByClassName("modal-content")[0].style.backgroundColor = "white";
+		Light(0);
+	}
+	if((themeStatus != "light") & (cookieSettings == 1)) {
+		Dark(0);
 	}
 
 	if ((cookieSettings != 1) & (cookieSettings != -1)) {
@@ -510,8 +519,6 @@ function EventsArray2(data) {
 		}
 
 	}
-
-	themeChanger(eventsLength);
 
 	var descriptionJsonStringPlayload = "[";
 
@@ -840,7 +847,7 @@ function OfflineSite() {
 	var streamStart = JSON.parse(getCookie("cachedStreamStart"));                        //Az előző menetrendi elemek idejét nyitja meg egy tömbbe.
 	var titles = JSON.parse(getCookie("cachedTitles"));                         //Az előző memnetrendi elemek címét nyitja meg egy tömbe.
 	var streamEnd = JSON.parse(getCookie("cachedStreamEnd"));
-	themeChanger(titles.length);
+	
 	for (var i = 0; i < titles.length; i++) {
 		var titleId = i + "_cim";
 		var coverId = i + "_cover";
@@ -890,7 +897,7 @@ function new_features(data) {
 }
 /*Részletek megjelenítése és elrejtése*/
 function hide_and_show(elementId, i) {
-	if (offlineStatus == "online") {
+	if (internetStatus == "online") {
 		/*Ha nem meglepi stream leírása akkor részletekkel töltjük fel részletek div-et.(Változtatás : else if ágba került egy rész ami a lekért leírást beilleszti ha nem üres. Ha üres akkor kiírja, hogy nem tartozik hozzá leírás.) */
 		if (elementId != "meglepi_description") {
 			if ((gameLiveStatus == 493057) & (i == 0) & (liveStatus == "live") & ((liveTimestamp < streamEndZeroElement + 3000) & (liveTimestamp > streamStartZeroElement - 3000))) {
@@ -982,10 +989,10 @@ function createcookie(name, value, days, banner) {
 	/*Téma választó cookie létrehozásával egyben át is váltjuk az általa képviselt kinézetre*/
 	if (name == themeCookie) {
 		if (value == "dark") {
-			Dark(eventsLength);
+			if (internetStatus = "online") { Dark(eventsLength); } else { Dark(offlineLength); }
 		}
 		if (value == "light") {
-			Light(eventsLength);
+			if (internetStatus = "online") { Light(eventsLength); } else { Light(offlineLength); }
 		}
 		modal_open("cookie_settings");
 	}
@@ -1025,20 +1032,6 @@ function timestampToTime(timestamp) {
 	return Time
 }
 
-function themeChanger(length) {
-	if ((themeStatus == "light") & (cookieSettings == 1)) {
-		Light(length);
-		var meta = document.createElement("meta");
-		meta.name = "theme-color";
-		meta.content = "#faf9fa";
-		document.getElementsByTagName('head')[0].appendChild(meta);
-	} else {
-		var meta = document.createElement("meta");
-		meta.name = "theme-color";
-		meta.content = "#0e0c13";
-		document.getElementsByTagName('head')[0].appendChild(meta);
-	}
-}
 // When the user clicks on <span> (x), close the modal
 function spanonclick() {
 	modal.style.display = "none";
