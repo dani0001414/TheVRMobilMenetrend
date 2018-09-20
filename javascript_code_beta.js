@@ -831,7 +831,7 @@ function OfflineSite() {
 	var titles = JSON.parse(getCookie("cachedTitles"));                         //Az előző memnetrendi elemek címét nyitja meg egy tömbe.
 	var streamEnd = JSON.parse(getCookie("cachedStreamEnd"));
 
-	for (var i = 0; i < eventsLength; i++) {
+	for (var i = 0; i < titles.lengt; i++) {
 		var titleId = i + "_cim";
 		var coverId = i + "_cover";
 		var timeId = i + "_time";
