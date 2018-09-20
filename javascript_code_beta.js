@@ -470,7 +470,7 @@ function EventsArray2(data) {
 		fromTime = liveStartTime.createdAt;
 		needSecondPostRequest = true;
 		HttpPost("https://gql.twitch.tv/gql", EventsArray2);
-		if (gameLiveStatus == 493057) { HttpGetFeature("https://script.google.com/macros/s/AKfycbwaqdvT0_QtH6js2JTAx6gNh1Ep-GJqYaQRqgPvEYlZ_i4FTDTe/exec", PUBGStatDownload); }
+		if ((gameLiveStatus == 493057)&(streamer = "wearethevr")) { HttpGetFeature("https://script.google.com/macros/s/AKfycbwaqdvT0_QtH6js2JTAx6gNh1Ep-GJqYaQRqgPvEYlZ_i4FTDTe/exec", PUBGStatDownload); }
 	}
 
 	/*Változtatás : Ha az events tömb nem nulla akkor az első elem kezdési és végetérési időpontját beletesszük a streamEndZeroElement és a streamStartZeroElement változókba. */
@@ -896,7 +896,7 @@ function hide_and_show(elementId, i) {
 		} else {
 			document.getElementById(elementId).innerHTML = "<b>Részletek:</b><br>Az eseményhez nem tartozik részletes leírás!<br><br><a style=\"cursor: pointer; color: grey; text-decoration: underline;\" onclick=\"modal_open(" + i + ")\" >Hozzáadás a naptárhoz!</a> ";
 		}
-	} else if ((liveStatus == "live") & (gameLiveStatus == 493057)) {
+	} else if ((liveStatus == "live") & (gameLiveStatus == 493057)&(streamer = "wearethevr")) {
 		document.getElementById(elementId).innerHTML = PUBGStat;
 
 	}
