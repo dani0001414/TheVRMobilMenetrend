@@ -256,7 +256,7 @@ function HttpPost(url, callback) {
 			if (http.status == 200) {
 				callback(http.responseText);
 			} else {
-				document.getElementById("no_stream").innerHTML = "<img src=\"" + offlinePic + "\" alt=\"23\" width=\"320\"><br><h3 style=\"font-family:rockwell;\">" + offlineText + "</h3>";
+				document.getElementById("no_stream").innerHTML = "<img src=\"" + offlinePic + "\" alt=\"23\" width=\"320\"><br><h3 style=\"font-family:rockwell; color:grey\">" + offlineText + "</h3>";
 				offlineStatus = "offline";
 			}
 		}
@@ -759,7 +759,7 @@ function HtmlStart() {
 		document.getElementById("meglepi_cover").innerHTML = "<img src=\"" + coverLive + "\" class=\"aspect__fill\" width=\"320\">";
 		document.getElementById("meglepi_time").innerHTML = liveDateStart + "<br>" + liveStart[1] + "-Ameddig tart</p>";
 	} else if ((eventsLength == 0) & readyCheck) {
-		document.getElementById("no_stream").innerHTML = "<img src=\"" + noEventsPic + "\" alt=\"23\" width=\"320\"><br><h3 style=\"font-family:rockwell;\">" + noEventsText + "</h3>";
+		document.getElementById("no_stream").innerHTML = "<img src=\"" + noEventsPic + "\" alt=\"23\" width=\"320\"><br><h3 style=\"font-family:rockwell; color:grey\">" + noEventsText + "</h3>";
 	}
 
 
