@@ -840,8 +840,8 @@ function OfflineSite() {
 
 
 
-		var startTime = TimeConvert(timestampToTime(streamStart)).split("<br>");
-		var endTime = TimeConvert(timestampToTime(streamEnd)).split("<br>");
+		var startTime = timestampToTime(streamStart).split("<br>");
+		var endTime = timestampToTime(streamEnd).split("<br>");
 
 		/*Feltölteni kívánt Div-ek megjelenítése a rejtésből és adatokkal való feltöltésük*/
 		document.getElementById(i).style.display = 'block';
