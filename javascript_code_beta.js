@@ -700,14 +700,14 @@ function HtmlStart() {
 		if (streamer == "wearethevr") {
 			var brakeTitle = events[i].node.title;
 			var breakIndicator = brakeTitle.search("SZÜNET");
-			if ((cover == blankCover) & (breakIndicator > -1)) { cover = "<iframe src=\"https://clips.twitch.tv/embed?autoplay=false&amp;clip=VenomousCulturedAsteriskFloof&amp;tt_content=embed&amp;tt_medium=clips_embed\" width=\"320\" height=\"180\" frameborder=\"0\" scrolling=\"no\" allowfullscreen=\"true\"></iframe>"; }
+			if ((cover == blankCover) & (breakIndicator > -1)) { document.getElementById(coverId).innerHTML = "<iframe src=\"https://clips.twitch.tv/embed?autoplay=false&amp;clip=VenomousCulturedAsteriskFloof&amp;tt_content=embed&amp;tt_medium=clips_embed\" width=\"320\" height=\"180\" frameborder=\"0\" scrolling=\"no\" allowfullscreen=\"true\"></iframe>"; }
 		}
 
 		/*Feltölteni kívánt Div-ek megjelenítése a rejtésből és adatokkal való feltöltésük*/
 		document.getElementById(i).style.display = 'block';
 		document.getElementById(brId).style.display = 'block';
 		document.getElementById(titleId).innerHTML = "<p><b>" + events[i].node.title + "</b></p>";
-		document.getElementById(coverId).innerHTML = "<img src=\"" + cover + "\" class=\"aspect__fill\" width=\"320\">";
+		if ((cover == blankCover) & (breakIndicator > -1)){}else{document.getElementById(coverId).innerHTML = "<img src=\"" + cover + "\" class=\"aspect__fill\" width=\"320\">";}
 		document.getElementById(timeId).innerHTML = startTime[0] + "<br>" + startTime[1] + "-" + endTime[1];
 
 		/*var stream_hossz = streamEnd[i] - streamStart[i];*/
