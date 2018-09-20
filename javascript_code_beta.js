@@ -331,12 +331,6 @@ var gCalendarLink = [];
 var icalCalendarLink = [];
 var outlook_calendar_link = [];
 var yahooCalendarLink = [];
-// Get the modal ws3school script
-modal = document.getElementById('myModal');
-// Get the button that opens the modal
-btn = document.getElementById("myBtn");
-// Get the <span> element that closes the modal
-span = document.getElementsByClassName("close")[0];
 
 function idGenerator() {
 	var array = new Uint32Array(2);
@@ -399,7 +393,12 @@ document.addEventListener("DOMContentLoaded", function (event) {
 	fontPUBG.rel = "stylesheet";
 	fontPUBG.href = "https://fonts.googleapis.com/css?family=Squada+One";
 	head.appendChild(fontPUBG);
-
+	// Get the modal ws3school script
+	modal = document.getElementById('myModal');
+	// Get the button that opens the modal
+	btn = document.getElementById("myBtn");
+	// Get the <span> element that closes the modal
+	span = document.getElementsByClassName("close")[0];
 
 });
 
