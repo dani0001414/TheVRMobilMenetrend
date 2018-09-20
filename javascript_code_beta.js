@@ -837,9 +837,6 @@ function OfflineSite() {
 		var coverId = i + "_cover";
 		var timeId = i + "_time";
 		var brId = i + "_br";
-		var cover = "https://static-cdn.jtvnw.net/twitch-event-images-v2/default/town-320x180";
-
-
 
 		var startTime = timestampToTime(streamStart).split("<br>");
 		var endTime = timestampToTime(streamEnd).split("<br>");
@@ -848,7 +845,7 @@ function OfflineSite() {
 		document.getElementById(i).style.display = 'block';
 		document.getElementById(brId).style.display = 'block';
 		document.getElementById(titleId).innerHTML = "<p><b>" + titles[i] + "</b></p>";
-		document.getElementById(coverId).innerHTML = "<img src=\"" + cover + "\" class=\"aspect__fill\" width=\"320\">";
+		document.getElementById(coverId).innerHTML = "<font size=\"10\">🖼️</font>";
 		document.getElementById(timeId).innerHTML = startTime[0] + "<br>" + startTime[1] + "-" + endTime[1];
 
 		/*var stream_hossz = streamEnd[i] - streamStart[i];*/
