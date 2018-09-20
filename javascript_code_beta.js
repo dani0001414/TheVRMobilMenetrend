@@ -845,7 +845,7 @@ function OfflineSite() {
 
 		/*Szünet Cover létrehozás*/
 		if (streamer == "wearethevr") {
-			var brakeTitle = events[i].node.title;
+			var brakeTitle = titles[i];
 			var breakIndicator = brakeTitle.search("SZÜNET");
 			if ((cover == blankCover) & (breakIndicator > -1)) { cover = "https://dani0001414.github.io/TheVRMobilMenetrend/brake.png"; }
 		}
@@ -853,7 +853,7 @@ function OfflineSite() {
 		/*Feltölteni kívánt Div-ek megjelenítése a rejtésből és adatokkal való feltöltésük*/
 		document.getElementById(i).style.display = 'block';
 		document.getElementById(brId).style.display = 'block';
-		document.getElementById(titleId).innerHTML = "<p><b>" + titles + "</b></p>";
+		document.getElementById(titleId).innerHTML = "<p><b>" + titles[i] + "</b></p>";
 		document.getElementById(coverId).innerHTML = "<img src=\"" + cover + "\" class=\"aspect__fill\" width=\"320\">";
 		document.getElementById(timeId).innerHTML = startTime[0] + "<br>" + startTime[1] + "-" + endTime[1];
 
