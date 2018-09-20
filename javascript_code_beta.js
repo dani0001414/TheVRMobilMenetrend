@@ -589,7 +589,7 @@ function HtmlStart() {
 			cachedStreamStart = streamStart;
 			cachedTitles = titles;
 			cachedIDs = id;
-			//cachedStreamEnd = streamEnd;
+			cachedStreamEnd = streamEnd;
 			//cached variables	
 
 			createcookie('cachedStreamStart', JSON.stringify(cachedStreamStart), 365);
