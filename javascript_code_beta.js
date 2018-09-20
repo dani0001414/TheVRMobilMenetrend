@@ -215,9 +215,29 @@ function Light(length) {
 	document.body.style.backgroundColor = "#faf9fa";
 	document.getElementsByClassName("modal-content")[0].style.color = "black";
 	document.getElementsByClassName("modal-content")[0].style.backgroundColor = "white";
+}
 
-
-
+function Dark(length){
+				
+	for (var i = 0; i < length; i++) {
+		if ((i == 0) & (liveStatus == "live") & ((liveTimestamp < streamEndZeroElement + 3000) & (liveTimestamp > streamStartZeroElement - 3000))) {
+			document.getElementById(i + "_description").style.backgroundColor = "#17141f";
+			document.getElementById(i + "_description").style.border = "1px solid #2e2b35";
+			document.getElementById(i + "_description").style.color = "#c3c1c8";
+		} else {
+			document.getElementById(i).style.backgroundColor = "#17141f";
+			document.getElementById(i).style.border = "1px solid #2e2b35";
+			document.getElementById(i).style.color = "#c3c1c8";
+			document.getElementById(i + "_description").style.backgroundColor = "#17141f";
+			document.getElementById(i + "_description").style.border = "1px solid #2e2b35"; /*Változtatás ezt itt*/
+			document.getElementById(i + "_description").style.color = "#c3c1c8";
+		}
+	}
+	document.body.style.Color = "#c3c1c8";
+	document.body.style.backgroundColor = "#0e0c13";
+	/*Változtatás : A lenti két dolog, hogy ezek is visszaváltozanak témaváltoztatásnál az oldal újratöltése nélkül, illetve vent a border-t: */
+	document.getElementsByClassName("modal-content")[0].style.color = "#c3c1c8";
+	document.getElementsByClassName("modal-content")[0].style.backgroundColor = "#17141f";
 }
 
 function dynamicallyLoadScript(url) {
@@ -962,29 +982,10 @@ function createcookie(name, value, days, banner) {
 	/*Téma választó cookie létrehozásával egyben át is váltjuk az általa képviselt kinézetre*/
 	if (name == themeCookie) {
 		if (value == "dark") {
-			
-			for (var i = 0; i < eventsLength; i++) {
-				if ((i == 0) & (liveStatus == "live") & ((liveTimestamp < streamEndZeroElement + 3000) & (liveTimestamp > streamStartZeroElement - 3000))) {
-					document.getElementById(i + "_description").style.backgroundColor = "#17141f";
-					document.getElementById(i + "_description").style.border = "1px solid #2e2b35";
-					document.getElementById(i + "_description").style.color = "#c3c1c8";
-				} else {
-					document.getElementById(i).style.backgroundColor = "#17141f";
-					document.getElementById(i).style.border = "1px solid #2e2b35";
-					document.getElementById(i).style.color = "#c3c1c8";
-					document.getElementById(i + "_description").style.backgroundColor = "#17141f";
-					document.getElementById(i + "_description").style.border = "1px solid #2e2b35"; /*Változtatás ezt itt*/
-					document.getElementById(i + "_description").style.color = "#c3c1c8";
-				}
-			}
-			document.body.style.Color = "#c3c1c8";
-			document.body.style.backgroundColor = "#0e0c13";
-			/*Változtatás : A lenti két dolog, hogy ezek is visszaváltozanak témaváltoztatásnál az oldal újratöltése nélkül, illetve vent a border-t: */
-			document.getElementsByClassName("modal-content")[0].style.color = "#c3c1c8";
-			document.getElementsByClassName("modal-content")[0].style.backgroundColor = "#17141f";
+			Dark(eventsLength);
 		}
 		if (value == "light") {
-			Light();
+			Light(eventsLength);
 		}
 		modal_open("cookie_settings");
 	}
