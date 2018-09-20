@@ -491,18 +491,7 @@ function EventsArray2(data) {
 
 	}
 
-	if ((themeStatus == "light") & (cookieSettings == 1)) {
-		Light();
-		var meta = document.createElement("meta");
-		meta.name = "theme-color";
-		meta.content = "#faf9fa";
-		document.getElementsByTagName('head')[0].appendChild(meta);
-	} else {
-		var meta = document.createElement("meta");
-		meta.name = "theme-color";
-		meta.content = "#0e0c13";
-		document.getElementsByTagName('head')[0].appendChild(meta);
-	}
+	themeChanger();
 
 	var descriptionJsonStringPlayload = "[";
 
@@ -827,7 +816,8 @@ function HtmlStart() {
 }
 
 function OfflineSite() {
-	document.getElementById("no_stream").innerHTML = "Offline menetrend:";
+	themeChanger();
+	document.getElementById("no_stream").innerHTML = "<span style=\"color: grey\" Offline menetrend:</span>";
 	var streamStart = JSON.parse(getCookie("cachedStreamStart"));                        //Az előző menetrendi elemek idejét nyitja meg egy tömbbe.
 	var titles = JSON.parse(getCookie("cachedTitles"));                         //Az előző memnetrendi elemek címét nyitja meg egy tömbe.
 	var streamEnd = JSON.parse(getCookie("cachedStreamEnd"));
@@ -1022,7 +1012,6 @@ function deleteAllCookies(banner) {
 
 function timestampToTime(timestamp) {
 	var d = new Date(timestamp * 1000);
-
 	var month = "0" + d.getMonth();
 	var day = "0" + d.getDate();
 	// Hours part from the timestamp
@@ -1034,6 +1023,21 @@ function timestampToTime(timestamp) {
 
 	var Time = d.getFullYear() + "." + month.substr(-2) + "." + day.substr(-2) + "<br>" + hours + ":" + minutes.substr(-2);
 	return Time
+}
+
+function themeChanger() {
+	if ((themeStatus == "light") & (cookieSettings == 1)) {
+		Light();
+		var meta = document.createElement("meta");
+		meta.name = "theme-color";
+		meta.content = "#faf9fa";
+		document.getElementsByTagName('head')[0].appendChild(meta);
+	} else {
+		var meta = document.createElement("meta");
+		meta.name = "theme-color";
+		meta.content = "#0e0c13";
+		document.getElementsByTagName('head')[0].appendChild(meta);
+	}
 }
 // When the user clicks on <span> (x), close the modal
 function spanonclick() {
