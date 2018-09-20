@@ -1006,10 +1006,10 @@ function createcookie(name, value, days, banner) {
 	/*Téma választó cookie létrehozásával egyben át is váltjuk az általa képviselt kinézetre*/
 	if (name == themeCookie) {
 		if (value == "dark") {
-			if (internetStatus = "online") { Dark(eventsLength); } else { Dark(offlineLength); }
+			if (internetStatus == "online") { Dark(eventsLength); } else { Dark(offlineLength); }
 		}
 		if (value == "light") {
-			if (internetStatus = "online") { Light(eventsLength); } else { Light(offlineLength); }
+			if (internetStatus == "online") { Light(eventsLength); } else { Light(offlineLength); }
 		}
 		modal_open("cookie_settings");
 	}
