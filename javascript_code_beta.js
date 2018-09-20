@@ -816,7 +816,7 @@ function HtmlStart() {
 }
 
 function OfflineSite() {
-	document.getElementById("no_stream").innerHTML = "<span style=\"color: grey\" Offline menetrend:</span>";
+	document.getElementById("no_stream").innerHTML = "<span style=\"color: grey\"> Offline menetrend:</span>";
 	var streamStart = JSON.parse(getCookie("cachedStreamStart"));                        //Az előző menetrendi elemek idejét nyitja meg egy tömbbe.
 	var titles = JSON.parse(getCookie("cachedTitles"));                         //Az előző memnetrendi elemek címét nyitja meg egy tömbe.
 	var streamEnd = JSON.parse(getCookie("cachedStreamEnd"));
@@ -962,7 +962,7 @@ function createcookie(name, value, days, banner) {
 	/*Téma választó cookie létrehozásával egyben át is váltjuk az általa képviselt kinézetre*/
 	if (name == themeCookie) {
 		if (value == "dark") {
-
+			
 			for (var i = 0; i < eventsLength; i++) {
 				if ((i == 0) & (liveStatus == "live") & ((liveTimestamp < streamEndZeroElement + 3000) & (liveTimestamp > streamStartZeroElement - 3000))) {
 					document.getElementById(i + "_description").style.backgroundColor = "#17141f";
