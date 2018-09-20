@@ -219,7 +219,7 @@ function Light(length) {
 	meta.name = "theme-color";
 	meta.content = "#faf9fa";
 	document.getElementsByTagName('head')[0].appendChild(meta);
-	
+
 }
 
 function Dark(length) {
@@ -248,6 +248,7 @@ function Dark(length) {
 	meta.content = "#0e0c13";
 	document.getElementsByTagName('head')[0].appendChild(meta);
 }
+
 
 function dynamicallyLoadScript(url) {
 	var script = document.createElement("script"); // Make a script DOM node
@@ -354,7 +355,7 @@ function HttpGetNorm(url) {
 
 /*Változtatás : streamEndZeroElement, streamStartZeroElement változók deklarálása itt. */
 var fromTime = CurrentTimeTwitchServerFormat(0);
-var events, liveData, streamEndZeroElement, needSecondPostRequest, calendarFunc, googleFunc, icalFunc, yahooFunc, detailFunc, whiteThemeFunc, blackThemeFunc, curentUserID, currenttime, theVRmmNewFeature, theVRmmNewInfo, stramStartFirstElement, streamEndFirstElement, streamStartZeroElement, eventsDescriptions, eventsLength, liveTimestamp, liveStatus, titleLive, coverLive, gameLiveStatus, titleLive, modal, span, btn, cookieSettings, themeStatus, liveDateStart, liveStart, newFunction;
+var events, liveData, streamEndZeroElement, needSecondPostRequest, calendarFunc, googleFunc, icalFunc, yahooFunc, detailFunc, whiteThemeFunc, blackThemeFunc, offlineLength, curentUserID, currenttime, theVRmmNewFeature, theVRmmNewInfo, stramStartFirstElement, streamEndFirstElement, streamStartZeroElement, eventsDescriptions, eventsLength, liveTimestamp, liveStatus, titleLive, coverLive, gameLiveStatus, titleLive, modal, span, btn, cookieSettings, themeStatus, liveDateStart, liveStart, newFunction;
 var PUBGStat = "Töltődik a statisztika!"
 var gCalendarLink = [];
 var icalCalendarLink = [];
@@ -405,7 +406,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
 	if ((themeStatus == "light") & (cookieSettings == 1)) {
 		Light(0);
 	}
-	if((themeStatus != "light") & (cookieSettings == 1)) {
+	if ((themeStatus != "light") & (cookieSettings == 1)) {
 		Dark(0);
 	}
 
@@ -492,6 +493,14 @@ function EventsArray2(data) {
 	needSecondPostRequest = false;
 	events = events["0"].data.user.eventLeaves.edges;
 	eventsLength = events.length;
+
+
+	if (themeStatus == "dark") {
+		Dark(eventsLength);
+	}
+	if (themeStatus == "light") {
+		 Light(eventsLength);
+	}
 
 	if (titleLive != null) { liveStatus = "live"; } else { liveStatus = null }
 
@@ -847,7 +856,15 @@ function OfflineSite() {
 	var streamStart = JSON.parse(getCookie("cachedStreamStart"));                        //Az előző menetrendi elemek idejét nyitja meg egy tömbbe.
 	var titles = JSON.parse(getCookie("cachedTitles"));                         //Az előző memnetrendi elemek címét nyitja meg egy tömbe.
 	var streamEnd = JSON.parse(getCookie("cachedStreamEnd"));
-	
+	offlineLength=titles.length;
+
+	if (themeStatus == "dark") {
+		 Dark(offlineLength); 
+	}
+	if (themeStatus == "light") {
+		Light(offlineLength); 
+	}
+
 	for (var i = 0; i < titles.length; i++) {
 		var titleId = i + "_cim";
 		var coverId = i + "_cover";
