@@ -838,8 +838,10 @@ function OfflineSite() {
 		var brId = i + "_br";
 		var cover = "https://static-cdn.jtvnw.net/twitch-event-images-v2/default/town-320x180";
 
-		var startTime = TimeConvert(events[i].node.startAt).split("<br>");
-		var endTime = TimeConvert(events[i].node.endAt).split("<br>");
+
+
+		var startTime = TimeConvert(timestampToTime(streamStart)).split("<br>");
+		var endTime = TimeConvert(timestampToTime(streamEnd)).split("<br>");
 
 		/*Szünet Cover létrehozás*/
 		if (streamer == "wearethevr") {
@@ -1024,6 +1026,21 @@ function deleteAllCookies(banner) {
 
 }
 
+function timestampToTime(d) {
+	var d = new Date(streamStart * 1000);
+
+	var month = "0" + d.getMonth();
+	var day = "0" + d.getDay();
+	// Hours part from the timestamp
+	var hours = d.getHours();
+	// Minutes part from the timestamp
+	var minutes = "0" + d.getMinutes();
+	// Seconds part from the timestamp
+	var seconds = "0" + d.getSeconds();
+
+	var Time = d.getFullYear + ". " + month.substr(-2) + ". " + day.substr(-2) + "<br>" + hours + ":" + minutes.substr(-2);
+	return Time
+}
 // When the user clicks on <span> (x), close the modal
 function spanonclick() {
 	modal.style.display = "none";
