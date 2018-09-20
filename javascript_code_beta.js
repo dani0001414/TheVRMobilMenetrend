@@ -845,7 +845,7 @@ function OfflineSite() {
 		document.getElementById(i).style.display = 'block';
 		document.getElementById(brId).style.display = 'block';
 		document.getElementById(titleId).innerHTML = "<p><b>" + titles[i] + "</b></p>";
-		document.getElementById(coverId).innerHTML = "<font size=\"100%\">🖼️</font>";
+		document.getElementById(coverId).innerHTML = "<div style=\"background-color: black; height: 180px\" ></div>";
 		document.getElementById(timeId).innerHTML = startTime[0] + "<br>" + startTime[1] + "-" + endTime[1];
 
 		/*var stream_hossz = streamEnd[i] - streamStart[i];*/
