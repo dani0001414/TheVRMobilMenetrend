@@ -21,7 +21,7 @@ var theVRmmNewInfoCookie = "thevrmm_new_info";
 /***********************************************************************************************************************/
 /*A visszaszámláló, valamint a Cookie olvasás/létrehozás/törlés és modal funkció mind a w3schools oldalról származnak.*/
 CreateValidManifest();
-
+var offlineStatus = "online";
 function convertTwitchChat(message) {
 	var twitchMessage;
 	var twitchUser;
@@ -257,6 +257,7 @@ function HttpPost(url, callback) {
 				callback(http.responseText);
 			} else {
 				document.getElementById("no_stream").innerHTML = "<img src=\"" + offlinePic + "\" alt=\"23\" width=\"320\"><br><h3 style=\"font-family:rockwell;\">" + offlineText + "</h3>";
+				offlineStatus = "offline";
 			}
 		}
 	}
@@ -470,7 +471,7 @@ function EventsArray2(data) {
 		fromTime = liveStartTime.createdAt;
 		needSecondPostRequest = true;
 		HttpPost("https://gql.twitch.tv/gql", EventsArray2);
-		if ((gameLiveStatus == 493057)&(streamer = "wearethevr")) { HttpGetFeature("https://script.google.com/macros/s/AKfycbwaqdvT0_QtH6js2JTAx6gNh1Ep-GJqYaQRqgPvEYlZ_i4FTDTe/exec", PUBGStatDownload); }
+		if ((gameLiveStatus == 493057) & (streamer = "wearethevr")) { HttpGetFeature("https://script.google.com/macros/s/AKfycbwaqdvT0_QtH6js2JTAx6gNh1Ep-GJqYaQRqgPvEYlZ_i4FTDTe/exec", PUBGStatDownload); }
 	}
 
 	/*Változtatás : Ha az events tömb nem nulla akkor az első elem kezdési és végetérési időpontját beletesszük a streamEndZeroElement és a streamStartZeroElement változókba. */
@@ -881,21 +882,24 @@ function new_features(data) {
 }
 /*Részletek megjelenítése és elrejtése*/
 function hide_and_show(elementId, i) {
-	/*Ha nem meglepi stream leírása akkor részletekkel töltjük fel részletek div-et.(Változtatás : else if ágba került egy rész ami a lekért leírást beilleszti ha nem üres. Ha üres akkor kiírja, hogy nem tartozik hozzá leírás.) */
-	if (elementId != "meglepi_description") {
-		if ((gameLiveStatus == 493057) & (i == 0) & (liveStatus == "live") & ((liveTimestamp < streamEndZeroElement + 3000) & (liveTimestamp > streamStartZeroElement - 3000))) {
+	if (offlineStatus = "online") {
+		/*Ha nem meglepi stream leírása akkor részletekkel töltjük fel részletek div-et.(Változtatás : else if ágba került egy rész ami a lekért leírást beilleszti ha nem üres. Ha üres akkor kiírja, hogy nem tartozik hozzá leírás.) */
+		if (elementId != "meglepi_description") {
+			if ((gameLiveStatus == 493057) & (i == 0) & (liveStatus == "live") & ((liveTimestamp < streamEndZeroElement + 3000) & (liveTimestamp > streamStartZeroElement - 3000))) {
+				document.getElementById(elementId).innerHTML = PUBGStat;
+			} else if ((i == 0) & (liveStatus == "live") & ((liveTimestamp < streamEndZeroElement + 3000) & (liveTimestamp > streamStartZeroElement - 3000))) {
+				document.getElementById(elementId).innerHTML = "<b>Chat Töltődik...</b><br>";
+				gameLiveStatus = liveData.game.id;
+			} else if (eventsDescriptions[i].data.event.description) {
+				document.getElementById(elementId).innerHTML = "<b>Részletek:</b><br>" + eventsDescriptions[i].data.event.description + "<br><br><a style=\"cursor: pointer; color: grey; text-decoration: underline;\" onclick=\"modal_open(" + i + ")\" >Hozzáadás a naptárhoz!</a>";
+			} else {
+				document.getElementById(elementId).innerHTML = "<b>Részletek:</b><br>Az eseményhez nem tartozik részletes leírás!<br><br><a style=\"cursor: pointer; color: grey; text-decoration: underline;\" onclick=\"modal_open(" + i + ")\" >Hozzáadás a naptárhoz!</a> ";
+			}
+		} else if ((liveStatus == "live") & (gameLiveStatus == 493057) & (streamer = "wearethevr")) {
 			document.getElementById(elementId).innerHTML = PUBGStat;
-		} else if ((i == 0) & (liveStatus == "live") & ((liveTimestamp < streamEndZeroElement + 3000) & (liveTimestamp > streamStartZeroElement - 3000))) {
-			document.getElementById(elementId).innerHTML = "<b>Chat Töltődik...</b><br>";
-			gameLiveStatus = liveData.game.id;
-		} else if (eventsDescriptions[i].data.event.description) {
-			document.getElementById(elementId).innerHTML = "<b>Részletek:</b><br>" + eventsDescriptions[i].data.event.description + "<br><br><a style=\"cursor: pointer; color: grey; text-decoration: underline;\" onclick=\"modal_open(" + i + ")\" >Hozzáadás a naptárhoz!</a>";
-		} else {
-			document.getElementById(elementId).innerHTML = "<b>Részletek:</b><br>Az eseményhez nem tartozik részletes leírás!<br><br><a style=\"cursor: pointer; color: grey; text-decoration: underline;\" onclick=\"modal_open(" + i + ")\" >Hozzáadás a naptárhoz!</a> ";
 		}
-	} else if ((liveStatus == "live") & (gameLiveStatus == 493057)&(streamer = "wearethevr")) {
-		document.getElementById(elementId).innerHTML = PUBGStat;
-
+	} else {
+		document.getElementById(elementId).innerHTML = "Offline állapotban nem elérhető a részletek funkció!";
 	}
 
 
@@ -922,7 +926,7 @@ function modal_open(i) {
 		if (themeStatus == "dark") { document.getElementById("light_popup").style.filter = "invert(0%)"; }  /*Világos Témánál az svg ikonok invertálása. */
 		HttpGetNorm(calendarFunc);
 	}
-	if (i == "cookie_settings") {
+	if (i == "cookie_settings") { 
 		/*Cookie és téma beállítására szolgáló rész. */
 		var cookieStatusString, themeChangePart;
 		if (cookieSettings == 1) { cookieStatusString = "<span id=\"c_gomb\"><span style=\"cursor: pointer; color: grey; text-decoration: underline;\" onclick=\"deleteAllCookies()\">Bekapcsolva</span></span>"; } else { cookieStatusString = "<span id=\"c_gomb\"><span style=\"cursor: pointer; color: grey; text-decoration: underline;\" onclick=\"createcookie('" + policyAgreementCookie + "',1,365)\">Kikapcsolva</span></span>"; }
