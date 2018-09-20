@@ -194,9 +194,9 @@ function TimeConvert(a) {
 	return convertedTime;
 }
 
-function Light() {
+function Light(length) {
 
-	for (var i = 0; i < eventsLength; i++) {
+	for (var i = 0; i < length; i++) {
 		if ((i == 0) & (liveStatus == "live") & ((liveTimestamp < streamEndZeroElement + 3000) & (liveTimestamp > streamStartZeroElement - 3000))) {
 			document.getElementById(i + "_description").style.backgroundColor = "white";
 			document.getElementById(i + "_description").style.border = "1px solid #e5e3e8";
@@ -491,7 +491,7 @@ function EventsArray2(data) {
 
 	}
 
-	themeChanger();
+	themeChanger(eventsLength);
 
 	var descriptionJsonStringPlayload = "[";
 
@@ -816,12 +816,11 @@ function HtmlStart() {
 }
 
 function OfflineSite() {
-	themeChanger();
 	document.getElementById("no_stream").innerHTML = "<span style=\"color: grey\" Offline menetrend:</span>";
 	var streamStart = JSON.parse(getCookie("cachedStreamStart"));                        //Az előző menetrendi elemek idejét nyitja meg egy tömbbe.
 	var titles = JSON.parse(getCookie("cachedTitles"));                         //Az előző memnetrendi elemek címét nyitja meg egy tömbe.
 	var streamEnd = JSON.parse(getCookie("cachedStreamEnd"));
-
+	themeChanger(titles.length);
 	for (var i = 0; i < titles.length; i++) {
 		var titleId = i + "_cim";
 		var coverId = i + "_cover";
@@ -1025,9 +1024,9 @@ function timestampToTime(timestamp) {
 	return Time
 }
 
-function themeChanger() {
+function themeChanger(length) {
 	if ((themeStatus == "light") & (cookieSettings == 1)) {
-		Light();
+		Light(length);
 		var meta = document.createElement("meta");
 		meta.name = "theme-color";
 		meta.content = "#faf9fa";
