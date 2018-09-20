@@ -843,13 +843,6 @@ function OfflineSite() {
 		var startTime = TimeConvert(timestampToTime(streamStart)).split("<br>");
 		var endTime = TimeConvert(timestampToTime(streamEnd)).split("<br>");
 
-		/*Szünet Cover létrehozás*/
-		if (streamer == "wearethevr") {
-			var brakeTitle = titles[i];
-			var breakIndicator = brakeTitle.search("SZÜNET");
-			if ((cover == blankCover) & (breakIndicator > -1)) { cover = "https://dani0001414.github.io/TheVRMobilMenetrend/brake.png"; }
-		}
-
 		/*Feltölteni kívánt Div-ek megjelenítése a rejtésből és adatokkal való feltöltésük*/
 		document.getElementById(i).style.display = 'block';
 		document.getElementById(brId).style.display = 'block';
