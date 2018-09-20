@@ -1026,8 +1026,8 @@ function deleteAllCookies(banner) {
 
 }
 
-function timestampToTime(d) {
-	var d = new Date(streamStart * 1000);
+function timestampToTime(timestamp) {
+	var d = new Date(timestamp * 1000);
 
 	var month = "0" + d.getMonth();
 	var day = "0" + d.getDay();
