@@ -1023,7 +1023,7 @@ function timestampToTime(timestamp) {
 	var d = new Date(timestamp * 1000);
 
 	var month = "0" + d.getMonth();
-	var day = "0" + d.getDay();
+	var day = "0" + d.getDate();
 	// Hours part from the timestamp
 	var hours = d.getHours();
 	// Minutes part from the timestamp
@@ -1031,7 +1031,7 @@ function timestampToTime(timestamp) {
 	// Seconds part from the timestamp
 	var seconds = "0" + d.getSeconds();
 
-	var Time = d.getFullYear + ". " + month.substr(-2) + ". " + day.substr(-2) + "<br>" + hours + ":" + minutes.substr(-2);
+	var Time = d.getFullYear() + "." + month.substr(-2) + "." + day.substr(-2) + "<br>" + hours + ":" + minutes.substr(-2);
 	return Time
 }
 // When the user clicks on <span> (x), close the modal
