@@ -871,8 +871,8 @@ function OfflineSite() {
 		var timeId = i + "_time";
 		var brId = i + "_br";
 
-		var startTime = timestampToTime(streamStart).split("<br>");
-		var endTime = timestampToTime(streamEnd).split("<br>");
+		var startTime = timestampToTime(streamStart[i]).split("<br>");
+		var endTime = timestampToTime(streamEnd[i]).split("<br>");
 
 		/*Feltölteni kívánt Div-ek megjelenítése a rejtésből és adatokkal való feltöltésük*/
 		document.getElementById(i).style.display = 'block';
