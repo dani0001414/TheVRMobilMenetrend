@@ -6,3 +6,6 @@ Ha ezeket a változtatásokat eszközöltem akkor elérhetővé teszem a forrás
 A kód megosztásával abban reménykedem, hogy tudom majd segíteni a streamerek azon nézőit akik mobil készülékről nézik a streameket, illetve, hogy tudok majd építőjellegű kritikát szerezni általa a tapasztalt fejlesztőktől a kód egyes részeivel kapcsolatban.
 
 Köszönöm, hogy elolvastad és hogy eltaláltál erre a titkos helyre. :)
+
+UI:
+Commits-okat nagyon elszúrtam. De nagyon. :/
