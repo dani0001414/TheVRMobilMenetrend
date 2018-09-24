@@ -22,6 +22,7 @@ var theVRmmNewInfoCookie = "thevrmm_new_info";
 /*A visszaszámláló, valamint a Cookie olvasás/létrehozás/törlés és modal funkció mind a w3schools oldalról származnak.*/
 CreateValidManifest();
 var internetStatus = "online";
+
 function convertTwitchChat(message) {
 	var twitchMessage;
 	var twitchUser;
@@ -503,8 +504,8 @@ function EventsArray2(data) {
 	}
 
 	if (titleLive != null) { liveStatus = "live"; } else { liveStatus = null }
-
-	if ((liveStatus == "live") & (fromTime != liveStartTime.createdAt)) {
+	
+	if ((liveStatus == "live") & (fromTime != liveStartTime.createdAt)&(!((liveStatus == "live") & ((liveTimestamp < streamEndZeroElement) & (liveTimestamp > streamStartZeroElement - 3000)) & (currenttime < stramStartFirstElement)))) {
 		coverLive = "https://static-cdn.jtvnw.net/previews-ttv/live_user_" + streamer + "-640x360.jpg";
 		gameLiveStatus = liveData.game.id;  /*493057==PUBG*/
 
@@ -669,7 +670,7 @@ function HtmlStart() {
 			streamEnd[i] = Timestamp(events[i].node.endAt);
 		}
 
-		if (cookieSettings == 1) {
+		if ((cookieSettings == 1)&(needSecondPostRequest == false)) {
 			//////
 			var changedTitleCount = 0, changedTimeCount = 0, changeAllCount = 0;
 			existElementCount = 0;
@@ -799,7 +800,7 @@ function HtmlStart() {
 	}
 
 
-	if (cookieSettings == 1) {
+	if ((cookieSettings == 1)&(needSecondPostRequest == false)) {
 		/*Változtatások színezése!*/
 		for (i = 0; i < newEventsPosition.length; i++) {
 			j = newEventsPosition[i];
@@ -975,7 +976,7 @@ function modal_open(i) {
 		if (streamer == "wearethevr") {
 			document.getElementById("popup_content").innerHTML += "<font size=\"1\"><div align=\"left\">A MobilBarát Menetrend által használt cookie-k:<br><br><span style=\"color: grey;\">" + policyAgreementCookie + ":</span><br>A döntésedet tárolja cookie-k használatával kapcsolatban. Ha nem fogadtad el, akkor a többi cookie nem lesz használatban.<br><br><span style=\"color: grey;\">" + themeCookie + ":</span><br>Az általad választott téma bellítását tárolja<br><br><span style=\"color: grey;\">" + newFeatureCookie + ":</span><br>Azt tárolja mikor láttad az új funkciókról szóló értesítést, hogy feleslegesen ne jelenjen meg újra.<br><br><span style=\"color: grey;\">" + theVRmmNewInfoCookie + ":</span><br>Azt tárolja mikor láttad az új TheVR Stream Infót, hogy feleslegesen ne jelenjen meg újra.<br><br><span style=\"color: grey;\">Google Analytics Cookie-k:</span><br>A Google Analitika szolgáltatása használja. Anoním módon rögzítik, hogy miként használod az oldalt. Ez segíti a későbbi fejlesztéseket.<br><br><span style=\"color: grey;\">cachedIDs, cachedTitles, cachedStreamStart, cachedStreamEnd:</span><br>A menetrend id, cím, kezdési idejét, befejezési idejét tárolják, hogy a legközelebbi megnyitáskor a mobil menetrend ki tudja jelezni, hogy mik a változások.<br><br><span style=\"color: grey;\">wearethevruserid:</span><br>Részletek, Témaválasztás, Naptárhozzáadás funkciók használatának figyeléséhez generált anoním userid.</div></font>";
 		} else {
-			document.getElementById("popup_content").innerHTML += "<font size=\"1\"><div align=\"left\">A MobilBarát Menetrend által használt cookie-k:<br><br><span style=\"color: grey;\">" + policyAgreementCookie + ":</span><br>A döntésedet tárolja cookie-k használatával kapcsolatban. Ha nem fogadtad el, akkor a többi cookie nem lesz használatban.<br><br><span style=\"color: grey;\">" + themeCookie + ":</span><br>Az általad választott téma bellítását tárolja<br><br><span style=\"color: grey;\">" + newFeatureCookie + ":</span><br>Azt tárolja mikor láttad az új funkciókról szóló értesítést, hogy feleslegesen ne jelenjen meg újra.<br><br><span style=\"color: grey;\">Google Analytics Cookie-k:</span><br>A Google Analitika szolgáltatása használja. Anoním módon rögzítik, hogy miként használod az oldalt. Ez segíti a későbbi fejlesztéseket.<br><br><span style=\"color: grey;\">cachedIDs, cachedTitles, cachedStreamStart, cachedStreamEnd:</span><br>A menetrend id, cím, kezdési idejét, befejezési idejét tárolják, hogy a legközelebbi megnyitáskor a mobil menetrend ki tudja jelezni, hogy mik a változások.</div></font>";
+			document.getElementById("popup_content").innerHTML += "<font size=\"1\"><div align=\"left\">A MobilBarát Menetrend által használt cookie-k:<br><br><span style=\"color: grey;\">" + policyAgreementCookie + ":</span><br>A döntésedet tárolja cookie-k használatával kapcsolatban. Ha nem fogadtad el, akkor a többi cookie nem lesz használatban.<br><br><span style=\"color: grey;\">" + themeCookie + ":</span><br>Az általad választott téma bellítását tárolja<br><br><span style=\"color: grey;\">" + newFeatureCookie + ":</span><br>Azt tárolja mikor láttad az új funkciókról szóló értesítést, hogy feleslegesen ne jelenjen meg újra.<br><br><span style=\"color: grey;\">Google Analytics Cookie-k:</span><br>A Google Analitika szolgáltatása használja. Anoním módon rögzítik, hogy miként használod az oldalt. Ez segíti a későbbi fejlesztéseket.<br><br><span style=\"color: grey;\">cachedIDs, cachedTitles, cachedStreamStart, cachedStreamEnd:</span><br>A menetrend id, cím, kezdési idejét, befejezési idejét tárolják, hogy a legközelebbi megnyitáskor a mobil menetrend ki tudja jelezni, hogy mik a változások.<br><br><span style=\"color: grey;\">fyrexxxuserid:</span><br>Részletek, Témaválasztás, Naptárhozzáadás funkciók használatának figyeléséhez generált anoním userid.</div></font>";
 		}
 		document.getElementById("popup_content").innerHTML += ""
 	}
@@ -1060,3 +1061,5 @@ window.onclick = function (event) {
 		modal.style.display = "none";
 	}
 }
+
+//A téma átállításnál felesleges külön basztatni a dolgokat. A 20 divet mind állítsam át
