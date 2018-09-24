@@ -1,20 +1,16 @@
 /**MobilBarát Menetrend Testreszabása. */
-
-/*Streamer adatok megadása*/
-var streamer = "wearethevr";
+var streamer = "fyrexxx";
 var twitchLink = "https://www.twitch.tv/" + streamer;
-var streamerID = "63493039";
-var noEventsPic = "https://i.imgur.com/5dZn6sc.png";
-var offlinePic = "https://i.imgur.com/5dZn6sc.png";
-var offlineText = "Kihúztad az UTP Kábelt!<br><span style=\"cursor: pointer; color: grey; text-decoration: underline;\" onclick=\"OfflineSite()\">OFFLINE MENETREND MEGTEKINTÉSE</span></span>";
-var noEventsText = "Jelenleg nincs egy stream sem a menetrendben! Elszívták az UTP-vel együtt! <img src=\"http://static-cdn.jtvnw.net/emoticons/v1/25/1.0\" alt=\"23\"><br>Hamarosan újabb szálítmány!";
-
+var streamerID = "40261250";
+var noEventsPic = "https://dani0001414.github.io/pingvinmenetrend/pingvin.png";
+var offlinePic = "https://dani0001414.github.io/pingvinmenetrend/pingvin.png";
+var offlineText = "Eltünt az internet!<br><span style=\"cursor: pointer; color: grey; text-decoration: underline;\" onclick=\"OfflineSite()\">OFFLINE MENETREND MEGTEKINTÉSE</span></span>";
+var noEventsText = "Nessaj jelenleg egy menetrendi eseményt sem adott meg!";
 
 /*Cookiek megadása*/
-var policyAgreementCookie = "thevrmmcookiepolicysagreement";
-var themeCookie = "thevrmm_theme";
-var newFeatureCookie = "thevrmm_new_feature";
-var theVRmmNewInfoCookie = "thevrmm_new_info";
+var policyAgreementCookie = "pingvinmmcookiepolicysagreement";
+var themeCookie = "pingvinmm_theme";
+var newFeatureCookie = "pingvinmm_new_feature";
 
 /*theVRmmNewInfoCookie részt zárjam ki más streamer megadásakor cookie info résznél és cookie létrehozásnál*/
 /*Szünet Cover 490 sor környékén kikommentelés ha nem a TheVR-ra specializálom */
@@ -397,9 +393,17 @@ document.onload = function () {
 }
 
 if (cookieSettings == 1) {
-	window.onload = function () {
-		dynamicallyLoadScript("https://www.googletagmanager.com/gtag/js?id=UA-121876941-1");
-		dynamicallyLoadScript_content("window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'UA-121876941-1');");
+	if (streamer == "wearethevr") {
+		window.onload = function () {
+			dynamicallyLoadScript("https://www.googletagmanager.com/gtag/js?id=UA-121876941-1");
+			dynamicallyLoadScript_content("window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'UA-121876941-1');");
+		}
+	}
+	if (streamer == "fyrexxx") {
+		window.onload = function () {
+			dynamicallyLoadScript("https://www.googletagmanager.com/gtag/js?id=UA-122179264-1");
+			dynamicallyLoadScript_content("window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'UA-122179264-1');");
+		}
 	}
 
 }
@@ -511,7 +515,7 @@ function EventsArray2(data) {
 		liveDateStart = OnlyDate(liveStartTime.createdAt);
 		coverLive = "https://static-cdn.jtvnw.net/previews-ttv/live_user_" + streamer + "-640x360.jpg";
 		gameLiveStatus = liveData.game.id;  /*493057==PUBG*/
-		if ((gameLiveStatus == 493057) & (streamer = "wearethevr")) { HttpGetFeature("https://script.google.com/macros/s/AKfycbwaqdvT0_QtH6js2JTAx6gNh1Ep-GJqYaQRqgPvEYlZ_i4FTDTe/exec", PUBGStatDownload); }
+		if ((gameLiveStatus == 493057) & (streamer == "wearethevr")) { HttpGetFeature("https://script.google.com/macros/s/AKfycbwaqdvT0_QtH6js2JTAx6gNh1Ep-GJqYaQRqgPvEYlZ_i4FTDTe/exec", PUBGStatDownload); }
 
 	} else { liveStatus = null }
 
@@ -523,7 +527,6 @@ function EventsArray2(data) {
 			stramStartFirstElement = Timestamp(events[1].node.startAt);
 			streamEndFirstElement = Timestamp(events[1].node.endAt);
 		}
-
 	}
 
 	if ((liveStatus == "live") & (fromTime != liveStartTime.createdAt) & (!((liveStatus == "live") & ((liveTimestamp < streamEndZeroElement) & (liveTimestamp > streamStartZeroElement - 3000)) & (currenttime < stramStartFirstElement)))) {
@@ -531,8 +534,6 @@ function EventsArray2(data) {
 		needSecondPostRequest = true;
 		HttpPost("https://gql.twitch.tv/gql", EventsArray2);
 	}
-
-
 
 	var descriptionJsonStringPlayload = "[";
 
@@ -611,7 +612,7 @@ function HtmlStart() {
 	var readyCheck = true;
 	if (needSecondPostRequest) { readyCheck = false }
 
-	if (cookieSettings == 1) {
+	if ((cookieSettings == 1) & readyCheck) {
 		for (var i = 0; i < eventsLength; i++) {
 			streamStart[i] = Timestamp(events[i].node.startAt);
 			streamEnd[i] = Timestamp(events[i].node.endAt);
@@ -638,18 +639,19 @@ function HtmlStart() {
 			createcookie('cachedStreamEnd', JSON.stringify(cachedStreamEnd), 365);
 		}
 		if (curentUserID == 0) {
-			curentUserID = idGenerator();
+			if(streamer == "wearethevr"){curentUserID = idGenerator();}
+			if(streamer == "fyrexxx") {curentUserID = idGenerator();}
 			createcookie(streamer + 'userid', curentUserID, 365);
 		}
 	}
 
-	calendarFunc = "https://script.google.com/macros/s/AKfycbwCuXEIW0pJo4aL8f09tvzPoaJ76t99aPT26kSw1Iji2K39WxNy/exec?func=open-calendar&user=" + curentUserID;
-	googleFunc = "https://script.google.com/macros/s/AKfycbwCuXEIW0pJo4aL8f09tvzPoaJ76t99aPT26kSw1Iji2K39WxNy/exec?func=add-google-calendar&user=" + curentUserID;
-	icalFunc = "https://script.google.com/macros/s/AKfycbwCuXEIW0pJo4aL8f09tvzPoaJ76t99aPT26kSw1Iji2K39WxNy/exec?func=add-ical-calendar&user=" + curentUserID;
-	yahooFunc = "https://script.google.com/macros/s/AKfycbwCuXEIW0pJo4aL8f09tvzPoaJ76t99aPT26kSw1Iji2K39WxNy/exec?func=add-yahoo-calendar&user=" + curentUserID;
-	detailFunc = "https://script.google.com/macros/s/AKfycbwCuXEIW0pJo4aL8f09tvzPoaJ76t99aPT26kSw1Iji2K39WxNy/exec?func=open-details&user=" + curentUserID;
-	whiteThemeFunc = "https://script.google.com/macros/s/AKfycbwCuXEIW0pJo4aL8f09tvzPoaJ76t99aPT26kSw1Iji2K39WxNy/exec?func=light-theme-set&user=" + curentUserID;
-	blackThemeFunc = "https://script.google.com/macros/s/AKfycbwCuXEIW0pJo4aL8f09tvzPoaJ76t99aPT26kSw1Iji2K39WxNy/exec?func=dark-theme-set&user=" + curentUserID;
+	calendarFunc = "https://script.google.com/macros/s/AKfycbxrSwsr3iSsUbxBB_H43j_3nP0pMmmgVXUL7HMR853muC_eM_em/exec?func=open-calendar&user=" + curentUserID;
+	googleFunc = "https://script.google.com/macros/s/AKfycbxrSwsr3iSsUbxBB_H43j_3nP0pMmmgVXUL7HMR853muC_eM_em/exec?func=add-google-calendar&user=" + curentUserID;
+	icalFunc = "https://script.google.com/macros/s/AKfycbxrSwsr3iSsUbxBB_H43j_3nP0pMmmgVXUL7HMR853muC_eM_em/exec?func=add-ical-calendar&user=" + curentUserID;
+	yahooFunc = "https://script.google.com/macros/s/AKfycbxrSwsr3iSsUbxBB_H43j_3nP0pMmmgVXUL7HMR853muC_eM_em/exec?func=add-yahoo-calendar&user=" + curentUserID;
+	detailFunc = "https://script.google.com/macros/s/AKfycbxrSwsr3iSsUbxBB_H43j_3nP0pMmmgVXUL7HMR853muC_eM_em/exec?func=open-details&user=" + curentUserID;
+	whiteThemeFunc = "https://script.google.com/macros/s/AKfycbxrSwsr3iSsUbxBB_H43j_3nP0pMmmgVXUL7HMR853muC_eM_em/exec?func=light-theme-set&user=" + curentUserID;
+	blackThemeFunc = "https://script.google.com/macros/s/AKfycbxrSwsr3iSsUbxBB_H43j_3nP0pMmmgVXUL7HMR853muC_eM_em/exec?func=dark-theme-set&user=" + curentUserID;
 
 	for (var i = 0; i < eventsLength; i++) {
 
@@ -673,7 +675,7 @@ function HtmlStart() {
 			streamEnd[i] = Timestamp(events[i].node.endAt);
 		}
 
-		if ((cookieSettings == 1) & (needSecondPostRequest == false)) {
+		if ((cookieSettings == 1) & readyCheck) {
 			//////
 			var changedTitleCount = 0, changedTimeCount = 0, changeAllCount = 0;
 			existElementCount = 0;
@@ -803,7 +805,7 @@ function HtmlStart() {
 	}
 
 
-	if ((cookieSettings == 1) & (needSecondPostRequest == false)) {
+	if ((cookieSettings == 1) & readyCheck) {
 		/*Változtatások színezése!*/
 		for (i = 0; i < newEventsPosition.length; i++) {
 			j = newEventsPosition[i];
@@ -931,7 +933,7 @@ function hide_and_show(elementId, i) {
 			} else {
 				document.getElementById(elementId).innerHTML = "<b>Részletek:</b><br>Az eseményhez nem tartozik részletes leírás!<br><br><a style=\"cursor: pointer; color: grey; text-decoration: underline;\" onclick=\"modal_open(" + i + ")\" >Hozzáadás a naptárhoz!</a> ";
 			}
-		} else if ((liveStatus == "live") & (gameLiveStatus == 493057) & (streamer = "wearethevr")) {
+		} else if ((liveStatus == "live") & (gameLiveStatus == 493057) & (streamer == "wearethevr")) {
 			document.getElementById(elementId).innerHTML = PUBGStat;
 		}
 	} else {
