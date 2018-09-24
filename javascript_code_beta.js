@@ -22,6 +22,7 @@ var theVRmmNewInfoCookie = "thevrmm_new_info";
 /*A visszaszámláló, valamint a Cookie olvasás/létrehozás/törlés és modal funkció mind a w3schools oldalról származnak.*/
 CreateValidManifest();
 var internetStatus = "online";
+var currenttime = CurrentTime();
 
 function convertTwitchChat(message) {
 	var twitchMessage;
@@ -356,7 +357,7 @@ function HttpGetNorm(url) {
 
 /*Változtatás : streamEndZeroElement, streamStartZeroElement változók deklarálása itt. */
 var fromTime = CurrentTimeTwitchServerFormat(0);
-var events, liveData, streamEndZeroElement, needSecondPostRequest, calendarFunc, googleFunc, icalFunc, yahooFunc, detailFunc, whiteThemeFunc, blackThemeFunc, offlineLength, curentUserID, currenttime, theVRmmNewFeature, theVRmmNewInfo, stramStartFirstElement, streamEndFirstElement, streamStartZeroElement, eventsDescriptions, eventsLength, liveTimestamp, liveStatus, titleLive, coverLive, gameLiveStatus, titleLive, modal, span, btn, cookieSettings, themeStatus, liveDateStart, liveStart, newFunction;
+var events, liveData, streamEndZeroElement, needSecondPostRequest, calendarFunc, googleFunc, icalFunc, yahooFunc, detailFunc, whiteThemeFunc, blackThemeFunc, offlineLength, curentUserID, theVRmmNewFeature, theVRmmNewInfo, stramStartFirstElement, streamEndFirstElement, streamStartZeroElement, eventsDescriptions, eventsLength, liveTimestamp, liveStatus, titleLive, coverLive, gameLiveStatus, titleLive, modal, span, btn, cookieSettings, themeStatus, liveDateStart, liveStart, newFunction;
 var PUBGStat = "Töltődik a statisztika!"
 var gCalendarLink = [];
 var icalCalendarLink = [];
@@ -597,7 +598,6 @@ function HtmlStart() {
 		};
 	}
 
-	currenttime = CurrentTime();
 	var cachedStreamStart, cachedTitles, k = 0, l = 0, m = 0, n = 0;
 	var titles = [];
 	var id = [];
