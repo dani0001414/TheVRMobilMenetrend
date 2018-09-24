@@ -500,12 +500,23 @@ function EventsArray2(data) {
 		Dark(eventsLength);
 	}
 	if (themeStatus == "light") {
-		 Light(eventsLength);
+		Light(eventsLength);
 	}
 
 	if (titleLive != null) { liveStatus = "live"; } else { liveStatus = null }
-	
-	if ((liveStatus == "live") & (fromTime != liveStartTime.createdAt)&(!((liveStatus == "live") & ((liveTimestamp < streamEndZeroElement) & (liveTimestamp > streamStartZeroElement - 3000)) & (currenttime < stramStartFirstElement)))) {
+
+	/*Változtatás : Ha az events tömb nem nulla akkor az első elem kezdési és végetérési időpontját beletesszük a streamEndZeroElement és a streamStartZeroElement változókba. */
+	if (eventsLength != 0) {
+		streamEndZeroElement = Timestamp(events[0].node.endAt);
+		streamStartZeroElement = Timestamp(events[0].node.startAt);
+		if (eventsLength > 1) {
+			stramStartFirstElement = Timestamp(events[1].node.startAt);
+			streamEndFirstElement = Timestamp(events[1].node.endAt);
+		}
+
+	}
+
+	if ((liveStatus == "live") & (fromTime != liveStartTime.createdAt) & (!((liveStatus == "live") & ((liveTimestamp < streamEndZeroElement) & (liveTimestamp > streamStartZeroElement - 3000)) & (currenttime < stramStartFirstElement)))) {
 		coverLive = "https://static-cdn.jtvnw.net/previews-ttv/live_user_" + streamer + "-640x360.jpg";
 		gameLiveStatus = liveData.game.id;  /*493057==PUBG*/
 
@@ -519,16 +530,7 @@ function EventsArray2(data) {
 		if ((gameLiveStatus == 493057) & (streamer = "wearethevr")) { HttpGetFeature("https://script.google.com/macros/s/AKfycbwaqdvT0_QtH6js2JTAx6gNh1Ep-GJqYaQRqgPvEYlZ_i4FTDTe/exec", PUBGStatDownload); }
 	}
 
-	/*Változtatás : Ha az events tömb nem nulla akkor az első elem kezdési és végetérési időpontját beletesszük a streamEndZeroElement és a streamStartZeroElement változókba. */
-	if (eventsLength != 0) {
-		streamEndZeroElement = Timestamp(events[0].node.endAt);
-		streamStartZeroElement = Timestamp(events[0].node.startAt);
-		if (eventsLength > 1) {
-			stramStartFirstElement = Timestamp(events[1].node.startAt);
-			streamEndFirstElement = Timestamp(events[1].node.endAt);
-		}
 
-	}
 
 	var descriptionJsonStringPlayload = "[";
 
@@ -670,7 +672,7 @@ function HtmlStart() {
 			streamEnd[i] = Timestamp(events[i].node.endAt);
 		}
 
-		if ((cookieSettings == 1)&(needSecondPostRequest == false)) {
+		if ((cookieSettings == 1) & (needSecondPostRequest == false)) {
 			//////
 			var changedTitleCount = 0, changedTimeCount = 0, changeAllCount = 0;
 			existElementCount = 0;
@@ -800,7 +802,7 @@ function HtmlStart() {
 	}
 
 
-	if ((cookieSettings == 1)&(needSecondPostRequest == false)) {
+	if ((cookieSettings == 1) & (needSecondPostRequest == false)) {
 		/*Változtatások színezése!*/
 		for (i = 0; i < newEventsPosition.length; i++) {
 			j = newEventsPosition[i];
@@ -857,13 +859,13 @@ function OfflineSite() {
 	var streamStart = JSON.parse(getCookie("cachedStreamStart"));                        //Az előző menetrendi elemek idejét nyitja meg egy tömbbe.
 	var titles = JSON.parse(getCookie("cachedTitles"));                         //Az előző memnetrendi elemek címét nyitja meg egy tömbe.
 	var streamEnd = JSON.parse(getCookie("cachedStreamEnd"));
-	offlineLength=titles.length;
+	offlineLength = titles.length;
 
 	if (themeStatus == "dark") {
-		 Dark(offlineLength); 
+		Dark(offlineLength);
 	}
 	if (themeStatus == "light") {
-		Light(offlineLength); 
+		Light(offlineLength);
 	}
 
 	for (var i = 0; i < titles.length; i++) {
