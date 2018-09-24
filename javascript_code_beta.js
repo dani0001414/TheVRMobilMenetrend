@@ -503,7 +503,16 @@ function EventsArray2(data) {
 		Light(eventsLength);
 	}
 
-	if (titleLive != null) { liveStatus = "live"; } else { liveStatus = null }
+	if (titleLive != null) {
+		liveStatus = "live";
+		liveTimestamp = Timestamp(liveStartTime.createdAt);
+		liveStart = TimeConvert(liveStartTime.createdAt).split("<br>");
+		liveDateStart = OnlyDate(liveStartTime.createdAt);
+		coverLive = "https://static-cdn.jtvnw.net/previews-ttv/live_user_" + streamer + "-640x360.jpg";
+		gameLiveStatus = liveData.game.id;  /*493057==PUBG*/
+		if ((gameLiveStatus == 493057) & (streamer = "wearethevr")) { HttpGetFeature("https://script.google.com/macros/s/AKfycbwaqdvT0_QtH6js2JTAx6gNh1Ep-GJqYaQRqgPvEYlZ_i4FTDTe/exec", PUBGStatDownload); }
+
+	} else { liveStatus = null }
 
 	/*Változtatás : Ha az events tömb nem nulla akkor az első elem kezdési és végetérési időpontját beletesszük a streamEndZeroElement és a streamStartZeroElement változókba. */
 	if (eventsLength != 0) {
@@ -517,17 +526,9 @@ function EventsArray2(data) {
 	}
 
 	if ((liveStatus == "live") & (fromTime != liveStartTime.createdAt) & (!((liveStatus == "live") & ((liveTimestamp < streamEndZeroElement) & (liveTimestamp > streamStartZeroElement - 3000)) & (currenttime < stramStartFirstElement)))) {
-		coverLive = "https://static-cdn.jtvnw.net/previews-ttv/live_user_" + streamer + "-640x360.jpg";
-		gameLiveStatus = liveData.game.id;  /*493057==PUBG*/
-
-		liveStart = TimeConvert(liveStartTime.createdAt).split("<br>");
-		liveDateStart = OnlyDate(liveStartTime.createdAt);
-		liveTimestamp = Timestamp(liveStartTime.createdAt);
-
 		fromTime = liveStartTime.createdAt;
 		needSecondPostRequest = true;
 		HttpPost("https://gql.twitch.tv/gql", EventsArray2);
-		if ((gameLiveStatus == 493057) & (streamer = "wearethevr")) { HttpGetFeature("https://script.google.com/macros/s/AKfycbwaqdvT0_QtH6js2JTAx6gNh1Ep-GJqYaQRqgPvEYlZ_i4FTDTe/exec", PUBGStatDownload); }
 	}
 
 
