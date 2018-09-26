@@ -1,0 +1,189 @@
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <style type="text/css">
+        @font-face {
+            font-family: 'Covenant';
+            src: url(data:application/x-font-woff;charset=utf-8;base64,) format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        .inerbox-pubg {
+            float: left;
+            width: 161px;
+            box-sizing: border-box;
+            background-color: #4b4b4b;
+            border: 1px solid #8d8d8d;
+            border-top: 0px solid;
+            border-right: 0px solid;
+        }
+
+        #inerbox2-pubg {
+            float: left;
+            width: 161px;
+            box-sizing: border-box;
+            background-color: #262626;
+            border: 1px solid #8d8d8d;
+            border-top: 0px solid;
+        }
+
+        .outerbox-pubg {
+            font-family: 'Squada One', cursive, sans-serif;
+            width: 322px;
+            color: #8d8d8d;
+        }
+
+        .site-stat-inerbox {
+            float: left;
+            width: 50%;
+            box-sizing: border-box;
+            color: #262626;
+
+        }
+
+        .site-stat-outerbox {
+            font-family: 'Squada One', cursive, sans-serif;
+            width: 100%;
+            color: #8d8d8d;
+        }
+
+        .info {
+            font-family: 'Squada One', cursive, sans-serif;
+        }
+
+        @media screen and (max-width: 800px) {
+            .site-stat-inerbox {
+                float: none;
+                width: 320px;
+                box-sizing: border-box;
+                color: #262626;
+            }
+        }
+
+        #matchID {
+            font-family: 'Squada One', cursive, sans-serif;
+            width: 320px;
+            background-color: #fbc22d;
+            border: 1px solid #b38100;
+            color: #262626;
+            border-top: 0px solid;
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css?family=Squada+One" rel="stylesheet">
+    <script>
+        function HttpGet(url, callback) {
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+                    callback(xhttp.responseText);
+                }
+            };
+            xhttp.open("GET", url, true);
+            xhttp.send();
+        }
+
+        function tables(length, where) {
+            for (var i = 0; i < length; i++) {
+                var myDiv = document.getElementById("statTable");
+                var divClone = myDiv.cloneNode(true);
+                divClone.setAttribute("id", "TableName-" + i);
+                //document.body.appendChild(divClone);
+                var whereTag = document.getElementById(where);
+                whereTag.appendChild(divClone);
+            }
+        }
+
+        function tableNumber(array) {
+            var length = Object.keys(array).length;
+            for (var i = 0; i < length; i++) {
+                if (array[i].kill == null) { break; }
+            }
+            return i;
+        }
+
+        HttpGet("https://script.google.com/macros/s/AKfycbz3m8CaYtR9sW7zuCcUyMx4ODhEq3OYKQzTlQa6bfG3tGY-nbGm/exec", html);
+
+        function html(cupArray) {
+            cupArray = JSON.parse(cupArray);
+
+            var howManyTables = tableNumber(cupArray.qualifier);
+            tables(howManyTables, "qualifier");
+
+            var j;
+            var tableId = document.getElementById('kill');
+            for (var i = 0; i < howManyTables; i++) {
+                j = i + 1;
+                document.getElementsByClassName("match-name")[j].innerHTML = j + "meccs";
+                document.getElementsByClassName("kill")[j].innerHTML = cupArray.qualifier[i].kill;
+                document.getElementsByClassName("place")[j].innerHTML = cupArray.qualifier[i].place;
+            }
+
+            var howManyTables = tableNumber(cupArray.finals);
+            tables(howManyTables, "finals");
+
+
+            var skiper = j;
+            var tableId = document.getElementById('kill');
+            for (var i = 0; i < howManyTables; i++) {
+                j = i + 1 + skiper;
+                document.getElementsByClassName("match-name")[j].innerHTML = j + "meccs";
+                document.getElementsByClassName("kill")[j].innerHTML = cupArray.finals[i].kill;
+                document.getElementsByClassName("place")[j].innerHTML = cupArray.finals[i].place;
+            }
+            document.getElementById("cup-name").innerHTML = "<h1>" + cupArray.cupInfo.matchName + "</h1>";
+            document.getElementById("map").innerHTML = "<h3>" + cupArray.cupInfo.map + "</h3>";
+            document.getElementById("upshot").innerHTML = "<h1>Végeredmény: " + cupArray.cupInfo.upshot + "</h1>";
+
+        }
+    </script>
+</head>
+
+<body style="font-family:'Roboto', sans-serif; background: #faf9fa; height:100%">
+    <center>
+        <div id="cup-name" class="info"></div>
+        <div id="map" class="info"></div>
+
+        <div style="display:none" id="pubgstat">
+            <div id="statTable">
+                <div id="matchID" class="match-name">Meccs</div>
+                <div class="outerbox-pubg">
+                    <div class="inerbox-pubg">Kill</div>
+                    <div class="inerbox-pubg">Helyezés</div>
+                    <br style="clear: left;" /> </div>
+                <div class="outerbox-pubg">
+                    <div id="inerbox2-pubg" class="kill"> </div>
+                    <div id="inerbox2-pubg" class="place"> </div>
+                    <br style="clear: left;" />
+                </div>
+            </div>
+        </div>
+
+        <div class="site-stat-outerbox">
+
+            <div class="site-stat-inerbox">
+                Selejtező:
+                <div id="qualifier"></div>
+            </div>
+
+            <div class="site-stat-inerbox">
+                Döntő:
+                <div id="finals"></div>
+            </div>
+            <br style="clear: left;" />
+        </div>
+
+        <div id="upshot" class="info"></div>
+
+
+
+
+
+
+    </center>
+</body>
+
+</html>
