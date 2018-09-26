@@ -134,7 +134,7 @@
         .loading-iner-content {
             position: fixed;
             top: 20%;
-            left: 50%;
+            left: 49%;
             width: 100%;
             height: 100%;
         }
@@ -196,11 +196,23 @@
         }
 
         function tableNumber(array) {
+            var j;
             var length = Object.keys(array).length;
             for (var i = 0; i < length; i++) {
-                if (array[i].kill == null) { break; }
+
+                if ((array[i].kill == null)) {
+                    var testlength = Object.keys(array[i]).length;
+                    if (Object.keys(array[i]).length > 3) {
+                        j = i;
+                    } else {
+                        j = i - 1;
+                        break;
+                    }
+                } else {
+                    j = i;
+                }
             }
-            return i;
+            return j + 1;
         }
 
         HttpGet("https://script.google.com/macros/s/AKfycbz3m8CaYtR9sW7zuCcUyMx4ODhEq3OYKQzTlQa6bfG3tGY-nbGm/exec", html);
@@ -213,12 +225,16 @@
             tables(howManyTables, "qualifier");
 
             var j;
-            var tableId = document.getElementById('kill');
+            //var tableId = document.getElementById('kill');
             for (var i = 0; i < howManyTables; i++) {
                 j = i + 1;
-                document.getElementsByClassName("match-name")[j].innerHTML = j + ". meccs";
-                document.getElementsByClassName("kill")[j].innerHTML = cupArray.qualifier[i].kill;
-                document.getElementsByClassName("place")[j].innerHTML = cupArray.qualifier[i].place;
+                if (cupArray.qualifier[i].kill != null) {
+                    document.getElementsByClassName("match-name")[j].innerHTML = j + ". meccs";
+                    document.getElementsByClassName("kill")[j].innerHTML = cupArray.qualifier[i].kill;
+                    document.getElementsByClassName("place")[j].innerHTML = cupArray.qualifier[i].place;
+                } else {
+                    document.getElementsByClassName("match-name")[j].innerHTML = j + ". meccs Folyamatban!";
+                }
             }
 
             var howManyTables = tableNumber(cupArray.finals);
@@ -260,8 +276,8 @@
                     <div class="inerbox-pubg2">Helyezés</div>
                     <br style="clear: left;" /> </div>
                 <div class="outerbox-pubg">
-                    <div id="inerbox2-pubg" class="kill"> </div>
-                    <div id="inerbox2-pubg2" class="place"> </div>
+                    <div id="inerbox2-pubg" class="kill">N/A</div>
+                    <div id="inerbox2-pubg2" class="place">N/A</div>
                     <br style="clear: left;" />
                 </div>
             </div>
