@@ -29,7 +29,7 @@
             background-color: #4b4b4b;
             border: 1px solid #8d8d8d;
             border-top: 0px solid;
-            
+
         }
 
         #inerbox2-pubg {
@@ -49,7 +49,7 @@
             background-color: #262626;
             border: 1px solid #8d8d8d;
             border-top: 0px solid;
-            
+
         }
 
         .outerbox-pubg {
@@ -76,7 +76,7 @@
 
         .info {
             font-family: 'Russo One', sans-serif;
-            color:whitesmoke;
+            color: whitesmoke;
         }
 
         @media screen and (max-width: 800px) {
@@ -115,7 +115,59 @@
             background-position: center;
             font-family: 'Roboto', sans-serif;
             background: #262626;
-            
+
+        }
+
+        .loading {
+            font-family: 'Russo One', sans-serif;
+            overflow: auto;
+            position: fixed;
+            color: whitesmoke;
+            text-align: center;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background: #262626;
+
+        }
+
+        .loading-iner-content {
+            position: fixed;
+            top: 20%;
+            left: 50%;
+            width: 100%;
+            height: 100%;
+        }
+
+        .loader {
+            border: 5px solid #f3f3f3;
+            border-radius: 50%;
+            border-top: 5px solid #fbc22d;
+            width: 10px;
+            height: 10px;
+            -webkit-animation: spin 2s linear infinite;
+            /* Safari */
+            animation: spin 2s linear infinite;
+        }
+
+        /* Safari */
+
+        @-webkit-keyframes spin {
+            0% {
+                -webkit-transform: rotate(0deg);
+            }
+            100% {
+                -webkit-transform: rotate(360deg);
+            }
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
         }
     </style>
     <link href="https://fonts.googleapis.com/css?family=Squada+One" rel="stylesheet">
@@ -154,6 +206,7 @@
         HttpGet("https://script.google.com/macros/s/AKfycbz3m8CaYtR9sW7zuCcUyMx4ODhEq3OYKQzTlQa6bfG3tGY-nbGm/exec", html);
 
         function html(cupArray) {
+            document.getElementById("loading-id").style.display = 'none';
             cupArray = JSON.parse(cupArray);
 
             var howManyTables = tableNumber(cupArray.qualifier);
@@ -189,6 +242,12 @@
 </head>
 
 <body>
+    <div id="loading-id" class="loading">
+        <div class="loading-iner-content">
+            <div class="loader"></div>
+        </div>
+
+    </div>
     <center>
         <div id="cup-name" class="info"></div>
         <div id="map" class="info"></div>
@@ -211,12 +270,12 @@
         <div class="site-stat-outerbox">
 
             <div class="site-stat-inerbox">
-               <span class="info"> Selejtező:</span>
+                <span class="info"> Selejtező:</span>
                 <div id="qualifier"></div>
             </div>
-            
+
             <div class="site-stat-inerbox">
-                <span class="info">Döntő:</span> 
+                <span class="info">Döntő:</span>
                 <div id="finals"></div>
             </div>
             <br style="clear: left;" />
