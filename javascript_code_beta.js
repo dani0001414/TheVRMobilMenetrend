@@ -1,16 +1,20 @@
 /**MobilBarát Menetrend Testreszabása. */
-var streamer = "fyrexxx";
+
+/*Streamer adatok megadása*/
+var streamer = "wearethevr";
 var twitchLink = "https://www.twitch.tv/" + streamer;
-var streamerID = "40261250";
-var noEventsPic = "https://dani0001414.github.io/pingvinmenetrend/pingvin.png";
-var offlinePic = "https://dani0001414.github.io/pingvinmenetrend/pingvin.png";
-var offlineText = "Eltünt az internet!<br><span style=\"cursor: pointer; color: grey; text-decoration: underline;\" onclick=\"OfflineSite()\">OFFLINE MENETREND MEGTEKINTÉSE</span></span>";
-var noEventsText = "Nessaj jelenleg egy menetrendi eseményt sem adott meg!";
+var streamerID = "63493039";
+var noEventsPic = "https://i.imgur.com/5dZn6sc.png";
+var offlinePic = "https://i.imgur.com/5dZn6sc.png";
+var offlineText = "Kihúztad az UTP Kábelt!<br><span style=\"cursor: pointer; color: grey; text-decoration: underline;\" onclick=\"OfflineSite()\">OFFLINE MENETREND MEGTEKINTÉSE</span></span>";
+var noEventsText = "Jelenleg nincs egy stream sem a menetrendben! Elszívták az UTP-vel együtt! <img src=\"http://static-cdn.jtvnw.net/emoticons/v1/25/1.0\" alt=\"23\"><br>Hamarosan újabb szálítmány!";
+
 
 /*Cookiek megadása*/
-var policyAgreementCookie = "pingvinmmcookiepolicysagreement";
-var themeCookie = "pingvinmm_theme";
-var newFeatureCookie = "pingvinmm_new_feature";
+var policyAgreementCookie = "thevrmmcookiepolicysagreement";
+var themeCookie = "thevrmm_theme";
+var newFeatureCookie = "thevrmm_new_feature";
+var theVRmmNewInfoCookie = "thevrmm_new_info";
 
 /*theVRmmNewInfoCookie részt zárjam ki más streamer megadásakor cookie info résznél és cookie létrehozásnál*/
 /*Szünet Cover 490 sor környékén kikommentelés ha nem a TheVR-ra specializálom */
@@ -547,8 +551,6 @@ function EventsArray2(data) {
 
 	}
 	HtmlStart();
-
-
 }
 
 /*HttpPost2 menetrend részletek api lekérő meghívja a funkciót és átadja a callback változót*/
@@ -638,9 +640,9 @@ function HtmlStart() {
 			createcookie('cachedIDs', JSON.stringify(cachedIDs), 365);
 			createcookie('cachedStreamEnd', JSON.stringify(cachedStreamEnd), 365);
 		}
-		if (curentUserID == 0) {
+		if (curentUserID == 0) {	
 			if(streamer == "wearethevr"){curentUserID = idGenerator();}
-			if(streamer == "fyrexxx") {curentUserID = idGenerator();}
+			if(streamer == "fyrexxx") {curentUserID = idGenerator()+"_PINGVIN";}
 			createcookie(streamer + 'userid', curentUserID, 365);
 		}
 	}
@@ -731,7 +733,7 @@ function HtmlStart() {
 
 		/*Calendar Linkek létrehozása*/
 		gCalendarLink[i] = "https://calendar.google.com/calendar/r/eventedit?dates=" + gCalendarStartTime + "/" + gCalendarEndTime + "&details&location&text=" + gCalendarTitle + "&trp=false&sf=true"
-		icalCalendarLink[i] = "https://maestro.io/pkg/lt3-api/4.0/api/calendar/event.ics?alarm=" + gCalendarEndTime + "&details=&end=" + gCalendarEndTime + "&location=&stamp=20180704T213131Z&convertedTime=" + gCalendarStartTime + "&title=" + icalCalendarTitle;
+		icalCalendarLink[i] = "https://maestro.io/pkg/lt3-api/4.0/api/calendar/event.ics?alarm=" + gCalendarStartTime + "&details=&end=" + gCalendarEndTime + "&start=" + gCalendarStartTime + "&location=&stamp=20180704T213131Z&convertedTime=" + gCalendarStartTime + "&title=" + icalCalendarTitle;
 		yahooCalendarLink[i] = "https://calendar.yahoo.com/?v=60&view=d&type=20&title=" + gCalendarTitle + "&st=" + gCalendarStartTime + "&et=" + gCalendarEndTime + "&uid=";
 
 		/*Szünet Cover létrehozás*/
