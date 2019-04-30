@@ -1,0 +1,77 @@
+﻿<html>
+
+<head>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" type="image/png" href="icon.png">
+  <title>Mobilbarát Menetrend</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta charset="utf-8">
+  <script id="main_js" type="text/javascript" src="https://dani0001414.github.io/javascript_code.js" crossorigin></script>
+</head>
+
+<body link="grey" vlink="grey" style="font-family:'Roboto', sans-serif; background: #0e0c13; height:100%; color: #c3c1c8;">
+  <center>
+    <div style="display: block;" id="no_stream">
+    </div>
+    <div style="width:320px; display: none; background-color:#ffa100; border:1px solid #ff8700; color: black" id="meglepi" class="elem">
+      <div id="meglepi_cim">cím</div>
+      <div id="meglepi_cover"></div>
+      <div id="meglepi_time"></div>
+      <span id="meglepistamp" style="cursor:pointer;" onclick="hide_and_show('meglepi_description',0)">☰</span>
+    </div>
+    <div style="width:320px; display: none; background-color:#17141f; border:1px solid #2e2b35" id="meglepi_description">
+      <b>Részletek:</b>
+      <br>Ez egy előre nem tervezett stream. Stream hossza ismeretlen és ne is kérdezd. Élvezd ki!
+    </div>
+    <div id="meglepi_br" style="display: none;">
+      <br>
+    </div>
+    <div id="footer_data" style="color: grey">
+      <font size="2">Creator:
+        <a target="_blank" href="https://forum.thevr.hu/u/danx27/">DanX27 Ninjon</a>
+        <br>
+        <br>
+        <a href="https://dani0001414.github.io/TheVRMobilMenetrend/changelog.html">[Change-Log]</a>
+        <br>
+        <br>
+        <a style="cursor: pointer; color: grey; text-decoration: underline;" onclick="modal_open('cookie_settings')">[Beállítások]</a>
+      </font>
+    </div>
+    <!-- The Modal -->
+    <div id="myCookie" class="cookie">
+      <!-- Modal content -->
+      <div align="left" class="modal-cookie">
+        A MobilBarát Menetrend egyes funkcióihoz saját(Témaválasztó, Új funkciók jelzése) illetve harmadik fél általi(Google Analytics)
+        Cookie-kat használ a későbbi fejlesztések segítése érdekében!
+        <br>
+        <span id="CookieAccept" style="cursor: pointer; color: grey; text-decoration: underline;">Elfogadom</span>
+        <span style="cursor: pointer; color: grey; text-decoration: underline;" onclick="deleteAllCookies('banner')">Nem fogadom el</span>
+        <span style="cursor: pointer; color: grey; text-decoration: underline;" onclick="modal_open('cookie_information')">Bővebb információ</span>
+      </div>
+    </div>
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <span onclick="spanonclick()" class="close">&times;</span>
+        <div id="popup_content"></div>
+      </div>
+    </div>
+  </center>
+</body>
+<script>
+   if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('thevrmm_sw.js').then(function (registration) {
+      console.log('Service worker registration succeeded:', registration);
+    }).catch(function (error) {
+      console.log('Service worker registration failed:', error);
+    });
+  } else {
+    console.log('Service workers are not supported.');
+  } 
+</script>
+</html>

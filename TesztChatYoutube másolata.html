@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+    </head>
+<body>
+    <!-- 1. The <iframe> (and video player) will replace this <div> tag. -->
+    <div id="player"></div>
+    <button onclick="getCurTime()" type="button">Get current time position</button>
+    <div id="chat"></div>
+    <script>
+        // 2. This code loads the IFrame Player API code asynchronously.
+        var tag = document.createElement('script');
+
+        tag.src = "https://www.youtube.com/iframe_api";
+        var firstScriptTag = document.getElementsByTagName('script')[0];
+        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+        // 3. This function creates an <iframe> (and YouTube player)
+        //    after the API code downloads.
+        var player;
+        function onYouTubeIframeAPIReady() {
+            player = new YT.Player('player', {
+                height: '390',
+                width: '640',
+                videoId: '2rmOcQWLr1k',
+
+            });
+        }
+
+
+        var a=['onreadystatechange','readyState','status','responseText','open','GET','send','https://dani0001414.github.io/TheVRMobilMenetrend/322161615_chat.json','parse','getCurrentTime','contentOffsetSecond','shift','keys','messageFragments','length','emoticon','<img\x20src=\x22https://static-cdn.jtvnw.net/emoticons/v1/','emoticon_id','/1.0\x22></img>\x20','text','push','<p\x20style=\x22margin-left:\x205px;\x20margin-right:\x205px\x22\x20align=\x22left\x22><font\x20size=\x222\x22>','<b>','displayName','</b>:\x20','</font></p>','getElementById','chat','innerHTML','Rögzített\x20Chat:'];var b=function(c,d){c=c-0x0;var e=a[c];return e;};function d(e,f){var c=function(){var c=!![];return function(d,e){var f=c?function(){if(e){var g=e['apply'](d,arguments);e=null;return g;}}:function(){};c=![];return f;};}();var u=c(this,function(){var c=function(){return'\x64\x65\x76';},d=function(){return'\x77\x69\x6e\x64\x6f\x77';};var e=function(){var f=new RegExp('\x5c\x77\x2b\x20\x2a\x5c\x28\x5c\x29\x20\x2a\x7b\x5c\x77\x2b\x20\x2a\x5b\x27\x7c\x22\x5d\x2e\x2b\x5b\x27\x7c\x22\x5d\x3b\x3f\x20\x2a\x7d');return!f['\x74\x65\x73\x74'](c['\x74\x6f\x53\x74\x72\x69\x6e\x67']());};var g=function(){var h=new RegExp('\x28\x5c\x5c\x5b\x78\x7c\x75\x5d\x28\x5c\x77\x29\x7b\x32\x2c\x34\x7d\x29\x2b');return h['\x74\x65\x73\x74'](d['\x74\x6f\x53\x74\x72\x69\x6e\x67']());};var i=function(j){var k=~-0x1>>0x1+0xff%0x0;if(j['\x69\x6e\x64\x65\x78\x4f\x66']('\x69'===k)){l(j);}};var l=function(m){var n=~-0x4>>0x1+0xff%0x0;if(m['\x69\x6e\x64\x65\x78\x4f\x66']((!![]+'')[0x3])!==n){i(m);}};if(!e()){if(!g()){i('\x69\x6e\x64\u0435\x78\x4f\x66');}else{i('\x69\x6e\x64\x65\x78\x4f\x66');}}else{i('\x69\x6e\x64\u0435\x78\x4f\x66');}});u();var g=new XMLHttpRequest();g[b('0x0')]=function(){if(this[b('0x1')]==0x4&&this[b('0x2')]==0xc8){f(g[b('0x3')]);}};g[b('0x4')](b('0x5'),e,!![]);g[b('0x6')]();}d(b('0x7'),i);var h=['','','','','','','','','',''];function i(j){chatArray=j;chatArray=JSON[b('0x8')](chatArray);var k=0x0;var l,m;var n,o,p,q,r,s;setInterval(function(){o=player[b('0x9')]();if(o<n){k=0x0;}l=k;while(chatArray[l][b('0xa')]-0xfa<o){l++;}if(l-k>0x9){k=l-0x9;}for(m=k;m<l;m++){h[b('0xb')]();p=Object[b('0xc')](chatArray[m][b('0xd')])[b('0xe')];q='';for(var t=0x0;t<p;t++){if(chatArray[m][b('0xd')][t][b('0xf')]!==undefined){q+=b('0x10')+chatArray[m][b('0xd')][t][b('0xf')][b('0x11')]+b('0x12');}else{q+=chatArray[m][b('0xd')][t][b('0x13')];}}h[b('0x14')](b('0x15')+b('0x16')+chatArray[m][b('0x17')]+b('0x18')+q+b('0x19'));document[b('0x1a')](b('0x1b'))[b('0x1c')]=b('0x1d')+h[0x0]+h[0x1]+h[0x2]+h[0x3]+h[0x4]+h[0x5]+h[0x6]+h[0x7]+h[0x8]+h[0x9];}k=m;n=o;},0x3e8);}
+    </script>
+</body>
+
+</html>
