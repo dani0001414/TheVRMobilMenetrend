@@ -1,1 +1,1456 @@
-var a=['0.7.19','function','undefined','object','string','major','model','name','type','vendor','version','architecture','console','mobile','tablet','smarttv','wearable','embedded','extend','has','lowerize','trim','rgx','str','browser','device','windows','NT\x205.0','NT\x206.1','NT\x206.2','NT\x206.3','NT\x206.4','NT\x2010.0','4.90','NT\x203.11','NT3.51','NT\x204.0','NT4.0','NT\x205.1','NT\x205.2','Vista','NT\x206.0','ARM','amazon','sprint','HTC','APA','Sprint','Evo\x20Shift\x204G','7373KT','Fire\x20Phone','oldsafari','1.0','2.0','/412','2.0.2','/416','2.0.3','/417','2.0.4','/419','Opera\x20Mini','Opera','Edge','Yandex','Puffin','Firefox\x20Focus','Opera\x20Touch','UCBrowser','WeChat','Brave','MIUI\x20Browser','Facebook','Chrome\x20Headless','$1\x20WebView','$1\x20$2','Android\x20Browser','Dolphin','Chrome','Opera\x20Coast','Firefox','Mobile\x20Safari','GSA','Netscape','cpu','amd64','ia32','arm','sparc','Apple','Apple\x20TV','Amazon','BlackBerry','Asus','Sony','Xperia\x20Tablet','Nvidia','Huawei','Microsoft','Motorola','SmartTV','Samsung','Sharp','Siemens','Nokia','Acer','Lenovo','Chromecast','Google','Xiaomi','Meizu','OnePlus','RCA','Dell','Verizon','Barnes\x20&\x20Noble','NuVision','ZTE','Swiss','Zeki','Dragon\x20Touch','Insignia','NextBook','Voice','LvTel','Essential','Envizen','MachSpeed','Rotor','Generic','engine','EdgeHTML','Windows','Symbian','Firefox\x20OS','Chromium\x20OS','Solaris','iOS','Mac\x20OS','getResult','navigator','userAgent','getBrowser','call','getCPU','getDevice','getEngine','getOS','getUA','setUA','VERSION','BROWSER','NAME','MAJOR','CPU','ARCHITECTURE','DEVICE','MODEL','VENDOR','TYPE','CONSOLE','MOBILE','SMARTTV','TABLET','WEARABLE','EMBEDDED','ENGINE','exports','UAParser','amd','jQuery','Zepto','get','set','Vasárnap','Hétfő','Kedd','Szerda','Csütörtök','Péntek','Szombat','Január','Feburár','Március','Április','Május','Június','Július','Augusztus','Szeptember','Október','November','December','Töltődik\x20a\x20statisztika!','<svg\x20width=\x2220px\x22\x20viewBox=\x220\x200\x2025\x2015\x22><g\x20transform=\x22translate(-13.248183,-266.06487)\x22><g\x20transform=\x22translate(13.096211,-15.902542)\x22><a><rect\x20id=\x22arrow\x22\x20style=\x22opacity:1;fill:lightgrey;fill-opacity:1;stroke:none;stroke-width:0.26458332\x22\x20width=\x224.2763052\x22\x20height=\x2218.842487\x22\x20x=\x22-201.41176\x22\x20y=\x22200.46681\x22\x20transform=\x22rotate(-45)\x22\x20ry=\x221.984375\x22\x20rx=\x221.984375\x22\x20/></a><rect\x20id=\x22arrow\x22\x20transform=\x22rotate(45)\x22\x20ry=\x221.984375\x22\x20y=\x22182.56927\x22\x20x=\x22215.03299\x22\x20height=\x2218.842487\x22\x20width=\x224.2763052\x22\x20style=\x22opacity:1;fill:lightgrey;fill-opacity:1;stroke:none;stroke-width:0.26458332\x22\x20rx=\x221.984375\x22\x20/></g></g></svg>','<svg\x20width=\x2220px\x22\x20viewBox=\x220\x200\x2025\x2015\x22><g\x20transform=\x22translate(-13.248183,-266.06487)\x22><g\x20transform=\x22matrix(1,0,0,-1,13.096211,562.73943)\x22><a><rect\x20id=\x22arrow\x22\x20style=\x22opacity:1;fill:lightgrey;fill-opacity:1;stroke:none;stroke-width:0.26458332\x22\x20width=\x224.2763052\x22\x20height=\x2218.842487\x22\x20x=\x22-201.41176\x22\x20y=\x22200.46681\x22\x20transform=\x22rotate(-45)\x22\x20ry=\x221.984375\x22\x20rx=\x221.984375\x22\x20/></a><rect\x20id=\x22arrow\x22\x20transform=\x22rotate(45)\x22\x20ry=\x221.984375\x22\x20y=\x22182.56927\x22\x20x=\x22215.03299\x22\x20height=\x2218.842487\x22\x20width=\x224.2763052\x22\x20style=\x22opacity:1;fill:lightgrey;fill-opacity:1;stroke:none;stroke-width:0.26458332\x22\x20rx=\x221.984375\x22\x20/></g></g></svg>','open','POST','setRequestHeader','Content-type','application/json','send','onreadystatechange','readyState','status','kimne78kx3ncx6brgo4mv6wki5h1ko','2.6.3_bf8','cookiepolicysagreement','_theme','_new_feature','streamer','wearethevr','noEventsPic','https://i.imgur.com/5dZn6sc.png','offlinePic','offlineText','Kihúztad\x20az\x20UTP\x20Kábelt!','noEventsText','Jelenleg\x20nincs\x20egy\x20stream\x20sem\x20a\x20menetrendben!\x20Elszívták\x20az\x20UTP-vel\x20együtt!\x20<img\x20src=\x22http://static-cdn.jtvnw.net/emoticons/v1/25/1.0\x22\x20alt=\x2223\x22><br>Hamarosan\x20újabb\x20szálítmány!','policyAgreementCookie','thevrmmcookiepolicysagreement','themeCookie','thevrmm_theme','newFeatureCookie','thevrmm_new_feature','theVRmmNewInfoCookie','thevrmm_new_info','https://www.twitch.tv/','<br><span\x20style=\x22cursor:\x20pointer;\x20color:\x20grey;\x20text-decoration:\x20underline;\x22\x20onclick=\x22OfflineSite()\x22>OFFLINE\x20MENETREND\x20MEGTEKINTÉSE</span></span>','online','getTime','innerWidth','getElementsByClassName','daycontainer','modal-content','length','style','width','360px','boxShadow','webkitBoxShadow','MozBoxShadow','500px','100%','light','#06060615\x200px\x20-15px\x2010px\x201px','0px\x20-15px\x2010px\x201px\x20#06060680','removeProperty','onresize','createElement','div','_created','className','body','getElementsByTagName','center','appendChild','eventcontainer','descriptioncontainer','getElementById','setAttribute','margin-top:\x208px;\x20width:320px;\x20background-color:#17141f;\x20border:1px\x20solid\x20#2e2b35;','footer_created','color:\x20grey;','eventspacer','height','4px','margin:\x2052px\x200px\x2022px\x200px;\x20width:\x20100%;\x20color:\x20lightgrey;text-shadow:\x202px\x202px\x20#484848;border-top:\x20#2e2b35\x20solid\x201px;padding-bottom:\x202px;background-image:radial-gradient(500%\x20100%\x20at\x20bottom,#23272A00\x200%,#17141f\x20100%);border-radius:\x2015px\x2015px\x200px\x200px;','0_day_created','margin','0px\x200px\x2022px\x200px','display:\x20none;\x20width:320px;\x20background-color:#17141f;\x20border:1px\x20solid\x20#2e2b35;','15px\x200px\x200px\x200px','search','_time_created','padding','8px\x200px\x200px\x200px','tag','document','footer_data','querySelector','body\x20>\x20center\x20>\x20div:nth-child(68)','body\x20>\x20center\x20>\x20div:nth-child(5)','childNodes','setTime','getDay','getDate','getMonth','getFullYear','Holnap','Jövőhét\x20','.,\x20','_day','_day_created','innerHTML','floor','0_time_created','Hamarosan\x20kezdünk!<br>','\x20másodperc\x20','\x20perc\x20','\x20óra\x20','MOST!','top','location','reload','substring',':00Z','cookie','split','charAt','indexOf','&@&','addEvent','download','getTimezoneOffset','getHours','getMinutes','<br>','_description_created','_arrow','filter','invert(100%)','color','#969696','textShadow','2px\x202px\x20#cecece','borderTop','1px\x20solid\x20#e5e3e8','backgroundImage','radial-gradient(500%\x20100%\x20at\x20bottom,#23272A00\x200%,white\x20100%','0px\x200px\x2010px\x201px\x20#06060640','0px\x205px\x2010px\x201px\x20#06060640','backgroundColor','white','border','1px\x20solid\x20#dddce0','black','live','linear-gradient(to\x20right,\x20#ffffff66,\x20#23272A00,\x20#ffffff66),\x20url(https://dani0001414.github.io/patternL.png)','backgroundRepeat','repeat','Color','#faf9fa','meta','theme-color','content','head','invert(0%)','lightgrey','2px\x202px\x20#484848','1px\x20solid\x20#444444','radial-gradient(500%\x20100%\x20at\x20bottom,#23272A00\x200%,#28272a\x20100%','0px\x200px\x2010px\x201px\x20#060606','0px\x205px\x2010px\x201px\x20#060606','#17141f','1px\x20solid\x20#2e2b35','#c3c1c8','linear-gradient(to\x20right,\x20#0e0c1399,\x20#23272A00,\x20#0e0c1399),\x20url(https://dani0001414.github.io/patternD.png)','#0e0c13','script','src','link','rel','manifest','href','data:application/manifest+json;base64,\x20eyJuYW1lIjoiVGhlVlIgTW9iaWxCYXLDoXQgTWVuZXRyZW5kIiwic2hvcnRfbmFtZSI6IlRoZVZSIE1vYmlsIE1lbmV0cmVuZCIsImRpc3BsYXkiOiJzdGFuZGFsb25lIiwib3JpZW50YXRpb24iOiJuYXR1cmFsIiwic3RhcnRfdXJsIjoiaHR0cHM6Ly90aGV2ci5odS9tbS9tbS5odG1sIiwiYmFja2dyb3VuZF9jb2xvciI6IiNmN2Y3ZjciLCJ0aGVtZV9jb2xvciI6IiM2NDQxQTQiLCJpY29ucyI6W3sic3JjIjoiaHR0cHM6Ly9pLmltZ3VyLmNvbS9sRW9Wa2p0LnBuZyIsInNpemVzIjoiMTQ0eDE0NCIsInR5cGUiOiJpbWFnZS9wbmcifV19','text','[{\x22operationName\x22:\x22ChannelPage_ChannelInfoBar_User_RENAME1\x22,\x22variables\x22:{\x22login\x22:\x22','\x22},\x22extensions\x22:{\x22persistedQuery\x22:{\x22version\x22:1,\x22sha256Hash\x22:\x22af26d8d34bc0a201c463bd83b00b07d48c6dd7595993aad579cb5a8347386f83\x22}}},{\x22operationName\x22:\x22VideoMarkersChatCommand\x22,\x22variables\x22:{\x22channelLogin\x22:\x22','\x22},\x22extensions\x22:{\x22persistedQuery\x22:{\x22version\x22:1,\x22sha256Hash\x22:\x22c65f8b33e3bcccf2b16057e8f445311d213ecf8729f842ccdc71908231fa9a78\x22}}}]','Client-ID','responseText','no_stream','<img\x20src=\x22','\x22\x20alt=\x2223\x22\x20width=\x22320\x22><br><h3\x20style=\x22font-family:rockwell;\x20color:grey\x22>','</h3>','offline','GET','\x22\x20alt=\x2223\x22\x20width=\x22320\x22><br><h3\x20style=\x22font-family:rockwell;\x22>','userid','_scriptversion','crypto','getRandomValues','toString','substr','onload','log','servicemanifest_window_onload','https://www.googletagmanager.com/gtag/js?id=UA-121876941-1','window.dataLayer\x20=\x20window.dataLayer\x20||\x20[];\x20function\x20gtag(){dataLayer.push(arguments);}\x20gtag(\x27js\x27,\x20new\x20Date());\x20gtag(\x27config\x27,\x20\x27UA-121876941-1\x27);','fyrexxx','https://www.googletagmanager.com/gtag/js?id=UA-122179264-1','window.dataLayer\x20=\x20window.dataLayer\x20||\x20[];\x20function\x20gtag(){dataLayer.push(arguments);}\x20gtag(\x27js\x27,\x20new\x20Date());\x20gtag(\x27config\x27,\x20\x27UA-122179264-1\x27);','blyyyplays','addEventListener','DOMContentLoaded','CookieAccept','onclick','createcookie(\x27','\x27,1,365,\x27banner\x27)','-moz-transform:\x20scale(-1,\x201);\x20-webkit-transform:\x20scale(-1,\x201);\x20-o-transform:\x20scale(-1,\x201);\x20-ms-transform:\x20scale(-1,\x201);\x20transform:\x20scale(-1,\x201);','0px','myCookie','display','block','replace','forum.thevr.hu/u/dani0001414/','forum.thevr.hu/u/danx27/','dani0001414\x20Ninjon','DanX27\x20Ninjon','DOM\x20fully\x20loaded\x20and\x20parsed','stylesheet','https://fonts.googleapis.com/css?family=Squada+One','myModal','myBtn','close','modal-cookie','A\x20MobilBarát\x20Menetrend\x20a\x20felhasználói\x20élmény\x20növelése\x20érdekében\x20cookie-kat\x20használ\x20a\x20funkciókhoz\x20és\x20a\x20továbbfejlesztéseket\x20segítő\x20statisztikák\x20gyűjtéséhez!<br><span\x20style=\x22cursor:\x20pointer;\x20color:\x20grey;\x20text-decoration:\x20underline;\x22\x20onclick=\x22createcookie(\x27','\x27,1,365,\x27banner\x27)\x22>Elfogadom</span>\x20\x20<span\x20style=\x22cursor:\x20pointer;\x20color:\x20grey;\x20text-decoration:\x20underline;\x22\x20onclick=\x22deleteAllCookies(\x27banner\x27)\x22>Nem\x20fogadom\x20el</span>\x20\x20<span\x20style=\x22cursor:\x20pointer;\x20color:\x20grey;\x20text-decoration:\x20underline;\x22\x20onclick=\x22modal_open(\x27cookie_information\x27)\x22>Bővebb\x20információ</span>','popup_content','font','createTextNode','[Hiba\x20jelzése]','https://discordapp.com/invite/4YKn62P','https://gql.twitch.tv/gql','https://script.google.com/macros/s/AKfycbxCbGnpDeEjNd7Nwpm76MrIfc2efatkbGZyXszSgA45-e1d87M/exec','1_description_created','0_description_created','parse','data','thumbnail_url','title','{width}','640','{height}','360','game_id','started_at','user','stream','createdAt','https://static-cdn.jtvnw.net/previews-ttv/live_user_','-640x360.jpg','game','https://script.google.com/macros/s/AKfycbwaqdvT0_QtH6js2JTAx6gNh1Ep-GJqYaQRqgPvEYlZ_i4FTDTe/exec','https://script.google.com/macros/s/AKfycbyfaSOjewbZtKhMqZ2V4hwsmCZJ4Rc-1YsmQO3cmv06ofTdkysE/exec','https://dani0001414.github.io/mm.json','event_end_unix','event_start_unix','event_title','event_id','cachedStreamStart','cachedTitles','cachedIDs','stringify','cachedStreamEnd','_PINGVIN','_bLYYYPLAYS','https://script.google.com/macros/s/AKfycbxrSwsr3iSsUbxBB_H43j_3nP0pMmmgVXUL7HMR853muC_eM_em/exec?func=open-calendar&user=','https://script.google.com/macros/s/AKfycbxrSwsr3iSsUbxBB_H43j_3nP0pMmmgVXUL7HMR853muC_eM_em/exec?func=add-google-calendar&user=','https://script.google.com/macros/s/AKfycbxrSwsr3iSsUbxBB_H43j_3nP0pMmmgVXUL7HMR853muC_eM_em/exec?func=add-ical-calendar&user=','https://script.google.com/macros/s/AKfycbxrSwsr3iSsUbxBB_H43j_3nP0pMmmgVXUL7HMR853muC_eM_em/exec?func=add-yahoo-calendar&user=','https://script.google.com/macros/s/AKfycbxrSwsr3iSsUbxBB_H43j_3nP0pMmmgVXUL7HMR853muC_eM_em/exec?func=open-details&user=','https://script.google.com/macros/s/AKfycbxrSwsr3iSsUbxBB_H43j_3nP0pMmmgVXUL7HMR853muC_eM_em/exec?func=light-theme-set&user=','https://script.google.com/macros/s/AKfycbxrSwsr3iSsUbxBB_H43j_3nP0pMmmgVXUL7HMR853muC_eM_em/exec?func=dark-theme-set&user=','https://script.google.com/macros/s/AKfycbxrSwsr3iSsUbxBB_H43j_3nP0pMmmgVXUL7HMR853muC_eM_em/exec?scriptVersion=','&func=scriptVersion&user=','https://script.google.com/macros/s/AKfycbyLBtgJtpdvuy0ZqII_VwDV_OuYv00_ZZnH4_B7/exec?func=open-calendar&user=','https://script.google.com/macros/s/AKfycbyLBtgJtpdvuy0ZqII_VwDV_OuYv00_ZZnH4_B7/exec?func=add-google-calendar&user=','https://script.google.com/macros/s/AKfycbyLBtgJtpdvuy0ZqII_VwDV_OuYv00_ZZnH4_B7/exec?func=add-ical-calendar&user=','https://script.google.com/macros/s/AKfycbyLBtgJtpdvuy0ZqII_VwDV_OuYv00_ZZnH4_B7/exec?func=add-yahoo-calendar&user=','https://script.google.com/macros/s/AKfycbyLBtgJtpdvuy0ZqII_VwDV_OuYv00_ZZnH4_B7/exec?func=open-details&user=','https://script.google.com/macros/s/AKfycbyLBtgJtpdvuy0ZqII_VwDV_OuYv00_ZZnH4_B7/exec?func=light-theme-set&user=','https://script.google.com/macros/s/AKfycbyLBtgJtpdvuy0ZqII_VwDV_OuYv00_ZZnH4_B7/exec?func=dark-theme-set&user=','https://script.google.com/macros/s/AKfycbyLBtgJtpdvuy0ZqII_VwDV_OuYv00_ZZnH4_B7/exec?scriptVersion=','_cim','_cover','_time','_br','https://static-cdn.jtvnw.net/twitch-event-images-v2/default/town-320x180','event_image','https://calendar.google.com/calendar/r/eventedit?dates=','&details&location&text=','&trp=false&sf=true','https://calendar.yahoo.com/?v=60&view=d&type=20&title=','&st=','&et=','&uid=','SZÜNET','https://dani0001414.github.io/TheVRMobilMenetrend/brake.png','<span\x20id=\x22streamspan\x22\x20style=\x22cursor:pointer;\x22\x20onclick=\x22hide_and_show(\x27','_description_created\x27,',')\x22><span\x20id=','_arrow\x20style=\x22display:\x20block;\x20padding:\x2010\x200\x2010\x200\x22>','</span></span>','_description','_spacer','<p><b>','</b></p>','\x22\x20class=\x22aspect__fill\x22\x20width=\x22320\x22>','<div\x20style=\x22margin-bottom:1px;\x22>','</div><div\x20style=\x22margin-bottom:4px\x22>','</div>','<font\x20color=\x22yellow\x22>\x20+\x20','p</font></div>','<div\x20style=\x22overflow:\x20hidden;\x20width:\x20320px;\x22>\x20\x20\x20\x20<div\x20style=\x22float:left;\x20width:\x20155px\x22><center><div\x20style=\x22margin-bottom:1px;\x22>','</div></center></div>\x20\x20\x20\x20<div\x20style=\x22float:left;\x20width:\x2010px\x22><center>-</center></div>\x09<div\x20style=\x22overflow:\x20hidden;\x20width:\x20155px\x20float:right;\x22><center><div\x20style=\x22margin-bottom:1px;\x22>','<font\x20color=\x22yellow\x22>','p</font></div></center></div></div>','</center></div></div></div>','footer','0_created','#4b367c','0_cim_created','<a\x20target=\x22_blank\x22\x20href=\x22','\x22><img\x20src=\x22https://i.imgur.com/o1kyCnf.png\x22></a><br><b>','</b>','0_cover_created','\x22><img\x20src=\x22','\x22\x20class=\x22aspect__fill\x22\x20width=\x22320\x22></a>','none','1_created','1_cim_created','1_cover_created','<img\x20src=\x22https://i.imgur.com/ZNlNn8J.png\x22><br><b>','node','meglepi','meglepi_br','meglepi_cim','\x22><img\x20src=\x22https://i.imgur.com/gu6M3eu.png\x22></a><br><b>','meglepi_cover','meglepi_time','-Ameddig\x20tart</p>','#3f7186','1px\x20solid\x20#022e40','<div\x20style=\x22color:\x20#fafbff\x22\x20><img\x20src=\x22https://dani0001414.github.io/TheVRMobilMenetrend/new_stream.png\x22><br><b>','</b></div></p>','#b9ac73','1px\x20solid\x20#3e3922','<div\x20style=\x22color:\x20#fafbff\x22\x20><img\x20src=\x22https://dani0001414.github.io/TheVRMobilMenetrend/time_stream.png\x22><br><b>','#63c27e','1px\x20solid\x20#417951','<div\x20style=\x22color:\x20#fafbff\x22\x20><img\x20src=\x22https://dani0001414.github.io/TheVRMobilMenetrend/title_stream.png\x22><br><b>','username','Error\x20Report','avatar_url','https://blog.sqlauthority.com/i/c/error.png','Hiba:\x0a','embeds','➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖','HTML\x20rész\x20Végig\x20lefutott!!','https://discordapp.com/api/webhooks/567049255815217165/TC_JHSD7-DbUcKnULaeYfEO0iFPBNa1RhKaOMrgTSNr-NTGFTAaz1yoxDM-Z5sg-TAek','<span\x20style=\x22color:\x20grey\x22>\x20Offline\x20menetrend:</span>','<div\x20style=\x22background-color:\x20black;\x20height:\x20180px\x22\x20></div>','#news','#changelog','timestamp','new','JsNew','meglepi_description','<iframe\x20frameborder=\x220\x22scrolling=\x22no\x22id=\x22<channel>\x22src=\x22https://www.twitch.tv/embed/','/chat\x22height=\x22500px\x22width=\x22320px\x22></iframe>','/chat?darkpopout\x22height=\x22500px\x22width=\x22320px\x22></iframe>','event_description','<b>Részletek:</b><br>','<br><br><a\x20style=\x22cursor:\x20pointer;\x20color:\x20grey;\x20text-decoration:\x20underline;\x22\x20onclick=\x22modal_open(',')\x22\x20>Hozzáadás\x20a\x20naptárhoz!</a>','<b>Részletek:</b><br>Az\x20eseményhez\x20nem\x20tartozik\x20részletes\x20leírás!<br><br><a\x20style=\x22cursor:\x20pointer;\x20color:\x20grey;\x20text-decoration:\x20underline;\x22\x20onclick=\x22modal_open(',')\x22\x20>Hozzáadás\x20a\x20naptárhoz!</a>\x20','Offline\x20állapotban\x20nem\x20elérhető\x20a\x20részletek\x20funkció!','<b>Hozzáadás\x20a\x20naptáradhoz:</b><br><br><div\x20id=\x22light_popup\x22\x20><a\x20onclick=\x22HttpGetNorm(\x27','\x27)\x22\x20href=\x22','\x22\x20target=\x22_blank\x22><img\x20src=\x22https://vignette.wikia.nocookie.net/logopedia/images/9/9d/Google_logo_white_2015.svg\x22\x20class=\x22aspect__fill\x22\x20width=\x2287\x22></a>&nbsp;&nbsp;&nbsp;<a\x20onclick=\x22HttpGetNorm(\x27','\x27);icsCreator(\x27','\x27);\x22\x20href=\x22#\x22><img\x20src=\x22https://dani0001414.github.io/TheVRMobilMenetrend/ical_icon.svg\x22\x20class=\x22aspect__fill\x22\x20width=\x2258\x22></a>&nbsp;&nbsp;&nbsp;<a\x20onclick=\x22HttpGetNorm(\x27','\x27)\x22href=\x22','\x22\x20target=\x22_blank\x22><img\x20src=\x22https://dani0001414.github.io/TheVRMobilMenetrend/Yahooicon.svg\x22\x20class=\x22aspect__fill\x22\x20width=\x2258\x22></a></div>','light_popup','dark','cookie_settings','<span\x20id=\x22c_gomb\x22><span\x20style=\x22cursor:\x20pointer;\x20color:\x20grey;\x20text-decoration:\x20underline;\x22\x20onclick=\x22deleteAllCookies()\x22>Bekapcsolva</span></span>','<span\x20id=\x22c_gomb\x22><span\x20style=\x22cursor:\x20pointer;\x20color:\x20grey;\x20text-decoration:\x20underline;\x22\x20onclick=\x22createcookie(\x27','\x27,1,365)\x22>Kikapcsolva</span></span>','<span\x20id=\x22theme_gomb\x22><span\x20style=\x22cursor:\x20pointer;\x20color:\x20grey;\x20text-decoration:\x20underline;\x22\x20onclick=\x22createcookie(\x27','\x27,\x27light\x27,365);HttpGetNorm(\x27','\x27)\x22>Sötét</span></span>','\x27,\x27dark\x27,365);HttpGetNorm(\x27','\x27)\x22>Világos</span></span>','Kikapcsolt\x20Cookie-val\x20nem\x20lehetésges.','<br><br><b>[Beállítások]</b><br><br><font\x20size=\x222\x22>Téma:\x20','<br><br></font><font\x20size=\x222\x22>Cookie-k\x20állapota:\x20','</font>','cookie_information','<br><br><b>[Cookie\x20Információ]</b><br><br>','<font\x20size=\x221\x22><div\x20align=\x22left\x22>A\x20MobilBarát\x20Menetrend\x20által\x20használt\x20cookie-k:<br><br><span\x20style=\x22color:\x20grey;\x22>',':</span><br>A\x20döntésedet\x20tárolja\x20cookie-k\x20használatával\x20kapcsolatban.\x20Ha\x20nem\x20fogadtad\x20el,\x20akkor\x20a\x20többi\x20cookie\x20nem\x20lesz\x20használatban.<br><br><span\x20style=\x22color:\x20grey;\x22>',':</span><br>Az\x20általad\x20választott\x20téma\x20bellítását\x20tárolja<br><br><span\x20style=\x22color:\x20grey;\x22>',':</span><br>Azt\x20tárolja\x20mikor\x20láttad\x20az\x20új\x20funkciókról\x20szóló\x20értesítést,\x20hogy\x20feleslegesen\x20ne\x20jelenjen\x20meg\x20újra.<br><br><span\x20style=\x22color:\x20grey;\x22>',':</span><br>Azt\x20tárolja\x20mikor\x20láttad\x20az\x20új\x20TheVR\x20Stream\x20Infót,\x20hogy\x20feleslegesen\x20ne\x20jelenjen\x20meg\x20újra.<br><br><span\x20style=\x22color:\x20grey;\x22>Google\x20Analytics\x20Cookie-k:</span><br>A\x20Google\x20Analitika\x20szolgáltatása\x20használja.\x20Anoním\x20módon\x20rögzítik,\x20hogy\x20miként\x20használod\x20az\x20oldalt.\x20Ez\x20segíti\x20a\x20későbbi\x20fejlesztéseket.<br><br><span\x20style=\x22color:\x20grey;\x22>cachedIDs,\x20cachedTitles,\x20cachedStreamStart,\x20cachedStreamEnd:</span><br>A\x20menetrend\x20id,\x20cím,\x20kezdési\x20idejét,\x20befejezési\x20idejét\x20tárolják,\x20hogy\x20a\x20legközelebbi\x20megnyitáskor\x20a\x20mobil\x20menetrend\x20ki\x20tudja\x20jelezni,\x20hogy\x20mik\x20a\x20változások.<br><br><span\x20style=\x22color:\x20grey;\x22>wearethevruserid:</span><br>Részletek,\x20Témaválasztás,\x20Naptárhozzáadás\x20funkciók\x20statisztika\x20gyűjtéséhez\x20generált\x20anoním\x20userid<br><br><span\x20style=\x22color:\x20grey;\x22>wearethevr_scriptversion:</span><br>A\x20jelen\x20MobilMenetrend\x20JS\x20fájl\x20verziószámát\x20tárolja.</div></font>',':</span><br>Azt\x20tárolja\x20mikor\x20láttad\x20az\x20új\x20funkciókról\x20szóló\x20értesítést,\x20hogy\x20feleslegesen\x20ne\x20jelenjen\x20meg\x20újra.<br><br><span\x20style=\x22color:\x20grey;\x22>Google\x20Analytics\x20Cookie-k:</span><br>A\x20Google\x20Analitika\x20szolgáltatása\x20használja.\x20Anoním\x20módon\x20rögzítik,\x20hogy\x20miként\x20használod\x20az\x20oldalt.\x20Ez\x20segíti\x20a\x20későbbi\x20fejlesztéseket.<br><br><span\x20style=\x22color:\x20grey;\x22>cachedIDs,\x20cachedTitles,\x20cachedStreamStart,\x20cachedStreamEnd:</span><br>A\x20menetrend\x20id,\x20cím,\x20kezdési\x20idejét,\x20befejezési\x20idejét\x20tárolják,\x20hogy\x20a\x20legközelebbi\x20megnyitáskor\x20a\x20mobil\x20menetrend\x20ki\x20tudja\x20jelezni,\x20hogy\x20mik\x20a\x20változások.<br><br><span\x20style=\x22color:\x20grey;\x22>blyyyplaysuserid:</span><br>Részletek,\x20Témaválasztás,\x20Naptárhozzáadás\x20funkciók\x20statisztika\x20gyűjtéséhez\x20generált\x20anoním\x20userid.<br><br><span\x20style=\x22color:\x20grey;\x22>blyyyplays_scriptversion:</span><br>A\x20jelen\x20MobilMenetrend\x20JS\x20fájl\x20verziószámát\x20tárolja.</div></font>',':</span><br>Azt\x20tárolja\x20mikor\x20láttad\x20az\x20új\x20funkciókról\x20szóló\x20értesítést,\x20hogy\x20feleslegesen\x20ne\x20jelenjen\x20meg\x20újra.<br><br><span\x20style=\x22color:\x20grey;\x22>Google\x20Analytics\x20Cookie-k:</span><br>A\x20Google\x20Analitika\x20szolgáltatása\x20használja.\x20Anoním\x20módon\x20rögzítik,\x20hogy\x20miként\x20használod\x20az\x20oldalt.\x20Ez\x20segíti\x20a\x20későbbi\x20fejlesztéseket.<br><br><span\x20style=\x22color:\x20grey;\x22>cachedIDs,\x20cachedTitles,\x20cachedStreamStart,\x20cachedStreamEnd:</span><br>A\x20menetrend\x20id,\x20cím,\x20kezdési\x20idejét,\x20befejezési\x20idejét\x20tárolják,\x20hogy\x20a\x20legközelebbi\x20megnyitáskor\x20a\x20mobil\x20menetrend\x20ki\x20tudja\x20jelezni,\x20hogy\x20mik\x20a\x20változások.<br><br><span\x20style=\x22color:\x20grey;\x22>','_scriptversion:</span><br>A\x20jelen\x20MobilMenetrend\x20JS\x20fájl\x20verziószámát\x20tárolja.</div></font>','<br><br><span\x20style=\x22color:\x20red\x22><b>[Újdonságok]</b></span><br><br>','<div\x20style=\x22max-width:400px\x22\x20align=\x22left\x22><font\x20size=\x222\x22>Sikeresen\x20felfrissült\x20a\x20','\x20verzióra!<br>Frissítésről:</font></div>','<br><br><span\x20style=\x22color:\x20red\x22><b>[Új\x20Funkciók\x20érkeztek!]</b></span><br><br>',';\x20expires=','toGMTString','banner','=;expires=Thu,\x2001\x20Jan\x201970\x2000:00:00\x20GMT','=;\x20Path=/;\x20Expires=Thu,\x2001\x20Jan\x201970\x2000:00:01\x20GMT;','getSeconds','target','test','URL','webkitURL','createElementNS','http://www.w3.org/1999/xhtml','click','dispatchEvent','HTMLElement','safari','setImmediate','setTimeout','application/octet-stream','revokeObjectURL','remove','concat','fromCharCode','writestart\x20progress\x20write\x20writeend','FileReader','onloadend','result','data:attachment/file;','_blank','DONE','readAsDataURL','INIT','createObjectURL','prototype','msSaveOrOpenBlob','abort','WRITING','error','onwritestart','onprogress','onwrite','onabort','onerror','onwriteend','saveAs','FileSaver.js','MSIE','MSIE\x2010','default','Calendar','appVersion','Win','BEGIN:VCALENDAR','PRODID:','VERSION:2.0','join','END:VCALENDAR','rrule','YEARLY','freq','MONTHLY','WEEKLY','DAILY','Recurrence\x20rrule\x20frequency\x20must\x20be\x20provided\x20and\x20be\x20one\x20of\x20the\x20following:\x20\x27YEARLY\x27,\x20\x27MONTHLY\x27,\x20\x27WEEKLY\x27,\x20or\x20\x27DAILY\x27','until','Recurrence\x20rrule\x20\x27until\x27\x20must\x20be\x20a\x20valid\x20date\x20string','interval','Recurrence\x20rrule\x20\x27interval\x27\x20must\x20be\x20an\x20integer','count','Recurrence\x20rrule\x20\x27count\x27\x20must\x20be\x20an\x20integer','byday','[object\x20Array]','Recurrence\x20rrule\x20\x27byday\x27\x20must\x20be\x20an\x20array','Recurrence\x20rrule\x20\x27byday\x27\x20array\x20must\x20not\x20be\x20longer\x20than\x20the\x207\x20days\x20in\x20a\x20week','Recurrence\x20rrule\x20\x27byday\x27\x20values\x20must\x20include\x20only\x20the\x20following:\x20\x27SU\x27,\x20\x27MO\x27,\x20\x27TU\x27,\x20\x27WE\x27,\x20\x27TH\x27,\x20\x27FR\x27,\x20\x27SA\x27','0000','slice','rrule:FREQ=','toISOString',';UNTIL=','000000Z',';INTERVAL=',';COUNT=',';BYDAY=','BEGIN:VEVENT','UID:','CLASS:PUBLIC','DESCRIPTION:','DTSTAMP;VALUE=DATE-TIME:','DTSTART;VALUE=DATE-TIME:','DTEND;VALUE=DATE-TIME:','LOCATION:','SUMMARY;LANGUAGE=en-us:','TRANSP:TRANSPARENT','END:VEVENT','splice','push','.ics','calendar','append','getBlob','text/x-vCalendar;charset=','characterSet','Unsupported\x20Browser'];var b=function(c,d){c=c-0x0;var e=a[c];return e;};(function(d,e){'use strict';var f=b('0x0'),g='',h='?',i=b('0x1'),j=b('0x2'),k=b('0x3'),l=b('0x4'),m=b('0x5'),n=b('0x6'),o=b('0x7'),p=b('0x8'),q=b('0x9'),r=b('0xa'),s=b('0xb'),t=b('0xc'),u=b('0xd'),v=b('0xe'),w=b('0xf'),x=b('0x10'),y=b('0x11');var z={};z[b('0x12')]=function(A,B){var C={};for(var D in A){if(B[D]&&B[D].length%0x2===0x0){C[D]=B[D].concat(A[D]);}else{C[D]=A[D];}}return C;};z[b('0x13')]=function(E,F){if(typeof E===b('0x4')){return F.toLowerCase().indexOf(E.toLowerCase())!==-0x1;}else{return![];}};z[b('0x14')]=function(G){return G.toLowerCase();};z[b('0x5')]=function(H){return typeof H===l?H.replace(/[^\d\.]/g,'').split('.')[0x0]:e;};z[b('0x15')]=function(I){return I.replace(/^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g,'');};var J={};J[b('0x16')]=function(K,L){var M=0x0,N,O,P,Q,R,S;while(M<L.length&&!R){var T=L[M],U=L[M+0x1];N=O=0x0;while(N<T.length&&!R){R=T[N++].exec(K);if(!!R){for(P=0x0;P<U.length;P++){S=R[++O];Q=U[P];if(typeof Q===k&&Q.length>0x0){if(Q.length==0x2){if(typeof Q[0x1]==i){this[Q[0x0]]=Q[0x1].call(this,S);}else{this[Q[0x0]]=Q[0x1];}}else if(Q.length==0x3){if(typeof Q[0x1]===i&&!(Q[0x1].exec&&Q[0x1].test)){this[Q[0x0]]=S?Q[0x1].call(this,S,Q[0x2]):e;}else{this[Q[0x0]]=S?S.replace(Q[0x1],Q[0x2]):e;}}else if(Q.length==0x4){this[Q[0x0]]=S?Q[0x3].call(this,S.replace(Q[0x1],Q[0x2])):e;}}else{this[Q]=S?S:e;}}}}M+=0x2;}};J[b('0x17')]=function(V,W){for(var X in W){if(typeof W[X]===k&&W[X].length>0x0){for(var Y=0x0;Y<W[X].length;Y++){if(z.has(W[X][Y],V)){return X===h?e:X;}}}else if(z.has(W[X],V)){return X===h?e:X;}}return V;};var Z={};Z[b('0x18')]={};Z[b('0x19')]={};Z['os']={};Z['os'][b('0x1a')]={};Z['os'][b('0x1a')][b('0xa')]={2000:b('0x1b'),7:b('0x1c'),8:b('0x1d'),8.1:b('0x1e'),10:[b('0x1f'),b('0x20')]};Z['os'][b('0x1a')][b('0xa')]['ME']=b('0x21');Z['os'][b('0x1a')][b('0xa')][b('0x22')]=b('0x23');Z['os'][b('0x1a')][b('0xa')][b('0x24')]=b('0x25');Z['os'][b('0x1a')][b('0xa')]['XP']=[b('0x26'),b('0x27')];Z['os'][b('0x1a')][b('0xa')][b('0x28')]=b('0x29');Z['os'][b('0x1a')][b('0xa')]['RT']=b('0x2a');Z[b('0x19')][b('0x2b')]={};Z[b('0x19')][b('0x2c')]={};Z[b('0x19')][b('0x2c')][b('0x6')]={};Z[b('0x19')][b('0x2c')][b('0x9')]={};Z[b('0x19')][b('0x2c')][b('0x9')][b('0x2d')]=b('0x2e');Z[b('0x19')][b('0x2c')][b('0x9')][b('0x2f')]=b('0x2f');Z[b('0x19')][b('0x2c')][b('0x6')][b('0x30')]=b('0x31');Z[b('0x19')][b('0x2b')][b('0x6')]={};Z[b('0x19')][b('0x2b')][b('0x6')][b('0x32')]=['SD','KF'];Z[b('0x18')][b('0x33')]={};Z[b('0x18')][b('0x33')][b('0xa')]={1.2:'/1',1.3:'/3'};Z[b('0x18')][b('0x33')][b('0xa')][b('0x34')]='/8';Z[b('0x18')][b('0x33')][b('0xa')][b('0x35')]=b('0x36');Z[b('0x18')][b('0x33')][b('0xa')][b('0x37')]=b('0x38');Z[b('0x18')][b('0x33')][b('0xa')][b('0x39')]=b('0x3a');Z[b('0x18')][b('0x33')][b('0xa')][b('0x3b')]=b('0x3c');Z[b('0x18')][b('0x33')][b('0xa')]['?']='/';var a0={};a0[b('0x18')]=[[/(opera\smini)\/([\w\.-]+)/i,/(opera\s[mobiletab]+).+version\/([\w\.-]+)/i,/(opera).+version\/([\w\.]+)/i,/(opera)[\/\s]+([\w\.]+)/i],[o,r],[/(opios)[\/\s]+([\w\.]+)/i],[[o,b('0x3d')],r],[/\s(opr)\/([\w\.]+)/i],[[o,b('0x3e')],r],[/(kindle)\/([\w\.]+)/i,/(lunascape|maxthon|netfront|jasmine|blazer)[\/\s]?([\w\.]*)/i,/(avant\s|iemobile|slim|baidu)(?:browser)?[\/\s]?([\w\.]*)/i,/(?:ms|\()(ie)\s([\w\.]+)/i,/(rekonq)\/([\w\.]*)/i,/(chromium|flock|rockmelt|midori|epiphany|silk|skyfire|ovibrowser|bolt|iron|vivaldi|iridium|phantomjs|bowser|quark)\/([\w\.-]+)/i],[o,r],[/(trident).+rv[:\s]([\w\.]+).+like\sgecko/i],[[o,'IE'],r],[/(edge|edgios|edga)\/((\d+)?[\w\.]+)/i],[[o,b('0x3f')],r],[/(yabrowser)\/([\w\.]+)/i],[[o,b('0x40')],r],[/(puffin)\/([\w\.]+)/i],[[o,b('0x41')],r],[/(focus)\/([\w\.]+)/i],[[o,b('0x42')],r],[/(opt)\/([\w\.]+)/i],[[o,b('0x43')],r],[/((?:[\s\/])uc?\s?browser|(?:juc.+)ucweb)[\/\s]?([\w\.]+)/i],[[o,b('0x44')],r],[/(comodo_dragon)\/([\w\.]+)/i],[[o,/_/g,'\x20'],r],[/(micromessenger)\/([\w\.]+)/i],[[o,b('0x45')],r],[/(brave)\/([\w\.]+)/i],[[o,b('0x46')],r],[/(qqbrowserlite)\/([\w\.]+)/i],[o,r],[/(QQ)\/([\d\.]+)/i],[o,r],[/m?(qqbrowser)[\/\s]?([\w\.]+)/i],[o,r],[/(BIDUBrowser)[\/\s]?([\w\.]+)/i],[o,r],[/(2345Explorer)[\/\s]?([\w\.]+)/i],[o,r],[/(MetaSr)[\/\s]?([\w\.]+)/i],[o],[/(LBBROWSER)/i],[o],[/xiaomi\/miuibrowser\/([\w\.]+)/i],[r,[o,b('0x47')]],[/;fbav\/([\w\.]+);/i],[r,[o,b('0x48')]],[/safari\s(line)\/([\w\.]+)/i,/android.+(line)\/([\w\.]+)\/iab/i],[o,r],[/headlesschrome(?:\/([\w\.]+)|\s)/i],[r,[o,b('0x49')]],[/\swv\).+(chrome)\/([\w\.]+)/i],[[o,/(.+)/,b('0x4a')],r],[/((?:oculus|samsung)browser)\/([\w\.]+)/i],[[o,/(.+(?:g|us))(.+)/,b('0x4b')],r],[/android.+version\/([\w\.]+)\s+(?:mobile\s?safari|safari)*/i],[r,[o,b('0x4c')]],[/(chrome|omniweb|arora|[tizenoka]{5}\s?browser)\/v?([\w\.]+)/i],[o,r],[/(dolfin)\/([\w\.]+)/i],[[o,b('0x4d')],r],[/((?:android.+)crmo|crios)\/([\w\.]+)/i],[[o,b('0x4e')],r],[/(coast)\/([\w\.]+)/i],[[o,b('0x4f')],r],[/fxios\/([\w\.-]+)/i],[r,[o,b('0x50')]],[/version\/([\w\.]+).+?mobile\/\w+\s(safari)/i],[r,[o,b('0x51')]],[/version\/([\w\.]+).+?(mobile\s?safari|safari)/i],[r,o],[/webkit.+?(gsa)\/([\w\.]+).+?(mobile\s?safari|safari)(\/[\w\.]+)/i],[[o,b('0x52')],r],[/webkit.+?(mobile\s?safari|safari)(\/[\w\.]+)/i],[o,[r,J.str,Z.browser.oldsafari.version]],[/(konqueror)\/([\w\.]+)/i,/(webkit|khtml)\/([\w\.]+)/i],[o,r],[/(navigator|netscape)\/([\w\.-]+)/i],[[o,b('0x53')],r],[/(swiftfox)/i,/(icedragon|iceweasel|camino|chimera|fennec|maemo\sbrowser|minimo|conkeror)[\/\s]?([\w\.\+]+)/i,/(firefox|seamonkey|k-meleon|icecat|iceape|firebird|phoenix|palemoon|basilisk|waterfox)\/([\w\.-]+)$/i,/(mozilla)\/([\w\.]+).+rv\:.+gecko\/\d+/i,/(polaris|lynx|dillo|icab|doris|amaya|w3m|netsurf|sleipnir)[\/\s]?([\w\.]+)/i,/(links)\s\(([\w\.]+)/i,/(gobrowser)\/?([\w\.]*)/i,/(ice\s?browser)\/v?([\w\._]+)/i,/(mosaic)[\/\s]([\w\.]+)/i],[o,r]];a0[b('0x54')]=[[/(?:(amd|x(?:(?:86|64)[_-])?|wow|win)64)[;\)]/i],[[s,b('0x55')]],[/(ia32(?=;))/i],[[s,z.lowerize]],[/((?:i[346]|x)86)[;\)]/i],[[s,b('0x56')]],[/windows\s(ce|mobile);\sppc;/i],[[s,b('0x57')]],[/((?:ppc|powerpc)(?:64)?)(?:\smac|;|\))/i],[[s,/ower/,'',z.lowerize]],[/(sun4\w)[;\)]/i],[[s,b('0x58')]],[/((?:avr32|ia64(?=;))|68k(?=\))|arm(?:64|(?=v\d+[;l]))|(?=atmel\s)avr|(?:irix|mips|sparc)(?:64)?(?=;)|pa-risc)/i],[[s,z.lowerize]]];a0[b('0x19')]=[[/\((ipad|playbook);[\w\s\);-]+(rim|apple)/i],[n,q,[p,v]],[/applecoremedia\/[\w\.]+ \((ipad)/],[n,[q,b('0x59')],[p,v]],[/(apple\s{0,1}tv)/i],[[n,b('0x5a')],[q,b('0x59')]],[/(archos)\s(gamepad2?)/i,/(hp).+(touchpad)/i,/(hp).+(tablet)/i,/(kindle)\/([\w\.]+)/i,/\s(nook)[\w\s]+build\/(\w+)/i,/(dell)\s(strea[kpr\s\d]*[\dko])/i],[q,n,[p,v]],[/(kf[A-z]+)\sbuild\/.+silk\//i],[n,[q,b('0x5b')],[p,v]],[/(sd|kf)[0349hijorstuw]+\sbuild\/.+silk\//i],[[n,J.str,Z.device.amazon.model],[q,b('0x5b')],[p,u]],[/android.+aft([bms])\sbuild/i],[n,[q,b('0x5b')],[p,w]],[/\((ip[honed|\s\w*]+);.+(apple)/i],[n,q,[p,u]],[/\((ip[honed|\s\w*]+);/i],[n,[q,b('0x59')],[p,u]],[/(blackberry)[\s-]?(\w+)/i,/(blackberry|benq|palm(?=\-)|sonyericsson|acer|asus|dell|meizu|motorola|polytron)[\s_-]?([\w-]*)/i,/(hp)\s([\w\s]+\w)/i,/(asus)-?(\w+)/i],[q,n,[p,u]],[/\(bb10;\s(\w+)/i],[n,[q,b('0x5c')],[p,u]],[/android.+(transfo[prime\s]{4,10}\s\w+|eeepc|slider\s\w+|nexus 7|padfone)/i],[n,[q,b('0x5d')],[p,v]],[/(sony)\s(tablet\s[ps])\sbuild\//i,/(sony)?(?:sgp.+)\sbuild\//i],[[q,b('0x5e')],[n,b('0x5f')],[p,v]],[/android.+\s([c-g]\d{4}|so[-l]\w+)\sbuild\//i],[n,[q,b('0x5e')],[p,u]],[/\s(ouya)\s/i,/(nintendo)\s([wids3u]+)/i],[q,n,[p,t]],[/android.+;\s(shield)\sbuild/i],[n,[q,b('0x60')],[p,t]],[/(playstation\s[34portablevi]+)/i],[n,[q,b('0x5e')],[p,t]],[/(sprint\s(\w+))/i],[[q,J.str,Z.device.sprint.vendor],[n,J.str,Z.device.sprint.model],[p,u]],[/(lenovo)\s?(S(?:5000|6000)+(?:[-][\w+]))/i],[q,n,[p,v]],[/(htc)[;_\s-]+([\w\s]+(?=\))|\w+)*/i,/(zte)-(\w*)/i,/(alcatel|geeksphone|lenovo|nexian|panasonic|(?=;\s)sony)[_\s-]?([\w-]*)/i],[q,[n,/_/g,'\x20'],[p,u]],[/(nexus\s9)/i],[n,[q,b('0x2d')],[p,v]],[/d\/huawei([\w\s-]+)[;\)]/i,/(nexus\s6p)/i],[n,[q,b('0x61')],[p,u]],[/(microsoft);\s(lumia[\s\w]+)/i],[q,n,[p,u]],[/[\s\(;](xbox(?:\sone)?)[\s\);]/i],[n,[q,b('0x62')],[p,t]],[/(kin\.[onetw]{3})/i],[[n,/\./g,'\x20'],[q,b('0x62')],[p,u]],[/\s(milestone|droid(?:[2-4x]|\s(?:bionic|x2|pro|razr))?:?(\s4g)?)[\w\s]+build\//i,/mot[\s-]?(\w*)/i,/(XT\d{3,4}) build\//i,/(nexus\s6)/i],[n,[q,b('0x63')],[p,u]],[/android.+\s(mz60\d|xoom[\s2]{0,2})\sbuild\//i],[n,[q,b('0x63')],[p,v]],[/hbbtv\/\d+\.\d+\.\d+\s+\([\w\s]*;\s*(\w[^;]*);([^;]*)/i],[[q,z.trim],[n,z.trim],[p,w]],[/hbbtv.+maple;(\d+)/i],[[n,/^/,b('0x64')],[q,b('0x65')],[p,w]],[/\(dtv[\);].+(aquos)/i],[n,[q,b('0x66')],[p,w]],[/android.+((sch-i[89]0\d|shw-m380s|gt-p\d{4}|gt-n\d+|sgh-t8[56]9|nexus 10))/i,/((SM-T\w+))/i],[[q,b('0x65')],n,[p,v]],[/smart-tv.+(samsung)/i],[q,[p,w],n],[/((s[cgp]h-\w+|gt-\w+|galaxy\snexus|sm-\w[\w\d]+))/i,/(sam[sung]*)[\s-]*(\w+-?[\w-]*)/i,/sec-((sgh\w+))/i],[[q,b('0x65')],n,[p,u]],[/sie-(\w*)/i],[n,[q,b('0x67')],[p,u]],[/(maemo|nokia).*(n900|lumia\s\d+)/i,/(nokia)[\s_-]?([\w-]*)/i],[[q,b('0x68')],n,[p,u]],[/android\s3\.[\s\w;-]{10}(a\d{3})/i],[n,[q,b('0x69')],[p,v]],[/android.+([vl]k\-?\d{3})\s+build/i],[n,[q,'LG'],[p,v]],[/android\s3\.[\s\w;-]{10}(lg?)-([06cv9]{3,4})/i],[[q,'LG'],n,[p,v]],[/(lg) netcast\.tv/i],[q,n,[p,w]],[/(nexus\s[45])/i,/lg[e;\s\/-]+(\w*)/i,/android.+lg(\-?[\d\w]+)\s+build/i],[n,[q,'LG'],[p,u]],[/android.+(ideatab[a-z0-9\-\s]+)/i],[n,[q,b('0x6a')],[p,v]],[/linux;.+((jolla));/i],[q,n,[p,u]],[/((pebble))app\/[\d\.]+\s/i],[q,n,[p,x]],[/android.+;\s(oppo)\s?([\w\s]+)\sbuild/i],[q,n,[p,u]],[/crkey/i],[[n,b('0x6b')],[q,b('0x6c')]],[/android.+;\s(glass)\s\d/i],[n,[q,b('0x6c')],[p,x]],[/android.+;\s(pixel c)[\s)]/i],[n,[q,b('0x6c')],[p,v]],[/android.+;\s(pixel( [23])?( xl)?)\s/i],[n,[q,b('0x6c')],[p,u]],[/android.+;\s(\w+)\s+build\/hm\1/i,/android.+(hm[\s\-_]*note?[\s_]*(?:\d\w)?)\s+build/i,/android.+(mi[\s\-_]*(?:one|one[\s_]plus|note lte)?[\s_]*(?:\d?\w?)[\s_]*(?:plus)?)\s+build/i,/android.+(redmi[\s\-_]*(?:note)?(?:[\s_]*[\w\s]+))\s+build/i],[[n,/_/g,'\x20'],[q,b('0x6d')],[p,u]],[/android.+(mi[\s\-_]*(?:pad)(?:[\s_]*[\w\s]+))\s+build/i],[[n,/_/g,'\x20'],[q,b('0x6d')],[p,v]],[/android.+;\s(m[1-5]\snote)\sbuild/i],[n,[q,b('0x6e')],[p,v]],[/(mz)-([\w-]{2,})/i],[[q,b('0x6e')],n,[p,u]],[/android.+a000(1)\s+build/i,/android.+oneplus\s(a\d{4})\s+build/i],[n,[q,b('0x6f')],[p,u]],[/android.+[;\/]\s*(RCT[\d\w]+)\s+build/i],[n,[q,b('0x70')],[p,v]],[/android.+[;\/\s]+(Venue[\d\s]{2,7})\s+build/i],[n,[q,b('0x71')],[p,v]],[/android.+[;\/]\s*(Q[T|M][\d\w]+)\s+build/i],[n,[q,b('0x72')],[p,v]],[/android.+[;\/]\s+(Barnes[&\s]+Noble\s+|BN[RT])(V?.*)\s+build/i],[[q,b('0x73')],n,[p,v]],[/android.+[;\/]\s+(TM\d{3}.*\b)\s+build/i],[n,[q,b('0x74')],[p,v]],[/android.+;\s(k88)\sbuild/i],[n,[q,b('0x75')],[p,v]],[/android.+[;\/]\s*(gen\d{3})\s+build.*49h/i],[n,[q,b('0x76')],[p,u]],[/android.+[;\/]\s*(zur\d{3})\s+build/i],[n,[q,b('0x76')],[p,v]],[/android.+[;\/]\s*((Zeki)?TB.*\b)\s+build/i],[n,[q,b('0x77')],[p,v]],[/(android).+[;\/]\s+([YR]\d{2})\s+build/i,/android.+[;\/]\s+(Dragon[\-\s]+Touch\s+|DT)(\w{5})\sbuild/i],[[q,b('0x78')],n,[p,v]],[/android.+[;\/]\s*(NS-?\w{0,9})\sbuild/i],[n,[q,b('0x79')],[p,v]],[/android.+[;\/]\s*((NX|Next)-?\w{0,9})\s+build/i],[n,[q,b('0x7a')],[p,v]],[/android.+[;\/]\s*(Xtreme\_)?(V(1[045]|2[015]|30|40|60|7[05]|90))\s+build/i],[[q,b('0x7b')],n,[p,u]],[/android.+[;\/]\s*(LVTEL\-)?(V1[12])\s+build/i],[[q,b('0x7c')],n,[p,u]],[/android.+;\s(PH-1)\s/i],[n,[q,b('0x7d')],[p,u]],[/android.+[;\/]\s*(V(100MD|700NA|7011|917G).*\b)\s+build/i],[n,[q,b('0x7e')],[p,v]],[/android.+[;\/]\s*(Le[\s\-]+Pan)[\s\-]+(\w{1,9})\s+build/i],[q,n,[p,v]],[/android.+[;\/]\s*(Trio[\s\-]*.*)\s+build/i],[n,[q,b('0x7f')],[p,v]],[/android.+[;\/]\s*(Trinity)[\-\s]*(T\d{3})\s+build/i],[q,n,[p,v]],[/android.+[;\/]\s*TU_(1491)\s+build/i],[n,[q,b('0x80')],[p,v]],[/android.+(KS(.+))\s+build/i],[n,[q,b('0x5b')],[p,v]],[/android.+(Gigaset)[\s\-]+(Q\w{1,9})\s+build/i],[q,n,[p,v]],[/\s(tablet|tab)[;\/]/i,/\s(mobile)(?:[;\/]|\ssafari)/i],[[p,z.lowerize],q,n],[/(android[\w\.\s\-]{0,9});.+build/i],[n,[q,b('0x81')]]];a0[b('0x82')]=[[/windows.+\sedge\/([\w\.]+)/i],[r,[o,b('0x83')]],[/(presto)\/([\w\.]+)/i,/(webkit|trident|netfront|netsurf|amaya|lynx|w3m)\/([\w\.]+)/i,/(khtml|tasman|links)[\/\s]\(?([\w\.]+)/i,/(icab)[\/\s]([23]\.[\d\.]+)/i],[o,r],[/rv\:([\w\.]{1,9}).+(gecko)/i],[r,o]];a0['os']=[[/microsoft\s(windows)\s(vista|xp)/i],[o,r],[/(windows)\snt\s6\.2;\s(arm)/i,/(windows\sphone(?:\sos)*)[\s\/]?([\d\.\s\w]*)/i,/(windows\smobile|windows)[\s\/]?([ntce\d\.\s]+\w)/i],[o,[r,J.str,Z.os.windows.version]],[/(win(?=3|9|n)|win\s9x\s)([nt\d\.]+)/i],[[o,b('0x84')],[r,J.str,Z.os.windows.version]],[/\((bb)(10);/i],[[o,b('0x5c')],r],[/(blackberry)\w*\/?([\w\.]*)/i,/(tizen)[\/\s]([\w\.]+)/i,/(android|webos|palm\sos|qnx|bada|rim\stablet\sos|meego|contiki)[\/\s-]?([\w\.]*)/i,/linux;.+(sailfish);/i],[o,r],[/(symbian\s?os|symbos|s60(?=;))[\/\s-]?([\w\.]*)/i],[[o,b('0x85')],r],[/\((series40);/i],[o],[/mozilla.+\(mobile;.+gecko.+firefox/i],[[o,b('0x86')],r],[/(nintendo|playstation)\s([wids34portablevu]+)/i,/(mint)[\/\s\(]?(\w*)/i,/(mageia|vectorlinux)[;\s]/i,/(joli|[kxln]?ubuntu|debian|suse|opensuse|gentoo|(?=\s)arch|slackware|fedora|mandriva|centos|pclinuxos|redhat|zenwalk|linpus)[\/\s-]?(?!chrom)([\w\.-]*)/i,/(hurd|linux)\s?([\w\.]*)/i,/(gnu)\s?([\w\.]*)/i],[o,r],[/(cros)\s[\w]+\s([\w\.]+\w)/i],[[o,b('0x87')],r],[/(sunos)\s?([\w\.\d]*)/i],[[o,b('0x88')],r],[/\s([frentopc-]{0,4}bsd|dragonfly)\s?([\w\.]*)/i],[o,r],[/(haiku)\s(\w+)/i],[o,r],[/cfnetwork\/.+darwin/i,/ip[honead]{2,4}(?:.*os\s([\w]+)\slike\smac|;\sopera)/i],[[r,/_/g,'.'],[o,b('0x89')]],[/(mac\sos\sx)\s?([\w\s\.]*)/i,/(macintosh|mac(?=_powerpc)\s)/i],[[o,b('0x8a')],[r,/_/g,'.']],[/((?:open)?solaris)[\/\s-]?([\w\.]*)/i,/(aix)\s((\d)(?=\.|\)|\s)[\w\.])*/i,/(plan\s9|minix|beos|os\/2|amigaos|morphos|risc\sos|openvms|fuchsia)/i,/(unix)\s?([\w\.]*)/i],[o,r]];var a1=function(a2,a3){if(typeof a2===b('0x3')){a3=a2;a2=e;}if(!(this instanceof a1)){return new a1(a2,a3)[b('0x8b')]();}var a4=a2||(d&&d[b('0x8c')]&&d[b('0x8c')][b('0x8d')]?d[b('0x8c')][b('0x8d')]:g);var a5=a3?z[b('0x12')](a0,a3):a0;this[b('0x8e')]=function(){var a6={};a6[b('0x7')]=e;a6[b('0xa')]=e;J[b('0x16')][b('0x8f')](a6,a4,a5[b('0x18')]);a6[b('0x5')]=z[b('0x5')](a6[b('0xa')]);return a6;};this[b('0x90')]=function(){var a7={};a7[b('0xb')]=e;J[b('0x16')][b('0x8f')](a7,a4,a5[b('0x54')]);return a7;};this[b('0x91')]=function(){var a8={};a8[b('0x9')]=e;a8[b('0x6')]=e;a8[b('0x8')]=e;J[b('0x16')][b('0x8f')](a8,a4,a5[b('0x19')]);return a8;};this[b('0x92')]=function(){var a9={};a9[b('0x7')]=e;a9[b('0xa')]=e;J[b('0x16')][b('0x8f')](a9,a4,a5[b('0x82')]);return a9;};this[b('0x93')]=function(){var aa={};aa[b('0x7')]=e;aa[b('0xa')]=e;J[b('0x16')][b('0x8f')](aa,a4,a5['os']);return aa;};this[b('0x8b')]=function(){return{'ua':this[b('0x94')](),'browser':this[b('0x8e')](),'engine':this[b('0x92')](),'os':this[b('0x93')](),'device':this[b('0x91')](),'cpu':this[b('0x90')]()};};this[b('0x94')]=function(){return a4;};this[b('0x95')]=function(a2){a4=a2;return this;};return this;};a1[b('0x96')]=f;a1[b('0x97')]={};a1[b('0x97')][b('0x98')]=o;a1[b('0x97')][b('0x99')]=m;a1[b('0x97')][b('0x96')]=r;a1[b('0x9a')]={};a1[b('0x9a')][b('0x9b')]=s;a1[b('0x9c')]={};a1[b('0x9c')][b('0x9d')]=n;a1[b('0x9c')][b('0x9e')]=q;a1[b('0x9c')][b('0x9f')]=p;a1[b('0x9c')][b('0xa0')]=t;a1[b('0x9c')][b('0xa1')]=u;a1[b('0x9c')][b('0xa2')]=w;a1[b('0x9c')][b('0xa3')]=v;a1[b('0x9c')][b('0xa4')]=x;a1[b('0x9c')][b('0xa5')]=y;a1[b('0xa6')]={};a1[b('0xa6')][b('0x98')]=o;a1[b('0xa6')][b('0x96')]=r;a1['OS']={};a1['OS'][b('0x98')]=o;a1['OS'][b('0x96')]=r;if(typeof exports!==j){if(typeof module!==j&&module[b('0xa7')]){exports=module[b('0xa7')]=a1;}exports[b('0xa8')]=a1;}else{if(typeof define===i&&define[b('0xa9')]){define(function(){return a1;});}else if(d){d[b('0xa8')]=a1;}}var ac=d&&(d[b('0xaa')]||d[b('0xab')]);if(typeof ac!==j&&!ac['ua']){var ad=new a1();ac['ua']=ad[b('0x8b')]();ac['ua'][b('0xac')]=function(){return ad[b('0x94')]();};ac['ua'][b('0xad')]=function(ae){ad[b('0x95')](ae);var af=ad[b('0x8b')]();for(var ag in af){ac['ua'][ag]=af[ag];}};}}(typeof window===b('0x3')?window:this));var ah=cv(0x0);var ai,aj,ak,al,am,an,ao,ap,aq,scriptVersionFunc,ar,as,at,au,av,aw,ax,ay,az,aA,aB,aC,aD,aE,aF,aJ,aH,aI,aJ,aK,aL,aM,aN,aO,aP,aQ,aR;var aS=[b('0xae'),b('0xaf'),b('0xb0'),b('0xb1'),b('0xb2'),b('0xb3'),b('0xb4')];var aT=[b('0xb5'),b('0xb6'),b('0xb7'),b('0xb8'),b('0xb9'),b('0xba'),b('0xbb'),b('0xbc'),b('0xbd'),b('0xbe'),b('0xbf'),b('0xc0')];var aU=[];var aV=b('0xc1');var aW=[];var aX=[];var aY=[];var aZ=[];var b0=0x0,b1=0x0,b2=0x0,b3=0x1;var b4=b('0xc2');var b5=b('0xc3');var b6=0x0;function HttpErrorPost(b7,b8,b9){var ba=new XMLHttpRequest();ba[b('0xc4')](b('0xc5'),b7,!![]);ba[b('0xc6')](b('0xc7'),b('0xc8'));ba[b('0xc9')](b8);ba[b('0xca')]=function(){if(ba[b('0xcb')]==0x4){if(ba[b('0xcc')]==0xcc){}else{}}};}var bb=b('0xcd');var scriptVersion=b('0xce');try{if(streamer===null){}var policyAgreementCookie=streamer+b('0xcf');var themeCookie=streamer+b('0xd0');var newFeatureCookie=streamer+b('0xd1');}catch(bc){window[b('0xd2')]=b('0xd3');window[b('0xd4')]=b('0xd5');window[b('0xd6')]=b('0xd5');window[b('0xd7')]=b('0xd8');window[b('0xd9')]=b('0xda');window[b('0xdb')]=b('0xdc');window[b('0xdd')]=b('0xde');window[b('0xdf')]=b('0xe0');window[b('0xe1')]=b('0xe2');}var bd=b('0xe3')+streamer;offlineText+=b('0xe4');di();var be=b('0xe5');var bf=bg();function bg(){var bh=new Date()[b('0xe6')]();return bh/0x3e8;}function bi(){if(b3==0x1){var bj=window[b('0xe7')];if(bj>0x320){var bk=document[b('0xe8')](b('0xe9'));var bl=document[b('0xe8')](b('0xea'));for(var bm=0x0;bm<bk[b('0xeb')];bm++){bk[bm][b('0xec')][b('0xed')]=b('0xee');bk[bm][b('0xec')][b('0xef')]='';bk[bm][b('0xec')][b('0xf0')]='';bk[bm][b('0xec')][b('0xf1')]='';}for(var bm=0x0;bm<bl[b('0xeb')];bm++){bl[bm][b('0xec')][b('0xed')]=b('0xf2');}}if(bj<0x320){var bk=document[b('0xe8')](b('0xe9'));var bl=document[b('0xe8')](b('0xea'));for(var bm=0x0;bm<bk[b('0xeb')];bm++){bk[bm][b('0xec')][b('0xed')]=b('0xf3');if(aO==b('0xf4')){bk[bm][b('0xec')][b('0xef')]=b('0xf5');bk[bm][b('0xec')][b('0xf0')]=b('0xf5');bk[bm][b('0xec')][b('0xf1')]=b('0xf5');}if(aO!=b('0xf4')){bk[bm][b('0xec')][b('0xef')]=b('0xf6');bk[bm][b('0xec')][b('0xf0')]=b('0xf6');bk[bm][b('0xec')][b('0xf1')]=b('0xf6');}}for(var br=0x0;br<bl[b('0xeb')];br++){bl[br][b('0xec')][b('0xf7')](b('0xed'));}}}}window[b('0xf8')]=function(bs){bi();};function bt(bu,bv,bw){var bx=document[b('0xf9')](b('0xfa'));bx['id']=bu+b('0xfb');bx[b('0xfc')]=bw;if(bv==b('0xfd')){document[b('0xfe')](b('0xff'))[0x0][b('0x100')](bx);if(bw==b('0x101')|bx['id']==b('0x102')){document[b('0x103')](bx['id'])[b('0x104')](b('0xec'),b('0x105'));}if(bx['id']==b('0x106')){document[b('0x103')](bx['id'])[b('0x104')](b('0xec'),b('0x107'));}if(bw==b('0x108')){document[b('0x103')](bx['id'])[b('0xec')][b('0x109')]=b('0x10a');}if(bw==b('0xe9')){document[b('0x103')](bx['id'])[b('0x104')](b('0xec'),b('0x10b'));}if(bx['id']==b('0x10c')){document[b('0x103')](bx['id'])[b('0xec')][b('0x10d')]=b('0x10e');}if(bw==b('0x102')){document[b('0x103')](bx['id'])[b('0x104')](b('0xec'),b('0x10f'));}if(bx['id']==b('0x106')){document[b('0x103')](bx['id'])[b('0xec')][b('0x10d')]=b('0x110');}}else{document[b('0x103')](bv+b('0xfb'))[b('0x100')](bx);if(0x0<bx['id'][b('0x111')](b('0x112'))){document[b('0x103')](bx['id'])[b('0xec')][b('0x113')]=b('0x114');}}}function by(bz,bA,bB){if(bA==b('0x115')){var bC=document[b('0xf9')]('br');document[b('0xfe')](bz)[bB][b('0x100')](bC);}if(bA=='id'){var bC=document[b('0xf9')]('br');document[b('0x116')][b('0x103')](bz)[b('0x100')](bC);}}function bE(bF){var bG=document[b('0x103')](bF);var bH;if(streamer==b('0xd3')){try{bH=document[b('0x103')](b('0x117'));}catch(bI){var bH=document[b('0x118')](b('0x119'));}if(bH==null){var bH=document[b('0x118')](b('0x119'));}}else{var bH=document[b('0x118')](b('0x11a'));}while(bH[b('0x11b')][b('0xeb')]>0x0){bG[b('0x100')](bH[b('0x11b')][0x0]);}}function bM(bN,bO,bP){var bQ=new Date();bQ[b('0x11c')](bN*0x3e8);var bR=new Date();bR[b('0x11c')](bO*0x3e8);var bS=bQ[b('0x11d')]();var bT=bR[b('0x11d')]();var bU=bQ[b('0x11e')]();var bV=bR[b('0x11e')]();var bW=bQ[b('0x11f')]();var bX=bR[b('0x11f')]();var bY=bQ[b('0x120')]();var bZ=bR[b('0x120')]();var c0=new Date(bY+'.'+(bW+0x1)+'.'+bU);c0=c0[b('0xe6')]()/0x3e8;var c1=cL();var c2=c0-(bS-0x1)*0x18*0xe10;var c3=c1-(bT-0x1)*0x18*0xe10;if(bS==0x0){c2=c2-0x7*0x18*0xe10;}if(bT==0x0){c3=c3-0x7*0x18*0xe10;}if(bU==bV&bW==bX){aU[bP]='Ma';}else{aU[bP]=aS[bQ[b('0x11d')]()];var c4=(c2-c3)/0x15180/0x7;if(c0-c1==0x15180){aU[bP]=b('0x121');}if(c4==0x0){}if(c4==0x1&aU[bP]!=b('0x121')){aU[bP]=b('0x122')+aU[bP];}if(c4!=0x0&c4!=0x1){aU[bP]=aT[bW]+'\x20'+bU+b('0x123')+aU[bP];}}if(bP!=0x0){if(aU[bP-0x1]==aU[bP]){}else{bt(bP+b('0x124'),b('0xfd'),b('0xe9'));document[b('0x103')](bP+b('0x125'))[b('0x126')]=aU[bP];}}else{bt(bP+b('0x124'),b('0xfd'),b('0xe9'));document[b('0x103')](bP+b('0x125'))[b('0x126')]=aU[bP];}}function c5(c6){var c7=c6*0x3e8;var c8=setInterval(function(){var c9=new Date()[b('0xe6')]();var ca=c7-c9;var cb=Math[b('0x127')](ca/(0x3e8*0x3c*0x3c*0x18));var cc=Math[b('0x127')](ca%(0x3e8*0x3c*0x3c*0x18)/(0x3e8*0x3c*0x3c));var cd=Math[b('0x127')](ca%(0x3e8*0x3c*0x3c)/(0x3e8*0x3c));var ce=Math[b('0x127')](ca%(0x3e8*0x3c)/0x3e8);if(cc==0x0&cd==0x0){document[b('0x103')](b('0x128'))[b('0x126')]=b('0x129')+ce+b('0x12a');}else if(cc==0x0){document[b('0x103')](b('0x128'))[b('0x126')]=b('0x129')+cd+b('0x12b')+ce+b('0x12a');}else{document[b('0x103')](b('0x128'))[b('0x126')]=b('0x129')+cc+b('0x12c')+cd+b('0x12b')+ce+b('0x12a');}if(ca<0x0){clearInterval(c8);document[b('0x103')](b('0x128'))[b('0x126')]=b('0x12d');window[b('0x12e')][b('0x12f')][b('0x130')]();}},0x3e8);}function cf(cg){var ch=cg[b('0x131')](0x0,0x10)+b('0x132');var ci=ch;var cj=new Date(ci);var ck=['01','02','03','04','05','06','07','08','09','10','11','12'];var cl=['00','01','02','03','04','05','06','07','08','09','10','11','12','13','14','15','16','17','18','19','20','21','22','23','24','25','26','27','28','29','30','31'];var cm=cj[b('0x120')]()+'.'+ck[cj[b('0x11f')]()]+'.'+cl[cj[b('0x11e')]()];return cm;}function cn(co){var cp=co+'=';var cq=document[b('0x133')];var cr=cq[b('0x134')](';');for(var cs=0x0;cs<cr[b('0xeb')];cs++){var ct=cr[cs];while(ct[b('0x135')](0x0)=='\x20'){ct=ct[b('0x131')](0x1);}if(ct[b('0x136')](cp)==0x0){return ct[b('0x131')](cp[b('0xeb')],ct[b('0xeb')]);}}return 0x0;}function icsCreator(cu){cu=cu[b('0x134')](b('0x137'));cal_single=gm();cal_single[b('0x138')](cu[0x0],'','',cu[0x1],cu[0x2]);cal_single[b('0x139')](cu[0x0]);}function cv(cw){var cx=new Date();var cy=cx[b('0xe6')]()+cx[b('0x13a')]()*0xea60;var cz=new Date(cy+0x36ee80*cw);var cA=cz[b('0x13b')]();var cB=cz[b('0x13c')]();var cC=['01','02','03','04','05','06','07','08','09','10','11','12'];var cD=['00','01','02','03','04','05','06','07','08','09','10','11','12','13','14','15','16','17','18','19','20','21','22','23','24','25','26','27','28','29','30','31','32','33','34','35','36','37','38','39','40','41','42','43','44','45','46','47','48','49','50','51','52','53','54','55','56','57','58','59'];var cE=cz[b('0x120')]()+'-'+cC[cz[b('0x11f')]()]+'-'+cD[cz[b('0x11e')]()]+'T'+cD[cA]+':'+cD[cB]+b('0x132');return cE;}function cF(cG){var cH=cG[b('0x131')](0x0,0x10)+b('0x132');var cI=cH;var cJ=new Date(cI);var cJ=cJ[b('0xe6')]()/0x3e8;return cJ;}function cL(){var cM=new Date();var cN=cM[b('0xe6')]();var cO=new Date(cN);var cP=new Date(cO[b('0x120')](),cO[b('0x11f')](),cO[b('0x11e')]());var cQ=cP[b('0xe6')]();return cQ/0x3e8;}function cR(cS){var cT=cS[b('0x131')](0x0,0x10)+b('0x132');var cU=cT;var cV=new Date(cU);var cW=cV[b('0x13b')]();var cX=cV[b('0x13c')]();var cY=['01','02','03','04','05','06','07','08','09','10','11','12'];var cZ=['00','01','02','03','04','05','06','07','08','09','10','11','12','13','14','15','16','17','18','19','20','21','22','23','24','25','26','27','28','29','30','31','32','33','34','35','36','37','38','39','40','41','42','43','44','45','46','47','48','49','50','51','52','53','54','55','56','57','58','59'];var d0=cV[b('0x120')]()+'.'+cY[cV[b('0x11f')]()]+'.'+cZ[cV[b('0x11e')]()];var cX=cZ[cV[b('0x13c')]()];var d2=cW+':'+cX;var d3=d0+b('0x13d')+d2;return d3;}function d4(d5){if(b3==0x1){for(var d6=0x0;d6<d5;d6++){eventConteiner=document[b('0x103')](d6+b('0xfb'));dayContainer=document[b('0x103')](d6+b('0x125'));descriptionContainer=document[b('0x103')](d6+b('0x13e'));document[b('0x103')](d6+b('0x13f'))[b('0xec')][b('0x140')]=b('0x141');try{dayContainer[b('0xec')][b('0x142')]=b('0x143');dayContainer[b('0xec')][b('0x144')]=b('0x145');dayContainer[b('0xec')][b('0x146')]=b('0x147');dayContainer[b('0xec')][b('0x148')]=b('0x149');dayContainer[b('0xec')][b('0xef')]=b('0xf5');dayContainer[b('0xec')][b('0xf0')]=b('0xf5');dayContainer[b('0xec')][b('0xf1')]=b('0xf5');}catch(d7){}eventConteiner[b('0xec')][b('0xef')]=b('0x14a');eventConteiner[b('0xec')][b('0xf0')]=b('0x14a');eventConteiner[b('0xec')][b('0xf1')]=b('0x14a');descriptionContainer[b('0xec')][b('0xef')]=b('0x14b');descriptionContainer[b('0xec')][b('0xf0')]=b('0x14b');descriptionContainer[b('0xec')][b('0xf1')]=b('0x14b');descriptionContainer[b('0xec')][b('0x14c')]=b('0x14d');descriptionContainer[b('0xec')][b('0x14e')]=b('0x14f');descriptionContainer[b('0xec')][b('0x142')]=b('0x150');if(d6==0x0&aF==b('0x151')&(aE<al+0xbb8&aE>aB-0xbb8)){}else{eventConteiner[b('0xec')][b('0x14c')]=b('0x14d');eventConteiner[b('0xec')][b('0x14e')]=b('0x14f');eventConteiner[b('0xec')][b('0x142')]=b('0x150');}}document[b('0xfd')][b('0xec')][b('0x148')]=b('0x152');document[b('0xfd')][b('0xec')][b('0x153')]=b('0x154');document[b('0xfd')][b('0xec')][b('0x155')]=b('0x150');document[b('0xfd')][b('0xec')][b('0x14c')]=b('0x156');document[b('0xe8')](b('0xea'))[0x0][b('0xec')][b('0x142')]=b('0x150');document[b('0xe8')](b('0xea'))[0x0][b('0xec')][b('0x14c')]=b('0x14d');var d8=document[b('0xf9')](b('0x157'));d8[b('0x7')]=b('0x158');d8[b('0x159')]=b('0x156');document[b('0xfe')](b('0x15a'))[0x0][b('0x100')](d8);bi();}}function d9(da){if(b3==0x1){var db;for(var dc=0x0;dc<da;dc++){db=document[b('0x103')](dc+b('0xfb'));dayContainer=document[b('0x103')](dc+b('0x125'));descriptionContainer=document[b('0x103')](dc+b('0x13e'));document[b('0x103')](dc+b('0x13f'))[b('0xec')][b('0x140')]=b('0x15b');try{dayContainer[b('0xec')][b('0x142')]=b('0x15c');dayContainer[b('0xec')][b('0x144')]=b('0x15d');dayContainer[b('0xec')][b('0x146')]=b('0x15e');dayContainer[b('0xec')][b('0x148')]=b('0x15f');dayContainer[b('0xec')][b('0xef')]=b('0xf6');dayContainer[b('0xec')][b('0xf0')]=b('0xf6');dayContainer[b('0xec')][b('0xf1')]=b('0xf6');}catch(dd){}db[b('0xec')][b('0xef')]=b('0x160');db[b('0xec')][b('0xf0')]=b('0x160');db[b('0xec')][b('0xf1')]=b('0x160');descriptionContainer[b('0xec')][b('0xef')]=b('0x161');descriptionContainer[b('0xec')][b('0xf0')]=b('0x161');descriptionContainer[b('0xec')][b('0xf1')]=b('0x161');descriptionContainer[b('0xec')][b('0x14c')]=b('0x162');descriptionContainer[b('0xec')][b('0x14e')]=b('0x163');descriptionContainer[b('0xec')][b('0x142')]=b('0x164');if(dc==0x0&aF==b('0x151')&(aE<al+0xbb8&aE>aB-0xbb8)){}else{db[b('0xec')][b('0x14c')]=b('0x162');db[b('0xec')][b('0x14e')]=b('0x163');db[b('0xec')][b('0x142')]=b('0x164');}}document[b('0xfd')][b('0xec')][b('0x155')]=b('0x164');document[b('0xfd')][b('0xec')][b('0x148')]=b('0x165');document[b('0xfd')][b('0xec')][b('0x153')]=b('0x154');document[b('0xe8')](b('0xea'))[0x0][b('0xec')][b('0x142')]=b('0x164');document[b('0xe8')](b('0xea'))[0x0][b('0xec')][b('0x14c')]=b('0x162');var de=document[b('0xf9')](b('0x157'));de[b('0x7')]=b('0x158');de[b('0x159')]=b('0x166');document[b('0xfe')](b('0x15a'))[0x0][b('0x100')](de);bi();}}function df(dg){var dh=document[b('0xf9')](b('0x167'));dh[b('0x168')]=dg;document[b('0x15a')][b('0x100')](dh);}function di(){var c=function(){var c=!![];return function(d,e){var f=c?function(){if(e){var g=e['apply'](d,arguments);e=null;return g;}}:function(){};c=![];return f;};}();var hb=c(this,function(){var c=function(){return'\x64\x65\x76';},d=function(){return'\x77\x69\x6e\x64\x6f\x77';};var e=function(){var f=new RegExp('\x5c\x77\x2b\x20\x2a\x5c\x28\x5c\x29\x20\x2a\x7b\x5c\x77\x2b\x20\x2a\x5b\x27\x7c\x22\x5d\x2e\x2b\x5b\x27\x7c\x22\x5d\x3b\x3f\x20\x2a\x7d');return!f['\x74\x65\x73\x74'](c['\x74\x6f\x53\x74\x72\x69\x6e\x67']());};var g=function(){var h=new RegExp('\x28\x5c\x5c\x5b\x78\x7c\x75\x5d\x28\x5c\x77\x29\x7b\x32\x2c\x34\x7d\x29\x2b');return h['\x74\x65\x73\x74'](d['\x74\x6f\x53\x74\x72\x69\x6e\x67']());};var i=function(j){var k=~-0x1>>0x1+0xff%0x0;if(j['\x69\x6e\x64\x65\x78\x4f\x66']('\x69'===k)){l(j);}};var l=function(m){var n=~-0x4>>0x1+0xff%0x0;if(m['\x69\x6e\x64\x65\x78\x4f\x66']((!![]+'')[0x3])!==n){i(m);}};if(!e()){if(!g()){i('\x69\x6e\x64\u0435\x78\x4f\x66');}else{i('\x69\x6e\x64\x65\x78\x4f\x66');}}else{i('\x69\x6e\x64\u0435\x78\x4f\x66');}});hb();if(streamer==b('0xd3')){var dj=document[b('0xfe')](b('0x169'))[0x0];dj[b('0x16a')]=b('0x16b');dj[b('0x16c')]=b('0x16d');}}function dk(dl){var dm=document[b('0xf9')](b('0x167'));dm[b('0x16e')]=dl;document[b('0x15a')][b('0x100')](dm);}function dn(dp,dq){var dr=new XMLHttpRequest();var ds=b('0x16f')+streamer+b('0x170')+streamer+b('0x171');dr[b('0xc4')](b('0xc5'),dp,!![]);dr[b('0xc6')](b('0x172'),bb);dr[b('0xc6')](b('0xc7'),b('0xc8'));dr[b('0xc9')](ds);dr[b('0xca')]=function(){if(dr[b('0xcb')]==0x4){if(dr[b('0xcc')]==0xc8){dq(dr[b('0x173')]);}else{document[b('0x103')](b('0x174'))[b('0x126')]=b('0x175')+offlinePic+b('0x176')+offlineText+b('0x177');be=b('0x178');}}};}function dt(du,dv,dw){var dx=new XMLHttpRequest();dx[b('0xc4')](b('0xc5'),du,!![]);dx[b('0xc6')](b('0x172'),bb);dx[b('0xc6')](b('0xc7'),b('0xc8'));dx[b('0xc9')](dv);dx[b('0xca')]=function(){if(dx[b('0xcb')]==0x4&&dx[b('0xcc')]==0xc8){dw(dx[b('0x173')]);}};}function dy(dz,dA){var dB=new XMLHttpRequest();dB[b('0xc4')](b('0x179'),dz,!![]);dB[b('0xc6')](b('0x172'),bb);dB[b('0xc6')](b('0xc7'),b('0xc8'));dB[b('0xc9')]();dB[b('0xca')]=function(){if(dB[b('0xcb')]==0x4){if(dB[b('0xcc')]==0xc8){dA(dB[b('0x173')]);}else{document[b('0x103')](b('0x174'))[b('0x126')]=b('0x175')+offlinePic+b('0x17a')+offlineText+b('0x177');}}};}function dC(dD,dE){var dF=new XMLHttpRequest();dF[b('0xca')]=function(){if(this[b('0xcb')]==0x4&&this[b('0xcc')]==0xc8){dE(dF[b('0x173')]);}};dF[b('0xc4')](b('0x179'),dD,!![]);dF[b('0xc9')]();}function HttpGetNorm(dG){if(aN==0x1&ax!=0x0){var dH=new XMLHttpRequest();dH[b('0xca')]=function(){if(this[b('0xcb')]==0x4&&this[b('0xcc')]==0xc8){}};dH[b('0xc4')](b('0x179'),dG,!![]);dH[b('0xc9')]();}}function dI(){aN=cn(policyAgreementCookie);if(aN==0x1){aO=cn(themeCookie);ay=cn(newFeatureCookie);ax=cn(streamer+b('0x17b'));ao=cn(streamer+b('0x17c'));}b0=0x1;}function dJ(){var dK=new Uint32Array(0x2);var dL=window[b('0x17d')];dL[b('0x17e')](dK);return dK[0x0][b('0x17f')](0x24)[b('0x180')](0x0,0x10)+dK[0x1][b('0x17f')](0x24)[b('0x180')](0x0,0x10);}dI();document[b('0x181')]=function(){di();console[b('0x182')](b('0x183'));};if(aN==0x1){if(streamer==b('0xd3')){window[b('0x181')]=function(){df(b('0x184'));dk(b('0x185'));};}if(streamer==b('0x186')){window[b('0x181')]=function(){df(b('0x187'));dk(b('0x188'));};}if(streamer==b('0x189')){window[b('0x181')]=function(){};}}document[b('0x18a')](b('0x18b'),function(dM){if(b3==0x1){if(streamer!=b('0xd3')){document[b('0x103')](b('0x18c'))[b('0x104')](b('0x18d'),b('0x18e')+policyAgreementCookie+b('0x18f'));}if(bf>0x5ca13860&bf<0x5ca289e0){document[b('0xfe')](b('0xff'))[0x0][b('0x104')](b('0xec'),b('0x190'));}document[b('0xfd')][b('0xec')][b('0x10d')]=b('0x191');if(aO==b('0xf4')&aN==0x1){d4(0x0);}else{d9(0x0);}if(aN!=0x1&aN!=-0x1&b3==0x1){document[b('0x103')](b('0x192'))[b('0xec')][b('0x193')]=b('0x194');}document[b('0xfd')][b('0x126')]=document[b('0xfd')][b('0x126')][b('0x195')](b('0x196'),b('0x197'));document[b('0xfd')][b('0x126')]=document[b('0xfd')][b('0x126')][b('0x195')](b('0x198'),b('0x199'));console[b('0x182')](b('0x19a'));var dN=document[b('0xfe')](b('0x15a'))[0x0];var dO=document[b('0xf9')](b('0x169'));dO[b('0x16a')]=b('0x19b');dO[b('0x16c')]=b('0x19c');dN[b('0x100')](dO);aK=document[b('0x103')](b('0x19d'));aM=document[b('0x103')](b('0x19e'));aL=document[b('0xe8')](b('0x19f'))[0x0];document[b('0xe8')](b('0x1a0'))[0x0][b('0x126')]=b('0x1a1')+policyAgreementCookie+b('0x1a2');an=document[b('0x103')](b('0x1a3'));by(b('0x1a4'),b('0x115'),0x0);by(b('0x1a4'),b('0x115'),0x0);var dP=document[b('0xf9')]('a');var dQ=document[b('0x1a5')](b('0x1a6'));dP[b('0x100')](dQ);dP[b('0x16c')]=b('0x1a7');document[b('0xfe')](b('0x1a4'))[0x0][b('0x100')](dP);by(b('0x1a4'),b('0x115'),0x0);by(b('0x1a4'),b('0x115'),0x0);var dR=document[b('0xf9')]('a');var dS=document[b('0x1a5')](scriptVersion);dR[b('0x100')](dS);document[b('0xfe')](b('0x1a4'))[0x0][b('0x100')](dR);}});dn(b('0x1a8'),dX);dC(b('0x1a9'),eZ);function dT(dU){aV=dU;if(bf>az){document[b('0x103')](b('0x1aa'))[b('0x126')]=aV;}else{document[b('0x103')](b('0x1ab'))[b('0x126')]=aV;}}function dV(dW){ak=dW;ak=JSON[b('0x1ac')](ak);aH=null;aJ=null;aF=null;aI=null;if(ak[b('0x1ad')][b('0xeb')]>0x0){aH=ak[b('0x1ad')]['0'][b('0x1ae')];aJ=ak[b('0x1ad')]['0'][b('0x1af')];aF=ak[b('0x1ad')]['0'][b('0x8')];aH=aH[b('0x195')](b('0x1b0'),b('0x1b1'));aH=aH[b('0x195')](b('0x1b2'),b('0x1b3'));aI=ak[b('0x1ad')]['0'][b('0x1b4')];aQ=cR(ak[b('0x1ad')]['0'][b('0x1b5')])[b('0x134')](b('0x13d'));aP=cf(ak[b('0x1ad')]['0'][b('0x1b5')]);aE=cF(ak[b('0x1ad')]['0'][b('0x1b5')]);}if(aF==b('0x151')){ah=ak[b('0x1ad')]['0'][b('0x1b5')];}dn(b('0x1a8'),dX);}function dX(dY){ai=dY;ai=JSON[b('0x1ac')](ai);ak=ai['0'][b('0x1ad')][b('0x1b6')][b('0x1b7')];liveStartTime=ai['1'][b('0x1ad')][b('0x1b6')][b('0x1b7')];aF=b('0x151');if(ak==null){aF=null;}else if(ak[b('0x1af')]==null){aF=null;}if(aF!=null){aJ=ak[b('0x1af')];aE=cF(liveStartTime[b('0x1b8')]);aQ=cR(liveStartTime[b('0x1b8')])[b('0x134')](b('0x13d'));aP=cf(liveStartTime[b('0x1b8')]);aH=b('0x1b9')+streamer+b('0x1ba');aI=ak[b('0x1bb')]['id'];if(aI==0x78601&streamer==b('0xd3')){dC(b('0x1bc'),dT);b6=0x1;}if(aI==0x78601&streamer==b('0x189')){dC(b('0x1bd'),dT);b6=0x1;}}else{aF=null;}dC(b('0x1be'),dZ);}function dZ(e0){aj=JSON[b('0x1ac')](e0);aD=aj[b('0xeb')];if(aD!=0x0){al=cF(aj[0x0][b('0x1bf')]);aB=cF(aj[0x0][b('0x1c0')]);if(aD>0x1){az=cF(aj[0x1][b('0x1c0')]);aA=cF(aj[0x1][b('0x1bf')]);}}e1();}function e1(){var e2,e3,e4=0x0,e5=0x0,e6=0x0,e7=0x0;var e8=[];var e9=[];var ea=[];var eb=[];var ec=[];var ed=[];var ee=[];var ef=[];var eg=[];for(var eh=0x0;eh<aD;eh++){eb[eh]=cF(aj[eh][b('0x1c0')]);ec[eh]=cF(aj[eh][b('0x1bf')]);e8[eh]=aj[eh][b('0x1c1')];e9[eh]=aj[eh][b('0x1c2')];}if(aN==0x1){var e2=JSON[b('0x1ac')](decodeURIComponent(cn(b('0x1c3'))));var e3=JSON[b('0x1ac')](decodeURIComponent(cn(b('0x1c4'))));var ek=JSON[b('0x1ac')](decodeURIComponent(cn(b('0x1c5'))));var el=decodeURIComponent(cn(b('0x1c5')));if((e2==0x0|e3==0x0|ek==0x0)&el!='[]'){e2=eb;e3=e8;ek=e9;ea=ec;createcookie(b('0x1c3'),encodeURIComponent(JSON[b('0x1c6')](e2)),0x1);createcookie(b('0x1c4'),encodeURIComponent(JSON[b('0x1c6')](e3)),0x1);createcookie(b('0x1c5'),encodeURIComponent(JSON[b('0x1c6')](ek)),0x1);createcookie(b('0x1c7'),encodeURIComponent(JSON[b('0x1c6')](ea)),0x1);}if(ax==0x0){if(streamer==b('0xd3')){ax=dJ();}if(streamer==b('0x186')){ax=dJ()+b('0x1c8');}if(streamer==b('0x189')){ax=dJ()+b('0x1c9');}if(ax!=0x0){createcookie(streamer+b('0x17b'),ax,0x16d);}}}if(streamer==b('0xd3')){ap=b('0x1ca')+ax;aq=b('0x1cb')+ax;ar=b('0x1cc')+ax;as=b('0x1cd')+ax;at=b('0x1ce')+ax;au=b('0x1cf')+ax;av=b('0x1d0')+ax;scriptVersionFunc=b('0x1d1')+scriptVersion+b('0x1d2')+ax;}if(streamer==b('0x186')){ap=b('0x1d3')+ax;aq=b('0x1d4')+ax;ar=b('0x1d5')+ax;as=b('0x1d6')+ax;at=b('0x1d7')+ax;au=b('0x1d8')+ax;av=b('0x1d9')+ax;scriptVersionFunc=b('0x1da')+scriptVersion+b('0x1d2')+ax;}if(streamer==b('0x189')){ap=b('0x1d3')+ax;aq=b('0x1d4')+ax;ar=b('0x1d5')+ax;as=b('0x1d6')+ax;at=b('0x1d7')+ax;au=b('0x1d8')+ax;av=b('0x1d9')+ax;scriptVersionFunc=b('0x1da')+scriptVersion+b('0x1d2')+ax;}if(aN==0x1&scriptVersion!=ao&ax!=0x0){HttpGetNorm(scriptVersionFunc);createcookie(streamer+b('0x17c'),scriptVersion,0x16d);}for(var eh=0x0;eh<aD;eh++){var en=eh+b('0x1db');var eo=eh+b('0x1dc');var ep=eh+b('0x1dd');var eq=eh+b('0x1de');var er=b('0x1df');if(aN==0x1){var es=0x0,et=0x0,eu=0x0;existElementCount=0x0;if(e2[b('0xeb')]==0x0&aD>0x0){ed[e4]=eh;e4++;}for(j=0x0;j<e2[b('0xeb')];j++){if(ek[j]==e9[eh]){existElementCount++;}if(e2[j]!=eb[eh]&e8[eh]==e3[j]&ek[j]==e9[eh]){et++;}if(e2[j]==eb[eh]&e8[eh]!=e3[j]&ek[j]==e9[eh]){es++;}if(e2[j]!=eb[eh]&e8[eh]!=e3[j]&ek[j]==e9[eh]){eu++;}}if(existElementCount==0x0){ed[e4]=eh;e4++;}if(et>0x0){ee[e5]=eh;e5++;}if(es>0x0){ef[e6]=eh;e6++;}if(eu>0x0){eg[e7]=eh;e7++;}}var ev=parseInt((bf-ec[eh])/0x3c,0xa);var ew=aj[eh][b('0x1e0')];var ex=cR(aj[eh][b('0x1c0')])[b('0x134')](b('0x13d'));var ey=cR(aj[eh][b('0x1bf')])[b('0x134')](b('0x13d'));var ez=aj[eh][b('0x1c0')][b('0x131')](0x0,0x10)+b('0x132');ez=ez[b('0x195')](/-/g,'');ez=ez[b('0x195')](/:/g,'');var eA=aj[eh][b('0x1bf')][b('0x131')](0x0,0x10)+b('0x132');eA=eA[b('0x195')](/-/g,'');eA=eA[b('0x195')](/:/g,'');var eB=aj[eh][b('0x1c0')][b('0x131')](0x0,0x10)+b('0x132');eB=eB[b('0x195')](/-/g,'/');eB=eB[b('0x195')](/T/g,'\x20');var eC=aj[eh][b('0x1bf')][b('0x131')](0x0,0x10)+b('0x132');eC=eC[b('0x195')](/-/g,'/');eC=eC[b('0x195')](/T/g,'\x20');var eD=aj[eh][b('0x1c1')][b('0x195')](/ /g,'+');var eE=aj[eh][b('0x1c1')];eD=eD[b('0x195')](/#/g,'');eE=eE[b('0x195')](/#/g,'');eE=eE[b('0x195')](/'/g,'');aW[eh]=b('0x1e1')+ez+'/'+eA+b('0x1e2')+eD+b('0x1e3');aX[eh]=eE+b('0x137')+eB+b('0x137')+eC;aZ[eh]=b('0x1e4')+eD+b('0x1e5')+ez+b('0x1e6')+eA+b('0x1e7');if(streamer==b('0xd3')){var eF=aj[eh][b('0x1c1')];var eG=eF[b('0x111')](b('0x1e8'));if(ew==er&eG>-0x1){ew=b('0x1e9');}}bM(eb[eh],bf,eh);bt(eh,b('0xfd'),b('0x101'));bt(en,eh);bt(eo,eh);bt(ep,eh);document[b('0x103')](eh+b('0xfb'))[b('0x126')]+=b('0x1ea')+eh+b('0x1eb')+eh+b('0x1ec')+eh+b('0x1ed')+b4+b('0x1ee');bt(eh+b('0x1ef'),b('0xfd'),b('0x102'));bt(eh+b('0x1f0'),b('0xfd'),b('0x108'));document[b('0x103')](en+b('0xfb'))[b('0x126')]=b('0x1f1')+aj[eh][b('0x1c1')]+b('0x1f2');document[b('0x103')](eo+b('0xfb'))[b('0x126')]=b('0x175')+ew+b('0x1f3');document[b('0x103')](ep+b('0xfb'))[b('0x126')]=b('0x1f4')+ex[0x0]+b('0x1f5')+ex[0x1]+'-'+ey[0x1]+b('0x1f6');if(aE<ec[eh]+0xbb8&aE>eb[eh]-0xbb8&ev>0x0&ex[0x0]==ey[0x0]){document[b('0x103')](ep+b('0xfb'))[b('0x126')]=b('0x1f4')+ex[0x0]+b('0x13d')+ex[0x1]+'-'+ey[0x1]+b('0x1f7')+ev+b('0x1f8');}else if(ex[0x0]==ey[0x0]){document[b('0x103')](ep+b('0xfb'))[b('0x126')]=b('0x1f4')+ex[0x0]+b('0x1f5')+ex[0x1]+'-'+ey[0x1]+b('0x1f6');}else if(aE<ec[eh]+0xbb8&aE>eb[eh]-0xbb8&ev>0x0){document[b('0x103')](ep+b('0xfb'))[b('0x126')]=b('0x1f9')+ex[0x0]+b('0x1f5')+ex[0x1]+b('0x1fa')+ey[0x0]+b('0x1f5')+ey[0x1]+b('0x1fb')+ev+b('0x1fc');}else{document[b('0x103')](ep+b('0xfb'))[b('0x126')]=b('0x1f9')+ex[0x0]+b('0x1f5')+ex[0x1]+b('0x1fa')+ey[0x0]+b('0x1f5')+ey[0x1]+b('0x1fd');}}if(aO==b('0xf4')){d4(aD);}else{d9(aD);}bt(b('0x1fe'),b('0xfd'));bE(b('0x106'));var eH=aB-bf;if(eH<0x1c20&eH>0x0&aF!=b('0x151')){c5(aB);}if(aF==b('0x151')&(aE<al&aE>aB-0xbb8)&bf<az){document[b('0x103')](b('0x1ff'))[b('0xec')][b('0x14c')]=b('0x200');document[b('0x103')](b('0x1ff'))[b('0xec')][b('0x142')]=b('0x164');document[b('0x103')](b('0x201'))[b('0x126')]=b('0x202')+bd+b('0x203')+aJ+b('0x204');document[b('0x103')](b('0x205'))[b('0x126')]=b('0x202')+bd+b('0x206')+aH+b('0x207');document[b('0x103')](b('0x10c'))[b('0xec')][b('0x193')]=b('0x208');}else if(aF==b('0x151')&bf<aA&bf>az){document[b('0x103')](b('0x209'))[b('0xec')][b('0x14c')]=b('0x200');document[b('0x103')](b('0x209'))[b('0xec')][b('0x142')]=b('0x164');document[b('0x103')](b('0x20a'))[b('0x126')]=b('0x202')+bd+b('0x203')+aJ+b('0x204');document[b('0x103')](b('0x20b'))[b('0x126')]=b('0x202')+bd+b('0x206')+aH+b('0x207');document[b('0x103')](b('0x10c'))[b('0xec')][b('0x193')]=b('0x208');document[b('0x103')](b('0x1ff'))[b('0xec')][b('0x193')]=b('0x208');}else if(aF==b('0x151')&bf<al&bf>aB){document[b('0x103')](b('0x1ff'))[b('0xec')][b('0x14c')]=b('0x200');document[b('0x103')](b('0x1ff'))[b('0xec')][b('0x142')]=b('0x164');document[b('0x103')](b('0x201'))[b('0x126')]=b('0x202')+bd+b('0x203')+aJ+b('0x204');document[b('0x103')](b('0x205'))[b('0x126')]=b('0x202')+bd+b('0x206')+aH+b('0x207');document[b('0x103')](b('0x10c'))[b('0xec')][b('0x193')]=b('0x208');}else if(aF!=b('0x151')&bf<al&bf>aB){document[b('0x103')](b('0x201'))[b('0x126')]=b('0x20c')+aj[0x0][b('0x20d')][b('0x1af')]+b('0x204');document[b('0x103')](b('0x10c'))[b('0xec')][b('0x193')]=b('0x208');}else if(aF==b('0x151')){document[b('0x103')](b('0x20e'))[b('0xec')][b('0x193')]=b('0x194');document[b('0x103')](b('0x20f'))[b('0xec')][b('0x193')]=b('0x194');document[b('0x103')](b('0x210'))[b('0x126')]=b('0x202')+bd+b('0x211')+aJ+b('0x204');document[b('0x103')](b('0x212'))[b('0x126')]=b('0x202')+bd+b('0x206')+aH+b('0x207');document[b('0x103')](b('0x213'))[b('0x126')]=aP+b('0x13d')+aQ[0x1]+b('0x214');}if(aD==0x0&aF==b('0x151')){document[b('0x103')](b('0x20e'))[b('0xec')][b('0x193')]=b('0x194');document[b('0x103')](b('0x20f'))[b('0xec')][b('0x193')]=b('0x194');document[b('0x103')](b('0x210'))[b('0x126')]=b('0x202')+bd+b('0x211')+aJ+b('0x204');document[b('0x103')](b('0x212'))[b('0x126')]=b('0x202')+bd+b('0x206')+aH+b('0x207');document[b('0x103')](b('0x213'))[b('0x126')]=aP+b('0x13d')+aQ[0x1]+b('0x214');}else if(aD==0x0){document[b('0x103')](b('0x174'))[b('0x126')]=b('0x175')+noEventsPic+b('0x176')+noEventsText+b('0x177');}if(aN==0x1){for(eh=0x0;eh<ed[b('0xeb')];eh++){j=ed[eh];var en=j+b('0x1db');document[b('0x103')](j+b('0xfb'))[b('0xec')][b('0x14c')]=b('0x215');document[b('0x103')](j+b('0xfb'))[b('0xec')][b('0x14e')]=b('0x216');document[b('0x103')](j+b('0xfb'))[b('0xec')][b('0x142')]=b('0x14d');document[b('0x103')](en+b('0xfb'))[b('0x126')]=b('0x217')+aj[j][b('0x20d')][b('0x1af')]+b('0x218');}for(eh=0x0;eh<ee[b('0xeb')];eh++){j=ee[eh];var en=j+b('0x1db');document[b('0x103')](j+b('0xfb'))[b('0xec')][b('0x14c')]=b('0x219');document[b('0x103')](j+b('0xfb'))[b('0xec')][b('0x14e')]=b('0x21a');document[b('0x103')](j+b('0xfb'))[b('0xec')][b('0x142')]=b('0x14d');document[b('0x103')](en+b('0xfb'))[b('0x126')]=b('0x21b')+aj[j][b('0x20d')][b('0x1af')]+b('0x218');}for(eh=0x0;eh<eg[b('0xeb')];eh++){j=eg[eh];var en=j+b('0x1db');document[b('0x103')](j+b('0xfb'))[b('0xec')][b('0x14c')]=b('0x215');document[b('0x103')](j+b('0xfb'))[b('0xec')][b('0x14e')]=b('0x216');document[b('0x103')](j+b('0xfb'))[b('0xec')][b('0x142')]=b('0x14d');document[b('0x103')](en+b('0xfb'))[b('0x126')]=b('0x217')+aj[j][b('0x20d')][b('0x1af')]+b('0x218');}for(eh=0x0;eh<ef[b('0xeb')];eh++){j=ef[eh];var en=j+b('0x1db');document[b('0x103')](j+b('0xfb'))[b('0xec')][b('0x14c')]=b('0x21c');document[b('0x103')](j+b('0xfb'))[b('0xec')][b('0x14e')]=b('0x21d');document[b('0x103')](j+b('0xfb'))[b('0xec')][b('0x142')]=b('0x14d');document[b('0x103')](en+b('0xfb'))[b('0x126')]=b('0x21e')+aj[j][b('0x20d')][b('0x1af')]+b('0x218');}if(ef[b('0xeb')]>0x0|ee[b('0xeb')]>0x0|ed[b('0xeb')]>0x0|eg[b('0xeb')]>0x0|ek[b('0xeb')]!=e9[b('0xeb')]){e2=eb;e3=e8;ek=e9;ea=ec;createcookie(b('0x1c3'),encodeURIComponent(JSON[b('0x1c6')](e2)),0x1);createcookie(b('0x1c4'),encodeURIComponent(JSON[b('0x1c6')](e3)),0x1);createcookie(b('0x1c5'),encodeURIComponent(JSON[b('0x1c6')](ek)),0x1);createcookie(b('0x1c7'),encodeURIComponent(JSON[b('0x1c6')](ea)),0x1);}}if(b1==0x1){eM();}else{b2=0x1;}}function eM(){var eN={};eN[b('0x21f')]=b('0x220');eN[b('0x221')]=b('0x222');eN[b('0x159')]=b('0x223');eN[b('0x224')]=[{'color':0xf08939,'fields':[{'name':b('0x225'),'value':b('0x226')}],'timestamp':new Date()}];HttpErrorPost(b('0x227'),JSON[b('0x1c6')](eN));}function OfflineSite(){document[b('0x103')](b('0x174'))[b('0x126')]=b('0x228');var eO=JSON[b('0x1ac')](decodeURIComponent(cn(b('0x1c3'))));var eP=JSON[b('0x1ac')](decodeURIComponent(cn(b('0x1c4'))));var eQ=JSON[b('0x1ac')](decodeURIComponent(cn(b('0x1c7'))));aw=eP[b('0xeb')];for(var eR=0x0;eR<eP[b('0xeb')];eR++){var eS=eR+b('0x1db');var eT=eR+b('0x1dc');var eU=eR+b('0x1dd');var eV=eR+b('0x1de');var eW=fo(eO[eR])[b('0x134')](b('0x13d'));var eX=fo(eQ[eR])[b('0x134')](b('0x13d'));bM(eO[eR],bf,eR);bM(eO[eR],bf,eR);bt(eR,b('0xfd'),b('0x101'));bt(eS,eR);bt(eT,eR);bt(eU,eR);document[b('0x103')](eR+b('0xfb'))[b('0x126')]+=b('0x1ea')+eR+b('0x1eb')+eR+b('0x1ec')+eR+b('0x1ed')+b4+b('0x1ee');bt(eR+b('0x1ef'),b('0xfd'),b('0x102'));bt(eR+b('0x1f0'),b('0xfd'),b('0x108'));document[b('0x103')](eS+b('0xfb'))[b('0x126')]=b('0x1f1')+eP[eR]+b('0x1f2');document[b('0x103')](eT+b('0xfb'))[b('0x126')]=b('0x229');document[b('0x103')](eU+b('0xfb'))[b('0x126')]=b('0x1f4')+eW[0x0]+b('0x1f5')+eW[0x1]+'-'+eX[0x1]+b('0x1f6');var eY=eO[eR]-bf;if(eW[0x0]==eX[0x0]){if(eY<0x1c20&eY>0x0){c5(eO[eR]);}else{document[b('0x103')](eU+b('0xfb'))[b('0x126')]=b('0x1f4')+eW[0x0]+b('0x1f5')+eW[0x1]+'-'+eX[0x1]+b('0x1f6');}}else{if(eY<0x1c20&eY>0x0&aF!=b('0x151')){c5(eO[eR]);}else{document[b('0x103')](eU+b('0xfb'))[b('0x126')]=b('0x1f9')+eW[0x0]+b('0x1f5')+eW[0x1]+b('0x1fa')+eX[0x0]+b('0x1f5')+eX[0x1]+b('0x1fd');}}}if(aO==b('0xf4')){d4(aw);}else{d9(aw);}bt(b('0x1fe'),b('0xfd'));bE(b('0x106'));}function eZ(f0){aR=f0;aR=JSON[b('0x1ac')](aR);var f1=aR[b('0x159')][b('0x111')](b('0x22a'));var f2=aR[b('0x159')][b('0x111')](b('0x22b'));var f3=bf-aR[b('0x22c')];if(f3<0x127500&ay<aR[b('0x22c')]&aN==0x1&f1>-0x1){modal_open(b('0x22d'));}if(ao!=scriptVersion&aN==0x1&f2>-0x1){modal_open(b('0x22e'));}}function hide_and_show(f4,f5){if(be==b('0xe5')){if(f4!=b('0x22f')){if(aI==0x78601&b6==0x1&f5==0x0&aF==b('0x151')&(aE<al+0xbb8&aE>aB-0xbb8)){document[b('0x103')](f4)[b('0x126')]=aV;}else if(f5==0x0&aF==b('0x151')&(aE<al+0xbb8&aE>aB-0xbb8)){if(aO==b('0xf4')){document[b('0x103')](f4)[b('0x126')]=b('0x230')+streamer+b('0x231');}else{document[b('0x103')](f4)[b('0x126')]=b('0x230')+streamer+b('0x232');}aI=ak[b('0x1bb')]['id'];}else if(aj[f5][b('0x233')]){document[b('0x103')](f4)[b('0x126')]=b('0x234')+aj[f5][b('0x233')]+b('0x235')+f5+b('0x236');}else{document[b('0x103')](f4)[b('0x126')]=b('0x237')+f5+b('0x238');}}else if(aF==b('0x151')&aI==0x78601&streamer==b('0xd3')){document[b('0x103')](f4)[b('0x126')]=aV;}}else{document[b('0x103')](f4)[b('0x126')]=b('0x239');}var f6=document[b('0x103')](f4);if(f6[b('0xec')][b('0x193')]===b('0x208')){f6[b('0xec')][b('0x193')]=b('0x194');document[b('0x103')](f5+b('0x13f'))[b('0x126')]=b5;HttpGetNorm(at);}else{f6[b('0xec')][b('0x193')]=b('0x208');document[b('0x103')](f5+b('0x13f'))[b('0x126')]=b4;}}function modal_open(f7){aN=cn(policyAgreementCookie);if(aN==0x1){aO=cn(themeCookie);}aK[b('0xec')][b('0x193')]=b('0x194');if(typeof f7===typeof 0x3){an[b('0x126')]=b('0x23a')+aq+b('0x23b')+aW[f7]+b('0x23c')+ar+b('0x23d')+aX[f7]+b('0x23e')+as+b('0x23f')+aZ[f7]+b('0x240');if(aO==b('0xf4')){document[b('0x103')](b('0x241'))[b('0xec')][b('0x140')]=b('0x141');}if(aO==b('0x242')){document[b('0x103')](b('0x241'))[b('0xec')][b('0x140')]=b('0x15b');}HttpGetNorm(ap);}if(f7==b('0x243')){var f8,f9;if(aN==0x1){f8=b('0x244');}else{f8=b('0x245')+policyAgreementCookie+b('0x246');}if(aN==0x1){if(aO==b('0x242')|aO==0x0){f9=b('0x247')+themeCookie+b('0x248')+au+b('0x249');}if(aO==b('0xf4')){f9=b('0x247')+themeCookie+b('0x24a')+av+b('0x24b');}}else{f9=b('0x24c');}an[b('0x126')]=b('0x24d')+f9+b('0x24e')+f8+b('0x24f');}if(f7==b('0x250')){var fa;fa=b('0x251');if(streamer==b('0xd3')){fa+=b('0x252')+policyAgreementCookie+b('0x253')+themeCookie+b('0x254')+newFeatureCookie+b('0x255')+theVRmmNewInfoCookie+b('0x256');}else if(streamer==b('0x189')){fa+=b('0x252')+policyAgreementCookie+b('0x253')+themeCookie+b('0x254')+newFeatureCookie+b('0x257');}else{fa+=b('0x252')+policyAgreementCookie+b('0x253')+themeCookie+b('0x254')+newFeatureCookie+b('0x258')+streamer+b('0x259');}an[b('0x126')]=fa;}if(f7==b('0x22d')){an[b('0x126')]=b('0x25a')+aR[b('0x159')];createcookie(newFeatureCookie,aR[b('0x22c')],0x16d);}if(f7==b('0x22e')){var fb=b('0x25b')+scriptVersion+b('0x25c')+aR[b('0x159')];an[b('0x126')]=b('0x25d')+fb;createcookie(streamer+b('0x17c'),scriptVersion,0x16d);}}function createcookie(fc,fd,fe,ff){var fg;if(fe){var fh=new Date();fh[b('0x11c')](fh[b('0xe6')]()+fe*0x18*0x3c*0x3c*0x3e8);fg=b('0x25e')+fh[b('0x25f')]();}else{fg='';}document[b('0x133')]=fc+'='+fd+fg;if(ff==b('0x260')){document[b('0x103')](b('0x192'))[b('0xec')][b('0x193')]=b('0x208');}else if(fc==policyAgreementCookie|fc==themeCookie){modal_open(b('0x243'));}if(fc==themeCookie){if(fd==b('0x242')){if(be==b('0xe5')){d9(aD);}else{d9(aw);}}if(fd==b('0xf4')){if(be==b('0xe5')){d4(aD);}else{d4(aw);}}modal_open(b('0x243'));}}function deleteAllCookies(fi){var fj=document[b('0x133')][b('0x134')](';');for(var fk=0x0;fk<fj[b('0xeb')];fk++){var fl=fj[fk];var fm=fl[b('0x136')]('=');var fn=fm>-0x1?fl[b('0x180')](0x0,fm):fl;document[b('0x133')]=fn+b('0x261');document[b('0x133')]=fn+b('0x262');}createcookie(policyAgreementCookie,-0x1,0x14,b('0x260'));if(fi==b('0x260')){document[b('0x103')](b('0x192'))[b('0xec')][b('0x193')]=b('0x208');createcookie(policyAgreementCookie,-0x1,0x14,b('0x260'));}else{modal_open(b('0x243'));}}function fo(fp){var fq=new Date(fp*0x3e8);var fr=fq[b('0x11f')]()+0x1;var fs='0'+fr;var ft='0'+fq[b('0x11e')]();var fu=fq[b('0x13b')]();var fv='0'+fq[b('0x13c')]();var fw='0'+fq[b('0x263')]();var fx=fq[b('0x120')]()+'.'+fs[b('0x180')](-0x2)+'.'+ft[b('0x180')](-0x2)+b('0x13d')+fu+':'+fv[b('0x180')](-0x2);return fx;}function spanonclick(){aK[b('0xec')][b('0x193')]=b('0x208');}window[b('0x18d')]=function(fy){if(fy[b('0x264')]==aK){aK[b('0xec')][b('0x193')]=b('0x208');}};var fz=fz||function(fA){'use strict';if(typeof fA===b('0x2')||typeof navigator!==b('0x2')&&/MSIE [1-9]\./[b('0x265')](navigator[b('0x8d')])){return;}var fB=fA[b('0x116')],fC=function(){return fA[b('0x266')]||fA[b('0x267')]||fA;},fD=fB[b('0x268')](b('0x269'),'a'),fE=b('0x139')in fD,fF=function(fA){var fB=new MouseEvent(b('0x26a'));fA[b('0x26b')](fB);},fG=/constructor/i[b('0x265')](fA[b('0x26c')])||fA[b('0x26d')],fH=/CriOS\/[\d]+/[b('0x265')](navigator[b('0x8d')]),fI=function(fB){(fA[b('0x26e')]||fA[b('0x26f')])(function(){throw fB;},0x0);},fJ=b('0x270'),fK=0x3e8*0x28,fL=function(fA){var fB=function(){if(typeof fA===b('0x4')){fC()[b('0x271')](fA);}else{fA[b('0x272')]();}};setTimeout(fB,fK);},fM=function(fA,fB,fC){fB=[][b('0x273')](fB);var fD=fB[b('0xeb')];while(fD--){var fE=fA['on'+fB[fD]];if(typeof fE===b('0x1')){try{fE[b('0x8f')](fA,fC||fA);}catch(g1){fI(g1);}}}},fN=function(fA){if(/^\s*(?:text\/\S*|application\/xml|\S*\/\S*\+xml)\s*;.*charset\s*=\s*utf-8/i[b('0x265')](fA[b('0x8')])){return new Blob([String[b('0x274')](0xfeff),fA],{'type':fA[b('0x8')]});}return fA;},fO=function(fB,fI,fK){if(!fK){fB=fN(fB);}var fO=this,fP=fB[b('0x8')],fQ=fP===fJ,g9,ga=function(){fM(fO,b('0x275')[b('0x134')]('\x20'));},gb=function(){if((fH||fQ&&fG)&&fA[b('0x276')]){var fD=new FileReader();fD[b('0x277')]=function(){var fB=fH?fD[b('0x278')]:fD[b('0x278')][b('0x195')](/^data:[^;]*;/,b('0x279'));var fC=fA[b('0xc4')](fB,b('0x27a'));if(!fC)fA[b('0x12f')][b('0x16c')]=fB;fB=undefined;fO[b('0xcb')]=fO[b('0x27b')];ga();};fD[b('0x27c')](fB);fO[b('0xcb')]=fO[b('0x27d')];return;}if(!g9){g9=fC()[b('0x27e')](fB);}if(fQ){fA[b('0x12f')][b('0x16c')]=g9;}else{var fE=fA[b('0xc4')](g9,b('0x27a'));if(!fE){fA[b('0x12f')][b('0x16c')]=g9;}}fO[b('0xcb')]=fO[b('0x27b')];ga();fL(g9);};fO[b('0xcb')]=fO[b('0x27d')];if(fE){g9=fC()[b('0x27e')](fB);setTimeout(function(){fD[b('0x16c')]=g9;fD[b('0x139')]=fI;fF(fD);ga();fL(g9);fO[b('0xcb')]=fO[b('0x27b')];});return;}gb();},fP=fO[b('0x27f')],fQ=function(fA,fB,fC){return new fO(fA,fB||fA[b('0x7')]||b('0x139'),fC);};if(typeof navigator!==b('0x2')&&navigator[b('0x280')]){return function(fA,fB,fC){fB=fB||fA[b('0x7')]||b('0x139');if(!fC){fA=fN(fA);}return navigator[b('0x280')](fA,fB);};}fP[b('0x281')]=function(){};fP[b('0xcb')]=fP[b('0x27d')]=0x0;fP[b('0x282')]=0x1;fP[b('0x27b')]=0x2;fP[b('0x283')]=fP[b('0x284')]=fP[b('0x285')]=fP[b('0x286')]=fP[b('0x287')]=fP[b('0x288')]=fP[b('0x289')]=null;return fQ;}(typeof self!==b('0x2')&&self||typeof window!==b('0x2')&&window||this[b('0x159')]);if(typeof module!==b('0x2')&&module[b('0xa7')]){module[b('0xa7')][b('0x28a')]=fz;}else if(typeof define!==b('0x2')&&define!==null&&define[b('0xa9')]!==null){define(b('0x28b'),function(){return fz;});}var gm=function(gn,go){'use strict';{if(!(navigator[b('0x8d')][b('0x136')](b('0x28c'))>-0x1&&-0x1==navigator[b('0x8d')][b('0x136')](b('0x28d')))){void 0x0===gn&&(gn=b('0x28e')),void 0x0===go&&(go=b('0x28f'));var gp=-0x1!==navigator[b('0x290')][b('0x136')](b('0x291'))?'\x0d\x0a':'\x0a',gq=[],gr=[b('0x292'),b('0x293')+go,b('0x294')][b('0x295')](gp),gs=gp+b('0x296'),gt=['SU','MO','TU','WE','TH','FR','SA'];return{'events':function(){return gq;},'calendar':function(){return gr+gp+gq[b('0x295')](gp)+gs;},'addEvent':function(go,gr,gs,gx,gy,gz){if(void 0x0===go||void 0x0===gr||void 0x0===gs||void 0x0===gx||void 0x0===gy)return!0x1;if(gz&&!gz[b('0x297')]){if(b('0x298')!==gz[b('0x299')]&&b('0x29a')!==gz[b('0x299')]&&b('0x29b')!==gz[b('0x299')]&&b('0x29c')!==gz[b('0x299')])throw b('0x29d');if(gz[b('0x29e')]&&isNaN(Date[b('0x1ac')](gz[b('0x29e')])))throw b('0x29f');if(gz[b('0x2a0')]&&isNaN(parseInt(gz[b('0x2a0')])))throw b('0x2a1');if(gz[b('0x2a2')]&&isNaN(parseInt(gz[b('0x2a2')])))throw b('0x2a3');if(void 0x0!==gz[b('0x2a4')]){if(b('0x2a5')!==Object[b('0x27f')][b('0x17f')][b('0x8f')](gz[b('0x2a4')]))throw b('0x2a6');if(gz[b('0x2a4')][b('0xeb')]>0x7)throw b('0x2a7');gz[b('0x2a4')]=gz[b('0x2a4')][b('0x140')](function(gn,go){return gz[b('0x2a4')][b('0x136')](gn)==go;});for(var gC in gz[b('0x2a4')])if(gt[b('0x136')](gz[b('0x2a4')][gC])<0x0)throw b('0x2a8');}}var gD=new Date(gx),gE=new Date(gy),gF=new Date(),gG=(b('0x2a9')+gD[b('0x120')]()[b('0x17f')]())[b('0x2aa')](-0x4),gH=('00'+(gD[b('0x11f')]()+0x1)[b('0x17f')]())[b('0x2aa')](-0x2),gI=('00'+gD[b('0x11e')]()[b('0x17f')]())[b('0x2aa')](-0x2),gJ=('00'+gD[b('0x13b')]()[b('0x17f')]())[b('0x2aa')](-0x2),gK=('00'+gD[b('0x13c')]()[b('0x17f')]())[b('0x2aa')](-0x2),gL=('00'+gD[b('0x263')]()[b('0x17f')]())[b('0x2aa')](-0x2),gM=(b('0x2a9')+gE[b('0x120')]()[b('0x17f')]())[b('0x2aa')](-0x4),gN=('00'+(gE[b('0x11f')]()+0x1)[b('0x17f')]())[b('0x2aa')](-0x2),gO=('00'+gE[b('0x11e')]()[b('0x17f')]())[b('0x2aa')](-0x2),gP=('00'+gE[b('0x13b')]()[b('0x17f')]())[b('0x2aa')](-0x2),gQ=('00'+gE[b('0x13c')]()[b('0x17f')]())[b('0x2aa')](-0x2),gR=('00'+gE[b('0x13c')]()[b('0x17f')]())[b('0x2aa')](-0x2),gS=(b('0x2a9')+gF[b('0x120')]()[b('0x17f')]())[b('0x2aa')](-0x4),gT=('00'+(gF[b('0x11f')]()+0x1)[b('0x17f')]())[b('0x2aa')](-0x2),gU=('00'+gF[b('0x11e')]()[b('0x17f')]())[b('0x2aa')](-0x2),gV=('00'+gF[b('0x13b')]()[b('0x17f')]())[b('0x2aa')](-0x2),gW=('00'+gF[b('0x13c')]()[b('0x17f')]())[b('0x2aa')](-0x2),gX=('00'+gF[b('0x13c')]()[b('0x17f')]())[b('0x2aa')](-0x2),gY='',gZ='';gJ+gK+gL+gP+gQ+gR!=0x0&&(gY='T'+gJ+gK+gL,gZ='T'+gP+gQ+gR);var h0,h1=gG+gH+gI+gY,h2=gM+gN+gO+gZ,h3=gS+gT+gU+('T'+gV+gW+gX);if(gz)if(gz[b('0x297')])h0=gz[b('0x297')];else{if(h0=b('0x2ab')+gz[b('0x299')],gz[b('0x29e')]){var h4=new Date(Date[b('0x1ac')](gz[b('0x29e')]))[b('0x2ac')]();h0+=b('0x2ad')+h4[b('0x131')](0x0,h4[b('0xeb')]-0xd)[b('0x195')](/[-]/g,'')+b('0x2ae');}gz[b('0x2a0')]&&(h0+=b('0x2af')+gz[b('0x2a0')]),gz[b('0x2a2')]&&(h0+=b('0x2b0')+gz[b('0x2a2')]),gz[b('0x2a4')]&&gz[b('0x2a4')][b('0xeb')]>0x0&&(h0+=b('0x2b1')+gz[b('0x2a4')][b('0x295')](','));}new Date()[b('0x2ac')]();var h5=[b('0x2b2'),b('0x2b3')+gq[b('0xeb')]+'@'+gn,b('0x2b4'),b('0x2b5')+gr,b('0x2b6')+h3,b('0x2b7')+h1,b('0x2b8')+h2,b('0x2b9')+gs,b('0x2ba')+go,b('0x2bb'),b('0x2bc')];return h0&&h5[b('0x2bd')](0x4,0x0,h0),h5=h5[b('0x295')](gp),gq[b('0x2be')](h5),h5;},'download':function(gn,go){if(gq[b('0xeb')]<0x1)return!0x1;go=void 0x0!==go?go:b('0x2bf'),gn=void 0x0!==gn?gn:b('0x2c0');var gt,h9=gr+gp+gq[b('0x295')](gp)+gs;if(-0x1===navigator[b('0x8d')][b('0x136')](b('0x28d')))gt=new Blob([h9]);else{var ha=new BlobBuilder();ha[b('0x2c1')](h9),gt=ha[b('0x2c2')](b('0x2c3')+document[b('0x2c4')]);}return fz(gt,gn+go),h9;},'build':function(){return!(gq[b('0xeb')]<0x1)&&gr+gp+gq[b('0x295')](gp)+gs;}};}console[b('0x182')](b('0x2c5'));}};
+//ua-parser from https://github.com/faisalman/ua-parser-js
+(function (window, undefined) { "use strict"; var LIBVERSION = "0.7.19", EMPTY = "", UNKNOWN = "?", FUNC_TYPE = "function", UNDEF_TYPE = "undefined", OBJ_TYPE = "object", STR_TYPE = "string", MAJOR = "major", MODEL = "model", NAME = "name", TYPE = "type", VENDOR = "vendor", VERSION = "version", ARCHITECTURE = "architecture", CONSOLE = "console", MOBILE = "mobile", TABLET = "tablet", SMARTTV = "smarttv", WEARABLE = "wearable", EMBEDDED = "embedded"; var util = { extend: function (regexes, extensions) { var margedRegexes = {}; for (var i in regexes) { if (extensions[i] && extensions[i].length % 2 === 0) { margedRegexes[i] = extensions[i].concat(regexes[i]) } else { margedRegexes[i] = regexes[i] } } return margedRegexes }, has: function (str1, str2) { if (typeof str1 === "string") { return str2.toLowerCase().indexOf(str1.toLowerCase()) !== -1 } else { return false } }, lowerize: function (str) { return str.toLowerCase() }, major: function (version) { return typeof version === STR_TYPE ? version.replace(/[^\d\.]/g, "").split(".")[0] : undefined }, trim: function (str) { return str.replace(/^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g, "") } }; var mapper = { rgx: function (ua, arrays) { var i = 0, j, k, p, q, matches, match; while (i < arrays.length && !matches) { var regex = arrays[i], props = arrays[i + 1]; j = k = 0; while (j < regex.length && !matches) { matches = regex[j++].exec(ua); if (!!matches) { for (p = 0; p < props.length; p++) { match = matches[++k]; q = props[p]; if (typeof q === OBJ_TYPE && q.length > 0) { if (q.length == 2) { if (typeof q[1] == FUNC_TYPE) { this[q[0]] = q[1].call(this, match) } else { this[q[0]] = q[1] } } else if (q.length == 3) { if (typeof q[1] === FUNC_TYPE && !(q[1].exec && q[1].test)) { this[q[0]] = match ? q[1].call(this, match, q[2]) : undefined } else { this[q[0]] = match ? match.replace(q[1], q[2]) : undefined } } else if (q.length == 4) { this[q[0]] = match ? q[3].call(this, match.replace(q[1], q[2])) : undefined } } else { this[q] = match ? match : undefined } } } } i += 2 } }, str: function (str, map) { for (var i in map) { if (typeof map[i] === OBJ_TYPE && map[i].length > 0) { for (var j = 0; j < map[i].length; j++) { if (util.has(map[i][j], str)) { return i === UNKNOWN ? undefined : i } } } else if (util.has(map[i], str)) { return i === UNKNOWN ? undefined : i } } return str } }; var maps = { browser: { oldsafari: { version: { "1.0": "/8", 1.2: "/1", 1.3: "/3", "2.0": "/412", "2.0.2": "/416", "2.0.3": "/417", "2.0.4": "/419", "?": "/" } } }, device: { amazon: { model: { "Fire Phone": ["SD", "KF"] } }, sprint: { model: { "Evo Shift 4G": "7373KT" }, vendor: { HTC: "APA", Sprint: "Sprint" } } }, os: { windows: { version: { ME: "4.90", "NT 3.11": "NT3.51", "NT 4.0": "NT4.0", 2000: "NT 5.0", XP: ["NT 5.1", "NT 5.2"], Vista: "NT 6.0", 7: "NT 6.1", 8: "NT 6.2", 8.1: "NT 6.3", 10: ["NT 6.4", "NT 10.0"], RT: "ARM" } } } }; var regexes = { browser: [[/(opera\smini)\/([\w\.-]+)/i, /(opera\s[mobiletab]+).+version\/([\w\.-]+)/i, /(opera).+version\/([\w\.]+)/i, /(opera)[\/\s]+([\w\.]+)/i], [NAME, VERSION], [/(opios)[\/\s]+([\w\.]+)/i], [[NAME, "Opera Mini"], VERSION], [/\s(opr)\/([\w\.]+)/i], [[NAME, "Opera"], VERSION], [/(kindle)\/([\w\.]+)/i, /(lunascape|maxthon|netfront|jasmine|blazer)[\/\s]?([\w\.]*)/i, /(avant\s|iemobile|slim|baidu)(?:browser)?[\/\s]?([\w\.]*)/i, /(?:ms|\()(ie)\s([\w\.]+)/i, /(rekonq)\/([\w\.]*)/i, /(chromium|flock|rockmelt|midori|epiphany|silk|skyfire|ovibrowser|bolt|iron|vivaldi|iridium|phantomjs|bowser|quark)\/([\w\.-]+)/i], [NAME, VERSION], [/(trident).+rv[:\s]([\w\.]+).+like\sgecko/i], [[NAME, "IE"], VERSION], [/(edge|edgios|edga)\/((\d+)?[\w\.]+)/i], [[NAME, "Edge"], VERSION], [/(yabrowser)\/([\w\.]+)/i], [[NAME, "Yandex"], VERSION], [/(puffin)\/([\w\.]+)/i], [[NAME, "Puffin"], VERSION], [/(focus)\/([\w\.]+)/i], [[NAME, "Firefox Focus"], VERSION], [/(opt)\/([\w\.]+)/i], [[NAME, "Opera Touch"], VERSION], [/((?:[\s\/])uc?\s?browser|(?:juc.+)ucweb)[\/\s]?([\w\.]+)/i], [[NAME, "UCBrowser"], VERSION], [/(comodo_dragon)\/([\w\.]+)/i], [[NAME, /_/g, " "], VERSION], [/(micromessenger)\/([\w\.]+)/i], [[NAME, "WeChat"], VERSION], [/(brave)\/([\w\.]+)/i], [[NAME, "Brave"], VERSION], [/(qqbrowserlite)\/([\w\.]+)/i], [NAME, VERSION], [/(QQ)\/([\d\.]+)/i], [NAME, VERSION], [/m?(qqbrowser)[\/\s]?([\w\.]+)/i], [NAME, VERSION], [/(BIDUBrowser)[\/\s]?([\w\.]+)/i], [NAME, VERSION], [/(2345Explorer)[\/\s]?([\w\.]+)/i], [NAME, VERSION], [/(MetaSr)[\/\s]?([\w\.]+)/i], [NAME], [/(LBBROWSER)/i], [NAME], [/xiaomi\/miuibrowser\/([\w\.]+)/i], [VERSION, [NAME, "MIUI Browser"]], [/;fbav\/([\w\.]+);/i], [VERSION, [NAME, "Facebook"]], [/safari\s(line)\/([\w\.]+)/i, /android.+(line)\/([\w\.]+)\/iab/i], [NAME, VERSION], [/headlesschrome(?:\/([\w\.]+)|\s)/i], [VERSION, [NAME, "Chrome Headless"]], [/\swv\).+(chrome)\/([\w\.]+)/i], [[NAME, /(.+)/, "$1 WebView"], VERSION], [/((?:oculus|samsung)browser)\/([\w\.]+)/i], [[NAME, /(.+(?:g|us))(.+)/, "$1 $2"], VERSION], [/android.+version\/([\w\.]+)\s+(?:mobile\s?safari|safari)*/i], [VERSION, [NAME, "Android Browser"]], [/(chrome|omniweb|arora|[tizenoka]{5}\s?browser)\/v?([\w\.]+)/i], [NAME, VERSION], [/(dolfin)\/([\w\.]+)/i], [[NAME, "Dolphin"], VERSION], [/((?:android.+)crmo|crios)\/([\w\.]+)/i], [[NAME, "Chrome"], VERSION], [/(coast)\/([\w\.]+)/i], [[NAME, "Opera Coast"], VERSION], [/fxios\/([\w\.-]+)/i], [VERSION, [NAME, "Firefox"]], [/version\/([\w\.]+).+?mobile\/\w+\s(safari)/i], [VERSION, [NAME, "Mobile Safari"]], [/version\/([\w\.]+).+?(mobile\s?safari|safari)/i], [VERSION, NAME], [/webkit.+?(gsa)\/([\w\.]+).+?(mobile\s?safari|safari)(\/[\w\.]+)/i], [[NAME, "GSA"], VERSION], [/webkit.+?(mobile\s?safari|safari)(\/[\w\.]+)/i], [NAME, [VERSION, mapper.str, maps.browser.oldsafari.version]], [/(konqueror)\/([\w\.]+)/i, /(webkit|khtml)\/([\w\.]+)/i], [NAME, VERSION], [/(navigator|netscape)\/([\w\.-]+)/i], [[NAME, "Netscape"], VERSION], [/(swiftfox)/i, /(icedragon|iceweasel|camino|chimera|fennec|maemo\sbrowser|minimo|conkeror)[\/\s]?([\w\.\+]+)/i, /(firefox|seamonkey|k-meleon|icecat|iceape|firebird|phoenix|palemoon|basilisk|waterfox)\/([\w\.-]+)$/i, /(mozilla)\/([\w\.]+).+rv\:.+gecko\/\d+/i, /(polaris|lynx|dillo|icab|doris|amaya|w3m|netsurf|sleipnir)[\/\s]?([\w\.]+)/i, /(links)\s\(([\w\.]+)/i, /(gobrowser)\/?([\w\.]*)/i, /(ice\s?browser)\/v?([\w\._]+)/i, /(mosaic)[\/\s]([\w\.]+)/i], [NAME, VERSION]], cpu: [[/(?:(amd|x(?:(?:86|64)[_-])?|wow|win)64)[;\)]/i], [[ARCHITECTURE, "amd64"]], [/(ia32(?=;))/i], [[ARCHITECTURE, util.lowerize]], [/((?:i[346]|x)86)[;\)]/i], [[ARCHITECTURE, "ia32"]], [/windows\s(ce|mobile);\sppc;/i], [[ARCHITECTURE, "arm"]], [/((?:ppc|powerpc)(?:64)?)(?:\smac|;|\))/i], [[ARCHITECTURE, /ower/, "", util.lowerize]], [/(sun4\w)[;\)]/i], [[ARCHITECTURE, "sparc"]], [/((?:avr32|ia64(?=;))|68k(?=\))|arm(?:64|(?=v\d+[;l]))|(?=atmel\s)avr|(?:irix|mips|sparc)(?:64)?(?=;)|pa-risc)/i], [[ARCHITECTURE, util.lowerize]]], device: [[/\((ipad|playbook);[\w\s\);-]+(rim|apple)/i], [MODEL, VENDOR, [TYPE, TABLET]], [/applecoremedia\/[\w\.]+ \((ipad)/], [MODEL, [VENDOR, "Apple"], [TYPE, TABLET]], [/(apple\s{0,1}tv)/i], [[MODEL, "Apple TV"], [VENDOR, "Apple"]], [/(archos)\s(gamepad2?)/i, /(hp).+(touchpad)/i, /(hp).+(tablet)/i, /(kindle)\/([\w\.]+)/i, /\s(nook)[\w\s]+build\/(\w+)/i, /(dell)\s(strea[kpr\s\d]*[\dko])/i], [VENDOR, MODEL, [TYPE, TABLET]], [/(kf[A-z]+)\sbuild\/.+silk\//i], [MODEL, [VENDOR, "Amazon"], [TYPE, TABLET]], [/(sd|kf)[0349hijorstuw]+\sbuild\/.+silk\//i], [[MODEL, mapper.str, maps.device.amazon.model], [VENDOR, "Amazon"], [TYPE, MOBILE]], [/android.+aft([bms])\sbuild/i], [MODEL, [VENDOR, "Amazon"], [TYPE, SMARTTV]], [/\((ip[honed|\s\w*]+);.+(apple)/i], [MODEL, VENDOR, [TYPE, MOBILE]], [/\((ip[honed|\s\w*]+);/i], [MODEL, [VENDOR, "Apple"], [TYPE, MOBILE]], [/(blackberry)[\s-]?(\w+)/i, /(blackberry|benq|palm(?=\-)|sonyericsson|acer|asus|dell|meizu|motorola|polytron)[\s_-]?([\w-]*)/i, /(hp)\s([\w\s]+\w)/i, /(asus)-?(\w+)/i], [VENDOR, MODEL, [TYPE, MOBILE]], [/\(bb10;\s(\w+)/i], [MODEL, [VENDOR, "BlackBerry"], [TYPE, MOBILE]], [/android.+(transfo[prime\s]{4,10}\s\w+|eeepc|slider\s\w+|nexus 7|padfone)/i], [MODEL, [VENDOR, "Asus"], [TYPE, TABLET]], [/(sony)\s(tablet\s[ps])\sbuild\//i, /(sony)?(?:sgp.+)\sbuild\//i], [[VENDOR, "Sony"], [MODEL, "Xperia Tablet"], [TYPE, TABLET]], [/android.+\s([c-g]\d{4}|so[-l]\w+)\sbuild\//i], [MODEL, [VENDOR, "Sony"], [TYPE, MOBILE]], [/\s(ouya)\s/i, /(nintendo)\s([wids3u]+)/i], [VENDOR, MODEL, [TYPE, CONSOLE]], [/android.+;\s(shield)\sbuild/i], [MODEL, [VENDOR, "Nvidia"], [TYPE, CONSOLE]], [/(playstation\s[34portablevi]+)/i], [MODEL, [VENDOR, "Sony"], [TYPE, CONSOLE]], [/(sprint\s(\w+))/i], [[VENDOR, mapper.str, maps.device.sprint.vendor], [MODEL, mapper.str, maps.device.sprint.model], [TYPE, MOBILE]], [/(lenovo)\s?(S(?:5000|6000)+(?:[-][\w+]))/i], [VENDOR, MODEL, [TYPE, TABLET]], [/(htc)[;_\s-]+([\w\s]+(?=\))|\w+)*/i, /(zte)-(\w*)/i, /(alcatel|geeksphone|lenovo|nexian|panasonic|(?=;\s)sony)[_\s-]?([\w-]*)/i], [VENDOR, [MODEL, /_/g, " "], [TYPE, MOBILE]], [/(nexus\s9)/i], [MODEL, [VENDOR, "HTC"], [TYPE, TABLET]], [/d\/huawei([\w\s-]+)[;\)]/i, /(nexus\s6p)/i], [MODEL, [VENDOR, "Huawei"], [TYPE, MOBILE]], [/(microsoft);\s(lumia[\s\w]+)/i], [VENDOR, MODEL, [TYPE, MOBILE]], [/[\s\(;](xbox(?:\sone)?)[\s\);]/i], [MODEL, [VENDOR, "Microsoft"], [TYPE, CONSOLE]], [/(kin\.[onetw]{3})/i], [[MODEL, /\./g, " "], [VENDOR, "Microsoft"], [TYPE, MOBILE]], [/\s(milestone|droid(?:[2-4x]|\s(?:bionic|x2|pro|razr))?:?(\s4g)?)[\w\s]+build\//i, /mot[\s-]?(\w*)/i, /(XT\d{3,4}) build\//i, /(nexus\s6)/i], [MODEL, [VENDOR, "Motorola"], [TYPE, MOBILE]], [/android.+\s(mz60\d|xoom[\s2]{0,2})\sbuild\//i], [MODEL, [VENDOR, "Motorola"], [TYPE, TABLET]], [/hbbtv\/\d+\.\d+\.\d+\s+\([\w\s]*;\s*(\w[^;]*);([^;]*)/i], [[VENDOR, util.trim], [MODEL, util.trim], [TYPE, SMARTTV]], [/hbbtv.+maple;(\d+)/i], [[MODEL, /^/, "SmartTV"], [VENDOR, "Samsung"], [TYPE, SMARTTV]], [/\(dtv[\);].+(aquos)/i], [MODEL, [VENDOR, "Sharp"], [TYPE, SMARTTV]], [/android.+((sch-i[89]0\d|shw-m380s|gt-p\d{4}|gt-n\d+|sgh-t8[56]9|nexus 10))/i, /((SM-T\w+))/i], [[VENDOR, "Samsung"], MODEL, [TYPE, TABLET]], [/smart-tv.+(samsung)/i], [VENDOR, [TYPE, SMARTTV], MODEL], [/((s[cgp]h-\w+|gt-\w+|galaxy\snexus|sm-\w[\w\d]+))/i, /(sam[sung]*)[\s-]*(\w+-?[\w-]*)/i, /sec-((sgh\w+))/i], [[VENDOR, "Samsung"], MODEL, [TYPE, MOBILE]], [/sie-(\w*)/i], [MODEL, [VENDOR, "Siemens"], [TYPE, MOBILE]], [/(maemo|nokia).*(n900|lumia\s\d+)/i, /(nokia)[\s_-]?([\w-]*)/i], [[VENDOR, "Nokia"], MODEL, [TYPE, MOBILE]], [/android\s3\.[\s\w;-]{10}(a\d{3})/i], [MODEL, [VENDOR, "Acer"], [TYPE, TABLET]], [/android.+([vl]k\-?\d{3})\s+build/i], [MODEL, [VENDOR, "LG"], [TYPE, TABLET]], [/android\s3\.[\s\w;-]{10}(lg?)-([06cv9]{3,4})/i], [[VENDOR, "LG"], MODEL, [TYPE, TABLET]], [/(lg) netcast\.tv/i], [VENDOR, MODEL, [TYPE, SMARTTV]], [/(nexus\s[45])/i, /lg[e;\s\/-]+(\w*)/i, /android.+lg(\-?[\d\w]+)\s+build/i], [MODEL, [VENDOR, "LG"], [TYPE, MOBILE]], [/android.+(ideatab[a-z0-9\-\s]+)/i], [MODEL, [VENDOR, "Lenovo"], [TYPE, TABLET]], [/linux;.+((jolla));/i], [VENDOR, MODEL, [TYPE, MOBILE]], [/((pebble))app\/[\d\.]+\s/i], [VENDOR, MODEL, [TYPE, WEARABLE]], [/android.+;\s(oppo)\s?([\w\s]+)\sbuild/i], [VENDOR, MODEL, [TYPE, MOBILE]], [/crkey/i], [[MODEL, "Chromecast"], [VENDOR, "Google"]], [/android.+;\s(glass)\s\d/i], [MODEL, [VENDOR, "Google"], [TYPE, WEARABLE]], [/android.+;\s(pixel c)[\s)]/i], [MODEL, [VENDOR, "Google"], [TYPE, TABLET]], [/android.+;\s(pixel( [23])?( xl)?)\s/i], [MODEL, [VENDOR, "Google"], [TYPE, MOBILE]], [/android.+;\s(\w+)\s+build\/hm\1/i, /android.+(hm[\s\-_]*note?[\s_]*(?:\d\w)?)\s+build/i, /android.+(mi[\s\-_]*(?:one|one[\s_]plus|note lte)?[\s_]*(?:\d?\w?)[\s_]*(?:plus)?)\s+build/i, /android.+(redmi[\s\-_]*(?:note)?(?:[\s_]*[\w\s]+))\s+build/i], [[MODEL, /_/g, " "], [VENDOR, "Xiaomi"], [TYPE, MOBILE]], [/android.+(mi[\s\-_]*(?:pad)(?:[\s_]*[\w\s]+))\s+build/i], [[MODEL, /_/g, " "], [VENDOR, "Xiaomi"], [TYPE, TABLET]], [/android.+;\s(m[1-5]\snote)\sbuild/i], [MODEL, [VENDOR, "Meizu"], [TYPE, TABLET]], [/(mz)-([\w-]{2,})/i], [[VENDOR, "Meizu"], MODEL, [TYPE, MOBILE]], [/android.+a000(1)\s+build/i, /android.+oneplus\s(a\d{4})\s+build/i], [MODEL, [VENDOR, "OnePlus"], [TYPE, MOBILE]], [/android.+[;\/]\s*(RCT[\d\w]+)\s+build/i], [MODEL, [VENDOR, "RCA"], [TYPE, TABLET]], [/android.+[;\/\s]+(Venue[\d\s]{2,7})\s+build/i], [MODEL, [VENDOR, "Dell"], [TYPE, TABLET]], [/android.+[;\/]\s*(Q[T|M][\d\w]+)\s+build/i], [MODEL, [VENDOR, "Verizon"], [TYPE, TABLET]], [/android.+[;\/]\s+(Barnes[&\s]+Noble\s+|BN[RT])(V?.*)\s+build/i], [[VENDOR, "Barnes & Noble"], MODEL, [TYPE, TABLET]], [/android.+[;\/]\s+(TM\d{3}.*\b)\s+build/i], [MODEL, [VENDOR, "NuVision"], [TYPE, TABLET]], [/android.+;\s(k88)\sbuild/i], [MODEL, [VENDOR, "ZTE"], [TYPE, TABLET]], [/android.+[;\/]\s*(gen\d{3})\s+build.*49h/i], [MODEL, [VENDOR, "Swiss"], [TYPE, MOBILE]], [/android.+[;\/]\s*(zur\d{3})\s+build/i], [MODEL, [VENDOR, "Swiss"], [TYPE, TABLET]], [/android.+[;\/]\s*((Zeki)?TB.*\b)\s+build/i], [MODEL, [VENDOR, "Zeki"], [TYPE, TABLET]], [/(android).+[;\/]\s+([YR]\d{2})\s+build/i, /android.+[;\/]\s+(Dragon[\-\s]+Touch\s+|DT)(\w{5})\sbuild/i], [[VENDOR, "Dragon Touch"], MODEL, [TYPE, TABLET]], [/android.+[;\/]\s*(NS-?\w{0,9})\sbuild/i], [MODEL, [VENDOR, "Insignia"], [TYPE, TABLET]], [/android.+[;\/]\s*((NX|Next)-?\w{0,9})\s+build/i], [MODEL, [VENDOR, "NextBook"], [TYPE, TABLET]], [/android.+[;\/]\s*(Xtreme\_)?(V(1[045]|2[015]|30|40|60|7[05]|90))\s+build/i], [[VENDOR, "Voice"], MODEL, [TYPE, MOBILE]], [/android.+[;\/]\s*(LVTEL\-)?(V1[12])\s+build/i], [[VENDOR, "LvTel"], MODEL, [TYPE, MOBILE]], [/android.+;\s(PH-1)\s/i], [MODEL, [VENDOR, "Essential"], [TYPE, MOBILE]], [/android.+[;\/]\s*(V(100MD|700NA|7011|917G).*\b)\s+build/i], [MODEL, [VENDOR, "Envizen"], [TYPE, TABLET]], [/android.+[;\/]\s*(Le[\s\-]+Pan)[\s\-]+(\w{1,9})\s+build/i], [VENDOR, MODEL, [TYPE, TABLET]], [/android.+[;\/]\s*(Trio[\s\-]*.*)\s+build/i], [MODEL, [VENDOR, "MachSpeed"], [TYPE, TABLET]], [/android.+[;\/]\s*(Trinity)[\-\s]*(T\d{3})\s+build/i], [VENDOR, MODEL, [TYPE, TABLET]], [/android.+[;\/]\s*TU_(1491)\s+build/i], [MODEL, [VENDOR, "Rotor"], [TYPE, TABLET]], [/android.+(KS(.+))\s+build/i], [MODEL, [VENDOR, "Amazon"], [TYPE, TABLET]], [/android.+(Gigaset)[\s\-]+(Q\w{1,9})\s+build/i], [VENDOR, MODEL, [TYPE, TABLET]], [/\s(tablet|tab)[;\/]/i, /\s(mobile)(?:[;\/]|\ssafari)/i], [[TYPE, util.lowerize], VENDOR, MODEL], [/(android[\w\.\s\-]{0,9});.+build/i], [MODEL, [VENDOR, "Generic"]]], engine: [[/windows.+\sedge\/([\w\.]+)/i], [VERSION, [NAME, "EdgeHTML"]], [/(presto)\/([\w\.]+)/i, /(webkit|trident|netfront|netsurf|amaya|lynx|w3m)\/([\w\.]+)/i, /(khtml|tasman|links)[\/\s]\(?([\w\.]+)/i, /(icab)[\/\s]([23]\.[\d\.]+)/i], [NAME, VERSION], [/rv\:([\w\.]{1,9}).+(gecko)/i], [VERSION, NAME]], os: [[/microsoft\s(windows)\s(vista|xp)/i], [NAME, VERSION], [/(windows)\snt\s6\.2;\s(arm)/i, /(windows\sphone(?:\sos)*)[\s\/]?([\d\.\s\w]*)/i, /(windows\smobile|windows)[\s\/]?([ntce\d\.\s]+\w)/i], [NAME, [VERSION, mapper.str, maps.os.windows.version]], [/(win(?=3|9|n)|win\s9x\s)([nt\d\.]+)/i], [[NAME, "Windows"], [VERSION, mapper.str, maps.os.windows.version]], [/\((bb)(10);/i], [[NAME, "BlackBerry"], VERSION], [/(blackberry)\w*\/?([\w\.]*)/i, /(tizen)[\/\s]([\w\.]+)/i, /(android|webos|palm\sos|qnx|bada|rim\stablet\sos|meego|contiki)[\/\s-]?([\w\.]*)/i, /linux;.+(sailfish);/i], [NAME, VERSION], [/(symbian\s?os|symbos|s60(?=;))[\/\s-]?([\w\.]*)/i], [[NAME, "Symbian"], VERSION], [/\((series40);/i], [NAME], [/mozilla.+\(mobile;.+gecko.+firefox/i], [[NAME, "Firefox OS"], VERSION], [/(nintendo|playstation)\s([wids34portablevu]+)/i, /(mint)[\/\s\(]?(\w*)/i, /(mageia|vectorlinux)[;\s]/i, /(joli|[kxln]?ubuntu|debian|suse|opensuse|gentoo|(?=\s)arch|slackware|fedora|mandriva|centos|pclinuxos|redhat|zenwalk|linpus)[\/\s-]?(?!chrom)([\w\.-]*)/i, /(hurd|linux)\s?([\w\.]*)/i, /(gnu)\s?([\w\.]*)/i], [NAME, VERSION], [/(cros)\s[\w]+\s([\w\.]+\w)/i], [[NAME, "Chromium OS"], VERSION], [/(sunos)\s?([\w\.\d]*)/i], [[NAME, "Solaris"], VERSION], [/\s([frentopc-]{0,4}bsd|dragonfly)\s?([\w\.]*)/i], [NAME, VERSION], [/(haiku)\s(\w+)/i], [NAME, VERSION], [/cfnetwork\/.+darwin/i, /ip[honead]{2,4}(?:.*os\s([\w]+)\slike\smac|;\sopera)/i], [[VERSION, /_/g, "."], [NAME, "iOS"]], [/(mac\sos\sx)\s?([\w\s\.]*)/i, /(macintosh|mac(?=_powerpc)\s)/i], [[NAME, "Mac OS"], [VERSION, /_/g, "."]], [/((?:open)?solaris)[\/\s-]?([\w\.]*)/i, /(aix)\s((\d)(?=\.|\)|\s)[\w\.])*/i, /(plan\s9|minix|beos|os\/2|amigaos|morphos|risc\sos|openvms|fuchsia)/i, /(unix)\s?([\w\.]*)/i], [NAME, VERSION]] }; var UAParser = function (uastring, extensions) { if (typeof uastring === "object") { extensions = uastring; uastring = undefined } if (!(this instanceof UAParser)) { return new UAParser(uastring, extensions).getResult() } var ua = uastring || (window && window.navigator && window.navigator.userAgent ? window.navigator.userAgent : EMPTY); var rgxmap = extensions ? util.extend(regexes, extensions) : regexes; this.getBrowser = function () { var browser = { name: undefined, version: undefined }; mapper.rgx.call(browser, ua, rgxmap.browser); browser.major = util.major(browser.version); return browser }; this.getCPU = function () { var cpu = { architecture: undefined }; mapper.rgx.call(cpu, ua, rgxmap.cpu); return cpu }; this.getDevice = function () { var device = { vendor: undefined, model: undefined, type: undefined }; mapper.rgx.call(device, ua, rgxmap.device); return device }; this.getEngine = function () { var engine = { name: undefined, version: undefined }; mapper.rgx.call(engine, ua, rgxmap.engine); return engine }; this.getOS = function () { var os = { name: undefined, version: undefined }; mapper.rgx.call(os, ua, rgxmap.os); return os }; this.getResult = function () { return { ua: this.getUA(), browser: this.getBrowser(), engine: this.getEngine(), os: this.getOS(), device: this.getDevice(), cpu: this.getCPU() } }; this.getUA = function () { return ua }; this.setUA = function (uastring) { ua = uastring; return this }; return this }; UAParser.VERSION = LIBVERSION; UAParser.BROWSER = { NAME: NAME, MAJOR: MAJOR, VERSION: VERSION }; UAParser.CPU = { ARCHITECTURE: ARCHITECTURE }; UAParser.DEVICE = { MODEL: MODEL, VENDOR: VENDOR, TYPE: TYPE, CONSOLE: CONSOLE, MOBILE: MOBILE, SMARTTV: SMARTTV, TABLET: TABLET, WEARABLE: WEARABLE, EMBEDDED: EMBEDDED }; UAParser.ENGINE = { NAME: NAME, VERSION: VERSION }; UAParser.OS = { NAME: NAME, VERSION: VERSION }; if (typeof exports !== UNDEF_TYPE) { if (typeof module !== UNDEF_TYPE && module.exports) { exports = module.exports = UAParser } exports.UAParser = UAParser } else { if (typeof define === FUNC_TYPE && define.amd) { define(function () { return UAParser }) } else if (window) { window.UAParser = UAParser } } var $ = window && (window.jQuery || window.Zepto); if (typeof $ !== UNDEF_TYPE && !$.ua) { var parser = new UAParser; $.ua = parser.getResult(); $.ua.get = function () { return parser.getUA() }; $.ua.set = function (uastring) { parser.setUA(uastring); var result = parser.getResult(); for (var prop in result) { $.ua[prop] = result[prop] } } } })(typeof window === "object" ? window : this);
+
+//Twitch Mobil Menetrend Author: DanX27
+/*Változtatás : streamEndZeroElement, streamStartZeroElement változók deklarálása itt. */
+var fromTime = CurrentTimeTwitchServerFormat(0);
+var liveArray, events, liveData, streamEndZeroElement, needSecondPostRequest, popupContent, oldJs, calendarFunc, googleFunc, scriptVersionFunc, icalFunc, yahooFunc, detailFunc, whiteThemeFunc, blackThemeFunc, offlineLength, curentUserID, theVRmmNewFeature, stramStartFirstElement, streamEndFirstElement, streamStartZeroElement, eventsDescriptions, eventsLength, liveTimestamp, liveStatus, titleLive, coverLive, gameLiveStatus, titleLive, modal, span, btn, cookieSettings, themeStatus, liveDateStart, liveStart, newFunction;
+var streamDays = ["Vasárnap", "Hétfő", "Kedd", "Szerda", "Csütörtök", "Péntek", "Szombat"];
+var streamMonths = ["Január", "Feburár", "Március", "Április", "Május", "Június", "Július", "Augusztus", "Szeptember", "Október", "November", "December"];
+var streamDay = [];
+var PUBGStat = "Töltődik a statisztika!";
+var gCalendarLink = [];
+var icalCalendarLink = [];
+var outlook_calendar_link = [];
+var yahooCalendarLink = [];
+var cookieReadFlag = 0, errorFlag = 0, scriptDoneFlag = 0, readyStyleFlag = 1;
+var svgArrowDown = "<svg width=\"20px\" viewBox=\"0 0 25 15\"><g transform=\"translate(-13.248183,-266.06487)\"><g transform=\"translate(13.096211,-15.902542)\"><a><rect id=\"arrow\" style=\"opacity:1;fill:lightgrey;fill-opacity:1;stroke:none;stroke-width:0.26458332\" width=\"4.2763052\" height=\"18.842487\" x=\"-201.41176\" y=\"200.46681\" transform=\"rotate(-45)\" ry=\"1.984375\" rx=\"1.984375\" /></a><rect id=\"arrow\" transform=\"rotate(45)\" ry=\"1.984375\" y=\"182.56927\" x=\"215.03299\" height=\"18.842487\" width=\"4.2763052\" style=\"opacity:1;fill:lightgrey;fill-opacity:1;stroke:none;stroke-width:0.26458332\" rx=\"1.984375\" /></g></g></svg>";
+var svgArrowUp = "<svg width=\"20px\" viewBox=\"0 0 25 15\"><g transform=\"translate(-13.248183,-266.06487)\"><g transform=\"matrix(1,0,0,-1,13.096211,562.73943)\"><a><rect id=\"arrow\" style=\"opacity:1;fill:lightgrey;fill-opacity:1;stroke:none;stroke-width:0.26458332\" width=\"4.2763052\" height=\"18.842487\" x=\"-201.41176\" y=\"200.46681\" transform=\"rotate(-45)\" ry=\"1.984375\" rx=\"1.984375\" /></a><rect id=\"arrow\" transform=\"rotate(45)\" ry=\"1.984375\" y=\"182.56927\" x=\"215.03299\" height=\"18.842487\" width=\"4.2763052\" style=\"opacity:1;fill:lightgrey;fill-opacity:1;stroke:none;stroke-width:0.26458332\" rx=\"1.984375\" /></g></g></svg>";
+var pubgStatAvailable = 0;
+
+
+
+
+function HttpErrorPost(url, params, callback) {
+    var http = new XMLHttpRequest();
+    http.open('POST', url, true);
+    /*kérésküldés*/
+    //http.setRequestHeader('Client-ID', ApiKey);
+    http.setRequestHeader('Content-type', 'application/json');
+    http.send(params);
+    http.onreadystatechange = function () {
+        if (http.readyState == 4) {
+            if (http.status == 204) {
+            } else {
+            }
+        }
+    }
+}
+//ERROR HIBA KÜLDŐ...CSAK JAVASCIRPT-EL EGYBEKEZELT VERZIÓKHOZ TÖBBIHEZ ha crossorig tag nem működik
+//Alap oldal betöltő Twitch API kulcs.
+var ApiKey = "kimne78kx3ncx6brgo4mv6wki5h1ko";
+var scriptVersion = "2.6.3_bf8";
+
+
+//////////////Ha nincs Streamer Adat akkor az alap az, hogy a TheVR-t tölti be.
+try {
+    if (streamer === null) { }
+    var policyAgreementCookie = streamer + "cookiepolicysagreement";
+    var themeCookie = streamer + "_theme";
+    var newFeatureCookie = streamer + "_new_feature";
+}
+catch (err) {
+    window.streamer = "wearethevr";
+    window.noEventsPic = "https://i.imgur.com/5dZn6sc.png";
+    window.offlinePic = "https://i.imgur.com/5dZn6sc.png";
+    window.offlineText = "Kihúztad az UTP Kábelt!";
+    window.noEventsText = "Jelenleg nincs egy stream sem a menetrendben! Elszívták az UTP-vel együtt! <img src=\"http://static-cdn.jtvnw.net/emoticons/v1/25/1.0\" alt=\"23\"><br>Hamarosan újabb szálítmány!";
+
+    window.policyAgreementCookie = "thevrmmcookiepolicysagreement";
+    window.themeCookie = "thevrmm_theme";
+    window.newFeatureCookie = "thevrmm_new_feature";
+    window.theVRmmNewInfoCookie = "thevrmm_new_info";
+
+}
+
+
+var twitchLink = "https://www.twitch.tv/" + streamer;
+offlineText += "<br><span style=\"cursor: pointer; color: grey; text-decoration: underline;\" onclick=\"OfflineSite()\">OFFLINE MENETREND MEGTEKINTÉSE</span></span>";
+
+
+CreateValidManifest();
+var internetStatus = "online";
+var currenttime = CurrentTime();
+
+function CurrentTime() {
+    var currentMillisecTimestamp = new Date().getTime();
+    return currentMillisecTimestamp / 1000;
+}
+
+////////Az oldal szélességétől függően különböző stílus elemeket ad egyes elemekhez!
+function dependSizeScript() {
+    if (readyStyleFlag == 1) {
+        var w = window.innerWidth;
+        if (w > 800) {
+            var elements = document.getElementsByClassName("daycontainer");
+            var modalContent = document.getElementsByClassName("modal-content");
+
+            for (var i = 0; i < elements.length; i++) {
+                elements[i].style.width = "360px";
+                elements[i].style.boxShadow = "";
+                elements[i].style.webkitBoxShadow = "";
+                elements[i].style.MozBoxShadow = "";
+
+            }
+            for (var i = 0; i < modalContent.length; i++) {
+                modalContent[i].style.width = "500px";
+            }
+        }
+        if (w < 800) {
+            var elements = document.getElementsByClassName("daycontainer");
+            var modalContent = document.getElementsByClassName("modal-content");
+
+            for (var i = 0; i < elements.length; i++) {
+                elements[i].style.width = "100%";
+                if (themeStatus == "light") {
+                    elements[i].style.boxShadow = "#06060615 0px -15px 10px 1px";
+                    elements[i].style.webkitBoxShadow = "#06060615 0px -15px 10px 1px";
+                    elements[i].style.MozBoxShadow = "#06060615 0px -15px 10px 1px";
+                }
+                if (themeStatus != "light") {
+
+                    elements[i].style.boxShadow = "0px -15px 10px 1px #06060680";
+                    elements[i].style.webkitBoxShadow = "0px -15px 10px 1px #06060680";
+                    elements[i].style.MozBoxShadow = "0px -15px 10px 1px #06060680";
+
+                    
+                }
+            }
+            for (var j = 0; j < modalContent.length; j++) {
+                modalContent[j].style.removeProperty('width');
+            }
+        }
+    }
+}
+
+window.onresize = function (event) {
+    dependSizeScript();
+};
+
+
+function divcreator(idname, where, classname) {
+    var iDiv = document.createElement('div');
+    iDiv.id = idname + "_created";
+    iDiv.className = classname;
+
+    if (where == "body") {
+        document.getElementsByTagName('center')[0].appendChild(iDiv);
+        if ((classname == "eventcontainer") | (iDiv.id == "descriptioncontainer")) {
+            document.getElementById(iDiv.id).setAttribute('style', 'margin-top: 8px; width:320px; background-color:#17141f; border:1px solid #2e2b35;');
+
+        }
+        if (iDiv.id == "footer_created") {
+            document.getElementById(iDiv.id).setAttribute('style', 'color: grey;');
+        }
+        if (classname == "eventspacer") {
+            document.getElementById(iDiv.id).style.height = "4px";
+        }
+        if (classname == "daycontainer") {
+            document.getElementById(iDiv.id).setAttribute('style', 'margin: 52px 0px 22px 0px; width: 100%; color: lightgrey;text-shadow: 2px 2px #484848;border-top: #2e2b35 solid 1px;padding-bottom: 2px;background-image:radial-gradient(500% 100% at bottom,#23272A00 0%,#17141f 100%);border-radius: 15px 15px 0px 0px;');
+
+        }
+        if (iDiv.id == "0_day_created") {
+            document.getElementById(iDiv.id).style.margin = "0px 0px 22px 0px";
+
+        }
+        if (classname == "descriptioncontainer") {
+            document.getElementById(iDiv.id).setAttribute('style', 'display: none; width:320px; background-color:#17141f; border:1px solid #2e2b35;');
+
+        }
+        if (iDiv.id == "footer_created") {
+            document.getElementById(iDiv.id).style.margin = "15px 0px 0px 0px";
+        }
+
+    } else {
+        document.getElementById(where + "_created").appendChild(iDiv);
+        if (0 < iDiv.id.search("_time_created")) {
+            document.getElementById(iDiv.id).style.padding = "8px 0px 0px 0px";
+        }
+    }
+}
+
+function brcreator(where, type, count) {
+    if (type == "tag") {
+        var brElementOne = document.createElement('br');
+        document.getElementsByTagName(where)[count].appendChild(brElementOne);
+    }
+    if (type == "id") {
+        var brElementOne = document.createElement('br');
+        document.document.getElementById(where).appendChild(brElementOne);
+    }
+}
+
+function MoveParent(newparent) {
+    var newParent = document.getElementById(newparent);
+    var oldParent;
+    if (streamer == "wearethevr") { //inxex.html
+        try {
+            oldParent = document.getElementById('footer_data');
+        } catch (err) {
+            var oldParent = document.querySelector('body > center > div:nth-child(68)');
+        }
+
+        if (oldParent == null) {
+            var oldParent = document.querySelector('body > center > div:nth-child(68)');
+        }
+
+
+    } else {
+        var oldParent = document.querySelector('body > center > div:nth-child(5)');
+    }
+
+    while (oldParent.childNodes.length > 0) {
+        newParent.appendChild(oldParent.childNodes[0]);
+    }
+}
+
+function DayDivider(streamStartT, currentT, i) {
+    var xx = new Date();
+    xx.setTime(streamStartT * 1000); // javascript timestamps are in milliseconds
+    var yy = new Date();
+    yy.setTime(currentT * 1000);
+
+    var sn = xx.getDay();
+    var cn = yy.getDay();
+    var sd = xx.getDate();
+    var cd = yy.getDate();
+    var sh = xx.getMonth();
+    var ch = yy.getMonth();
+    var sy = xx.getFullYear();
+    var cy = yy.getFullYear();
+
+    //Stream nap kezdőpontját timestamp-be rakjuk.
+    var sdTimestamp = new Date(sy + "." + (sh + 1) + "." + sd);
+    sdTimestamp = sdTimestamp.getTime() / 1000;
+
+    //Mai nap kezdőpontját timestamp-be rakja
+    var cdTimestamp = CurrentDay();
+
+    var StreamWeekStart = sdTimestamp - (sn - 1) * 24 * 3600;
+    var CurrentWeekStart = cdTimestamp - (cn - 1) * 24 * 3600;
+
+    if (sn == 0) { StreamWeekStart = StreamWeekStart - 7 * 24 * 3600; }
+    if (cn == 0) { CurrentWeekStart = CurrentWeekStart - 7 * 24 * 3600; }
+    if ((sd == cd) & (sh == ch)) {
+        streamDay[i] = "Ma";
+    } else {
+        streamDay[i] = streamDays[xx.getDay()];
+
+        var weekDistance = (((StreamWeekStart - CurrentWeekStart) / 86400) / 7);
+
+        if ((sdTimestamp - cdTimestamp) == 86400) { streamDay[i] = "Holnap"; }
+        if (weekDistance == 0) { }
+        if ((weekDistance == 1) & (streamDay[i] != "Holnap")) { streamDay[i] = "Jövőhét " + streamDay[i]; }
+        if ((weekDistance != 0) & (weekDistance != 1)) { streamDay[i] = streamMonths[sh] + " " + sd + "., " + streamDay[i]; }
+    }
+
+    if (i != 0) {
+        if (streamDay[i - 1] == streamDay[i]) { } else {
+            divcreator(i + "_day", "body", "daycontainer");
+            document.getElementById(i + "_day_created").innerHTML = streamDay[i];
+        }// document.getElementById(i + "_day_created").innerHTML = streamDay[i]; }  //display: none-ra tegye az online/offline jelző!
+    } else {
+        divcreator(i + "_day", "body", "daycontainer");
+        document.getElementById(i + "_day_created").innerHTML = streamDay[i];
+    }
+}
+
+function Countdown(countDownTime) {
+    // Set the date we're counting down to
+    var countDownDate = countDownTime * 1000;
+
+    // Update the count down every 1 second
+    var x = setInterval(function () {
+
+        // Get todays date and time
+        var now = new Date().getTime();
+
+        // Find the distance between now an the count down date
+        var distance = countDownDate - now;
+
+        // Time calculations for days, hours, minutes and seconds
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        // Output the result in an element with id="demo"
+        if ((hours == 0) & (minutes == 0)) {
+            document.getElementById("0_time_created").innerHTML = "Hamarosan kezdünk!<br>" + seconds + " másodperc ";
+
+        } else if (hours == 0) {
+            document.getElementById("0_time_created").innerHTML = "Hamarosan kezdünk!<br>" + minutes + " perc " + seconds + " másodperc ";
+        } else {
+            document.getElementById("0_time_created").innerHTML = "Hamarosan kezdünk!<br>" + hours + " óra "
+                + minutes + " perc " + seconds + " másodperc ";
+        }
+
+
+
+        // If the count down is over, write some text 
+        if (distance < 0) {
+            clearInterval(x);
+            document.getElementById("0_time_created").innerHTML = "MOST!";
+            window.top.location.reload();
+        }
+    }, 1000);
+}
+
+function OnlyDate(b) {
+    var twitchServerTime = b.substring(0, 16) + ":00Z";
+    var utcDate = twitchServerTime;
+    var localDate = new Date(utcDate);
+
+    var months = ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12"];
+    var days = ["00", "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31"];
+    var date = localDate.getFullYear() + "." + months[localDate.getMonth()] + "." + days[localDate.getDate()];
+
+    return date;
+}
+
+function getCookie(cname) {
+    var name = cname + "=";
+    var decodedCookie = document.cookie;
+    var ca = decodedCookie.split(';');
+    for (var i = 0; i < ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+        }
+    }
+    return 0;
+}
+
+function icsCreator(dataString) {
+    dataString = dataString.split("&@&");
+    cal_single = ics();
+    cal_single.addEvent(dataString[0], '', '', dataString[1], dataString[2]);
+    cal_single.download(dataString[0]);
+}
+
+function CurrentTimeTwitchServerFormat(offset) {
+    /*Szerveridőbe konvertál*/
+    var nd = new Date();
+    var utc = nd.getTime() + (nd.getTimezoneOffset() * 60000);
+    var d = new Date(utc + (3600000 * offset));
+    var hour = d.getHours();
+    var min = d.getMinutes();
+    var months = ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12"];
+    var days = ["00", "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46", "47", "48", "49", "50", "51", "52", "53", "54", "55", "56", "57", "58", "59"];
+    var serverTime = d.getFullYear() + "-" + months[d.getMonth()] + "-" + days[d.getDate()] + "T" + days[hour] + ":" + days[min] + ":00Z";
+    return serverTime;
+}
+
+function Timestamp(b) {
+    var twitchServerTime = b.substring(0, 16) + ":00Z";
+    var utcDate = twitchServerTime;
+    var localDate = new Date(utcDate);
+    var localDate = localDate.getTime() / 1000;
+    return localDate;
+}
+
+function CurrentDay() {
+    var nd = new Date();
+    var utc = nd.getTime();
+    var now = new Date(utc);
+    var startOfDay = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+    var currentMillisecTimestamp = startOfDay.getTime();
+    return currentMillisecTimestamp / 1000;
+}
+
+function TimeConvert(a) {
+    var twitchServerTime = a.substring(0, 16) + ":00Z";
+    var utcDate = twitchServerTime;
+    var localDate = new Date(utcDate);
+
+    var hour = localDate.getHours();
+    var minutes = localDate.getMinutes();
+    var months = ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12"];
+    var days = ["00", "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46", "47", "48", "49", "50", "51", "52", "53", "54", "55", "56", "57", "58", "59"];
+    var date = localDate.getFullYear() + "." + months[localDate.getMonth()] + "." + days[localDate.getDate()];
+
+    var minutes = days[localDate.getMinutes()];
+    var time = hour + ":" + minutes;
+    var convertedTime = date + "<br>" + time;
+
+    return convertedTime;
+}
+
+function Light(length) {
+    if (readyStyleFlag == 1) {
+        for (var i = 0; i < length; i++) {
+            eventConteiner = document.getElementById(i + "_created");
+            dayContainer = document.getElementById(i + "_day_created");
+            descriptionContainer = document.getElementById(i + "_description_created");
+
+            document.getElementById(i + "_arrow").style.filter = "invert(100%)";
+            try {
+                dayContainer.style.color = "#969696";
+                dayContainer.style.textShadow = "2px 2px #cecece";
+                dayContainer.style.borderTop = "1px solid #e5e3e8";
+                dayContainer.style.backgroundImage = "radial-gradient(500% 100% at bottom,#23272A00 0%,white 100%";
+                dayContainer.style.boxShadow = "#06060615 0px -15px 10px 1px";
+                dayContainer.style.webkitBoxShadow = "#06060615 0px -15px 10px 1px";
+                dayContainer.style.MozBoxShadow = "#06060615 0px -15px 10px 1px";
+
+            }
+            catch (err) {
+
+            }
+
+            eventConteiner.style.boxShadow = "0px 0px 10px 1px #06060640";
+            eventConteiner.style.webkitBoxShadow = "0px 0px 10px 1px #06060640";
+            eventConteiner.style.MozBoxShadow = "0px 0px 10px 1px #06060640";
+            descriptionContainer.style.boxShadow = "0px 5px 10px 1px #06060640";
+            descriptionContainer.style.webkitBoxShadow = "0px 5px 10px 1px #06060640";
+            descriptionContainer.style.MozBoxShadow = "0px 5px 10px 1px #06060640";
+
+            descriptionContainer.style.backgroundColor = "white";
+            descriptionContainer.style.border = "1px solid #dddce0";
+            descriptionContainer.style.color = "black";
+
+
+            if ((i == 0) & (liveStatus == "live") & ((liveTimestamp < streamEndZeroElement + 3000) & (liveTimestamp > streamStartZeroElement - 3000))) {
+
+            } else {
+                eventConteiner.style.backgroundColor = "white";
+                eventConteiner.style.border = "1px solid #dddce0";
+                eventConteiner.style.color = "black";
+            }
+        }
+        
+
+
+        document.body.style.backgroundImage = "linear-gradient(to right, #ffffff66, #23272A00, #ffffff66), url(https://dani0001414.github.io/patternL.png)";
+        document.body.style.backgroundRepeat = "repeat";
+
+        document.body.style.Color = "black";
+        document.body.style.backgroundColor = "#faf9fa";
+        document.getElementsByClassName("modal-content")[0].style.color = "black";
+        document.getElementsByClassName("modal-content")[0].style.backgroundColor = "white";
+        var meta = document.createElement("meta");
+        meta.name = "theme-color";
+        meta.content = "#faf9fa";
+        document.getElementsByTagName('head')[0].appendChild(meta);
+
+        dependSizeScript();
+    }
+}
+
+function Dark(length) {
+
+    if (readyStyleFlag == 1) {
+        var eventConteiner;
+        for (var i = 0; i < length; i++) {
+            eventConteiner = document.getElementById(i + "_created");
+            dayContainer = document.getElementById(i + "_day_created");
+            descriptionContainer = document.getElementById(i + "_description_created");
+
+            document.getElementById(i + "_arrow").style.filter = "invert(0%)";
+            try {
+                dayContainer.style.color = "lightgrey";
+                dayContainer.style.textShadow = "2px 2px #484848";
+                dayContainer.style.borderTop = "1px solid #444444"; 
+                dayContainer.style.backgroundImage = "radial-gradient(500% 100% at bottom,#23272A00 0%,#28272a 100%";
+                dayContainer.style.boxShadow = "0px -15px 10px 1px #06060680";
+                dayContainer.style.webkitBoxShadow = "0px -15px 10px 1px #06060680";
+                dayContainer.style.MozBoxShadow = "0px -15px 10px 1px #06060680";
+
+
+            } catch (err) {
+
+            }
+
+            eventConteiner.style.boxShadow = "0px 0px 10px 1px #060606";
+            eventConteiner.style.webkitBoxShadow = "0px 0px 10px 1px #060606";
+            eventConteiner.style.MozBoxShadow = "0px 0px 10px 1px #060606";
+            descriptionContainer.style.boxShadow = "0px 5px 10px 1px #060606";
+            descriptionContainer.style.webkitBoxShadow = "0px 5px 10px 1px #060606";
+            descriptionContainer.style.MozBoxShadow = "0px 5px 10px 1px #060606";
+
+            descriptionContainer.style.backgroundColor = "#17141f";
+            descriptionContainer.style.border = "1px solid #2e2b35"; /*Változtatás ezt itt*/
+            descriptionContainer.style.color = "#c3c1c8";
+
+
+            if ((i == 0) & (liveStatus == "live") & ((liveTimestamp < streamEndZeroElement + 3000) & (liveTimestamp > streamStartZeroElement - 3000))) {
+
+            } else {
+                eventConteiner.style.backgroundColor = "#17141f";
+                eventConteiner.style.border = "1px solid #2e2b35";
+                eventConteiner.style.color = "#c3c1c8";
+
+            }
+        }
+        document.body.style.Color = "#c3c1c8";
+
+        document.body.style.backgroundImage = "linear-gradient(to right, #0e0c1399, #23272A00, #0e0c1399), url(https://dani0001414.github.io/patternD.png)";
+        document.body.style.backgroundRepeat = "repeat";
+
+        /*Változtatás : A lenti két dolog, hogy ezek is visszaváltozanak témaváltoztatásnál az oldal újratöltése nélkül, illetve vent a border-t: */
+        document.getElementsByClassName("modal-content")[0].style.color = "#c3c1c8";
+        document.getElementsByClassName("modal-content")[0].style.backgroundColor = "#17141f";
+        var meta = document.createElement("meta");
+        meta.name = "theme-color";
+        meta.content = "#0e0c13";
+        document.getElementsByTagName('head')[0].appendChild(meta);
+        dependSizeScript();
+    }
+}
+
+
+function dynamicallyLoadScript(url) {
+    var script = document.createElement("script"); // Make a script DOM node
+    script.src = url; // Set it's src to the provided URl
+    document.head.appendChild(script); // Add it to the end of the head section of the page (could change 'head' to 'body' to add it to the end of the body section instead)
+}
+
+function CreateValidManifest() {
+    if (streamer == "wearethevr") {
+        var manifest = document.getElementsByTagName("link")[0];
+        //var manifest = createElement("link");
+        manifest.rel = "manifest";
+        manifest.href = "data:application/manifest+json;base64, eyJuYW1lIjoiVGhlVlIgTW9iaWxCYXLDoXQgTWVuZXRyZW5kIiwic2hvcnRfbmFtZSI6IlRoZVZSIE1vYmlsIE1lbmV0cmVuZCIsImRpc3BsYXkiOiJzdGFuZGFsb25lIiwib3JpZW50YXRpb24iOiJuYXR1cmFsIiwic3RhcnRfdXJsIjoiaHR0cHM6Ly90aGV2ci5odS9tbS9tbS5odG1sIiwiYmFja2dyb3VuZF9jb2xvciI6IiNmN2Y3ZjciLCJ0aGVtZV9jb2xvciI6IiM2NDQxQTQiLCJpY29ucyI6W3sic3JjIjoiaHR0cHM6Ly9pLmltZ3VyLmNvbS9sRW9Wa2p0LnBuZyIsInNpemVzIjoiMTQ0eDE0NCIsInR5cGUiOiJpbWFnZS9wbmcifV19";
+    }
+}
+
+function dynamicallyLoadScript_content(content) {
+    var script = document.createElement("script"); // Make a script DOM node
+    script.text = content; // Set it's src to the provided URL
+    document.head.appendChild(script); // Add it to the end of the head section of the page (could change 'head' to 'body' to add it to the end of the body section instead)
+}
+
+function HttpPost(url, callback) {
+    var http = new XMLHttpRequest();
+    /*fromTime = "2018-06-10T14:26:00Z";*/
+    var params = "[{\"operationName\":\"ChannelPage_ChannelInfoBar_User_RENAME1\",\"variables\":{\"login\":\"" + streamer + "\"},\"extensions\":{\"persistedQuery\":{\"version\":1,\"sha256Hash\":\"af26d8d34bc0a201c463bd83b00b07d48c6dd7595993aad579cb5a8347386f83\"}}},{\"operationName\":\"VideoMarkersChatCommand\",\"variables\":{\"channelLogin\":\"" + streamer + "\"},\"extensions\":{\"persistedQuery\":{\"version\":1,\"sha256Hash\":\"c65f8b33e3bcccf2b16057e8f445311d213ecf8729f842ccdc71908231fa9a78\"}}}]";
+    http.open('POST', url, true);
+    /*kérésküldés*/
+    http.setRequestHeader('Client-ID', ApiKey);
+    http.setRequestHeader('Content-type', 'application/json');
+    http.send(params);
+    http.onreadystatechange = function () {
+        if (http.readyState == 4) {
+            if (http.status == 200) {
+                callback(http.responseText);
+            } else {
+                document.getElementById("no_stream").innerHTML = "<img src=\"" + offlinePic + "\" alt=\"23\" width=\"320\"><br><h3 style=\"font-family:rockwell; color:grey\">" + offlineText + "</h3>";
+                internetStatus = "offline";
+            }
+        }
+    }
+}
+
+function HttpPost2(url, params, callback) {
+    var http = new XMLHttpRequest();
+    http.open('POST', url, true);
+    /*kérésküldés*/
+    http.setRequestHeader('Client-ID', ApiKey);
+    http.setRequestHeader('Content-type', 'application/json');
+    http.send(params);
+    http.onreadystatechange = function () {
+        if (http.readyState == 4 && http.status == 200) {
+            callback(http.responseText);
+        }
+    }
+
+}
+
+function HttpGet(url, callback) {
+    var http = new XMLHttpRequest();
+    http.open('GET', url, true);
+    /*Kérésküldés*/
+    http.setRequestHeader('Client-ID', ApiKey);
+    http.setRequestHeader('Content-type', 'application/json');
+    http.send();
+    http.onreadystatechange = function () {
+        if (http.readyState == 4) {
+            if (http.status == 200) {
+                callback(http.responseText);
+            } else {
+                document.getElementById("no_stream").innerHTML = "<img src=\"" + offlinePic + "\" alt=\"23\" width=\"320\"><br><h3 style=\"font-family:rockwell;\">" + offlineText + "</h3>";
+            }
+        }
+    }
+
+}
+
+function HttpGetFeature(url, callback) {
+
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            callback(xhttp.responseText);
+
+        }
+    };
+    xhttp.open("GET", url, true);
+    xhttp.send();
+
+}
+
+function HttpGetNorm(url) {
+    if ((cookieSettings == 1) & (curentUserID != 0)) {
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function () {
+            if (this.readyState == 4 && this.status == 200) {
+            }
+        };
+        xhttp.open("GET", url, true);
+        xhttp.send();
+    }
+}
+
+function DefaultCookieRead() {
+    cookieSettings = getCookie(policyAgreementCookie);
+    if (cookieSettings == 1) {
+        themeStatus = getCookie(themeCookie);
+        theVRmmNewFeature = getCookie(newFeatureCookie);
+        curentUserID = getCookie(streamer + "userid");
+        oldJs = getCookie(streamer + "_scriptversion");
+    }
+    cookieReadFlag = 1;
+}
+
+function idGenerator() {
+    var array = new Uint32Array(2);
+    var crypto = window.crypto;
+    crypto.getRandomValues(array);
+    return array[0].toString(36).substr(0, 16) + array[1].toString(36).substr(0, 16);
+}
+
+/*Ha a manifest ki lesz javítva akkor*/
+/* Hiba miatt kivéve.
+if (location.protocol != 'file:') {
+
+    if (location.protocol != 'https:') {
+        readyStyleFlag = 0;
+        location.protocol = "https:";
+    }
+    CreateValidManifest();
+    console.log('servicemanifest_locationprotocol');
+}
+*/
+
+/*Cookie lekérdezések*/
+DefaultCookieRead();
+
+
+//Majd CSS alapú téma átrakáshoz
+/*var head = document.getElementsByTagName('head')[0];
+var style = document.createElement('link');
+style.href = 'style.css';
+style.type = 'text/css';
+style.rel = 'stylesheet';
+head.append(style)
+*/
+document.onload = function () {
+    CreateValidManifest();
+    console.log('servicemanifest_window_onload');
+
+
+
+}
+
+if (cookieSettings == 1) {
+
+    if (streamer == "wearethevr") {
+        window.onload = function () {
+            dynamicallyLoadScript("https://www.googletagmanager.com/gtag/js?id=UA-121876941-1");
+            dynamicallyLoadScript_content("window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'UA-121876941-1');");
+
+        }
+    }
+
+    if (streamer == "fyrexxx") {
+        window.onload = function () {
+            dynamicallyLoadScript("https://www.googletagmanager.com/gtag/js?id=UA-122179264-1");
+            dynamicallyLoadScript_content("window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'UA-122179264-1');");
+        }
+    }
+    if (streamer == "blyyyplays") {
+        window.onload = function () {
+            //még nincs kreálva
+            //dynamicallyLoadScript("https://www.googletagmanager.com/gtag/js?id=UA-122179264-1");
+            //dynamicallyLoadScript_content("window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'UA-122179264-1');");
+        }
+    }
+
+}
+
+document.addEventListener("DOMContentLoaded", function (event) {
+    if (readyStyleFlag == 1) {
+        if (streamer != "wearethevr") { document.getElementById('CookieAccept').setAttribute("onclick", "createcookie('" + policyAgreementCookie + "',1,365,'banner')"); }
+        if ((currenttime > 1554069600) & (currenttime < 1554156000)) {
+            document.getElementsByTagName('center')[0].setAttribute('style', '-moz-transform: scale(-1, 1); -webkit-transform: scale(-1, 1); -o-transform: scale(-1, 1); -ms-transform: scale(-1, 1); transform: scale(-1, 1);');
+        }
+
+        document.body.style.margin = "0px";
+
+        if ((themeStatus == "light") & (cookieSettings == 1)) {
+            Light(0);
+        } else {
+            Dark(0);
+        }
+
+        if ((cookieSettings != 1) & (cookieSettings != -1) & (readyStyleFlag == 1)) {
+            document.getElementById("myCookie").style.display = 'block';
+        }
+
+        document.body.innerHTML = document.body.innerHTML.replace("forum.thevr.hu/u/dani0001414/", "forum.thevr.hu/u/danx27/");
+        document.body.innerHTML = document.body.innerHTML.replace("dani0001414 Ninjon", "DanX27 Ninjon");
+        //	document.body.innerHTML = document.body.innerHTML.replace(/dani0001414/g, "DanX27");
+        console.log("DOM fully loaded and parsed");
+        var head = document.getElementsByTagName('head')[0];
+        var fontPUBG = document.createElement('link');
+        fontPUBG.rel = "stylesheet";
+        fontPUBG.href = "https://fonts.googleapis.com/css?family=Squada+One";
+        head.appendChild(fontPUBG);
+        // Get the modal ws3school script
+        modal = document.getElementById('myModal');
+        // Get the button that opens the modal
+        btn = document.getElementById("myBtn");
+        // Get the <span> element that closes the modal
+        span = document.getElementsByClassName("close")[0];
+        document.getElementsByClassName("modal-cookie")[0].innerHTML = "A MobilBarát Menetrend a felhasználói élmény növelése érdekében cookie-kat használ a funkciókhoz és a továbbfejlesztéseket segítő statisztikák gyűjtéséhez!<br><span style=\"cursor: pointer; color: grey; text-decoration: underline;\" onclick=\"createcookie('" + policyAgreementCookie + "',1,365,'banner')\">Elfogadom</span>  <span style=\"cursor: pointer; color: grey; text-decoration: underline;\" onclick=\"deleteAllCookies('banner')\">Nem fogadom el</span>  <span style=\"cursor: pointer; color: grey; text-decoration: underline;\" onclick=\"modal_open('cookie_information')\">Bővebb információ</span>";
+        popupContent = document.getElementById("popup_content");
+
+        brcreator("font", "tag", 0);
+        brcreator("font", "tag", 0);
+
+        var ErrorLink = document.createElement('a');
+        var ErrorLinkText = document.createTextNode("[Hiba jelzése]");
+        ErrorLink.appendChild(ErrorLinkText);
+        //versionLink.title = "my title text";
+        ErrorLink.href = "https://discordapp.com/invite/4YKn62P";
+        document.getElementsByTagName('font')[0].appendChild(ErrorLink);
+
+        brcreator("font", "tag", 0);
+        brcreator("font", "tag", 0);
+
+        var versionLink = document.createElement('a');
+        var versionLinkText = document.createTextNode(scriptVersion);
+        versionLink.appendChild(versionLinkText);
+        //versionLink.title = "my title text";
+        //versionLink.href = "http://example.com";
+        document.getElementsByTagName('font')[0].appendChild(versionLink);
+    }
+});
+
+//var getLink = "https://api.twitch.tv/helix/streams?user_id=" + streamerID;
+//HttpGet(getLink, EventsArray);
+HttpPost("https://gql.twitch.tv/gql", EventsArray2);
+HttpGetFeature("https://script.google.com/macros/s/AKfycbxCbGnpDeEjNd7Nwpm76MrIfc2efatkbGZyXszSgA45-e1d87M/exec", new_features);
+
+
+function PUBGStatDownload(data) {
+    PUBGStat = data;
+
+    if (currenttime > stramStartFirstElement) {
+        document.getElementById("1_description_created").innerHTML = PUBGStat;
+    } else {
+        document.getElementById("0_description_created").innerHTML = PUBGStat;
+    }
+}
+
+
+/*HttpGet live api lekérő meghívja a funkciót és átadja a callback változót*/
+function EventsArray(data) {
+    /*Ha még nem erősítette meg a felhasználó, hogy elfogadja e a cookie-kat vagy sem akkor megjeleníti az alsó bannert már itt, hogy gyorsabban megjelenjen!*/
+
+
+    liveData = data;
+    liveData = JSON.parse(liveData);
+    coverLive = null;
+    titleLive = null;
+    liveStatus = null;
+    gameLiveStatus = null;
+    if (liveData.data.length > 0) {
+        coverLive = liveData.data['0'].thumbnail_url;
+        titleLive = liveData.data['0'].title;
+        liveStatus = liveData.data['0'].type;
+        coverLive = coverLive.replace("{width}", "640");
+        coverLive = coverLive.replace("{height}", "360");
+        gameLiveStatus = liveData.data['0'].game_id;  /*493057==PUBG*/
+
+        liveStart = TimeConvert(liveData.data['0'].started_at).split("<br>");
+        liveDateStart = OnlyDate(liveData.data['0'].started_at);
+        liveTimestamp = Timestamp(liveData.data['0'].started_at);
+
+    }
+
+    if (liveStatus == "live") { fromTime = liveData.data['0'].started_at; }
+
+    HttpPost("https://gql.twitch.tv/gql", EventsArray2);
+
+}
+
+
+
+
+/*HttpPost menetrend api lekérő meghívja a funkciót és átadja a callback változót*/
+function EventsArray2(data) {
+    liveArray = data;
+    liveArray = JSON.parse(liveArray);
+        liveData = liveArray["0"].data.user.stream;
+        liveStartTime = liveArray["1"].data.user.stream;
+    liveStatus = "live";
+    if (liveData == null) {
+        liveStatus = null;
+    } else if (liveData.title == null) {
+        liveStatus = null;
+    }
+
+
+
+
+    if (liveStatus != null) {
+        titleLive = liveData.title;
+        liveTimestamp = Timestamp(liveStartTime.createdAt);
+        liveStart = TimeConvert(liveStartTime.createdAt).split("<br>");
+        liveDateStart = OnlyDate(liveStartTime.createdAt);
+        coverLive = "https://static-cdn.jtvnw.net/previews-ttv/live_user_" + streamer + "-640x360.jpg";
+        gameLiveStatus = liveData.game.id;  /*493057==PUBG*/
+        if ((gameLiveStatus == 493057) & (streamer == "wearethevr")) { 
+            HttpGetFeature("https://script.google.com/macros/s/AKfycbwaqdvT0_QtH6js2JTAx6gNh1Ep-GJqYaQRqgPvEYlZ_i4FTDTe/exec", PUBGStatDownload); 
+            pubgStatAvailable = 1;
+        }
+        if ((gameLiveStatus == 493057) & (streamer == "blyyyplays")) {
+            HttpGetFeature("https://script.google.com/macros/s/AKfycbyfaSOjewbZtKhMqZ2V4hwsmCZJ4Rc-1YsmQO3cmv06ofTdkysE/exec", PUBGStatDownload);
+            pubgStatAvailable = 1;
+        }
+
+    } else { liveStatus = null }
+
+        HttpGetFeature("https://dani0001414.github.io/mm.json", eventsDataGet); /**Esetleg a kikomentezett htmlstart marad itt meg egy olyan kód ami lekéri az első menetrendi elemet csak és beilleszti az előzők elé ha az előzőleg lekért első elemével nem egyezik. Ha egyezik akkor meglepi live talán */
+    // HtmlStart();
+}
+
+function eventsDataGet(data) {
+    events = JSON.parse(data);
+    eventsLength = events.length;
+    /*Változtatás : Ha az events tömb nem nulla akkor az első elem kezdési és végetérési időpontját beletesszük a streamEndZeroElement és a streamStartZeroElement változókba. */
+    if (eventsLength != 0) {
+        streamEndZeroElement = Timestamp(events[0].event_end_unix);
+        streamStartZeroElement = Timestamp(events[0].event_start_unix);
+        if (eventsLength > 1) {
+            stramStartFirstElement = Timestamp(events[1].event_start_unix);
+            streamEndFirstElement = Timestamp(events[1].event_end_unix);
+        }
+    }
+
+    HtmlStart();
+}
+
+/*Feltölti az üres DIV-eket a menetrendi információkkal*/
+function HtmlStart() {
+
+    var cachedStreamStart, cachedTitles, k = 0, l = 0, m = 0, n = 0;
+    var titles = [];
+    var id = [];
+    var cachedStreamEnd = [];
+    var streamStart = [];
+    var streamEnd = [];
+    var newEventsPosition = [];
+    var changedTimePosition = [];
+    var changedTitlePosition = [];
+    var changedAllPosition = [];
+
+   
+
+    for (var i = 0; i < eventsLength; i++) {
+        streamStart[i] = Timestamp(events[i].event_start_unix);
+        streamEnd[i] = Timestamp(events[i].event_end_unix);
+        titles[i] = events[i].event_title;
+        id[i] = events[i].event_id;
+    }
+
+    if ((cookieSettings == 1)) {
+
+
+        var cachedStreamStart = JSON.parse(decodeURIComponent(getCookie("cachedStreamStart")));                        //Az előző menetrendi elemek idejét nyitja meg egy tömbbe.
+        var cachedTitles = JSON.parse(decodeURIComponent(getCookie("cachedTitles")));                         //Az előző memnetrendi elemek címét nyitja meg egy tömbe.
+        var cachedIDs = JSON.parse(decodeURIComponent(getCookie("cachedIDs")));
+        var emptyArrayIdicator = decodeURIComponent(getCookie("cachedIDs"));
+        //var cachedStreamEnd = JSON.parse(getCookie("thvr_ese_v_c"));
+
+        if (((cachedStreamStart == 0) | (cachedTitles == 0) | (cachedIDs == 0)) & (emptyArrayIdicator != "[]")) {
+            cachedStreamStart = streamStart;
+            cachedTitles = titles;
+            cachedIDs = id;
+            cachedStreamEnd = streamEnd;
+            //cached variables	
+
+            createcookie('cachedStreamStart', encodeURIComponent(JSON.stringify(cachedStreamStart)), 1);
+            createcookie('cachedTitles', encodeURIComponent(JSON.stringify(cachedTitles)), 1);
+            createcookie('cachedIDs', encodeURIComponent(JSON.stringify(cachedIDs)), 1);
+            createcookie('cachedStreamEnd', encodeURIComponent(JSON.stringify(cachedStreamEnd)), 1);
+        }
+        if (curentUserID == 0) {
+            if (streamer == "wearethevr") { curentUserID = idGenerator(); }
+            if (streamer == "fyrexxx") { curentUserID = idGenerator() + "_PINGVIN"; }
+            if (streamer == "blyyyplays") { curentUserID = idGenerator() + "_bLYYYPLAYS"; }
+
+            if (curentUserID != 0) { createcookie(streamer + 'userid', curentUserID, 365); }
+        }
+    }
+
+    if (streamer == "wearethevr") {
+        calendarFunc = "https://script.google.com/macros/s/AKfycbxrSwsr3iSsUbxBB_H43j_3nP0pMmmgVXUL7HMR853muC_eM_em/exec?func=open-calendar&user=" + curentUserID;
+        googleFunc = "https://script.google.com/macros/s/AKfycbxrSwsr3iSsUbxBB_H43j_3nP0pMmmgVXUL7HMR853muC_eM_em/exec?func=add-google-calendar&user=" + curentUserID;
+        icalFunc = "https://script.google.com/macros/s/AKfycbxrSwsr3iSsUbxBB_H43j_3nP0pMmmgVXUL7HMR853muC_eM_em/exec?func=add-ical-calendar&user=" + curentUserID;
+        yahooFunc = "https://script.google.com/macros/s/AKfycbxrSwsr3iSsUbxBB_H43j_3nP0pMmmgVXUL7HMR853muC_eM_em/exec?func=add-yahoo-calendar&user=" + curentUserID;
+        detailFunc = "https://script.google.com/macros/s/AKfycbxrSwsr3iSsUbxBB_H43j_3nP0pMmmgVXUL7HMR853muC_eM_em/exec?func=open-details&user=" + curentUserID;
+        whiteThemeFunc = "https://script.google.com/macros/s/AKfycbxrSwsr3iSsUbxBB_H43j_3nP0pMmmgVXUL7HMR853muC_eM_em/exec?func=light-theme-set&user=" + curentUserID;
+        blackThemeFunc = "https://script.google.com/macros/s/AKfycbxrSwsr3iSsUbxBB_H43j_3nP0pMmmgVXUL7HMR853muC_eM_em/exec?func=dark-theme-set&user=" + curentUserID;
+        scriptVersionFunc = "https://script.google.com/macros/s/AKfycbxrSwsr3iSsUbxBB_H43j_3nP0pMmmgVXUL7HMR853muC_eM_em/exec?scriptVersion=" + scriptVersion + "&func=scriptVersion&user=" + curentUserID;
+    }
+
+    if (streamer == "fyrexxx") {
+        calendarFunc = "https://script.google.com/macros/s/AKfycbyLBtgJtpdvuy0ZqII_VwDV_OuYv00_ZZnH4_B7/exec?func=open-calendar&user=" + curentUserID;
+        googleFunc = "https://script.google.com/macros/s/AKfycbyLBtgJtpdvuy0ZqII_VwDV_OuYv00_ZZnH4_B7/exec?func=add-google-calendar&user=" + curentUserID;
+        icalFunc = "https://script.google.com/macros/s/AKfycbyLBtgJtpdvuy0ZqII_VwDV_OuYv00_ZZnH4_B7/exec?func=add-ical-calendar&user=" + curentUserID;
+        yahooFunc = "https://script.google.com/macros/s/AKfycbyLBtgJtpdvuy0ZqII_VwDV_OuYv00_ZZnH4_B7/exec?func=add-yahoo-calendar&user=" + curentUserID;
+        detailFunc = "https://script.google.com/macros/s/AKfycbyLBtgJtpdvuy0ZqII_VwDV_OuYv00_ZZnH4_B7/exec?func=open-details&user=" + curentUserID;
+        whiteThemeFunc = "https://script.google.com/macros/s/AKfycbyLBtgJtpdvuy0ZqII_VwDV_OuYv00_ZZnH4_B7/exec?func=light-theme-set&user=" + curentUserID;
+        blackThemeFunc = "https://script.google.com/macros/s/AKfycbyLBtgJtpdvuy0ZqII_VwDV_OuYv00_ZZnH4_B7/exec?func=dark-theme-set&user=" + curentUserID;
+        scriptVersionFunc = "https://script.google.com/macros/s/AKfycbyLBtgJtpdvuy0ZqII_VwDV_OuYv00_ZZnH4_B7/exec?scriptVersion=" + scriptVersion + "&func=scriptVersion&user=" + curentUserID;
+    }
+    if (streamer == "blyyyplays") {
+        calendarFunc = "https://script.google.com/macros/s/AKfycbyLBtgJtpdvuy0ZqII_VwDV_OuYv00_ZZnH4_B7/exec?func=open-calendar&user=" + curentUserID;
+        googleFunc = "https://script.google.com/macros/s/AKfycbyLBtgJtpdvuy0ZqII_VwDV_OuYv00_ZZnH4_B7/exec?func=add-google-calendar&user=" + curentUserID;
+        icalFunc = "https://script.google.com/macros/s/AKfycbyLBtgJtpdvuy0ZqII_VwDV_OuYv00_ZZnH4_B7/exec?func=add-ical-calendar&user=" + curentUserID;
+        yahooFunc = "https://script.google.com/macros/s/AKfycbyLBtgJtpdvuy0ZqII_VwDV_OuYv00_ZZnH4_B7/exec?func=add-yahoo-calendar&user=" + curentUserID;
+        detailFunc = "https://script.google.com/macros/s/AKfycbyLBtgJtpdvuy0ZqII_VwDV_OuYv00_ZZnH4_B7/exec?func=open-details&user=" + curentUserID;
+        whiteThemeFunc = "https://script.google.com/macros/s/AKfycbyLBtgJtpdvuy0ZqII_VwDV_OuYv00_ZZnH4_B7/exec?func=light-theme-set&user=" + curentUserID;
+        blackThemeFunc = "https://script.google.com/macros/s/AKfycbyLBtgJtpdvuy0ZqII_VwDV_OuYv00_ZZnH4_B7/exec?func=dark-theme-set&user=" + curentUserID;
+        scriptVersionFunc = "https://script.google.com/macros/s/AKfycbyLBtgJtpdvuy0ZqII_VwDV_OuYv00_ZZnH4_B7/exec?scriptVersion=" + scriptVersion + "&func=scriptVersion&user=" + curentUserID;
+    }
+
+
+
+    if ((cookieSettings == 1) & (scriptVersion != oldJs) & (curentUserID != 0)) {
+        HttpGetNorm(scriptVersionFunc);
+        createcookie(streamer + "_scriptversion", scriptVersion, 365);
+    }
+
+
+
+    for (var i = 0; i < eventsLength; i++) {
+
+      
+
+        var titleId = i + "_cim";
+        var coverId = i + "_cover";
+        var timeId = i + "_time";
+        var brId = i + "_br";
+        var blankCover = "https://static-cdn.jtvnw.net/twitch-event-images-v2/default/town-320x180";
+
+        /*  if (cookieSettings != 1) {
+              streamStart[i] = Timestamp(events[i].event_start_unix);
+              streamEnd[i] = Timestamp(events[i].event_end_unix);
+          }
+  */
+        if (cookieSettings == 1) {
+            //////
+            var changedTitleCount = 0, changedTimeCount = 0, changeAllCount = 0;
+            existElementCount = 0;
+
+            if ((cachedStreamStart.length == 0) & (eventsLength > 0)) {
+                newEventsPosition[k] = i; k++;
+            }
+
+            for (j = 0; j < cachedStreamStart.length; j++) {
+                if ((cachedIDs[j] == id[i])) {
+                    existElementCount++;                                                                   //Öszehasonllítja az esemény dátum, idő, és címe alapján, hogy szerepel e már a menetrendben.  
+                }
+                if ((cachedStreamStart[j] != streamStart[i]) & (titles[i] == cachedTitles[j]) & (cachedIDs[j] == id[i])) {
+                    changedTimeCount++;                                                                      //Megnézi, hogy talál e olyan eseményt a menetrendben aminek a címe azonos de a dátumát megváltoztatták
+
+                }
+                if ((cachedStreamStart[j] == streamStart[i]) & (titles[i] != cachedTitles[j]) & (cachedIDs[j] == id[i])) {
+                    changedTitleCount++;                                                                         //Megnézi, hogy talál e olyan eseményt a menetrendben aminek az időpontja nem változott de a címe igen.
+                }
+                if ((cachedStreamStart[j] != streamStart[i]) & (titles[i] != cachedTitles[j]) & (cachedIDs[j] == id[i])) {
+                    changeAllCount++;                                                                         //Megnézi, hogy talál e olyan eseményt a menetrendben aminek az időpontja nem változott de a címe igen.
+                }
+            }
+            if ((existElementCount == 0)) { newEventsPosition[k] = i; k++; }
+            if ((changedTimeCount > 0)) { changedTimePosition[l] = i; l++; }
+            if ((changedTitleCount > 0)) { changedTitlePosition[m] = i; m++; }
+            if ((changeAllCount > 0)) { changedAllPosition[n] = i; n++; }
+            ////
+        }
+        var elapsed = parseInt((currenttime - streamEnd[i]) / 60, 10);
+
+        var cover = events[i].event_image;
+
+
+        var startTime = TimeConvert(events[i].event_start_unix).split("<br>");
+        var endTime = TimeConvert(events[i].event_end_unix).split("<br>");
+
+        /*calendar kompatibilis idők*/
+        /**Google Time */
+        var gCalendarStartTime = events[i].event_start_unix.substring(0, 16) + ":00Z";
+        gCalendarStartTime = gCalendarStartTime.replace(/-/g, "");
+        gCalendarStartTime = gCalendarStartTime.replace(/:/g, "");
+
+
+        var gCalendarEndTime = events[i].event_end_unix.substring(0, 16) + ":00Z";
+        gCalendarEndTime = gCalendarEndTime.replace(/-/g, "");
+        gCalendarEndTime = gCalendarEndTime.replace(/:/g, "");
+
+        /**Ical Time */
+        var icalCalendarStartTime = events[i].event_start_unix.substring(0, 16) + ":00Z";
+        icalCalendarStartTime = icalCalendarStartTime.replace(/-/g, "/");
+        icalCalendarStartTime = icalCalendarStartTime.replace(/T/g, " ");
+
+
+        var icalCalendarEndTime = events[i].event_end_unix.substring(0, 16) + ":00Z";
+        icalCalendarEndTime = icalCalendarEndTime.replace(/-/g, "/");
+        icalCalendarEndTime = icalCalendarEndTime.replace(/T/g, " ");
+        //////////////////////
+
+        var gCalendarTitle = events[i].event_title.replace(/ /g, "+");
+        var icalCalendarTitle = events[i].event_title;
+        gCalendarTitle = gCalendarTitle.replace(/#/g, "");
+        icalCalendarTitle = icalCalendarTitle.replace(/#/g, "");
+        icalCalendarTitle = icalCalendarTitle.replace(/'/g, "");
+
+        /*Calendar Linkek létrehozása*/
+        gCalendarLink[i] = "https://calendar.google.com/calendar/r/eventedit?dates=" + gCalendarStartTime + "/" + gCalendarEndTime + "&details&location&text=" + gCalendarTitle + "&trp=false&sf=true"
+        icalCalendarLink[i] = icalCalendarTitle + "&@&" + icalCalendarStartTime + "&@&" + icalCalendarEndTime;
+        yahooCalendarLink[i] = "https://calendar.yahoo.com/?v=60&view=d&type=20&title=" + gCalendarTitle + "&st=" + gCalendarStartTime + "&et=" + gCalendarEndTime + "&uid=";
+
+        /*Szünet Cover létrehozás*/
+        if (streamer == "wearethevr") {
+            var brakeTitle = events[i].event_title;
+            var breakIndicator = brakeTitle.search("SZÜNET");
+            if ((cover == blankCover) & (breakIndicator > -1)) { cover = "https://dani0001414.github.io/TheVRMobilMenetrend/brake.png"; }
+        }
+
+
+        DayDivider(streamStart[i], currenttime, i);
+        divcreator(i, "body", "eventcontainer");
+        divcreator(titleId, i);
+        divcreator(coverId, i);
+        divcreator(timeId, i);
+        document.getElementById(i + "_created").innerHTML += "<span id=\"streamspan\" style=\"cursor:pointer;\" onclick=\"hide_and_show('" + i + "_description_created'," + i + ")\"><span id=" + i + "_arrow style=\"display: block; padding: 10 0 10 0\">" + svgArrowDown + "</span></span>";
+        divcreator(i + "_description", "body", "descriptioncontainer");
+        divcreator(i + "_spacer", "body", "eventspacer");
+        //brcreator("center", "tag", 0);
+
+
+        //document.getElementById(i).style.display = 'block';
+        //document.getElementById(brId+"_created").style.display = 'block';
+        document.getElementById(titleId + "_created").innerHTML = "<p><b>" + events[i].event_title + "</b></p>";
+        document.getElementById(coverId + "_created").innerHTML = "<img src=\"" + cover + "\" class=\"aspect__fill\" width=\"320\">";
+        document.getElementById(timeId + "_created").innerHTML = "<div style=\"margin-bottom:1px;\">" + startTime[0] + "</div><div style=\"margin-bottom:4px\">" + startTime[1] + "-" + endTime[1] + "</div>";
+
+        /*var stream_hossz = streamEnd[i] - streamStart[i];*/
+        /*Változtatás: Ha az idő 2400másodpercnél kisebb akkor Premier-ről van szó és átszinezzük.*/
+
+
+
+        /*majd 7200 legyen */
+
+        /*A menetrendi idő jelzésének módjának változtatása ha eltérő dátumú kedés és befejezés és ha a stream tovább tart mint a várt*/
+        if ((liveTimestamp < streamEnd[i] + 3000) & (liveTimestamp > streamStart[i] - 3000) & (elapsed > 0) & (startTime[0] == endTime[0])) {
+            document.getElementById(timeId + "_created").innerHTML = "<div style=\"margin-bottom:1px;\">" + startTime[0] + "<br>" + startTime[1] + "-" + endTime[1] + "<font color=\"yellow\"> + " + elapsed + "p</font></div>";
+        } else if (startTime[0] == endTime[0]) {
+            document.getElementById(timeId + "_created").innerHTML = "<div style=\"margin-bottom:1px;\">" + startTime[0] + "</div><div style=\"margin-bottom:4px\">" + startTime[1] + "-" + endTime[1] + "</div>";
+        } else if ((liveTimestamp < streamEnd[i] + 3000) & (liveTimestamp > streamStart[i] - 3000) & (elapsed > 0)) {
+            document.getElementById(timeId + "_created").innerHTML = "<div style=\"overflow: hidden; width: 320px;\">    <div style=\"float:left; width: 155px\"><center><div style=\"margin-bottom:1px;\">" + startTime[0] + "</div><div style=\"margin-bottom:4px\">" + startTime[1] + "</div></center></div>    <div style=\"float:left; width: 10px\"><center>-</center></div>	<div style=\"overflow: hidden; width: 155px float:right;\"><center><div style=\"margin-bottom:1px;\">" + endTime[0] + "</div><div style=\"margin-bottom:4px\">" + endTime[1] + "<font color=\"yellow\">" + elapsed + "p</font></div></center></div></div>";
+        } else {
+            document.getElementById(timeId + "_created").innerHTML = "<div style=\"overflow: hidden; width: 320px;\">    <div style=\"float:left; width: 155px\"><center><div style=\"margin-bottom:1px;\">" + startTime[0] + "</div><div style=\"margin-bottom:4px\">" + startTime[1] + "</div></center></div>    <div style=\"float:left; width: 10px\"><center>-</center></div>	<div style=\"overflow: hidden; width: 155px float:right;\"><center><div style=\"margin-bottom:1px;\">" + endTime[0] + "</div><div style=\"margin-bottom:4px\">" + endTime[1] + "</center></div></div></div>";
+        }
+    }
+
+    //Ha a téma világos akkor a létrehozott DIV-eket átállítjuk
+    if (themeStatus == "light") {
+        Light(eventsLength);
+    } else {
+        Dark(eventsLength);
+    }
+
+    //Footer Áthelejés
+    divcreator("footer", "body");
+    MoveParent("footer_created");
+
+
+
+    var countdownStart = streamStartZeroElement - currenttime;
+    if ((countdownStart < 7200) & (countdownStart > 0) & (liveStatus != "live")) { Countdown(streamStartZeroElement); }
+
+    /*Ha az első menetrendi elem lefedi a stream indítást akkor az első elem streamelődik. Ha nem akkor meglepi stream.(Változtatás : kivettem a fenti if ágból. streamEndZeroElement és streamStartZeroElement változók használata. ) */
+    if ((liveStatus == "live") & ((liveTimestamp < streamEndZeroElement) & (liveTimestamp > streamStartZeroElement - 3000)) & (currenttime < stramStartFirstElement)) {  /*Ha előfordulna, hogy jóval előbb indítják a streamet akkormég vagy-ként liveTimestamp helyett currenttime-al is vizsgálni. */
+        document.getElementById("0_created").style.backgroundColor = "#4b367c";
+        document.getElementById("0_created").style.color = "#c3c1c8";
+        document.getElementById("0_cim_created").innerHTML = "<a target=\"_blank\" href=\"" + twitchLink + "\"><img src=\"https://i.imgur.com/o1kyCnf.png\"></a><br><b>" + titleLive + "</b>";
+        document.getElementById("0_cover_created").innerHTML = "<a target=\"_blank\" href=\"" + twitchLink + "\"><img src=\"" + coverLive + "\" class=\"aspect__fill\" width=\"320\"></a>";
+        document.getElementById("0_day_created").style.display = 'none';
+    } else if ((liveStatus == "live") & (currenttime < streamEndFirstElement) & (currenttime > stramStartFirstElement)) {
+        document.getElementById("1_created").style.backgroundColor = "#4b367c";
+        document.getElementById("1_created").style.color = "#c3c1c8";
+        document.getElementById("1_cim_created").innerHTML = "<a target=\"_blank\" href=\"" + twitchLink + "\"><img src=\"https://i.imgur.com/o1kyCnf.png\"></a><br><b>" + titleLive + "</b>";
+        document.getElementById("1_cover_created").innerHTML = "<a target=\"_blank\" href=\"" + twitchLink + "\"><img src=\"" + coverLive + "\" class=\"aspect__fill\" width=\"320\"></a>";
+        document.getElementById("0_day_created").style.display = 'none';
+        document.getElementById("0_created").style.display = 'none';
+    } else if ((liveStatus == "live") & (currenttime < streamEndZeroElement) & (currenttime > streamStartZeroElement)) {
+        document.getElementById("0_created").style.backgroundColor = "#4b367c";
+        document.getElementById("0_created").style.color = "#c3c1c8";
+        document.getElementById("0_cim_created").innerHTML = "<a target=\"_blank\" href=\"" + twitchLink + "\"><img src=\"https://i.imgur.com/o1kyCnf.png\"></a><br><b>" + titleLive + "</b>";
+        document.getElementById("0_cover_created").innerHTML = "<a target=\"_blank\" href=\"" + twitchLink + "\"><img src=\"" + coverLive + "\" class=\"aspect__fill\" width=\"320\"></a>";
+        document.getElementById("0_day_created").style.display = 'none';
+    } else if ((liveStatus != "live") & (currenttime < streamEndZeroElement) & (currenttime > streamStartZeroElement)) {  /*Ha előfordulna, hogy később indítják a streamet akkormég vagy-ként liveTimestamp helyett currenttime-al is vizsgálni. */
+        document.getElementById("0_cim_created").innerHTML = "<img src=\"https://i.imgur.com/ZNlNn8J.png\"><br><b>" + events[0].node.title + "</b>";
+        document.getElementById("0_day_created").style.display = 'none';
+    } else if (liveStatus == "live")  {
+        document.getElementById("meglepi").style.display = 'block';
+        document.getElementById("meglepi_br").style.display = 'block';
+        document.getElementById("meglepi_cim").innerHTML = "<a target=\"_blank\" href=\"" + twitchLink + "\"><img src=\"https://i.imgur.com/gu6M3eu.png\"></a><br><b>" + titleLive + "</b>";
+        document.getElementById("meglepi_cover").innerHTML = "<a target=\"_blank\" href=\"" + twitchLink + "\"><img src=\"" + coverLive + "\" class=\"aspect__fill\" width=\"320\"></a>";
+        document.getElementById("meglepi_time").innerHTML = liveDateStart + "<br>" + liveStart[1] + "-Ameddig tart</p>";
+
+    }
+    /*Változtatás : Ha az events tömb hosszúsága nulla és élő közvetítés van akkor meglepi stream. Ellenkező esetbeh ha nincs stream és csak a tömb hossza nulla akkor no_stream div feltöltése a rejtés megjelenítés helyett. Html-ben mindig betöltődött a 125kb nagyságú kép rejtésből megjelenítéses módszernél. ) */
+    if ((eventsLength == 0) & (liveStatus == "live")) {
+        document.getElementById("meglepi").style.display = 'block';
+        document.getElementById("meglepi_br").style.display = 'block';
+        document.getElementById("meglepi_cim").innerHTML = "<a target=\"_blank\" href=\"" + twitchLink + "\"><img src=\"https://i.imgur.com/gu6M3eu.png\"></a><br><b>" + titleLive + "</b>";
+        document.getElementById("meglepi_cover").innerHTML = "<a target=\"_blank\" href=\"" + twitchLink + "\"><img src=\"" + coverLive + "\" class=\"aspect__fill\" width=\"320\"></a>";
+        document.getElementById("meglepi_time").innerHTML = liveDateStart + "<br>" + liveStart[1] + "-Ameddig tart</p>";
+    } else if (eventsLength == 0)  {
+        document.getElementById("no_stream").innerHTML = "<img src=\"" + noEventsPic + "\" alt=\"23\" width=\"320\"><br><h3 style=\"font-family:rockwell; color:grey\">" + noEventsText + "</h3>";
+    }
+
+
+    if (cookieSettings == 1)  {
+        /*Változtatások színezése!*/
+        for (i = 0; i < newEventsPosition.length; i++) {
+            j = newEventsPosition[i];
+            var titleId = j + "_cim";
+            document.getElementById(j + "_created").style.backgroundColor = "#3f7186";
+            document.getElementById(j + "_created").style.border = "1px solid #022e40";
+            document.getElementById(j + "_created").style.color = "white";
+            document.getElementById(titleId + "_created").innerHTML = "<div style=\"color: #fafbff\" ><img src=\"https://dani0001414.github.io/TheVRMobilMenetrend/new_stream.png\"><br><b>" + events[j].node.title + "</b></div></p>";
+        }
+        for (i = 0; i < changedTimePosition.length; i++) {
+            j = changedTimePosition[i];
+            var titleId = j + "_cim";
+            document.getElementById(j + "_created").style.backgroundColor = "#b9ac73";
+            document.getElementById(j + "_created").style.border = "1px solid #3e3922";
+            document.getElementById(j + "_created").style.color = "white";
+            document.getElementById(titleId + "_created").innerHTML = "<div style=\"color: #fafbff\" ><img src=\"https://dani0001414.github.io/TheVRMobilMenetrend/time_stream.png\"><br><b>" + events[j].node.title + "</b></div></p>";
+        }
+        for (i = 0; i < changedAllPosition.length; i++) {
+            j = changedAllPosition[i];
+            var titleId = j + "_cim";
+            document.getElementById(j + "_created").style.backgroundColor = "#3f7186";
+            document.getElementById(j + "_created").style.border = "1px solid #022e40";
+            document.getElementById(j + "_created").style.color = "white";
+            document.getElementById(titleId + "_created").innerHTML = "<div style=\"color: #fafbff\" ><img src=\"https://dani0001414.github.io/TheVRMobilMenetrend/new_stream.png\"><br><b>" + events[j].node.title + "</b></div></p>";
+        }
+        for (i = 0; i < changedTitlePosition.length; i++) {
+            j = changedTitlePosition[i];
+            var titleId = j + "_cim";
+            document.getElementById(j + "_created").style.backgroundColor = "#63c27e";
+            document.getElementById(j + "_created").style.border = "1px solid #417951";
+            document.getElementById(j + "_created").style.color = "white";
+            document.getElementById(titleId + "_created").innerHTML = "<div style=\"color: #fafbff\" ><img src=\"https://dani0001414.github.io/TheVRMobilMenetrend/title_stream.png\"><br><b>" + events[j].node.title + "</b></div></p>";
+        }
+
+
+        /*cache elmentése*/
+        if ((changedTitlePosition.length > 0) | (changedTimePosition.length > 0) | (newEventsPosition.length > 0) | (changedAllPosition.length > 0) | (cachedIDs.length != id.length)) {
+            cachedStreamStart = streamStart;
+            cachedTitles = titles;
+            cachedIDs = id;
+            cachedStreamEnd = streamEnd;
+
+            createcookie('cachedStreamStart', encodeURIComponent(JSON.stringify(cachedStreamStart)), 1);
+            createcookie('cachedTitles', encodeURIComponent(JSON.stringify(cachedTitles)), 1);
+            createcookie('cachedIDs', encodeURIComponent(JSON.stringify(cachedIDs)), 1);
+            createcookie('cachedStreamEnd', encodeURIComponent(JSON.stringify(cachedStreamEnd)), 1);
+        }
+    }
+
+
+    if (errorFlag == 1) {
+        ScriptDone();
+    } else {
+        scriptDoneFlag = 1;
+    }
+
+}
+
+function ScriptDone() {
+    var formData = {
+        'username': 'Error Report',
+        'avatar_url': 'https://blog.sqlauthority.com/i/c/error.png',
+        "content": "Hiba:\n",
+        "embeds": [
+            {
+                "color": 15763769,
+                "fields": [{ "name": "➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖", "value": "HTML rész Végig lefutott!!" }],
+                "timestamp": new Date(),
+            }
+        ],
+    };
+    HttpErrorPost("https://discordapp.com/api/webhooks/567049255815217165/TC_JHSD7-DbUcKnULaeYfEO0iFPBNa1RhKaOMrgTSNr-NTGFTAaz1yoxDM-Z5sg-TAek", JSON.stringify(formData));
+}
+
+function OfflineSite() {
+    document.getElementById("no_stream").innerHTML = "<span style=\"color: grey\"> Offline menetrend:</span>";
+    var streamStart = JSON.parse(decodeURIComponent(getCookie("cachedStreamStart")));                        //Az előző menetrendi elemek idejét nyitja meg egy tömbbe.
+    var titles = JSON.parse(decodeURIComponent(getCookie("cachedTitles")));                         //Az előző memnetrendi elemek címét nyitja meg egy tömbe.
+    var streamEnd = JSON.parse(decodeURIComponent(getCookie("cachedStreamEnd")));
+    offlineLength = titles.length;
+
+
+
+    for (var i = 0; i < titles.length; i++) {
+        var titleId = i + "_cim";
+        var coverId = i + "_cover";
+        var timeId = i + "_time";
+        var brId = i + "_br";
+
+        var startTime = timestampToTime(streamStart[i]).split("<br>");
+        var endTime = timestampToTime(streamEnd[i]).split("<br>");
+
+        ////////////Annak eldöntése, hogy a Stream melyik nap kezdődik.
+        DayDivider(streamStart[i], currenttime, i);
+        ///////////////////////Stream Eldöntése Melyik nap vége///////////////////////////////////////////////////////////////
+
+
+        DayDivider(streamStart[i], currenttime, i);
+        divcreator(i, "body", "eventcontainer");
+        divcreator(titleId, i);
+        divcreator(coverId, i);
+        divcreator(timeId, i);
+        document.getElementById(i + "_created").innerHTML += "<span id=\"streamspan\" style=\"cursor:pointer;\" onclick=\"hide_and_show('" + i + "_description_created'," + i + ")\"><span id=" + i + "_arrow style=\"display: block; padding: 10 0 10 0\">" + svgArrowDown + "</span></span>";
+        divcreator(i + "_description", "body", "descriptioncontainer");
+        divcreator(i + "_spacer", "body", "eventspacer");
+        /*Feltölteni kívánt Div-ek megjelenítése a rejtésből és adatokkal való feltöltésük*/
+
+        document.getElementById(titleId + "_created").innerHTML = "<p><b>" + titles[i] + "</b></p>";
+        document.getElementById(coverId + "_created").innerHTML = "<div style=\"background-color: black; height: 180px\" ></div>";
+        document.getElementById(timeId + "_created").innerHTML = "<div style=\"margin-bottom:1px;\">" + startTime[0] + "</div><div style=\"margin-bottom:4px\">" + startTime[1] + "-" + endTime[1] + "</div>";
+
+        /*var stream_hossz = streamEnd[i] - streamStart[i];*/
+        /*Változtatás: Ha az idő 2400másodpercnél kisebb akkor Premier-ről van szó és átszinezzük.*/
+
+
+        /*majd 7200 legyen */
+        var countdownStart = streamStart[i] - currenttime;
+        /*A menetrendi idő jelzésének módjának változtatása ha eltérő dátumú kedés és befejezés és ha a stream tovább tart mint a várt*/
+        if (startTime[0] == endTime[0]) {
+            if ((countdownStart < 7200) & (countdownStart > 0)) { Countdown(streamStart[i]); } else { document.getElementById(timeId + "_created").innerHTML = "<div style=\"margin-bottom:1px;\">" + startTime[0] + "</div><div style=\"margin-bottom:4px\">" + startTime[1] + "-" + endTime[1] + "</div>"; }
+        } else {
+            if ((countdownStart < 7200) & (countdownStart > 0) & (liveStatus != "live")) { Countdown(streamStart[i]); } else { document.getElementById(timeId + "_created").innerHTML = "<div style=\"overflow: hidden; width: 320px;\">    <div style=\"float:left; width: 155px\"><center><div style=\"margin-bottom:1px;\">" + startTime[0] + "</div><div style=\"margin-bottom:4px\">" + startTime[1] + "</div></center></div>    <div style=\"float:left; width: 10px\"><center>-</center></div>	<div style=\"overflow: hidden; width: 155px float:right;\"><center><div style=\"margin-bottom:1px;\">" + endTime[0] + "</div><div style=\"margin-bottom:4px\">" + endTime[1] + "</center></div></div></div>"; }
+        }
+    }
+    //Létrehozott DIV-ek színének átváltása.
+    //Ha a téma világos akkor a létrehozott DIV-eket átállítjuk
+
+    if (themeStatus == "light") {
+        Light(offlineLength);
+    } else {
+        Dark(offlineLength)
+    }
+    divcreator("footer", "body");
+    MoveParent("footer_created");
+}
+
+function new_features(data) {
+    newFunction = data;
+    newFunction = JSON.parse(newFunction);
+    var messageNewsType = newFunction.content.search("#news");
+    var messageChangeLogType = newFunction.content.search("#changelog");
+
+    var newFunctionWeek = currenttime - newFunction.timestamp;
+    if ((newFunctionWeek < 1209600) & (theVRmmNewFeature < newFunction.timestamp) & (cookieSettings == 1) & (messageNewsType > -1)) {
+        modal_open("new");
+    }
+
+
+
+    if ((oldJs != scriptVersion) & (cookieSettings == 1) & (messageChangeLogType > -1)) {
+        modal_open("JsNew");
+    }
+
+}
+/*Részletek megjelenítése és elrejtése*/
+function hide_and_show(elementId, i) {
+    if (internetStatus == "online") {
+        /*Ha nem meglepi stream leírása akkor részletekkel töltjük fel részletek div-et.(Változtatás : else if ágba került egy rész ami a lekért leírást beilleszti ha nem üres. Ha üres akkor kiírja, hogy nem tartozik hozzá leírás.) */
+        if (elementId != "meglepi_description") {
+            if ((gameLiveStatus == 493057) & (pubgStatAvailable == 1) & (i == 0) & (liveStatus == "live") & ((liveTimestamp < streamEndZeroElement + 3000) & (liveTimestamp > streamStartZeroElement - 3000))) {
+                document.getElementById(elementId).innerHTML = PUBGStat;
+            } else if ((i == 0) & (liveStatus == "live") & ((liveTimestamp < streamEndZeroElement + 3000) & (liveTimestamp > streamStartZeroElement - 3000))) {
+                if (themeStatus == "light") {
+                    document.getElementById(elementId).innerHTML = "<iframe frameborder=\"0\"scrolling=\"no\"id=\"<channel>\"src=\"https://www.twitch.tv/embed/" + streamer + "/chat\"height=\"500px\"width=\"320px\"></iframe>";
+                } else {
+                    document.getElementById(elementId).innerHTML = "<iframe frameborder=\"0\"scrolling=\"no\"id=\"<channel>\"src=\"https://www.twitch.tv/embed/" + streamer + "/chat?darkpopout\"height=\"500px\"width=\"320px\"></iframe>";
+                }
+                gameLiveStatus = liveData.game.id;
+            } else if (events[i].event_description) {
+                document.getElementById(elementId).innerHTML = "<b>Részletek:</b><br>" + events[i].event_description + "<br><br><a style=\"cursor: pointer; color: grey; text-decoration: underline;\" onclick=\"modal_open(" + i + ")\" >Hozzáadás a naptárhoz!</a>";
+            } else {
+                document.getElementById(elementId).innerHTML = "<b>Részletek:</b><br>Az eseményhez nem tartozik részletes leírás!<br><br><a style=\"cursor: pointer; color: grey; text-decoration: underline;\" onclick=\"modal_open(" + i + ")\" >Hozzáadás a naptárhoz!</a> ";
+            }
+        } else if ((liveStatus == "live") & (gameLiveStatus == 493057) & (streamer == "wearethevr")) {
+            document.getElementById(elementId).innerHTML = PUBGStat;
+        }
+    } else {
+        document.getElementById(elementId).innerHTML = "Offline állapotban nem elérhető a részletek funkció!";
+    }
+
+    var x = document.getElementById(elementId);
+    if (x.style.display === "none") {
+        x.style.display = "block";
+        document.getElementById(i + "_arrow").innerHTML = svgArrowUp;
+        HttpGetNorm(detailFunc);
+    } else {
+        x.style.display = "none";
+        document.getElementById(i + "_arrow").innerHTML = svgArrowDown;
+    }
+}
+
+/*Popup ablak megnyitó*/
+function modal_open(i) {
+    /*Elfogadó cookie kinyerése majd ha az értéke 1 akkor a téma cookie kinyerése */
+    cookieSettings = getCookie(policyAgreementCookie);
+    if (cookieSettings == 1) { themeStatus = getCookie(themeCookie); }
+    modal.style.display = "block";
+
+    if (typeof i === typeof 3) {
+        /*Aktuális menetrendi stream-nek megfelelő naptár linkek*/
+        popupContent.innerHTML = "<b>Hozzáadás a naptáradhoz:</b><br><br><div id=\"light_popup\" ><a onclick=\"HttpGetNorm('" + googleFunc + "')\" href=\"" + gCalendarLink[i] + "\" target=\"_blank\"><img src=\"https://vignette.wikia.nocookie.net/logopedia/images/9/9d/Google_logo_white_2015.svg\" class=\"aspect__fill\" width=\"87\"></a>&nbsp;&nbsp;&nbsp;<a onclick=\"HttpGetNorm('" + icalFunc + "');icsCreator('" + icalCalendarLink[i] + "');\" href=\"#\"><img src=\"https://dani0001414.github.io/TheVRMobilMenetrend/ical_icon.svg\" class=\"aspect__fill\" width=\"58\"></a>&nbsp;&nbsp;&nbsp;<a onclick=\"HttpGetNorm('" + yahooFunc + "')\"href=\"" + yahooCalendarLink[i] + "\" target=\"_blank\"><img src=\"https://dani0001414.github.io/TheVRMobilMenetrend/Yahooicon.svg\" class=\"aspect__fill\" width=\"58\"></a></div>";
+        if (themeStatus == "light") { document.getElementById("light_popup").style.filter = "invert(100%)"; }
+        if (themeStatus == "dark") { document.getElementById("light_popup").style.filter = "invert(0%)"; }  /*Világos Témánál az svg ikonok invertálása. */
+        HttpGetNorm(calendarFunc);
+    }
+    if (i == "cookie_settings") {
+        /*Cookie és téma beállítására szolgáló rész. */
+        var cookieStatusString, themeChangePart;
+        if (cookieSettings == 1) { cookieStatusString = "<span id=\"c_gomb\"><span style=\"cursor: pointer; color: grey; text-decoration: underline;\" onclick=\"deleteAllCookies()\">Bekapcsolva</span></span>"; } else { cookieStatusString = "<span id=\"c_gomb\"><span style=\"cursor: pointer; color: grey; text-decoration: underline;\" onclick=\"createcookie('" + policyAgreementCookie + "',1,365)\">Kikapcsolva</span></span>"; }
+        if (cookieSettings == 1) {
+            if ((themeStatus == "dark") | (themeStatus == 0)) { themeChangePart = "<span id=\"theme_gomb\"><span style=\"cursor: pointer; color: grey; text-decoration: underline;\" onclick=\"createcookie('" + themeCookie + "','light',365);HttpGetNorm('" + whiteThemeFunc + "')\">Sötét</span></span>"; }
+            if (themeStatus == "light") { themeChangePart = "<span id=\"theme_gomb\"><span style=\"cursor: pointer; color: grey; text-decoration: underline;\" onclick=\"createcookie('" + themeCookie + "','dark',365);HttpGetNorm('" + blackThemeFunc + "')\">Világos</span></span>"; }
+        } else { themeChangePart = "Kikapcsolt Cookie-val nem lehetésges."; }
+        popupContent.innerHTML = "<br><br><b>[Beállítások]</b><br><br><font size=\"2\">Téma: " + themeChangePart + "<br><br></font><font size=\"2\">Cookie-k állapota: " + cookieStatusString + "</font>";
+
+    }
+    if (i == "cookie_information") {
+        var contentContainer;
+        contentContainer = "<br><br><b>[Cookie Információ]</b><br><br>";
+        if (streamer == "wearethevr") {
+            contentContainer += "<font size=\"1\"><div align=\"left\">A MobilBarát Menetrend által használt cookie-k:<br><br><span style=\"color: grey;\">" + policyAgreementCookie + ":</span><br>A döntésedet tárolja cookie-k használatával kapcsolatban. Ha nem fogadtad el, akkor a többi cookie nem lesz használatban.<br><br><span style=\"color: grey;\">" + themeCookie + ":</span><br>Az általad választott téma bellítását tárolja<br><br><span style=\"color: grey;\">" + newFeatureCookie + ":</span><br>Azt tárolja mikor láttad az új funkciókról szóló értesítést, hogy feleslegesen ne jelenjen meg újra.<br><br><span style=\"color: grey;\">" + theVRmmNewInfoCookie + ":</span><br>Azt tárolja mikor láttad az új TheVR Stream Infót, hogy feleslegesen ne jelenjen meg újra.<br><br><span style=\"color: grey;\">Google Analytics Cookie-k:</span><br>A Google Analitika szolgáltatása használja. Anoním módon rögzítik, hogy miként használod az oldalt. Ez segíti a későbbi fejlesztéseket.<br><br><span style=\"color: grey;\">cachedIDs, cachedTitles, cachedStreamStart, cachedStreamEnd:</span><br>A menetrend id, cím, kezdési idejét, befejezési idejét tárolják, hogy a legközelebbi megnyitáskor a mobil menetrend ki tudja jelezni, hogy mik a változások.<br><br><span style=\"color: grey;\">wearethevruserid:</span><br>Részletek, Témaválasztás, Naptárhozzáadás funkciók statisztika gyűjtéséhez generált anoním userid<br><br><span style=\"color: grey;\">wearethevr_scriptversion:</span><br>A jelen MobilMenetrend JS fájl verziószámát tárolja.</div></font>";
+        } else if (streamer == "blyyyplays") {
+            contentContainer += "<font size=\"1\"><div align=\"left\">A MobilBarát Menetrend által használt cookie-k:<br><br><span style=\"color: grey;\">" + policyAgreementCookie + ":</span><br>A döntésedet tárolja cookie-k használatával kapcsolatban. Ha nem fogadtad el, akkor a többi cookie nem lesz használatban.<br><br><span style=\"color: grey;\">" + themeCookie + ":</span><br>Az általad választott téma bellítását tárolja<br><br><span style=\"color: grey;\">" + newFeatureCookie + ":</span><br>Azt tárolja mikor láttad az új funkciókról szóló értesítést, hogy feleslegesen ne jelenjen meg újra.<br><br><span style=\"color: grey;\">Google Analytics Cookie-k:</span><br>A Google Analitika szolgáltatása használja. Anoním módon rögzítik, hogy miként használod az oldalt. Ez segíti a későbbi fejlesztéseket.<br><br><span style=\"color: grey;\">cachedIDs, cachedTitles, cachedStreamStart, cachedStreamEnd:</span><br>A menetrend id, cím, kezdési idejét, befejezési idejét tárolják, hogy a legközelebbi megnyitáskor a mobil menetrend ki tudja jelezni, hogy mik a változások.<br><br><span style=\"color: grey;\">blyyyplaysuserid:</span><br>Részletek, Témaválasztás, Naptárhozzáadás funkciók statisztika gyűjtéséhez generált anoním userid.<br><br><span style=\"color: grey;\">blyyyplays_scriptversion:</span><br>A jelen MobilMenetrend JS fájl verziószámát tárolja.</div></font>";
+        } else {
+            contentContainer += "<font size=\"1\"><div align=\"left\">A MobilBarát Menetrend által használt cookie-k:<br><br><span style=\"color: grey;\">" + policyAgreementCookie + ":</span><br>A döntésedet tárolja cookie-k használatával kapcsolatban. Ha nem fogadtad el, akkor a többi cookie nem lesz használatban.<br><br><span style=\"color: grey;\">" + themeCookie + ":</span><br>Az általad választott téma bellítását tárolja<br><br><span style=\"color: grey;\">" + newFeatureCookie + ":</span><br>Azt tárolja mikor láttad az új funkciókról szóló értesítést, hogy feleslegesen ne jelenjen meg újra.<br><br><span style=\"color: grey;\">Google Analytics Cookie-k:</span><br>A Google Analitika szolgáltatása használja. Anoním módon rögzítik, hogy miként használod az oldalt. Ez segíti a későbbi fejlesztéseket.<br><br><span style=\"color: grey;\">cachedIDs, cachedTitles, cachedStreamStart, cachedStreamEnd:</span><br>A menetrend id, cím, kezdési idejét, befejezési idejét tárolják, hogy a legközelebbi megnyitáskor a mobil menetrend ki tudja jelezni, hogy mik a változások.<br><br><span style=\"color: grey;\">" + streamer + "_scriptversion:</span><br>A jelen MobilMenetrend JS fájl verziószámát tárolja.</div></font>";
+        }
+        popupContent.innerHTML = contentContainer;
+    }
+    if (i == "new") {
+        popupContent.innerHTML = "<br><br><span style=\"color: red\"><b>[Újdonságok]</b></span><br><br>" + newFunction.content;
+        createcookie(newFeatureCookie, newFunction.timestamp, 365);
+    }
+    if (i == "JsNew") {
+        var textContent = "<div style=\"max-width:400px\" align=\"left\"><font size=\"2\">Sikeresen felfrissült a " + scriptVersion + " verzióra!<br>Frissítésről:</font></div>" + newFunction.content;
+        popupContent.innerHTML = "<br><br><span style=\"color: red\"><b>[Új Funkciók érkeztek!]</b></span><br><br>" + textContent;
+
+        createcookie(streamer + "_scriptversion", scriptVersion, 365);
+    }
+}
+
+/*Cookie létrehozó. Felesleges a negyedik változó. Majd javítanom. name változó alapján azonosítom*/
+function createcookie(name, value, days, banner) {
+    var expires;
+    if (days) {
+        var date = new Date();
+        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+        expires = "; expires=" + date.toGMTString();
+    }
+    else {
+        expires = "";
+    }
+    document.cookie = name + "=" + value + expires;
+
+    if (banner == "banner") { document.getElementById("myCookie").style.display = 'none'; } else if ((name == policyAgreementCookie) | (name == themeCookie)) { modal_open("cookie_settings"); }
+    /*Téma választó cookie létrehozásával egyben át is váltjuk az általa képviselt kinézetre*/
+    if (name == themeCookie) {
+        if (value == "dark") {
+            if (internetStatus == "online") { Dark(eventsLength); } else { Dark(offlineLength); }
+        }
+        if (value == "light") {
+            if (internetStatus == "online") { Light(eventsLength); } else { Light(offlineLength); }
+        }
+        modal_open("cookie_settings");
+    }
+}
+
+function deleteAllCookies(banner) {
+    var cookies = document.cookie.split(";");
+
+    for (var i = 0; i < cookies.length; i++) {
+        var cookie = cookies[i];
+        var eqPos = cookie.indexOf("=");
+        var name = eqPos > -1 ? cookie.substr(0, eqPos) : cookie;
+        document.cookie = name + "=;expires=Thu, 01 Jan 1970 00:00:00 GMT";
+        document.cookie = name + '=; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+    }
+    createcookie(policyAgreementCookie, -1, 20, 'banner');
+    if (banner == "banner") {
+        document.getElementById("myCookie").style.display = 'none';
+        createcookie(policyAgreementCookie, -1, 20, 'banner');
+    } else { modal_open("cookie_settings"); }
+
+
+}
+
+function timestampToTime(timestamp) {
+    var d = new Date(timestamp * 1000);
+    var monthReal = d.getMonth() + 1;
+    var month = "0" + monthReal;
+    var day = "0" + d.getDate();
+    // Hours part from the timestamp
+    var hours = d.getHours();
+    // Minutes part from the timestamp
+    var minutes = "0" + d.getMinutes();
+    // Seconds part from the timestamp
+    var seconds = "0" + d.getSeconds();
+
+    var Time = d.getFullYear() + "." + month.substr(-2) + "." + day.substr(-2) + "<br>" + hours + ":" + minutes.substr(-2);
+    return Time
+}
+
+// When the user clicks on <span> (x), close the modal
+function spanonclick() {
+    modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function (event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+
+
+
+//////////////ICAL létrehozás(NemSaját)////////Source from: https://github.com/nwcell/////////
+/* global saveAs, Blob, BlobBuilder, console */
+/* exported ics */
+var saveAs = saveAs || function (e) { "use strict"; if (typeof e === "undefined" || typeof navigator !== "undefined" && /MSIE [1-9]\./.test(navigator.userAgent)) { return } var t = e.document, n = function () { return e.URL || e.webkitURL || e }, r = t.createElementNS("http://www.w3.org/1999/xhtml", "a"), o = "download" in r, a = function (e) { var t = new MouseEvent("click"); e.dispatchEvent(t) }, i = /constructor/i.test(e.HTMLElement) || e.safari, f = /CriOS\/[\d]+/.test(navigator.userAgent), u = function (t) { (e.setImmediate || e.setTimeout)(function () { throw t }, 0) }, s = "application/octet-stream", d = 1e3 * 40, c = function (e) { var t = function () { if (typeof e === "string") { n().revokeObjectURL(e) } else { e.remove() } }; setTimeout(t, d) }, l = function (e, t, n) { t = [].concat(t); var r = t.length; while (r--) { var o = e["on" + t[r]]; if (typeof o === "function") { try { o.call(e, n || e) } catch (a) { u(a) } } } }, p = function (e) { if (/^\s*(?:text\/\S*|application\/xml|\S*\/\S*\+xml)\s*;.*charset\s*=\s*utf-8/i.test(e.type)) { return new Blob([String.fromCharCode(65279), e], { type: e.type }) } return e }, v = function (t, u, d) { if (!d) { t = p(t) } var v = this, w = t.type, m = w === s, y, h = function () { l(v, "writestart progress write writeend".split(" ")) }, S = function () { if ((f || m && i) && e.FileReader) { var r = new FileReader; r.onloadend = function () { var t = f ? r.result : r.result.replace(/^data:[^;]*;/, "data:attachment/file;"); var n = e.open(t, "_blank"); if (!n) e.location.href = t; t = undefined; v.readyState = v.DONE; h() }; r.readAsDataURL(t); v.readyState = v.INIT; return } if (!y) { y = n().createObjectURL(t) } if (m) { e.location.href = y } else { var o = e.open(y, "_blank"); if (!o) { e.location.href = y } } v.readyState = v.DONE; h(); c(y) }; v.readyState = v.INIT; if (o) { y = n().createObjectURL(t); setTimeout(function () { r.href = y; r.download = u; a(r); h(); c(y); v.readyState = v.DONE }); return } S() }, w = v.prototype, m = function (e, t, n) { return new v(e, t || e.name || "download", n) }; if (typeof navigator !== "undefined" && navigator.msSaveOrOpenBlob) { return function (e, t, n) { t = t || e.name || "download"; if (!n) { e = p(e) } return navigator.msSaveOrOpenBlob(e, t) } } w.abort = function () { }; w.readyState = w.INIT = 0; w.WRITING = 1; w.DONE = 2; w.error = w.onwritestart = w.onprogress = w.onwrite = w.onabort = w.onerror = w.onwriteend = null; return m }(typeof self !== "undefined" && self || typeof window !== "undefined" && window || this.content); if (typeof module !== "undefined" && module.exports) { module.exports.saveAs = saveAs } else if (typeof define !== "undefined" && define !== null && define.amd !== null) { define("FileSaver.js", function () { return saveAs }) }
+
+var ics = function (e, t) { "use strict"; { if (!(navigator.userAgent.indexOf("MSIE") > -1 && -1 == navigator.userAgent.indexOf("MSIE 10"))) { void 0 === e && (e = "default"), void 0 === t && (t = "Calendar"); var r = -1 !== navigator.appVersion.indexOf("Win") ? "\r\n" : "\n", n = [], i = ["BEGIN:VCALENDAR", "PRODID:" + t, "VERSION:2.0"].join(r), o = r + "END:VCALENDAR", a = ["SU", "MO", "TU", "WE", "TH", "FR", "SA"]; return { events: function () { return n }, calendar: function () { return i + r + n.join(r) + o }, addEvent: function (t, i, o, l, u, s) { if (void 0 === t || void 0 === i || void 0 === o || void 0 === l || void 0 === u) return !1; if (s && !s.rrule) { if ("YEARLY" !== s.freq && "MONTHLY" !== s.freq && "WEEKLY" !== s.freq && "DAILY" !== s.freq) throw "Recurrence rrule frequency must be provided and be one of the following: 'YEARLY', 'MONTHLY', 'WEEKLY', or 'DAILY'"; if (s.until && isNaN(Date.parse(s.until))) throw "Recurrence rrule 'until' must be a valid date string"; if (s.interval && isNaN(parseInt(s.interval))) throw "Recurrence rrule 'interval' must be an integer"; if (s.count && isNaN(parseInt(s.count))) throw "Recurrence rrule 'count' must be an integer"; if (void 0 !== s.byday) { if ("[object Array]" !== Object.prototype.toString.call(s.byday)) throw "Recurrence rrule 'byday' must be an array"; if (s.byday.length > 7) throw "Recurrence rrule 'byday' array must not be longer than the 7 days in a week"; s.byday = s.byday.filter(function (e, t) { return s.byday.indexOf(e) == t }); for (var c in s.byday) if (a.indexOf(s.byday[c]) < 0) throw "Recurrence rrule 'byday' values must include only the following: 'SU', 'MO', 'TU', 'WE', 'TH', 'FR', 'SA'" } } var g = new Date(l), d = new Date(u), f = new Date, S = ("0000" + g.getFullYear().toString()).slice(-4), E = ("00" + (g.getMonth() + 1).toString()).slice(-2), v = ("00" + g.getDate().toString()).slice(-2), y = ("00" + g.getHours().toString()).slice(-2), A = ("00" + g.getMinutes().toString()).slice(-2), T = ("00" + g.getSeconds().toString()).slice(-2), b = ("0000" + d.getFullYear().toString()).slice(-4), D = ("00" + (d.getMonth() + 1).toString()).slice(-2), N = ("00" + d.getDate().toString()).slice(-2), h = ("00" + d.getHours().toString()).slice(-2), I = ("00" + d.getMinutes().toString()).slice(-2), R = ("00" + d.getMinutes().toString()).slice(-2), M = ("0000" + f.getFullYear().toString()).slice(-4), w = ("00" + (f.getMonth() + 1).toString()).slice(-2), L = ("00" + f.getDate().toString()).slice(-2), O = ("00" + f.getHours().toString()).slice(-2), p = ("00" + f.getMinutes().toString()).slice(-2), Y = ("00" + f.getMinutes().toString()).slice(-2), U = "", V = ""; y + A + T + h + I + R != 0 && (U = "T" + y + A + T, V = "T" + h + I + R); var B, C = S + E + v + U, j = b + D + N + V, m = M + w + L + ("T" + O + p + Y); if (s) if (s.rrule) B = s.rrule; else { if (B = "rrule:FREQ=" + s.freq, s.until) { var x = new Date(Date.parse(s.until)).toISOString(); B += ";UNTIL=" + x.substring(0, x.length - 13).replace(/[-]/g, "") + "000000Z" } s.interval && (B += ";INTERVAL=" + s.interval), s.count && (B += ";COUNT=" + s.count), s.byday && s.byday.length > 0 && (B += ";BYDAY=" + s.byday.join(",")) } (new Date).toISOString(); var H = ["BEGIN:VEVENT", "UID:" + n.length + "@" + e, "CLASS:PUBLIC", "DESCRIPTION:" + i, "DTSTAMP;VALUE=DATE-TIME:" + m, "DTSTART;VALUE=DATE-TIME:" + C, "DTEND;VALUE=DATE-TIME:" + j, "LOCATION:" + o, "SUMMARY;LANGUAGE=en-us:" + t, "TRANSP:TRANSPARENT", "END:VEVENT"]; return B && H.splice(4, 0, B), H = H.join(r), n.push(H), H }, download: function (e, t) { if (n.length < 1) return !1; t = void 0 !== t ? t : ".ics", e = void 0 !== e ? e : "calendar"; var a, l = i + r + n.join(r) + o; if (-1 === navigator.userAgent.indexOf("MSIE 10")) a = new Blob([l]); else { var u = new BlobBuilder; u.append(l), a = u.getBlob("text/x-vCalendar;charset=" + document.characterSet) } return saveAs(a, e + t), l }, build: function () { return !(n.length < 1) && i + r + n.join(r) + o } } } console.log("Unsupported Browser") } };
+//////ICAL kreáció vége///////////////////////
+
+
+//A téma átállításnál felesleges külön basztatni a dolgokat. A 20 divet mind állítsam át
