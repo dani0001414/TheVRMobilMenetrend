@@ -10,7 +10,6 @@
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta charset="utf-8">
-  <script id="streamerdata_js" type="text/javascript" src="streamerdata.js"></script>
   <script id="main_js" type="text/javascript" src="https://dani0001414.github.io/javascript_code.js" crossorigin></script>
 </head>
 
@@ -31,9 +30,9 @@
     <div id="meglepi_br" style="display: none;">
       <br>
     </div>
-    <div style="color: grey">
+    <div id="footer_data" style="color: grey">
       <font size="2">Creator:
-        <a target="_blank" href="https://forum.thevr.hu/u/dani0001414/">dani0001414 Ninjon</a>
+        <a target="_blank" href="https://forum.thevr.hu/u/danx27/">DanX27 Ninjon</a>
         <br>
         <br>
         <a href="https://dani0001414.github.io/TheVRMobilMenetrend/changelog.html">[Change-Log]</a>
@@ -66,7 +65,7 @@
 </body>
 <script>
    if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('streamer_sw.js').then(function (registration) {
+    navigator.serviceWorker.register('thevrmm_sw.js').then(function (registration) {
       console.log('Service worker registration succeeded:', registration);
     }).catch(function (error) {
       console.log('Service worker registration failed:', error);
