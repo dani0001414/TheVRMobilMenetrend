@@ -1,133 +1,125 @@
-//Ez a ServiceWorker a https://css-tricks.com/serviceworker-for-offline/ oldalról származik.
-//This ServiceWorker originated from this article: https://css-tricks.com/serviceworker-for-offline/ 
+/*
+ Copyright 2016 Google Inc. All Rights Reserved.
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+     http://www.apache.org/licenses/LICENSE-2.0
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+*/
 
-const cacheName = 'v3';
-self.addEventListener("install", function (event) {
-  console.log('WORKER: install event in progress.');
+// Names of the two caches used in this version of the service worker.
+// Change to v2, etc. when you update any of the local resources, which will
+// in turn trigger the install event again.
+//const CACHE_VERSION = '{{ site.time }}';
+
+
+const version = "v2";
+
+const PRECACHE = 'precache-' + version;
+const RUNTIME = 'runtime' + version;
+console.log(PRECACHE);
+console.log(RUNTIME);
+// A list of local resources we always want to be cached.
+const PRECACHE_URLS = [
+  'mm.html',
+  'index.html',
+  'https://i.imgur.com/5dZn6sc.png',
+];
+
+// The install handler takes care of precaching the resources we always need.
+self.addEventListener('install', event => {
   event.waitUntil(
-
-    caches.open(cacheName + 'fundamentals').then(function (cache) {
-//Itt van az a rész amelyet be kell állítanod:
-      return cache.addAll([
-        'blyyy_logo.png', //streamerdata.js-ben megadott offlinePic. Vagyis az Offline-nak szánt kép elérési útját illeszd be ide. Mást ne módosíts!
-      ]);
-    })
-      .then(function () {
-        console.log('WORKER: install completed');
-      })
+    caches.open(PRECACHE)
+      .then(cache => cache.addAll(PRECACHE_URLS))
+      .then(self.skipWaiting())
   );
 });
 
-self.addEventListener('activate', e => {
-  console.log('Service Worker: Aktiválva!');
-  //Töröljük a nemkívánt gyorsítótárakat.
-  e.waitUntil(
+// The activate handler takes care of cleaning up old caches.
+self.addEventListener('activate', event => {
+  const currentCaches = [PRECACHE, RUNTIME];
+  event.waitUntil(
     caches.keys().then(cacheNames => {
-      return Promise.all(
-        cacheNames.map(cache => {
-          if (cache !== cacheName) {
-            console.log('ServiceWorker: Töröli a régi gyorítótárat!');
-            return caches.delete(cache);
-          }
-        })
-      )
-    })
-  )
+      return cacheNames.filter(cacheName => !currentCaches.includes(cacheName));
+    }).then(cachesToDelete => {
+      return Promise.all(cachesToDelete.map(cacheToDelete => {
+        return caches.delete(cacheToDelete);
+      }));
+    }).then(() => self.clients.claim())
+  );
 });
 
-//Fetch event meghívása
+const trimCache = (cacheName, maxItems) => {
+  caches.open(cacheName).then(cache => {
+    cache.keys().then(keys => {
+      if (keys.length > maxItems)
+        cache.delete(keys[0]).then(trimCache(cacheName, maxItems));
+
+    });
+  });
+};
+function timestamp(b) {
+  var utcDate = b;
+  var localDate = new Date(utcDate);
+  var localDate = localDate.getTime() / 1000;
+  return localDate;
+}
+function aktualisido() {
+  var d = new Date().getTime();
+  return d / 1000;
+}
+var time;
+// The fetch handler serves responses for same-origin resources from a cache.
+// If no response is found, it populates the runtime cache with the response
+// from the network before returning it to the page.
+i = 0;
 self.addEventListener('fetch', event => {
-  console.log('ServiceWorker: Fetchelés!');
-  var twitch_cover = event.request.url.startsWith('https://static-cdn.jtvnw.net/twitch-event');
-  if ((event.request.method !== 'GET') | (twitch_cover == true)) {
-    console.log('Service Worker: Ne listázd a Post Request és Twitch Cover-eket'); //Azért nem mentjük őket, még ha jobb is lenne így az Offline mód, mert a letárolásuk módja a ServiceWorkerben sok helyet foglal.
-    //Tesztelésem során volt amikor 130MB-ra hízott a cache. 
-    return;
-  }
+  // Skip cross-origin requests, like those for Google Analytics.
+  var same_origin = event.request.url.startsWith(self.location.origin);
+  var google_fonts = event.request.url.startsWith('https://fonts');
+  var twitch_cover = event.request.url.startsWith('https://thevr.hu/wp-content/uploads/');
+  var imgur = event.request.url.startsWith('https://i.imgur.com/9KP46NF.png');
+  var javascript = event.request.url.startsWith('https://dani0001414.github.io/javascript_code.js');
+  var cached_time = null;
+  var cached_time_catch = false;
+  i++;
 
-  event.respondWith(
-    caches
-      /* This method returns a promise that resolves to a cache entry matching
-         the request. Once the promise is settled, we can then provide a response
-         to the fetch request.
-      */
-      .match(event.request)
-      .then(function (cached) {
-        /* Even if the response is in our cache, we go to the network as well.
-           This pattern is known for producing "eventually fresh" responses,
-           where we return cached responses immediately, and meanwhile pull
-           a network response and store that in the cache.
-           Read more:
-           https://ponyfoo.com/articles/progressive-networking-serviceworker
-        */
-        var networked = fetch(event.request)
-          // We handle the network request with success and failure scenarios.
-          .then(fetchedFromNetwork, unableToResolve)
-          // We should catch errors on the fetchedFromNetwork handler as well.
-          .catch(unableToResolve);
+  if (same_origin | google_fonts | imgur | javascript) {
+    event.respondWith(
+      caches.match(event.request).then(cachedResponse => {
+        if (cachedResponse) {
+          time = cachedResponse.headers.get("Date");
+          if (time != null) {
+            cached_time = timestamp(time);
+            time = aktualisido() - cached_time;
+            console.log('ido:', time);
+            if (259200 < time) {
+              trimCache(PRECACHE, 0);
+              trimCache(RUNTIME, 0);
+            }
+          }
+          return cachedResponse;
+        }
 
-        /* We return the cached response immediately if there is one, and fall
-           back to waiting on the network as usual.
-        */
-        console.log('WORKER: fetch event', cached ? '(cached)' : '(network)', event.request.url);
-        return cached || networked;
-
-        function fetchedFromNetwork(response) {
-          /* We copy the response before replying to the network request.
-             This is the response that will be stored on the ServiceWorker cache.
-          */
-          var cacheCopy = response.clone();
-
-          console.log('WORKER: fetch response from network.', event.request.url);
-
-          caches
-            // We open a cache to store the response for this request.
-            .open(cacheName + 'pages')
-            .then(function add(cache) {
-              /* We store the response for this request. It'll later become
-                 available to caches.match(event.request) calls, when looking
-                 for cached responses.
-              */
-              cache.put(event.request, cacheCopy);
-            })
-            .then(function () {
-              console.log('WORKER: fetch response stored in cache.', event.request.url);
+        return caches.open(RUNTIME).then(cache => {
+          return fetch(event.request).then(response => {
+            // Put a copy of the response in the runtime cache.
+            return cache.put(event.request, response.clone()).then(() => {
+              return response;
             });
-
-          // Return the response so that the promise is settled in fulfillment.
-          return response;
-        }
-
-        /* When this method is called, it means we were unable to produce a response
-           from either the cache or the network. This is our opportunity to produce
-           a meaningful response even when all else fails. It's the last chance, so
-           you probably want to display a "Service Unavailable" view or a generic
-           error response.
-        */
-        function unableToResolve() {
-          /* There's a couple of things we can do here.
-             - Test the Accept header and then return one of the `offlineFundamentals`
-               e.g: `return caches.match('/some/cached/image.png')`
-             - You should also consider the origin. It's easier to decide what
-               "unavailable" means for requests against your origins than for requests
-               against a third party, such as an ad provider
-             - Generate a Response programmaticaly, as shown below, and return that
-          */
-
-          console.log('WORKER: fetch request failed in both cache and network.');
-
-          /* Here we're creating a response programmatically. The first parameter is the
-             response body, and the second one defines the options for the response.
-          */
-          return new Response('<h1>Service Unavailable</h1>', {
-            status: 503,
-            statusText: 'Service Unavailable',
-            headers: new Headers({
-              'Content-Type': 'text/html'
-            })
           });
-        }
+        });
       })
-  );
-})
+    );
+  }
+});
+
+
+
+
+
 
