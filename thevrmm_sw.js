@@ -79,16 +79,20 @@ var time;
 i = 0;
 self.addEventListener('fetch', event => {
   // Skip cross-origin requests, like those for Google Analytics.
-  var same_origin = event.request.url.startsWith(self.location.origin);
+  
   var google_fonts = event.request.url.startsWith('https://fonts');
-  var twitch_cover = event.request.url.startsWith('https://thevr.hu/wp-content/uploads/');
+  var pngImg = event.request.url.endsWith('.png');
+  var javascript = event.request.url.endsWith('javascript_code.js');
+  var indexHTML = event.request.url.endsWith('index.html');
+  var mmHTML = event.request.url.endsWith('mm.html');
+  var webManif = event.request.url.endsWith('manifest.webmanifest');
+  var styleFile = event.request.url.endsWith('style.css');
   var imgur = event.request.url.startsWith('https://i.imgur.com/9KP46NF.png');
-  var javascript = event.request.url.startsWith('https://dani0001414.github.io/javascript_code.js');
   var cached_time = null;
   var cached_time_catch = false;
   i++;
 
-  if (same_origin | google_fonts | imgur | javascript) {
+  if ( pngImg | indexHTML | mmHTML | google_fonts | imgur | javascript | webManif | styleFile) {
     event.respondWith(
       caches.match(event.request).then(cachedResponse => {
         if (cachedResponse) {
